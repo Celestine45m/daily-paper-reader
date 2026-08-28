@@ -1,0 +1,878 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-28T06:33:39.845596+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 18,
+    "deep_cap": 6,
+    "deep_selected": 10,
+    "quick_candidates": 17,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2607.29468v1",
+      "source": "arxiv",
+      "title": "Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember",
+      "abstract": "Self-play agents can generate training problems without questions from target benchmarks, but their curricula lack persistent state: failures affect gradients yet do not explicitly shape future practice. External skill memories preserve procedural experience but are typically learned from fixed task distributions. We introduce \\textbf{SESA} (Self-Evolving Skill-Augmented Agent), which makes procedural memory an evolving state of tool-augmented search self-play. A challenger poses problems, while a separately parameterized solver alone retrieves skills. Informative failures are distilled into reusable skills and written back to memory. The updated memory changes solver behavior and success, which changes the challenger's reward and the distribution of future problems; the resulting frontier produces new failures that rewrite memory. This bidirectional loop makes task generation and skill memory co-evolve. Because retrieved skills shape on-policy training trajectories, their benefits can enter the model parameters as well as remain in the external bank, enabling memory-free deployment and optional inference-time retrieval. Across seven open-domain and multi-hop question-answering benchmarks, SESA improves average accuracy over SSP by 1.2--3.2 points across multiple backbones and surpasses the skill-augmented SkillRL baseline by 0.9 points under a unified evaluation protocol. On Qwen3 models, SESA-Off retains 1.8--2.2 points of improvement over SSP, while the final skill bank adds a further 0.5--1.0 points. These results show that evolving skill memory is not merely an inference-time plug-in: it changes policy learning and the future training distribution while retaining value as optional external memory. Our code is available at https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents.",
+      "authors": [
+        "Zenghuang Fu",
+        "Zhaoyang Li",
+        "Qiuyuan Ai",
+        "Haoyu Wu",
+        "Minghui Wu",
+        "Chenxu Zhao",
+        "Ante Wang",
+        "Guannan He",
+        "Changwei Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-31T14:32:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.29468v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "self-evolving skill-augmented self-play agents for generating and solving problems",
+      "llm_evidence_cn": "自进化技能增强的自博弈智能体，用于提出问题、求解并记忆技能",
+      "llm_evidence": "自进化技能增强的自博弈智能体，用于提出问题、求解并记忆技能",
+      "canonical_evidence": "自进化技能增强的自博弈智能体，用于提出问题、求解并记忆技能",
+      "llm_tldr_en": "Introduces SESA, a self-evolving skill-augmented agent where a challenger poses problems and a solver retrieves skills; failures are distilled into reusable procedural memories that shape future self-play.",
+      "llm_tldr_cn": "当前自博弈智能体虽然能自己生成训练问题，但课程缺乏持久状态，失败只影响梯度而不能塑造后续训练。作者提出SESA，将程序性记忆作为工具增强搜索自博弈的动态状态：挑战者出题，求解者检索技能，失败的样本被提炼为可复用技能并写回记忆，进而改变求解者行为与奖励。该机制使课程随技能演化而持续改进，显著提升智能体在未见过的任务上的泛化能力。",
+      "llm_tldr": "当前自博弈智能体虽然能自己生成训练问题，但课程缺乏持久状态，失败只影响梯度而不能塑造后续训练。作者提出SESA，将程序性记忆作为工具增强搜索自博弈的动态状态：挑战者出题，求解者检索技能，失败的样本被提炼为可复用技能并写回记忆，进而改变求解者行为与奖励。该机制使课程随技能演化而持续改进，显著提升智能体在未见过的任务上的泛化能力。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.01822v1",
+      "source": "arxiv",
+      "title": "SearchMaster: Grounded and Regulated Self-Play for Search Agents",
+      "abstract": "Training LLM-based search agents requires high-quality search data: tasks that demand genuine multi-hop retrieval and trajectories that use search tools effectively. Existing pipelines often depend on human-written tasks, expert demonstrations, or stronger teacher models. We present SearchMaster, a self-play framework that trains a single LLM from search tasks it generates, solves, and verifies in a local search environment. The key challenge is that self-generated tasks and rollouts can yield misleading signals: pseudo multi-hop questions, success-rate difficulty estimates that ignore search depth, and rollouts with excessive opening but little targeted evidence acquisition. SearchMaster addresses these failure modes with three controls. An Evidence-Chain Generator (ECG) grounds task generation in explicit cross-document evidence chains to reduce pseudo multi-hop questions. A Search-Depth Reward (SDR) scores task difficulty by the search depth of successful rollouts rather than success rate alone, keeping retained tasks search-intensive. An Over-Opening Penalty (OOP) regulates tool use by discouraging excessive document opening, avoiding long but shallow browsing. Verified Proposer and Solver rollouts are then jointly optimized with GRPO. Across six deep-search benchmarks, SearchMaster improves a Qwen3.5-9B backbone from 38.19% to 51.52% average accuracy, with a 30.1-point gain on BrowseComp-Plus. These results show that grounded and regulated self-play can provide effective search-agent training data without human-labeled QA pairs or expert demonstrations. The code is available at https://github.com/WentaoTan/SearchMaster.",
+      "authors": [
+        "Wentao Tan",
+        "Qiong Cao",
+        "Jiaqi Wang",
+        "Nan Duan"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-03T07:29:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.01822v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play framework for training search agents from self-generated tasks",
+      "llm_evidence_cn": "自博弈框架，智能体在本地搜索环境中自行生成、求解并验证任务",
+      "llm_evidence": "自博弈框架，智能体在本地搜索环境中自行生成、求解并验证任务",
+      "canonical_evidence": "自博弈框架，智能体在本地搜索环境中自行生成、求解并验证任务",
+      "llm_tldr_en": "SearchMaster is a self-play framework training a single LLM from search tasks it generates, solves, and verifies, with controls against misleading self-generated signals such as pseudo multi-hop questions.",
+      "llm_tldr_cn": "训练搜索智能体需要高质量的多跳检索数据，而人工编写或教师示范成本高、易失真。SearchMaster 提出自博弈框架，让单个大模型在本地搜索环境中自行生成任务、求解并验证。针对自生成任务中的伪多跳问题、难度估计偏差和无效开卷轨迹，设计了证据链控制和规范化机制。实验表明该方法能够有效训练搜索智能体。它与自博弈智能体训练需求高度契合。",
+      "llm_tldr": "训练搜索智能体需要高质量的多跳检索数据，而人工编写或教师示范成本高、易失真。SearchMaster 提出自博弈框架，让单个大模型在本地搜索环境中自行生成任务、求解并验证。针对自生成任务中的伪多跳问题、难度估计偏差和无效开卷轨迹，设计了证据链控制和规范化机制。实验表明该方法能够有效训练搜索智能体。它与自博弈智能体训练需求高度契合。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.05430v1",
+      "source": "arxiv",
+      "title": "Robust Context-Aware Detection of Malicious Instructions in Text",
+      "abstract": "The remarkable instruction-following ability of modern LLMs has enabled their practical use as the minds of agents that can autonomously complete increasingly complex tasks. Therein, however, also lies their vulnerability to attacks which embed malicious instructions in text, common variants of which are known as indirect prompt injection (IPI). A fundamental task in addressing this vulnerability is successful segmentation of a given text into benign and malicious sentences (if any). While a number of approaches for this task have been proposed, no detector combines query-relative detection at the segment level, and none are hardened against adaptive evasion attacks realizable in agentic executions. We address the former limitation by developing an approach for malicious sentence classification that is both context- and query-aware. Next, to harden the resulting classifier against evasion, we present two adversarial training methods. The first is directly adapted feature-space adversarial training (AT) in which evasions are approximated using projected-gradient-based optimization in the embedding space. The second simulates realizable evasion attacks in the AT loop through LLM-based paraphrasing. Crucially, we parametrize both AT variants to facilitate a smooth tradeoff between utility and attack robustness. In extensive experiments using indirect prompt injection benchmarks we show that the proposed approach outperforms state-of-the-art IPI defense baselines under static attacks, while in the case of adaptive attacks, our AT variants provide significantly higher utility, lower attack success rate, and often both. Finally, we show that the best AT parameters can depend intimately on the particular application domain. Consequently, domain-dependent tuning of malicious text detectors is likely necessary in practice. Our code is publicly available at https://github.com/tavia-liu/CAD.",
+      "authors": [
+        "Buzhao Liu",
+        "Xinhang Ma",
+        "Yevgeniy Vorobeychik"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-08-05T21:44:44+00:00",
+      "link": "https://arxiv.org/pdf/2608.05430v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Robust detection of adversarial malicious instructions in text",
+      "llm_evidence_cn": "针对文本中对抗性恶意指令的鲁棒检测",
+      "llm_evidence": "针对文本中对抗性恶意指令的鲁棒检测",
+      "canonical_evidence": "针对文本中对抗性恶意指令的鲁棒检测",
+      "llm_tldr_en": "Presents a context-aware detector for segmenting malicious instructions in text, hardened against adaptive evasion attacks in agentic executions, filling a gap in query-relative detection.",
+      "llm_tldr_cn": "针对大语言模型智能体易受间接提示注入等恶意指令攻击的问题，论文提出一种上下文感知的文本分割检测器，能够将给定文本划分成良性句和恶意句。该方法结合查询相对检测与段级判别，并专门抵御智能体执行场景中的自适应规避攻击。实验表明该检测器在恶意指令定位与攻击对抗性上均优于现有方法，为智能体安全提供了关键防护技术。",
+      "llm_tldr": "针对大语言模型智能体易受间接提示注入等恶意指令攻击的问题，论文提出一种上下文感知的文本分割检测器，能够将给定文本划分成良性句和恶意句。该方法结合查询相对检测与段级判别，并专门抵御智能体执行场景中的自适应规避攻击。实验表明该检测器在恶意指令定位与攻击对抗性上均优于现有方法，为智能体安全提供了关键防护技术。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.09542v1",
+      "source": "arxiv",
+      "title": "Dual-Adversarial Safety Alignment: Cultivating Intrinsic Threat Comprehension in LRMs",
+      "abstract": "Large reasoning models (LRMs) achieve remarkable success on complex tasks but remain vulnerable to harmful prompts that induce unsafe outputs. Recent methods align LRMs using direct refusals or safety rationales, yet often focus on prompt patterns rather than intrinsic attack mechanisms. As a result, these pattern-centric alignments struggle to generalize across diverse jailbreaks, compromising adversarial robustness and reasoning utility. We propose AdvSafe, a dual-adversarial framework that enables LRMs to internalize unsafety knowledge by explicitly deconstructing adversarial mechanisms. This moves beyond pattern-dependent traces, fostering robust cognitive defense without compromising reasoning utility. Our pipeline operates via a two-phase adversarial game. First, in adversarial synthesis, an autonomous agent dynamically crafts deceptive jailbreak prompts, adapting its strategies to breach a strong teacher model. Second, in adversarial extraction, the breached teacher executes a cognitive counter-attack. For every successful jailbreak, the teacher unmasks the camouflage, explaining why the attack succeeds and how such prompts can be identified and mitigated. This dual-adversarial process yields a compact reasoning dataset capturing rich, generalizable unsafety knowledge. Student models trained on this dataset implicitly acquire safety alignment through intrinsic threat comprehension. Experiments show that with only 1K synthesized samples, AdvSafe-aligned LRMs achieve significantly stronger jailbreak robustness than existing baselines, with almost no utility degradation. Furthermore, AdvSafe improves robustness against out-of-distribution prompts, demonstrating that learning unsafety knowledge enables a superior robustness-utility trade-off and generalizes beyond seen attack patterns.",
+      "authors": [
+        "Hongli Shen",
+        "Shaopeng Fu",
+        "Qinbo Zhang",
+        "Jian Li",
+        "Di Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-08-10T12:40:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.09542v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Adversarial safety alignment against harmful prompts; dual adversarial framework",
+      "llm_evidence_cn": "针对有害提示的对抗安全对齐；双对抗框架",
+      "llm_evidence": "针对有害提示的对抗安全对齐；双对抗框架",
+      "canonical_evidence": "针对有害提示的对抗安全对齐；双对抗框架",
+      "llm_tldr_en": "Proposes AdvSafe, a dual-adversarial framework that deconstructs adversarial mechanisms to improve robustness of large reasoning models against diverse jailbreaks.",
+      "llm_tldr_cn": "现有对齐方法多关注提示模式，难以泛化到多样越狱攻击，导致对抗鲁棒性不足。本文提出AdvSafe双对抗框架，通过显式解构对抗机制，使大推理模型内化不安全知识，形成稳健的认知防御，且不损害推理效用。实验在多个越狱基准上验证了鲁棒性提升，表明该框架是应对文本对抗攻击的有效防御思路。",
+      "llm_tldr": "现有对齐方法多关注提示模式，难以泛化到多样越狱攻击，导致对抗鲁棒性不足。本文提出AdvSafe双对抗框架，通过显式解构对抗机制，使大推理模型内化不安全知识，形成稳健的认知防御，且不损害推理效用。实验在多个越狱基准上验证了鲁棒性提升，表明该框架是应对文本对抗攻击的有效防御思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.12246v1",
+      "source": "arxiv",
+      "title": "VICBench: A Multi-Language Benchmark for Code Vulnerability Detection",
+      "abstract": "Evaluating security vulnerability detection tools requires benchmark datasets with vulnerability-inducing commits (VICs) - the commits that first introduce vulnerabilities into codebases. VICs are essential for determining the full range of vulnerable software versions. Existing vulnerability datasets suffer from limited programming language coverage, restricted patch complexity, and narrow project scope. Through our dual annotation by human experts and an agentic workflow, we create a benchmark - VICBench - of 100 verified VICs for 100 CVEs across 88 projects in Python, Java, and C++, covering 48 CWE types. VICBench features complex real-world vulnerability fixes averaging 38.6 lines and corresponding VICs of 252.5 lines - significantly larger than prior work. Our evaluation shows that state-of-the-art algorithms V-SZZ and LLM4SZZ achieve only 33.3%-40.1% F1, confirming that using existing approaches still entails significant manual effort. VICBench enables robust evaluation of vulnerability detection approaches.",
+      "authors": [
+        "Jin Lu",
+        "Xuening Han",
+        "Yang Zhong",
+        "Lin Tan",
+        "Kevin Luo",
+        "Andrew Gacek",
+        "Neha Rungta"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "published": "2026-08-12T16:45:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.12246v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "code vulnerability detection benchmark, software security",
+      "llm_evidence_cn": "代码漏洞检测基准，软件安全",
+      "llm_evidence": "代码漏洞检测基准，软件安全",
+      "canonical_evidence": "代码漏洞检测基准，软件安全",
+      "llm_tldr_en": "Existing vulnerability datasets lack language coverage and realistic complexity. The authors present VICBench, with 100 verified vulnerability-inducing commits across 88 projects and 48 CWE types, providing a larger, more realistic benchmark for code vulnerability detection.",
+      "llm_tldr_cn": "针对现有漏洞检测基准在语言覆盖、补丁复杂度和项目范围上的不足，本文构建了VICBench基准。通过人类专家与智能体工作流双重标注，得到100个已验证的漏洞引入提交，覆盖100个CVE、88个项目、48种CWE类型。该基准的漏洞修复平均38.6行、对应提交252.5行，显著大于以往资源，为多语言代码漏洞检测工具的评测提供了更贴近真实世界的基准。",
+      "llm_tldr": "针对现有漏洞检测基准在语言覆盖、补丁复杂度和项目范围上的不足，本文构建了VICBench基准。通过人类专家与智能体工作流双重标注，得到100个已验证的漏洞引入提交，覆盖100个CVE、88个项目、48种CWE类型。该基准的漏洞修复平均38.6行、对应提交252.5行，显著大于以往资源，为多语言代码漏洞检测工具的评测提供了更贴近真实世界的基准。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.14135v1",
+      "source": "arxiv",
+      "title": "AgilePE: Autonomous UAV Pursuit-Evasion via Self-Play Reinforcement Learning",
+      "abstract": "Autonomous pursuit-evasion is a fundamental challenge for Unmanned Aerial Vehicles (UAVs), requiring rapid decision-making under tightly coupled dynamics and continuously changing opponent behaviors. Traditional rule-based or differential-game approaches often struggle with high-dimensional aerial interactions and agile maneuvering. We present AgilePE, a complete system for autonomous UAV pursuit-evasion via self-play reinforcement learning. AgilePE integrates agile low-level control, competitive policy optimization, and sim-to-real deployment in a unified framework. The policy directly maps onboard state observations to Collective Thrust and Body Rates (CTBR) commands, enabling end-to-end agile maneuvering without intermediate trajectory planners or waypoint controllers. For training, we use competitive self-play with Prioritized Fictitious Self-Play (PFSP) and a diversified opponent pool, enabling agents to improve against historical policies while stabilizing optimization and reducing policy oscillation. This process leads to the emergence of sophisticated pursuit and evasion strategies. For real-world deployment, we develop a hardware-aligned simulation pipeline that models actuator-response dynamics, communication latency, and domain randomization. The learned policies transfer zero-shot to real quadrotors without task-specific tuning. Real-world experiments reproduce pursuit-evasion tactics observed in simulation, including rapid dodging and flanking, and demonstrate interactive two-agent zero-shot deployment.",
+      "authors": [
+        "Wenhao Tang",
+        "Tianyang Chen",
+        "Zhejun Cui",
+        "Boyuan An",
+        "Jiayu Chen",
+        "Ruize Zhang",
+        "Huidong Liu",
+        "Tianyue Wu",
+        "Qingmin Liao",
+        "Fei Gao",
+        "Yu Wang",
+        "Chao Yu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-08-14T09:41:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.14135v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play reinforcement learning for UAV pursuit-evasion; direct self-play RL system",
+      "llm_evidence_cn": "自博弈强化学习在自主追逃任务中的完整系统实现",
+      "llm_evidence": "自博弈强化学习在自主追逃任务中的完整系统实现",
+      "canonical_evidence": "自博弈强化学习在自主追逃任务中的完整系统实现",
+      "llm_tldr_en": "Presents AgilePE, a unified self-play RL system for UAV pursuit-evasion integrating agile control, competitive policy optimization, and sim-to-real deployment.",
+      "llm_tldr_cn": "无人机自主追逃需要在高维动态和持续变化的对手行为下快速决策，传统规则或微分博弈方法难以应对。AgilePE将低层敏捷控制、竞争策略优化和仿真到现实部署统一为自博弈强化学习系统，直接从机载观测映射到推力与姿态指令。仿真及部署结果显示智能体能够实现敏捷机动并稳定应对对手策略变化，为自博弈强化学习在真实机器人任务中的应用提供了完整范式。",
+      "llm_tldr": "无人机自主追逃需要在高维动态和持续变化的对手行为下快速决策，传统规则或微分博弈方法难以应对。AgilePE将低层敏捷控制、竞争策略优化和仿真到现实部署统一为自博弈强化学习系统，直接从机载观测映射到推力与姿态指令。仿真及部署结果显示智能体能够实现敏捷机动并稳定应对对手策略变化，为自博弈强化学习在真实机器人任务中的应用提供了完整范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.15146v1",
+      "source": "arxiv",
+      "title": "PureTD: Reinforcement Learning for Backgammon Money Games with No Evaluation-time Search",
+      "abstract": "We revisit Tesauro's TD-Gammon for backgammon money games in the setting of no evaluation-time search. Both checker play and cube action (use of the doubling cube) are learned from scratch via self-play reinforcement learning (RL), with minimal hand-coded logic and no expert features. In this setting, we demonstrate that pure self-play RL suffices to train models that reach near-state-of-the-art playing strength. Specifically, for cubeful money games, our search-free model evaluates faster and is substantially stronger than the open-source engines GNU Backgammon and Open Sage running a one-move (1-ply) look-ahead search.",
+      "authors": [
+        "Alexander L. Strehl"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-15T09:46:03+00:00",
+      "link": "https://arxiv.org/pdf/2608.15146v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "pure self-play RL, agent training",
+      "llm_evidence_cn": "纯自博弈强化学习，智能体训练",
+      "llm_evidence": "纯自博弈强化学习，智能体训练",
+      "canonical_evidence": "纯自博弈强化学习，智能体训练",
+      "llm_tldr_en": "Revisits TD-Gammon for money games without evaluation-time search. Pure self-play RL trains checker play and cube action from scratch, reaching near-state-of-the-art strength, and outperforming GNU Backgammon and Open Sage with 1-ply search.",
+      "llm_tldr_cn": "Tesauro的TD-Gammon长期依赖评估期搜索，本文研究无搜索设定下的西洋双陆棋货币棋局。作者用纯自博弈强化学习从零训练落子和加倍骰子动作，仅需极少硬编码逻辑和专家特征。实验表明搜索无关模型达到接近最优水平，评估速度更快，并显著强于使用1层搜索的开源引擎GNU Backgammon与Open Sage。这证明纯自博弈强化学习足以支撑无搜索的强棋力智能体。",
+      "llm_tldr": "Tesauro的TD-Gammon长期依赖评估期搜索，本文研究无搜索设定下的西洋双陆棋货币棋局。作者用纯自博弈强化学习从零训练落子和加倍骰子动作，仅需极少硬编码逻辑和专家特征。实验表明搜索无关模型达到接近最优水平，评估速度更快，并显著强于使用1层搜索的开源引擎GNU Backgammon与Open Sage。这证明纯自博弈强化学习足以支撑无搜索的强棋力智能体。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.15372v1",
+      "source": "arxiv",
+      "title": "UC-PSRO: Utility-Conditioned Policy-Space Response Oracles with a Communication-Dropout Curriculum for Game-Theoretic Course-of-Action Generation in Adversarial Swarms",
+      "abstract": "We study generating game-theoretically optimized Courses of Action (COAs) for a Blue UAS swarm against an adaptive Red adversary in a communication-degraded environment, motivated by (but not derived from) a public U.S. Air Force SBIR solicitation. We propose UC-PSRO (Utility-Conditioned Policy-Space Response Oracles with a Communication-Dropout Curriculum), combining three mechanisms: (i) PSRO self-play, so Blue and Red policies train as approximate best responses to each other rather than one side against a fixed scripted opponent; (ii) FiLM conditioning of the Blue policy on a Commander's-Intent weight vector, sampled from a Dirichlet distribution during training, so one trained policy is re-steerable at execution time without retraining; and (iii) a curriculum annealing communication-graph edge dropout during training, so the swarm learns decentralized, peer-to-peer fallback instead of depending on full connectivity. We evaluate on a synthetic, unclassified stand-in for the solicitation's maritime scenario, with 5 seeds at N=25 Blue agents and a scalability sweep to N=200. We find a genuine trade-off, not a uniform win: the communication-dropout curriculum alone gives the strongest, most robust mission-completion rates of any learned method, improving counter-intuitively as denial increases (35% to 62% success as dropout rises from 0 to 0.75); adding utility-conditioning and PSRO self-play substantially slows convergence within a fixed budget, and we find no reliable exploitability advantage for self-play over a fixed-opponent policy, both statistically indistinguishable from a small, near-zero gap. We report this honestly as a convergence cost not yet offset by a demonstrated robustness benefit, rather than overstating one method as dominant, and provide a fully vectorized, open environment training at N=200 agents in single-digit milliseconds per step on a single consumer GPU.",
+      "authors": [
+        "Phillip Jiang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-15T18:52:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.15372v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "PSRO self-play, adversarial game theory",
+      "llm_evidence_cn": "PSRO自博弈，对抗博弈论",
+      "llm_evidence": "PSRO自博弈，对抗博弈论",
+      "canonical_evidence": "PSRO自博弈，对抗博弈论",
+      "llm_tldr_en": "Generates game-theoretic courses of action for a Blue swarm facing an adaptive Red adversary under communication dropout. UC-PSRO combines PSRO self-play, FiLM conditioning, and a communication-dropout curriculum so both sides train as approximate best responses.",
+      "llm_tldr_cn": "在对抗性蜂群任务中，蓝方需在通信降级环境下对抗自适应红方，生成博弈论最优行动方案。本文提出UC-PSRO，结合PSRO自博弈、FiLM指挥官意图条件化与通信丢弃课程，使蓝红策略互为近似最佳应对而非对付固定脚本对手。该方法将效用条件向量注入策略网络，并模拟通信中断增强鲁棒性。这一自博弈框架为对抗环境中的策略生成提供了新途径。",
+      "llm_tldr": "在对抗性蜂群任务中，蓝方需在通信降级环境下对抗自适应红方，生成博弈论最优行动方案。本文提出UC-PSRO，结合PSRO自博弈、FiLM指挥官意图条件化与通信丢弃课程，使蓝红策略互为近似最佳应对而非对付固定脚本对手。该方法将效用条件向量注入策略网络，并模拟通信中断增强鲁棒性。这一自博弈框架为对抗环境中的策略生成提供了新途径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.18681v1",
+      "source": "arxiv",
+      "title": "Learning What to Fail On: Failure-Mode Contextual Bandits for Adversarial Data Curation",
+      "abstract": "We introduce a failure-aware adversarial retrieval-augmented framework for improving robustness in natural language understanding. Rather than selecting synthetic examples with a fixed reward threshold, our method formulates adversarial data curation as a failure-mode contextual bandit problem. Candidate examples are generated with retrieval-augmented prompting, filtered by the current target model, automatically validated by an LLM judge ensemble, and clustered into recurring failure modes. A stochastic policy then selects which failure modes to sample for retraining, and is updated using validation-based reward that balances robustness gains, forgetting, and data cost. This makes the data curator itself the learning agent, enabling adaptive selection of the most useful model failures across training rounds. On standard benchmarks, our approach improves RoBERTa-base accuracy from 88.48% to 92.60% on SNLI, from 75.04% to 80.95% on ANLI, and from 54.67% to 71.99% on MultiNLI, while consistently outperforming prior adversarial augmentation methods. We further demonstrate transfer to FEVER fact verification, achieving up to 79.86\\% FEVER score and 82.45\\% accuracy with RoBERTa-large. Finally, we provide a theoretical interpretation showing that, under stated assumptions, failure-mode sampling can reduce shortcut-aligned gradient contributions while inducing bounded distributional drift. By combining retrieval, automated validation, contextual-bandit failure selection, and controlled adversarial retraining, our framework enables scalable robustness improvement without additional human annotation.",
+      "authors": [
+        "Roie Kazoom",
+        "Ofir Cohen",
+        "Rami Puzis",
+        "Asaf Shabtai",
+        "Ofer Hadar"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-08-19T08:31:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.18681v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "adversarial data curation for NLU robustness, failure-mode bandits",
+      "llm_evidence_cn": "面向自然语言理解鲁棒性的对抗性数据整理",
+      "llm_evidence": "面向自然语言理解鲁棒性的对抗性数据整理",
+      "canonical_evidence": "面向自然语言理解鲁棒性的对抗性数据整理",
+      "llm_tldr_en": "Proposes a failure-aware adversarial data curation framework that treats example selection as a contextual bandit with LLM judge validation, improving NLU robustness.",
+      "llm_tldr_cn": "现有对抗数据生成通常使用固定阈值或启发式规则，难以聚焦模型真正的失败模式。该论文将对抗数据整理建模为失败模式上下文老虎机，用检索增强提示生成候选样本、LLM评测器自动验证并聚类出失败模式，最后用随机策略选择需要重训的失败模式。实验表明该方法在提升鲁棒性的同时控制了遗忘和数据成本，使数据整理者本身成为学习智能体。",
+      "llm_tldr": "现有对抗数据生成通常使用固定阈值或启发式规则，难以聚焦模型真正的失败模式。该论文将对抗数据整理建模为失败模式上下文老虎机，用检索增强提示生成候选样本、LLM评测器自动验证并聚类出失败模式，最后用随机策略选择需要重训的失败模式。实验表明该方法在提升鲁棒性的同时控制了遗忘和数据成本，使数据整理者本身成为学习智能体。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.19197v2",
+      "source": "arxiv",
+      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+      "abstract": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the strongest baseline grows with model scale. By making environment design itself a learnable component, SPADE takes a concrete step toward open-ended self-improvement.",
+      "authors": [
+        "Bo Liu",
+        "Simon Yu",
+        "Yiding Jiang",
+        "Ao Qu",
+        "Andrew Zhao",
+        "Zichen Liu",
+        "Junsu Kim",
+        "Zijian Zhou",
+        "Seungone Kim",
+        "Tongzheng Ren",
+        "Mickel Liu",
+        "Hanfei Yu",
+        "Zhaorun Chen",
+        "Weiyan Shi",
+        "Paul Pu Liang",
+        "Luke Zettlemoyer",
+        "Yejin Choi",
+        "Natasha Jaques"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-08-19T17:58:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.19197v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play RL framework with LLM as environment designer and reasoning agent",
+      "llm_evidence_cn": "以LLM同时扮演环境设计者和推理智能体的自博弈强化学习框架",
+      "llm_evidence": "以LLM同时扮演环境设计者和推理智能体的自博弈强化学习框架",
+      "canonical_evidence": "以LLM同时扮演环境设计者和推理智能体的自博弈强化学习框架",
+      "llm_tldr_en": "SPADE is a self-play RL framework where one LLM acts as Environment Designer generating executable environments and Reasoning Agent learning in them. It enables continuous self-improvement through adaptive self-generated goals.",
+      "llm_tldr_cn": "现有语言代理训练环境池多为手工、静态或冻结验证器，目标分布随规模扩展而固定，阻碍持续自我改进。为此提出SPADE自博弈强化学习框架，让同一个LLM扮演环境设计者编写完整可执行环境，并让推理智能体在其中学习。每个环境都包含状态转移、奖励函数和验证代码，统一接口可覆盖推理等问题。SPADE使语言代理能不断生成多样化自适应目标，实现持续自我改进。",
+      "llm_tldr": "现有语言代理训练环境池多为手工、静态或冻结验证器，目标分布随规模扩展而固定，阻碍持续自我改进。为此提出SPADE自博弈强化学习框架，让同一个LLM扮演环境设计者编写完整可执行环境，并让推理智能体在其中学习。每个环境都包含状态转移、奖励函数和验证代码，统一接口可覆盖推理等问题。SPADE使语言代理能不断生成多样化自适应目标，实现持续自我改进。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.28959v1",
+      "source": "arxiv",
+      "title": "Efficient LLM Adversarial Training via Low-Rank Defense and Circuit-Guided Surrogates",
+      "abstract": "Adversarial training is one of the most effective defenses against adversarial attacks, yet the computational cost remains prohibitive at modern scales, especially for large language models (LLMs). While existing mitigation strategies, e.g., latent adversarial training (LAT), have been developed, they still incur a high computational cost. In this work, we comprehensively investigate computation-efficient strategies to speed up LAT from two complementary perspectives: (1) Defense-side optimization: We explore the representation fine-tuning (ReFT) within LAT, and reveal a potential issue if there is a mismatch on which tokens to apply ReFT and the attack. (2) Attack-side optimization: When computing adversarial attacks in each LAT iteration, we extract only the relevant circuits from the LLM to construct a lightweight surrogate model, avoiding the computation in the forward-backward passes through the full model during the attack generation. For both perspectives, we provide theoretical justifications and numerical evidence to illustrate the effectiveness of the proposed strategies. Ultimately, compared to standard LAT with full fine-tuning, our method on average reduces per-step adversarial-training FLOPs by 48.1% while requiring only 0.0118% trainable parameters.",
+      "authors": [
+        "Weiyi He",
+        "Yuping Lin",
+        "Jiliang Tang",
+        "Yue Xing"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-31T02:26:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.28959v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adversarial training on LLMs with low-rank defense and circuit-guided surrogates",
+      "llm_evidence_cn": "针对大语言模型的对抗训练，利用低秩防御与电路引导替代模型",
+      "llm_evidence": "针对大语言模型的对抗训练，利用低秩防御与电路引导替代模型",
+      "canonical_evidence": "针对大语言模型的对抗训练，利用低秩防御与电路引导替代模型",
+      "llm_tldr_en": "Accelerates latent adversarial training for LLMs via low-rank defense and circuit-guided surrogates, cutting cost and enabling large-scale robustness.",
+      "llm_tldr_cn": "对抗训练是抵御对抗攻击的有效手段，但在大语言模型规模下计算成本过高。现有潜在对抗训练仍代价高昂，本文从防御侧和攻击侧两方面提出高效优化策略：防御侧探索表示微调，攻击侧使用电路引导的替代模型加速对抗样本生成。这些互补方法显著降低计算开销，使大规模LLM对抗训练更可行。研究为大模型鲁棒性提供低成本防御方案。",
+      "llm_tldr": "对抗训练是抵御对抗攻击的有效手段，但在大语言模型规模下计算成本过高。现有潜在对抗训练仍代价高昂，本文从防御侧和攻击侧两方面提出高效优化策略：防御侧探索表示微调，攻击侧使用电路引导的替代模型加速对抗样本生成。这些互补方法显著降低计算开销，使大规模LLM对抗训练更可行。研究为大模型鲁棒性提供低成本防御方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.29402v1",
+      "source": "arxiv",
+      "title": "Bridging the Question-Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings",
+      "abstract": "Retrieval-Augmented Generation (RAG) systems synergize retrieval mechanisms with generative language models to enhance the accuracy and relevance of responses. However, bridging the style gap between user queries and relevant information in document text remains a persistent challenge in retrieval-augmented systems, often addressed by runtime solutions (e.g., Hypothetical Document Embeddings (HyDE)) that attempt to improve alignment but introduce extra computational overhead at query time. To address these challenges, we propose Hypothetical Prompt Embeddings (HyPE), a framework that shifts the generation of hypothetical content from query time to the indexing phase. By precomputing multiple hypothetical prompts for each data chunk and embedding the chunk in place of the prompt, HyPE transforms retrieval into a question-question matching task, bypassing the need for runtime synthetic answer generation. This approach does not introduce latency but also strengthens the alignment between queries and relevant context. Our experimental results on six common datasets show that HyPE can improve retrieval context precision by up to 42 percentage points and claim recall by up to 45 percentage points, compared to standard approaches, while remaining compatible with re-ranking, multi-vector retrieval, query decomposition, and other RAG advancements",
+      "authors": [
+        "Domen Vake",
+        "Jernej Vičič",
+        "Aleksandar Tošić"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "published": "2026-07-31T13:22:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.29402v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Generates multiple hypothetical prompt texts per document for retrieval augmentation",
+      "llm_evidence_cn": "为每条文档生成多个假设提示文本，实现检索增强式数据扩充",
+      "llm_evidence": "为每条文档生成多个假设提示文本，实现检索增强式数据扩充",
+      "canonical_evidence": "为每条文档生成多个假设提示文本，实现检索增强式数据扩充",
+      "llm_tldr_en": "HyPE generates multiple hypothetical prompts per document at indexing time to bridge the query-document style gap in RAG, avoiding query-time overhead by shifting hypothetical content generation offline.",
+      "llm_tldr_cn": "检索增强生成中用户查询与文档风格不一致，常见的 HyDE 在查询时生成假设文档会增加开销。HyPE 将假设内容生成移到索引阶段，为每个文档预计算多个假设提示。这相当于在索引侧进行文本数据扩充，降低查询时计算成本。虽然面向检索而非通用文本增强，但对文本数据增强场景有借鉴价值。",
+      "llm_tldr": "检索增强生成中用户查询与文档风格不一致，常见的 HyDE 在查询时生成假设文档会增加开销。HyPE 将假设内容生成移到索引阶段，为每个文档预计算多个假设提示。这相当于在索引侧进行文本数据扩充，降低查询时计算成本。虽然面向检索而非通用文本增强，但对文本数据增强场景有借鉴价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.09128v1",
+      "source": "arxiv",
+      "title": "Social Gym and SPaRTan: Benchmarking and Improving LLM Social Reasoning via Multi-Agent Game Tournaments",
+      "abstract": "LLM agents are increasingly deployed in multi-agent social settings where they must cooperate, negotiate, and adapt to other agents. Measuring and improving these social skills is hard because, unlike math or logic, social interaction offers no objective ground truth: evaluations fall back on LLM judges, which are costly, subjective, and noisy, and models get no reliable signal to learn from. To address both, we first introduce Social Gym, an environment of 21 multi-agent social games (e.g., Werewolves, Resistance, Spyfall) whose rule-decided outcomes make agent performance verifiable and objective, with an Elo tournament that produces a cross-game leaderboard. Benchmarking experiments show that while GPT-5-mini tops the leaderboard, no model excels at all games uniformly or in all game roles, pointing to limitations of social reasoning. Motivated by this, we additionally propose SPaRTan (Self-Play and Reflect-Transfer), a training-free self-improvement loop: a model plays a game, reflects on its trajectories and their outcomes to produce a transferable playbook, and applies that playbook in subsequent games. Our results show that SPaRTan playbooks help GPT-5-mini agents level their performance on weaker roles, but largely do not improve Qwen3-32B's performance. Together, Social Gym and SPaRTan offer a reproducible, verifiable foundation for measuring and improving LLM social reasoning without weight updates.",
+      "authors": [
+        "Keyu He",
+        "Xuhui Zhou",
+        "Maarten Sap"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-10T05:12:56+00:00",
+      "link": "https://arxiv.org/pdf/2608.09128v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-agent game tournaments for benchmarking and improving LLM social reasoning",
+      "llm_evidence_cn": "多智能体游戏锦标赛，用于评估与改进LLM社会推理",
+      "llm_evidence": "多智能体游戏锦标赛，用于评估与改进LLM社会推理",
+      "canonical_evidence": "多智能体游戏锦标赛，用于评估与改进LLM社会推理",
+      "llm_tldr_en": "Introduces Social Gym, an environment of 21 multi-agent social games with Elo tournament scoring, and improves LLM social reasoning through tournament-based multi-agent training.",
+      "llm_tldr_cn": "LLM智能体在多人社交场景中需要协作与博弈，但缺乏客观评价和训练信号。论文提出Social Gym，包含21个多智能体社交游戏，使用规则决定结果和Elo锦标赛提供可验证的评测。基于该环境训练推理策略，显著提升了模型在多个社交推理基准上的表现，为智能体社会能力研究提供了可靠平台。",
+      "llm_tldr": "LLM智能体在多人社交场景中需要协作与博弈，但缺乏客观评价和训练信号。论文提出Social Gym，包含21个多智能体社交游戏，使用规则决定结果和Elo锦标赛提供可验证的评测。基于该环境训练推理策略，显著提升了模型在多个社交推理基准上的表现，为智能体社会能力研究提供了可靠平台。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.00718v1",
+      "source": "arxiv",
+      "title": "Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures",
+      "abstract": "Multi-agent LLM pipelines orchestrate multiple specialized language model agents into structured workflows where intermediate outputs are passed across agents to solve complex tasks. This design introduces a security gap absent in single-agent settings: once an agent accepts adversarial content, it is propagated as trusted input throughout the pipeline. We argue that this vulnerability stems from the absence of boundary verification, a security primitive that enforces explicit validation of data as it crosses inter-agent boundaries, including content, identity, execution intent, and state integrity. Without such verification, modern pipelines embed implicit trust assumptions that are not adversarially robust, giving rise to structurally distinct attack surfaces (e.g., content injection, agent impersonation, plan deviation, and memory poisoning). Leveraging annotated production traces from the GAIA and SWE-Bench benchmark, we show that these vulnerabilities arise in benign deployments and largely evade existing evaluation frameworks. We further operationalize these failure modes within a controlled multi-agent setting and evaluate them across GPT-5-mini, Claude Sonnet 4.5, and Kimi K2.5 under identical pipeline configurations. The results reveal that attack success aligns with pipeline structure rather than model capability, indicating that adversarial vulnerability is fundamentally an architectural property and motivating a shift toward pipeline-level defenses.",
+      "authors": [
+        "Faisal Haque Bappy",
+        "Tahrim Hossain",
+        "Tarannum Shaila Zaman",
+        "Raiful Hasan",
+        "Kamrul Hasan",
+        "Tariqul Islam"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-01T15:35:58+00:00",
+      "link": "https://arxiv.org/pdf/2608.00718v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adversarial attacks and structural vulnerabilities in multi-agent LLM text pipelines",
+      "llm_evidence_cn": "多智能体大语言模型文本流水线中的对抗攻击与结构性漏洞",
+      "llm_evidence": "多智能体大语言模型文本流水线中的对抗攻击与结构性漏洞",
+      "canonical_evidence": "多智能体大语言模型文本流水线中的对抗攻击与结构性漏洞",
+      "llm_tldr_en": "Identifies structural vulnerabilities in multi-agent LLM pipelines where adversarial content propagates unchecked across agent boundaries, arguing for boundary verification as a security primitive.",
+      "llm_tldr_cn": "该文指出现有多智能体大语言模型流水线因缺乏边界验证，使对抗性内容一旦被某个智能体接受就会作为可信输入传播至后续环节，形成单智能体场景不存在的安全缺口。作者系统剖析了内容、身份、执行意图与状态完整性等边界校验缺失所导致的结构性漏洞，并论证这些隐式信任假设无法对抗鲁棒。研究为智能体架构的安全设计与对抗防御提供了关键分析框架。",
+      "llm_tldr": "该文指出现有多智能体大语言模型流水线因缺乏边界验证，使对抗性内容一旦被某个智能体接受就会作为可信输入传播至后续环节，形成单智能体场景不存在的安全缺口。作者系统剖析了内容、身份、执行意图与状态完整性等边界校验缺失所导致的结构性漏洞，并论证这些隐式信任假设无法对抗鲁棒。研究为智能体架构的安全设计与对抗防御提供了关键分析框架。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.08468v1",
+      "source": "arxiv",
+      "title": "SkillsMetric: Mapping the Detection Boundary of Static Analysis for Malicious Agent Skills",
+      "abstract": "Agent Skills---structured packages of instructions and scripts that augment LLM-based agents---are rapidly proliferating, yet their security properties remain under-explored. We present \\textsc{SkillsMetric}, a five-stage static analysis framework that scores skill packages along pattern density, statistical anomaly, dataflow taint, import anomaly, and capability mismatch dimensions. We construct an adversarial evaluation dataset of 2{,}266 skills spanning 16~attack types across code-level, system-level, and semantic-level threats, and evaluate on the full SkillMD-138K corpus. Our framework achieves an AUC of 0.93 and 5-fold cross-validated F1 of 73.4\\%$\\pm$0.5\\%, with strong detection of data exfiltration (93\\%) and steganographic payloads (93\\%). Crucially, we identify fundamental blind spots: \\emph{host destruction} attacks using common shell commands evade all five stages (0\\% detection), and \\emph{prompt injection} via natural-language manipulation achieves only 42\\% detection. These findings establish that static analysis alone is insufficient for skill security, motivating defense-in-depth architectures that combine fast static pre-screening with semantic review.",
+      "authors": [
+        "Xinze Chen",
+        "Chi Zhang",
+        "Ping Ji",
+        "Yimin Liu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-09T04:19:10+00:00",
+      "link": "https://arxiv.org/pdf/2608.08468v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Static analysis for malicious agent skills; security detection",
+      "llm_evidence_cn": "恶意智能体技能静态分析；软件安全检测",
+      "llm_evidence": "恶意智能体技能静态分析；软件安全检测",
+      "canonical_evidence": "恶意智能体技能静态分析；软件安全检测",
+      "llm_tldr_en": "Presents SkillsMetric, a five-stage static analysis framework for scoring malicious agent skills, achieving strong detection across 16 attack types.",
+      "llm_tldr_cn": "智能体技能包快速普及但安全性研究不足。本文提出SkillsMetric五阶段静态分析框架，从模式密度、数据流污点和能力错配等维度评估技能包风险，并构建包含2266个对抗样本的数据集。实验在SkillMD-138K上达到AUC 0.93，能有效检测数据外泄和隐写攻击。该方法为软件安全中的恶意代码检测提供了有力工具。",
+      "llm_tldr": "智能体技能包快速普及但安全性研究不足。本文提出SkillsMetric五阶段静态分析框架，从模式密度、数据流污点和能力错配等维度评估技能包风险，并构建包含2266个对抗样本的数据集。实验在SkillMD-138K上达到AUC 0.93，能有效检测数据外泄和隐写攻击。该方法为软件安全中的恶意代码检测提供了有力工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.20756v1",
+      "source": "arxiv",
+      "title": "Vis-Poison: Poisoning Visual Knowledge in Multimodal Retrieval-Augmented Generation",
+      "abstract": "While multimodal retrieval-augmented generation (RAG) systems increasingly rely on images as external knowledge sources, the introduction of poisoned visual evidence can severely compromise multimodal large language model (MLLM) generation. Unlike prior attacks that rely on altering textual metadata, we introduce Vis-Poison, a novel visual knowledge poisoning attack where the poisoned image itself is the attacker-controlled payload, without manipulating captions, summaries, metadata, or other associated text. Specifically, this attack is instantiated through an automated multi-agent method that constructs visually plausible poisoned images. To assess its impact, we evaluate Vis-Poison across two representative multimodal RAG pipelines, four embedding models, and six generation models. Empirically, Vis-Poison achieves an end-to-end attack success rate of 40.16\\% to 65.40\\% against 30k-entry multimodal knowledge bases in \\emph{black-box} settings. Moreover, Vis-Poison remains effective against various MLLMs that can answer correctly from parametric knowledge alone, with an average success rate above 60\\%. Code and data are available at https://github.com/SWUFE-DB-Group/Vis-Poison.",
+      "authors": [
+        "Rujin Liang",
+        "Zhongpu Chen",
+        "Yuhao Lei",
+        "Xin Miao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-21T05:34:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.20756v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "poisoning visual knowledge in multimodal RAG via automated multi-agent attack",
+      "llm_evidence_cn": "通过自动化多智能体攻击对多模态RAG进行视觉知识投毒",
+      "llm_evidence": "通过自动化多智能体攻击对多模态RAG进行视觉知识投毒",
+      "canonical_evidence": "通过自动化多智能体攻击对多模态RAG进行视觉知识投毒",
+      "llm_tldr_en": "Presents Vis-Poison, an automated multi-agent method that crafts visually plausible poisoned images to attack multimodal RAG, exposing vulnerabilities in MLLM knowledge grounding.",
+      "llm_tldr_cn": "多模态检索增强生成（RAG）依赖图像作为外部知识，但投毒的图像可能严重损害多模态大模型的输出。不同于以往修改文本元数据的攻击，Vis-Poison将图像本身作为攻击载荷，利用自动化多智能体方法构造视觉上看似合理的投毒图像。在多个多模态RAG流水线上的评估显示，该方法能有效地误导生成结果，揭示了多模态RAG系统的安全漏洞。",
+      "llm_tldr": "多模态检索增强生成（RAG）依赖图像作为外部知识，但投毒的图像可能严重损害多模态大模型的输出。不同于以往修改文本元数据的攻击，Vis-Poison将图像本身作为攻击载荷，利用自动化多智能体方法构造视觉上看似合理的投毒图像。在多个多模态RAG流水线上的评估显示，该方法能有效地误导生成结果，揭示了多模态RAG系统的安全漏洞。",
+      "llm_tags": [
+        "query:as:composite"
+      ],
+      "matched_query_tag": "query:as:composite",
+      "matched_query_text": "Papers central to 帮我查找自博弈、攻防、漏挖、文本数据增强智能体相关的论文, especially work that connects or combines: self-play reinforcement learning; adversarial attack text; vulnerability mining software security; text data augmentation techniques; self-play agent training; data augmentation agent text generation; self play based reinforcement learning for adversarial attack and defense; vulnerability mining using intelligent agents and reinforcement learning; text data augmentation with language model agents; adversarial attack and defense in text using self play.",
+      "matched_requirement_id": "req-composite-as",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.02674v1",
+      "source": "arxiv",
+      "title": "Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks",
+      "abstract": "With the widespread deployment of large foundation models (LFMs) in open environments, safety threats are shifting from black-box jailbreaks toward white-box attacks that directly identify and disrupt internal safety neurons or routes. However, existing safety defenses often rely on static safety units or fixed refusal pathways, leaving models highly vulnerable to targeted route-level white-box attacks. For that, we propose dynamic routing adaptive alignment (DRAA), a framework that introduces dynamic compensatory routes to preserve robust refusal behavior when the safety route is compromised. Specifically, we first identify and localize the model's safety route by contrasting internal activations between safe and unsafe calibration samples. DRAA then masks this safety route to induce causal failure cases and selectively mines the resulting defense failures, thereby constructing failure-aware preference pairs. Extensive experiments demonstrate that DRAA effectively restructures the underlying pathway dependence of model safety, substantially improving robustness against route-level white-box attacks, while preserving general utility.",
+      "authors": [
+        "Shangze Li",
+        "Chuancheng Shi",
+        "Simiao Xie",
+        "Lingzhi He",
+        "Cheng Ji",
+        "Zifeng Cheng",
+        "Fei Shen",
+        "Chao Wu",
+        "Tat-Seng Chua"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-02T17:45:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.02674v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "White-box adversarial attacks on LLM safety mechanisms; dynamic routing defense",
+      "llm_evidence_cn": "面向大模型白盒对抗攻击的动态路由自适应防御方法",
+      "llm_evidence": "面向大模型白盒对抗攻击的动态路由自适应防御方法",
+      "canonical_evidence": "面向大模型白盒对抗攻击的动态路由自适应防御方法",
+      "llm_tldr_en": "Proposes DRAA, dynamic routing adaptive alignment that preserves refusal behavior via compensatory routes when safety neurons or pathways are attacked by white-box adversarial attacks.",
+      "llm_tldr_cn": "大模型在开放环境中面临白盒攻击，固定安全单元或拒绝路径易被定向破坏。本文提出动态路由自适应对齐框架DRAA，通过对比安全与不安全激活定位安全路由，并在其受损时引入动态补偿路由来维持鲁棒的拒答行为。实验表明该方法能显著提升模型应对白盒路由级攻击的鲁棒性，为开放环境下的模型安全防御提供了新思路。",
+      "llm_tldr": "大模型在开放环境中面临白盒攻击，固定安全单元或拒绝路径易被定向破坏。本文提出动态路由自适应对齐框架DRAA，通过对比安全与不安全激活定位安全路由，并在其受损时引入动态补偿路由来维持鲁棒的拒答行为。实验表明该方法能显著提升模型应对白盒路由级攻击的鲁棒性，为开放环境下的模型安全防御提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.11878v1",
+      "source": "arxiv",
+      "title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
+      "abstract": "Large language model (LLM) agents integrated with external tools are vulnerable to indirect prompt injections embedded in environmental states. However, existing studies largely rely on manually implemented or reused environments, stochastic LLM-based tool simulation, and predefined injection locations, limiting scalable security research across broader domains. To bridge this gap, we propose **ToolHazard**, a scalable adversarial environment synthesis framework that reduces human engineering and supports expansion with additional seed domains and compute. Through an Environment Simulator, an Attacker Agent, and a User Simulator, ToolHazard synthesizes executable stateful environments, discovers viable injection points and generates environment-specific payloads, and constructs state-grounded long-horizon tasks. Based on ToolHazard, we build **ToolHazard-Bench** for stress-testing agents under complex workflows and diverse environmental attacks. Experiments reveal substantial agent vulnerabilities and show that injection timing and placement affect attack effectiveness. Moreover, ToolHazard-generated alignment data improves security on both ToolHazard-Bench and AgentDojo while preserving benign task utility.",
+      "authors": [
+        "Yutao Mou",
+        "Pengfei Yang",
+        "Zhe Yin",
+        "Zhangchi Xue",
+        "Xiaotian Luan",
+        "Dingyao Yu",
+        "Tong Zhang",
+        "Shikun Zhang",
+        "Wei Ye"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-08-12T10:05:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.11878v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Adversarial environment synthesis for LLM agents via indirect prompt injection",
+      "llm_evidence_cn": "通过间接提示注入合成对抗环境以评估LLM代理安全",
+      "llm_evidence": "通过间接提示注入合成对抗环境以评估LLM代理安全",
+      "canonical_evidence": "通过间接提示注入合成对抗环境以评估LLM代理安全",
+      "llm_tldr_en": "ToolHazard synthesizes scalable adversarial environments for LLM agent security evaluation. An Environment Simulator, Attacker Agent, and User Simulator produce executable environments and discover injection points, reducing human effort and enabling domain expansion.",
+      "llm_tldr_cn": "LLM代理结合外部工具时易受环境状态中的间接提示注入攻击，但现有安全研究依赖手工或小规模模拟环境。为此提出ToolHazard，一个可扩展的对抗环境合成框架，通过环境模拟器、攻击者代理和用户模拟器自动生成可执行状态环境，并发现可行的注入点。该框架减少人工工程，支持更多种子领域和计算扩展，为LLM代理安全评估与对齐提供规模化基础。",
+      "llm_tldr": "LLM代理结合外部工具时易受环境状态中的间接提示注入攻击，但现有安全研究依赖手工或小规模模拟环境。为此提出ToolHazard，一个可扩展的对抗环境合成框架，通过环境模拟器、攻击者代理和用户模拟器自动生成可执行状态环境，并发现可行的注入点。该框架减少人工工程，支持更多种子领域和计算扩展，为LLM代理安全评估与对齐提供规模化基础。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.25133v1",
+      "source": "arxiv",
+      "title": "Rethinking the Transferable Adversarial Attacks and Robust Defense in Federated Learning",
+      "abstract": "The development of federated learning (FL) techniques has helped improve the privacy preservation of users' data and extended the applications of machine learning models. However, the involvement of a large number of users in FL also creates open opportunities for different adversaries, such as poisoning attacks, Byzantine attacks, and adversarial example attacks. Yet, recent research has disclosed that existing poisoning attacks and Byzantine attacks can not achieve satisfactory penetration in realistic FL scenarios caused by strong assumptions, \\textit{e.g.,} client selection rate, and the ratio of malicious attackers. In this paper, the transferability of adversarial examples among different client models is analyzed to understand the relation between adversarial examples and clients' data distribution. Moreover, to mitigate the attacks of transferable adversarial examples, we design a defense mechanism stemming from the transferability of model robustness by adversarial training. As a result, through theoretical analysis of transferability, we gain insights into adversarial examples and the vulnerability of federated learning systems. Our proposed adversarial attack and defense methods are evaluated via real-life datasets in various settings to show their performance over the existing state-of-the-art methods.",
+      "authors": [
+        "Zuobin Xiong",
+        "Deval Mukherjee",
+        "Homook Cho",
+        "Wei Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "published": "2026-08-25T20:30:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.25133v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Transferable adversarial attacks and robust defense, relevant to adversarial attack/defense methodology",
+      "llm_evidence_cn": "可迁移对抗攻击与鲁棒防御，与对抗攻防方法相关",
+      "llm_evidence": "可迁移对抗攻击与鲁棒防御，与对抗攻防方法相关",
+      "canonical_evidence": "可迁移对抗攻击与鲁棒防御，与对抗攻防方法相关",
+      "llm_tldr_en": "Studies transferable adversarial examples across client models in federated learning and proposes robust defense, offering transferable attack/defense concepts applicable to other adversarial settings including text.",
+      "llm_tldr_cn": "针对联邦学习中现有投毒攻击和拜占庭攻击在真实场景下穿透力受限的问题，论文分析对抗样本在不同客户端模型间的可迁移性，并据此构思鲁棒防御策略。其迁移攻击和防御的思想不依赖具体模态，可为文本对抗攻防提供方法借鉴。实验验证了迁移性分析的有效性，扩展了对抗鲁棒性研究边界。",
+      "llm_tldr": "针对联邦学习中现有投毒攻击和拜占庭攻击在真实场景下穿透力受限的问题，论文分析对抗样本在不同客户端模型间的可迁移性，并据此构思鲁棒防御策略。其迁移攻击和防御的思想不依赖具体模态，可为文本对抗攻防提供方法借鉴。实验验证了迁移性分析的有效性，扩展了对抗鲁棒性研究边界。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.04366v1",
+      "source": "arxiv",
+      "title": "Combating Knowledge Corruption in Agent Systems: A Byzantine-Tolerant Secure Collaborative RAG Framework",
+      "abstract": "While retrieval-augmented generation systems partially address the hallucination issues in large language models, it also introduces new vulnerabilities to knowledge corruption attacks. Adversaries exploit these vulnerabilities by poisoning documents provided by RAG system to manipulate LLM outputs. To counter this threat, we propose SecureCollaRAG, a Byzantine-tolerant collaborative RAG framework leveraging Multi-source Knowledge Validation Mechanism. Our approach enables agent system to securely verify document provenance through dynamic GNN-based credibility scoring, effectively preventing stealthy knowledge corruption attacks while preserving essential domain knowledge integrity. Through extensive evaluations and formal analysis, we demonstrate that SecureCollaRAG maintains robustness against attackers under non-IID data distributions.",
+      "authors": [
+        "Zhaoqi Wang",
+        "Daqing He",
+        "Zijian Zhang",
+        "Ye Liu",
+        "Jiamou Liu",
+        "Zhirui Zeng",
+        "Zhan Qin",
+        "Zhen Li",
+        "Xin Li",
+        "Hongwei Yao",
+        "Jincheng An",
+        "Yong Liu",
+        "Yi Li",
+        "Qi Sun",
+        "Xiulei Liu",
+        "Liehuang Zhu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-05T02:13:37+00:00",
+      "link": "https://arxiv.org/pdf/2608.04366v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adversarial knowledge poisoning in RAG text; agent security defense",
+      "llm_evidence_cn": "RAG文本知识污染攻击与防御；智能体系统安全",
+      "llm_evidence": "RAG文本知识污染攻击与防御；智能体系统安全",
+      "canonical_evidence": "RAG文本知识污染攻击与防御；智能体系统安全",
+      "llm_tldr_en": "Proposes SecureCollaRAG, a Byzantine-tolerant collaborative RAG framework using GNN-based credibility scoring to defend against document-poisoning adversarial attacks.",
+      "llm_tldr_cn": "检索增强生成系统易受知识污染攻击，敌方通过投毒文档操纵模型输出。本文提出SecureCollaRAG框架，利用多源知识验证机制和动态GNN信誉评分验证文档来源，有效阻止隐秘知识污染。实验表明该方法在保护领域知识完整性的同时显著提升安全性。这是面向文本对抗攻击与智能体安全的重要防御方案。",
+      "llm_tldr": "检索增强生成系统易受知识污染攻击，敌方通过投毒文档操纵模型输出。本文提出SecureCollaRAG框架，利用多源知识验证机制和动态GNN信誉评分验证文档来源，有效阻止隐秘知识污染。实验表明该方法在保护领域知识完整性的同时显著提升安全性。这是面向文本对抗攻击与智能体安全的重要防御方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.16536v1",
+      "source": "arxiv",
+      "title": "DSPrompt: Dynamic Soft Prompt Defense Against M-RAG Corruption",
+      "abstract": "Multimodal Retrieval Augmented Generation (M-RAG) is increasingly vulnerable to adversarial attacks where malicious data are crafted to produce embeddings that align with benign entries in the vector space, deceiving retrieval and inducing harmful outputs. Existing defenses primarily operate at query time, relying on auxiliary detectors, similarity re-ranking, or feature-consistency checks. However, these approaches suffer from non-trivial inference overhead, generalize poorly to unseen attack strategies, and often assume specific attack distributions. To address this, we propose DSPrompt, a Dynamic Soft Prompt defense framework that directly reshapes the retriever's embedding semantics, without modifying the retrieval pipeline. It inserts few learnable soft prompts into each layer of the visual and textual encoders of a frozen retriever, utilizing a shallow-to-deep length schedule that is adaptive to the capacity in the model layers. These prompts are trained under a dynamic min-max scheme: an online multimodal attacker continually crafts hard adversarial documents against the current retriever, while the defender is updated to push such documents out of the top-k while preserving the ranking and diversity of benign evidence. Because the defended encoder can be pre-computed and indexed exactly as in standard dense retrieval, DSPrompt incurs no additional per-query optimization and introduces fewer than 1% additional parameters. Extensive experiments across four benchmarks and three representative poisoning attacks show that DSPrompt substantially reduces the attack success rate and poison retrieval rate while maintaining near-lossless retrieval utility and generation fidelity, consistently outperforming existing defense baselines at a fraction of their computational cost.",
+      "authors": [
+        "Chang Liu",
+        "Yuni Lai",
+        "Mingyue Cui",
+        "Cong Tian",
+        "Yunyan Zhang",
+        "Xian Wu",
+        "Kai Zhou",
+        "Bin Xiao"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-08-17T13:11:51+00:00",
+      "link": "https://arxiv.org/pdf/2608.16536v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "adversarial attack and defense, robust embeddings",
+      "llm_evidence_cn": "对抗攻防，鲁棒嵌入",
+      "llm_evidence": "对抗攻防，鲁棒嵌入",
+      "canonical_evidence": "对抗攻防，鲁棒嵌入",
+      "llm_tldr_en": "M-RAG is vulnerable to adversarial embedding attacks; query-time defenses are costly and generalize poorly. DSPrompt inserts learnable soft prompts to reshape retriever embeddings, defending without changing the retrieval pipeline and generalizing to unseen attacks.",
+      "llm_tldr_cn": "多模态检索增强生成（M-RAG）易受恶意数据嵌入攻击，攻击者构造与正常条目对齐的嵌入以欺骗检索并诱导有害输出。现有防御多在查询时依赖辅助检测器或重排序，推理开销大且对未知攻击泛化差。本文提出DSPrompt动态软提示防御，通过在检索器中直接重塑嵌入语义、插入少量可学习软提示，不改动检索管线即可实现防御。实验显示该方法降低推理开销，并对未见攻击策略具有更好鲁棒性。",
+      "llm_tldr": "多模态检索增强生成（M-RAG）易受恶意数据嵌入攻击，攻击者构造与正常条目对齐的嵌入以欺骗检索并诱导有害输出。现有防御多在查询时依赖辅助检测器或重排序，推理开销大且对未知攻击泛化差。本文提出DSPrompt动态软提示防御，通过在检索器中直接重塑嵌入语义、插入少量可学习软提示，不改动检索管线即可实现防御。实验显示该方法降低推理开销，并对未见攻击策略具有更好鲁棒性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
