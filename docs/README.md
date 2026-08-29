@@ -44,14 +44,14 @@
       <span class="dpr-home-dashboard-kicker">2026-08-29</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 20 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 26 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>9</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>17</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 03:42:52 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 22:48:00 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日20篇论文精读9篇，聚焦LLM多轮安全鲁棒性与零数据推理自博弈两大高分突破。最值得关注：组合界方法可认证多轮对话安全，追逐-逃避自博弈让LLM在无数据下学会推理。下一步可结合速读中的提示注入防御与人形机器人策略，探索安全与具身智能交叉方向。</p>
+<p>今日26篇论文扫描，9篇精读重点聚焦大模型安全与推理，其中两篇获9.0高分。</p>
+<p>最值得关注的是《Certified Multi-Turn Robustness》提出的组合界与安全持续性方法，以及《Pursuit-Evasion Self-Play》用追逃博弈实现零数据推理训练。</p>
+<p>下一步建议普通读者优先精读这两篇9分论文，并顺带关注RAG安全类速读文章中的几何共识思路。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">11 篇</strong>
+    <strong class="dpr-home-dashboard-count">17 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems">Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems</span></li><li><span class="dpr-home-dashboard-paper-title" title="RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing">RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing</span></li><li><span class="dpr-home-dashboard-paper-title" title="COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense">COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="MEMORY Wins All: Indirect Bias Injection Attacks via Social Media Feeds">MEMORY Wins All: Indirect Bias Injection Attacks via Social Media Feeds</span></li><li><span class="dpr-home-dashboard-paper-title" title="RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation">RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation</span></li><li><span class="dpr-home-dashboard-paper-title" title="StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing">StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>11</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>17</strong></span></div>
 </section>
 </div>
 

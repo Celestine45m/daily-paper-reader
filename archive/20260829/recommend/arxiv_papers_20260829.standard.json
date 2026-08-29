@@ -1,13 +1,13 @@
 {
   "mode": "standard",
-  "generated_at": "2026-08-29T03:30:44.318189+00:00",
+  "generated_at": "2026-08-29T22:41:57.628506+00:00",
   "stats": {
     "mode": "standard",
     "tag_count": 1,
-    "deep_divecandidates": 16,
+    "deep_divecandidates": 11,
     "deep_cap": 6,
-    "deep_selected": 9,
-    "quick_candidates": 13,
+    "deep_selected": 6,
+    "quick_candidates": 14,
     "quick_skim_target": 11,
     "quick_selected": 11
   },
@@ -42,13 +42,13 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "LLM safety against multi-turn jailbreak attacks, a form of adversarial attacks in text",
-      "llm_evidence_cn": "针对LLM多轮越狱攻击的鲁棒性认证，属于文本对抗攻防",
-      "llm_evidence": "针对LLM多轮越狱攻击的鲁棒性认证，属于文本对抗攻防",
-      "canonical_evidence": "针对LLM多轮越狱攻击的鲁棒性认证，属于文本对抗攻防",
-      "llm_tldr_en": "LLMs are vulnerable to multi-turn jailbreak attacks. This paper introduces MTCR, a State-Adversarial MDP framework for certified multi-turn robustness, yielding tighter bounds and safety persistence for text adversarial attacks.",
-      "llm_tldr_cn": "大语言模型易受多轮越狱攻击的威胁，而现有认证鲁棒性方法只能处理单轮输入，朴素多轮组合会使认证边界随轮数指数退化。本文提出多轮认证鲁棒性（MTCR）框架，将对话安全建模为状态对抗MDP，并定义了k轮认证鲁棒性，通过嵌入空间模式分解得到比朴素方法更紧的认证下界，同时引入安全性持久性指标来刻画攻击下的安全退化。该方法为多轮文本对抗攻防提供了可验证的鲁棒性保障。",
-      "llm_tldr": "大语言模型易受多轮越狱攻击的威胁，而现有认证鲁棒性方法只能处理单轮输入，朴素多轮组合会使认证边界随轮数指数退化。本文提出多轮认证鲁棒性（MTCR）框架，将对话安全建模为状态对抗MDP，并定义了k轮认证鲁棒性，通过嵌入空间模式分解得到比朴素方法更紧的认证下界，同时引入安全性持久性指标来刻画攻击下的安全退化。该方法为多轮文本对抗攻防提供了可验证的鲁棒性保障。",
+      "llm_evidence_en": "adversarial multi-turn jailbreak attacks and certified defense on LLM text safety",
+      "llm_evidence_cn": "针对LLM文本安全的多轮越狱对抗攻击与认证防御",
+      "llm_evidence": "针对LLM文本安全的多轮越狱对抗攻击与认证防御",
+      "canonical_evidence": "针对LLM文本安全的多轮越狱对抗攻击与认证防御",
+      "llm_tldr_en": "Introduces MTCR for certified robustness against multi-turn jailbreak attacks, using compositional bounds and safety persistence to avoid exponential degradation.",
+      "llm_tldr_cn": "大语言模型容易受到多轮越狱攻击的逐步上下文操控，而现有认证鲁棒性方法仅限单轮，朴素多轮组合会使界指数退化。MTCR将对话安全建模为状态对抗MDP，定义k轮认证鲁棒性，并利用嵌入空间模式分解的组合认证与(α,β)-安全持久性降低下界退化。实验显示MTCR在多轮攻击下显著提升认证下界，为LLM安全提供可验证的鲁棒保障。",
+      "llm_tldr": "大语言模型容易受到多轮越狱攻击的逐步上下文操控，而现有认证鲁棒性方法仅限单轮，朴素多轮组合会使界指数退化。MTCR将对话安全建模为状态对抗MDP，定义k轮认证鲁棒性，并利用嵌入空间模式分解的组合认证与(α,β)-安全持久性降低下界退化。实验显示MTCR在多轮攻击下显著提升认证下界，为LLM安全提供可验证的鲁棒保障。",
       "llm_tags": [
         "query:as"
       ],
@@ -79,13 +79,13 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "self-play reinforcement learning for LLM reasoning curriculum generation",
-      "llm_evidence_cn": "自博弈强化学习用于LLM推理课程生成",
-      "llm_evidence": "自博弈强化学习用于LLM推理课程生成",
-      "canonical_evidence": "自博弈强化学习用于LLM推理课程生成",
-      "llm_tldr_en": "This paper recasts zero-data self-play as a pursuit-evasion game (LURE) where an evader positions tasks along a difficulty axis while a pursuer solves them, providing dense credit and curriculum adaptation. It removes the need for human-curated task collections in RL for reasoning.",
-      "llm_tldr_cn": "针对零数据条件下基于验证奖励的强化学习依赖人工任务集的问题，论文将零数据自博弈重构为追逃博弈LURE：LLM逃逸者沿难度轴部署任务，规划-执行追击者通过可验证交互求解。逃逸者以课程目标训练，捕获信号提供更密集的奖励信用。实验表明该方法能有效提升LLM推理能力，且无需人工策划任务。该工作直接展示自博弈强化学习在推理训练中的应用。",
-      "llm_tldr": "针对零数据条件下基于验证奖励的强化学习依赖人工任务集的问题，论文将零数据自博弈重构为追逃博弈LURE：LLM逃逸者沿难度轴部署任务，规划-执行追击者通过可验证交互求解。逃逸者以课程目标训练，捕获信号提供更密集的奖励信用。实验表明该方法能有效提升LLM推理能力，且无需人工策划任务。该工作直接展示自博弈强化学习在推理训练中的应用。",
+      "llm_evidence_en": "Pursuit-evasion self-play reinforcement learning for zero-data LLM reasoning",
+      "llm_evidence_cn": "以追逃自博弈形式实现零数据LLM推理的强化学习课程生成",
+      "llm_evidence": "以追逃自博弈形式实现零数据LLM推理的强化学习课程生成",
+      "canonical_evidence": "以追逃自博弈形式实现零数据LLM推理的强化学习课程生成",
+      "llm_tldr_en": "LURE recasts zero-data self-play as a pursuit-evasion game where an LLM evader places tasks on a difficulty axis and a planner-executor pursuer solves them, learning task placement and sparse credit for verifiable LLM reasoning.",
+      "llm_tldr_cn": "现有零数据自博弈方法仅事后探测候选任务可学性，且只给稀疏终局奖励，导致难度放置与信用分配不佳。本文提出LURE，把零数据自博弈重构为追逃博弈：LLM逃逸者沿环境难度轴放置任务，规划执行追踪者通过可验证交互追捕任务。逃逸者在能力上限训练，从而自适应生成课程并给求解器提供锚定信用。该方法摆脱了对人工任务集合的依赖，为LLM推理的自我博弈训练开辟了新途径。",
+      "llm_tldr": "现有零数据自博弈方法仅事后探测候选任务可学性，且只给稀疏终局奖励，导致难度放置与信用分配不佳。本文提出LURE，把零数据自博弈重构为追逃博弈：LLM逃逸者沿环境难度轴放置任务，规划执行追踪者通过可验证交互追捕任务。逃逸者在能力上限训练，从而自适应生成课程并给求解器提供锚定信用。该方法摆脱了对人工任务集合的依赖，为LLM推理的自我博弈训练开辟了新途径。",
       "llm_tags": [
         "query:as"
       ],
@@ -122,13 +122,13 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "adversarial rebuttal attacks on LLM-based text moderation",
-      "llm_evidence_cn": "针对LLM文本审核的对抗性反驳攻击",
-      "llm_evidence": "针对LLM文本审核的对抗性反驳攻击",
-      "canonical_evidence": "针对LLM文本审核的对抗性反驳攻击",
-      "llm_tldr_en": "This paper introduces annotator-style rebuttal attacks on LLM-based moderation, including whitewashing hate and smearing harmless content. It proposes a rejudge protocol with decision-boundary perturbations and adversarial rationales, showing both manipulation directions are effective across LLMs.",
-      "llm_tldr_cn": "针对基于大语言模型的仇恨言论审核，论文提出注释者风格的反驳攻击，可把仇恨内容洗白为正常或将正常内容抹黑为仇恨。他们设计了重审协议，融合决策边界扰动与对抗性理由。实验显示多个LLM在该攻击下显著受影响，且两类方向效果不同。该工作揭示人工反馈环节的安全隐患，对审核系统鲁棒性提出挑战。",
-      "llm_tldr": "针对基于大语言模型的仇恨言论审核，论文提出注释者风格的反驳攻击，可把仇恨内容洗白为正常或将正常内容抹黑为仇恨。他们设计了重审协议，融合决策边界扰动与对抗性理由。实验显示多个LLM在该攻击下显著受影响，且两类方向效果不同。该工作揭示人工反馈环节的安全隐患，对审核系统鲁棒性提出挑战。",
+      "llm_evidence_en": "adversarial rebuttal attacks manipulate LLM text moderation decisions",
+      "llm_evidence_cn": "对抗性反驳攻击操控LLM文本审核判断",
+      "llm_evidence": "对抗性反驳攻击操控LLM文本审核判断",
+      "canonical_evidence": "对抗性反驳攻击操控LLM文本审核判断",
+      "llm_tldr_en": "Introduces annotator-style rebuttal attacks that whitewash hateful text or smear harmless content, bypassing LLM moderation.",
+      "llm_tldr_cn": "LLM越来越多用于仇恨言论审核，常与人类审核员协作，反馈过程可被利用。该研究提出标注者风格反驳攻击：通过直接反驳、决策边界扰动和对抗理由，既能将仇恨内容洗白为正常，也能将无害内容抹黑为仇恨。实验表明多个LLM在两种数据集上均显著受影响，揭示人机协同审核流程的脆弱性。",
+      "llm_tldr": "LLM越来越多用于仇恨言论审核，常与人类审核员协作，反馈过程可被利用。该研究提出标注者风格反驳攻击：通过直接反驳、决策边界扰动和对抗理由，既能将仇恨内容洗白为正常，也能将无害内容抹黑为仇恨。实验表明多个LLM在两种数据集上均显著受影响，揭示人机协同审核流程的脆弱性。",
       "llm_tags": [
         "query:as"
       ],
@@ -159,138 +159,13 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "text-anchored semantic perturbation jailbreak attack on multimodal LLMs",
-      "llm_evidence_cn": "多模态大模型的文本语义扰动越狱攻击",
-      "llm_evidence": "多模态大模型的文本语义扰动越狱攻击",
-      "canonical_evidence": "多模态大模型的文本语义扰动越狱攻击",
-      "llm_tldr_en": "Proposes TA-SPA, a black-box jailbreak framework that optimizes transferable text-anchored semantic perturbations to attack multimodal LLMs, separating cross-modal semantic factors to improve attack transferability across models.",
-      "llm_tldr_cn": "针对多模态大语言模型安全对齐的脆弱性，论文提出文本锚定语义扰动攻击（TA-SPA），在黑盒设置下优化可迁移的语义扰动，使安全行为在跨模态表示中失效。方法集成文本锚定语义分解，分离跨模态语义因子与模态特有残差。实验显示该攻击能有效迁移到多个MLLM，揭示文本空间与多模态空间安全对齐的鸿沟。研究对多模态模型的安全评测与防御有重要意义。",
-      "llm_tldr": "针对多模态大语言模型安全对齐的脆弱性，论文提出文本锚定语义扰动攻击（TA-SPA），在黑盒设置下优化可迁移的语义扰动，使安全行为在跨模态表示中失效。方法集成文本锚定语义分解，分离跨模态语义因子与模态特有残差。实验显示该攻击能有效迁移到多个MLLM，揭示文本空间与多模态空间安全对齐的鸿沟。研究对多模态模型的安全评测与防御有重要意义。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "adversarial attack text",
-      "matched_requirement_id": "req-2",
-      "selection_source": "fresh_fetch"
-    },
-    {
-      "id": "2608.23471v1",
-      "source": "arxiv",
-      "title": "InjecMEM: Memory Injection Attack on LLM Agent Memory Systems",
-      "abstract": "Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities into agents? Thus we propose InjecMEM, a novel memory injection attack paradigm that requires only a single interaction (no read/edit access to memory store) to steer later responses of related queries toward a pre-specified output. Guided by the retrieval-then-generate mechanism of memory systems, we craft the injection with a retriever-agnostic anchor and an adversarial command. The anchor contains high-recall topical cues so that downstream retrieval consistently associates the record with the target topic. The command is a short sequence optimized to remain effective under uncertain fused contexts, variable placements, and long prompts so that it reliably steers outputs once retrieved. We learn the command via gradient-based coordinate search, averaging over synthetic prompt templates and insertion positions, and extend it to joint optimization across backbones to study transfer. Evaluated across multiple memory systems and backbone models, InjecMEM achieves reliable topic-conditioned retrieval and targeted generation, remains effective under memory drift, and leaves non-target queries unaffected. Our results underscore the need to harden memory systems and provide a reproducible framework for studying agent memory.",
-      "authors": [
-        "Hanling Tian",
-        "Gengyu Zhang",
-        "Zeyang Sha",
-        "Jingying Wang",
-        "Yuhang Liu",
-        "Zhehao Huang",
-        "Kun Yang",
-        "Xiaolin Huang"
-      ],
-      "primary_category": "cs.CR",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
-      ],
-      "published": "2026-08-24T16:37:50+00:00",
-      "link": "https://arxiv.org/pdf/2608.23471v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 9.0,
-      "llm_evidence_en": "Memory injection adversarial attack on LLM agent memory; directly exemplifies adversarial attack in text",
-      "llm_evidence_cn": "针对LLM智能体记忆系统的注入式对抗攻击，直接属于文本对抗攻击范畴",
-      "llm_evidence": "针对LLM智能体记忆系统的注入式对抗攻击，直接属于文本对抗攻击范畴",
-      "canonical_evidence": "针对LLM智能体记忆系统的注入式对抗攻击，直接属于文本对抗攻击范畴",
-      "llm_tldr_en": "Proposes InjecMEM, a single-interaction memory injection attack on LLM agents that steers later responses without memory access, using retriever-agnostic anchors and adversarial commands; exposes new vulnerabilities in agent memory.",
-      "llm_tldr_cn": "LLM智能体广泛采用记忆系统后，其安全性值得审视。该文提出InjecMEM记忆注入攻击，只需一次普通交互且无需读写记忆库，即可将后续相关查询的回答定向引导至预设输出。攻击利用检索器无关锚点和对抗命令，实现对记忆检索过程的稳定操控。该工作揭示记忆子系统可被利用的新漏洞，为智能体记忆安全防御提供重要警示。",
-      "llm_tldr": "LLM智能体广泛采用记忆系统后，其安全性值得审视。该文提出InjecMEM记忆注入攻击，只需一次普通交互且无需读写记忆库，即可将后续相关查询的回答定向引导至预设输出。攻击利用检索器无关锚点和对抗命令，实现对记忆检索过程的稳定操控。该工作揭示记忆子系统可被利用的新漏洞，为智能体记忆安全防御提供重要警示。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "adversarial attack text",
-      "matched_requirement_id": "req-2",
-      "selection_source": "fresh_fetch"
-    },
-    {
-      "id": "2608.24977v1",
-      "source": "arxiv",
-      "title": "Retrieved But Not Reliable: A Survey on Attacks, and Defenses in Retrieval-Augmented Generation",
-      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language models by grounding outputs in external knowledge, improving factuality and reducing hallucinations. At the same time, the retrieval-augmented pipeline introduces new robustness and security risks, including corpus poisoning, backdoor attacks, privacy leakage, and fairness violations. Despite rapid progress in this area, existing surveys remain limited in their treatment of attacker objectives, threat models, and stage-specific defenses across the full RAG pipeline. This survey presents a unified and pipeline-aware overview of RAG robustness. We formalize threat models over the corpus, retriever, and generator, and organize attacks into three main objectives: accuracy, privacy, and fairness. We further review defenses from a pipeline-aware perspective, covering the retrieval, rerank, generation, and traceback stages. In addition, we summarize robustness benchmarks and explainability methods for more deeply evaluating and explaining RAG robustness.",
-      "authors": [
-        "Minh Tran",
-        "Cuong Dang",
-        "Tuc Nguyen",
-        "Khanh-Tung Tran",
-        "Minh Huynh Nguyen",
-        "Trinh Chau",
-        "Kien Le",
-        "Do Xuan Long",
-        "Jiahao Zhang",
-        "Hoang D. Nguyen",
-        "Thanh Le",
-        "Suhang Wang"
-      ],
-      "primary_category": "cs.CR",
-      "categories": [
-        "cs.CR",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "published": "2026-08-25T16:18:04+00:00",
-      "link": "https://arxiv.org/pdf/2608.24977v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 9.0,
-      "llm_evidence_en": "survey on adversarial attacks and defenses in retrieval-augmented text generation",
-      "llm_evidence_cn": "检索增强文本生成中的对抗攻击与防御综述",
-      "llm_evidence": "检索增强文本生成中的对抗攻击与防御综述",
-      "canonical_evidence": "检索增强文本生成中的对抗攻击与防御综述",
-      "llm_tldr_en": "This survey provides a pipeline-aware overview of RAG robustness, formalizing threat models over corpus, retriever, and generator and categorizing attacks and defenses across the full pipeline.",
-      "llm_tldr_cn": "检索增强生成在提升 LLM 事实性的同时引入了多种鲁棒性与安全风险，如语料污染、后门攻击、隐私泄露等。现有综述对攻击者目标、威胁模型和分阶段防御的覆盖不足。该综述统一且按流水线审视 RAG 鲁棒性，对语料、检索器和生成器进行威胁建模，并按三类攻击目标组织讨论。它为理解和防范 RAG 中的文本对抗攻击提供了系统参考。",
-      "llm_tldr": "检索增强生成在提升 LLM 事实性的同时引入了多种鲁棒性与安全风险，如语料污染、后门攻击、隐私泄露等。现有综述对攻击者目标、威胁模型和分阶段防御的覆盖不足。该综述统一且按流水线审视 RAG 鲁棒性，对语料、检索器和生成器进行威胁建模，并按三类攻击目标组织讨论。它为理解和防范 RAG 中的文本对抗攻击提供了系统参考。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "adversarial attack text",
-      "matched_requirement_id": "req-2",
-      "selection_source": "fresh_fetch"
-    },
-    {
-      "id": "2608.26008v1",
-      "source": "arxiv",
-      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
-      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
-      "authors": [
-        "Tongyan Hu",
-        "Bryan Hooi"
-      ],
-      "primary_category": "cs.CR",
-      "categories": [
-        "cs.CR",
-        "cs.CL"
-      ],
-      "published": "2026-08-26T16:52:06+00:00",
-      "link": "https://arxiv.org/pdf/2608.26008v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 9.0,
-      "llm_evidence_en": "defense against LLM jailbreak attacks; a form of adversarial text attack and defense",
-      "llm_evidence_cn": "针对LLM越狱攻击的自进化多智能体防御，属文本对抗攻防",
-      "llm_evidence": "针对LLM越狱攻击的自进化多智能体防御，属文本对抗攻防",
-      "canonical_evidence": "针对LLM越狱攻击的自进化多智能体防御，属文本对抗攻防",
-      "llm_tldr_en": "A self-evolving multi-agent defense against LLM jailbreak attacks that abstracts successful attacks into reusable method-level rules, adapting to unseen strategies via persistent cross-interaction memory.",
-      "llm_tldr_cn": "大语言模型仍易受角色扮演、混淆、多步间接等越狱攻击，已有防御多为静态部署，无法积累经验。论文提出自进化测试时防御，构建跨交互的规则记忆：当攻击得手时，将失败抽象为方法级规则而非有害主题，并复用于未来输入。实验显示该方法能不断积累防御经验并适应未见攻击策略。该框架为LLM安全提供了可持续演化的防御方向。",
-      "llm_tldr": "大语言模型仍易受角色扮演、混淆、多步间接等越狱攻击，已有防御多为静态部署，无法积累经验。论文提出自进化测试时防御，构建跨交互的规则记忆：当攻击得手时，将失败抽象为方法级规则而非有害主题，并复用于未来输入。实验显示该方法能不断积累防御经验并适应未见攻击策略。该框架为LLM安全提供了可持续演化的防御方向。",
+      "llm_evidence_en": "black-box jailbreak attack on multimodal LLMs, direct text adversarial attack",
+      "llm_evidence_cn": "对多模态大语言模型的黑盒越狱攻击，直接对应文本对抗攻击",
+      "llm_evidence": "对多模态大语言模型的黑盒越狱攻击，直接对应文本对抗攻击",
+      "canonical_evidence": "对多模态大语言模型的黑盒越狱攻击，直接对应文本对抗攻击",
+      "llm_tldr_en": "TA-SPA performs black-box jailbreak attacks on MLLMs by optimizing transferable perturbations in a text-anchored semantic space, exploiting cross-modal safety gaps.",
+      "llm_tldr_cn": "多模态大语言模型的安全对齐主要来自文本空间，跨模态融合表示仍易被越狱攻击利用。本文提出文本锚定语义扰动攻击（TA-SPA），在文本锚定的语义空间中优化可迁移扰动，并整合文本锚定语义分解以分离跨模态语义因素与模态特有残差。黑盒实验表明该方法能有效迁移到不同多模态模型，揭示视觉-语言安全机制的根本漏洞。",
+      "llm_tldr": "多模态大语言模型的安全对齐主要来自文本空间，跨模态融合表示仍易被越狱攻击利用。本文提出文本锚定语义扰动攻击（TA-SPA），在文本锚定的语义空间中优化可迁移扰动，并整合文本锚定语义分解以分离跨模态语义因素与模态特有残差。黑盒实验表明该方法能有效迁移到不同多模态模型，揭示视觉-语言安全机制的根本漏洞。",
       "llm_tags": [
         "query:as"
       ],
@@ -318,19 +193,19 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "Formulates adversarial UAV patrolling as zero-sum stochastic game; analyzes limits of self-play in attack-defense",
-      "llm_evidence_cn": "将对抗性无人机巡逻形式化为零和随机博弈，研究自博弈在攻防中的能力边界",
-      "llm_evidence": "将对抗性无人机巡逻形式化为零和随机博弈，研究自博弈在攻防中的能力边界",
-      "canonical_evidence": "将对抗性无人机巡逻形式化为零和随机博弈，研究自博弈在攻防中的能力边界",
-      "llm_tldr_en": "Formalizes energy-constrained adversarial UAV patrolling as zero-sum partially observable stochastic game, treating battery as concealable hidden state; identifies energy-security threshold and analyzes limits of self-play in attack-defense.",
-      "llm_tldr_cn": "能量受限的无人机在执行对抗性巡逻任务时，剩余能量是攻击者无法直接观察但可推断的隐藏状态。该文将问题形式化为零和部分可观察随机博弈，研究自博弈在能量约束下的表现，并给出能量-安全阈值。结果表明自博弈存在明显局限性，为能量感知巡逻与攻防策略设计提供理论基础。",
-      "llm_tldr": "能量受限的无人机在执行对抗性巡逻任务时，剩余能量是攻击者无法直接观察但可推断的隐藏状态。该文将问题形式化为零和部分可观察随机博弈，研究自博弈在能量约束下的表现，并给出能量-安全阈值。结果表明自博弈存在明显局限性，为能量感知巡逻与攻防策略设计提供理论基础。",
+      "llm_evidence_en": "self-play reinforcement learning in zero-sum partially observable stochastic game",
+      "llm_evidence_cn": "零和部分可观测随机博弈中的自博弈强化学习",
+      "llm_evidence": "零和部分可观测随机博弈中的自博弈强化学习",
+      "canonical_evidence": "零和部分可观测随机博弈中的自博弈强化学习",
+      "llm_tldr_en": "Proposes a zero-sum POSG model for energy-constrained UAV patrolling, studies self-play limits, and derives an energy-security threshold.",
+      "llm_tldr_cn": "研究提出能量受限的对抗性无人机巡逻问题，将巡逻者与攻击者的交互建模为零和部分可观测随机博弈，重点分析能量作为可隐藏状态对安全的影响。通过自博弈方法探索策略极限，给出能量-安全阈值，理论上揭示自博弈在能量隐藏下的性能边界。实验和理论贡献为安全领域中的自博弈迁移提供参考。",
+      "llm_tldr": "研究提出能量受限的对抗性无人机巡逻问题，将巡逻者与攻击者的交互建模为零和部分可观测随机博弈，重点分析能量作为可隐藏状态对安全的影响。通过自博弈方法探索策略极限，给出能量-安全阈值，理论上揭示自博弈在能量隐藏下的性能边界。实验和理论贡献为安全领域中的自博弈迁移提供参考。",
       "llm_tags": [
         "query:as"
       ],
       "matched_query_tag": "query:as",
-      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
-      "matched_requirement_id": "req-7",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
       "selection_source": "fresh_fetch"
     },
     {
@@ -358,13 +233,13 @@
         "query:as"
       ],
       "llm_score": 9.0,
-      "llm_evidence_en": "Automatic red-teaming agent for LLM jailbreaks, i.e., adversarial attacks on text-based systems",
-      "llm_evidence_cn": "面向LLM越狱的自动红队代理，属于文本对抗攻击",
-      "llm_evidence": "面向LLM越狱的自动红队代理，属于文本对抗攻击",
-      "canonical_evidence": "面向LLM越狱的自动红队代理，属于文本对抗攻击",
-      "llm_tldr_en": "RedEvoAgent is an automatic red-teaming agent that distills cross-case attack trajectories into concise attack skills, improving coordination and interpretability for text-based adversarial attacks on LLM agents.",
-      "llm_tldr_cn": "大语言模型智能体在真实执行环境中面临越狱风险，可能引发有害工具调用等严重后果，而现有自动红队方法依赖固定攻击或直接复用完整轨迹，存在偏差和可解释性差的问题。本文提出RedEvoAgent，将跨案例的攻击轨迹提炼成简洁、可读的攻击技能，以协调多个越狱工具，提升攻击效果与可解释性。这使得针对LLM的文本对抗攻击更加自动化、高效。",
-      "llm_tldr": "大语言模型智能体在真实执行环境中面临越狱风险，可能引发有害工具调用等严重后果，而现有自动红队方法依赖固定攻击或直接复用完整轨迹，存在偏差和可解释性差的问题。本文提出RedEvoAgent，将跨案例的攻击轨迹提炼成简洁、可读的攻击技能，以协调多个越狱工具，提升攻击效果与可解释性。这使得针对LLM的文本对抗攻击更加自动化、高效。",
+      "llm_evidence_en": "Automatic red-teaming agent that distills attack trajectories into reusable attack skills for LLM agents; direct adversarial attack on text/agent systems",
+      "llm_evidence_cn": "面向大模型智能体的自动红队攻击智能体，将攻击轨迹提炼为可复用攻击技能，直接属于文本/智能体对抗攻击",
+      "llm_evidence": "面向大模型智能体的自动红队攻击智能体，将攻击轨迹提炼为可复用攻击技能，直接属于文本/智能体对抗攻击",
+      "canonical_evidence": "面向大模型智能体的自动红队攻击智能体，将攻击轨迹提炼为可复用攻击技能，直接属于文本/智能体对抗攻击",
+      "llm_tldr_en": "RedEvoAgent is a black-box red-teaming agent that distills cross-case attack trajectories into concise human-readable attack skills, overcoming retrieval bias and tool-credit issues in trajectory-based attackers and improving jailbreak success on product-level LLM agents.",
+      "llm_tldr_cn": "针对大模型智能体在真实执行环境中越狱可能触发有害工具调用和持久状态改变的问题，本文提出RedEvoAgent，一个黑盒红队攻击智能体。它把跨案例攻击轨迹提炼为简洁可读的攻击技能，避免轨迹检索中的误导经验与工具归因不清，降低上下文开销并提升可解释性。相比固定攻击方法和基于轨迹检索的智能体攻击者，该方法能更有效地自动发现产品级智能体的越狱漏洞。这项工作为智能体攻防提供了可演进的经验驱动攻击范式。",
+      "llm_tldr": "针对大模型智能体在真实执行环境中越狱可能触发有害工具调用和持久状态改变的问题，本文提出RedEvoAgent，一个黑盒红队攻击智能体。它把跨案例攻击轨迹提炼为简洁可读的攻击技能，避免轨迹检索中的误导经验与工具归因不清，降低上下文开销并提升可解释性。相比固定攻击方法和基于轨迹检索的智能体攻击者，该方法能更有效地自动发现产品级智能体的越狱漏洞。这项工作为智能体攻防提供了可演进的经验驱动攻击范式。",
       "llm_tags": [
         "query:as"
       ],
@@ -376,89 +251,49 @@
   ],
   "quick_skim": [
     {
-      "id": "2608.12889v1",
+      "id": "2608.22061v1",
       "source": "arxiv",
-      "title": "Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems",
-      "abstract": "Smishing detection systems are commonly trained and evaluated on clean, monolingual text. In low-resource settings, however, attackers frequently circumvent these systems through character obfuscation, cross-lingual code-switching, and structural perturbation. This study evaluates adversarial robustness for five model architectures: three classical lexical models (Random Forest, XGBoost, CNN+BiLSTM) and two multilingual transformers (mBERT, XLM-RoBERTa), using a dataset of 27,037 messages. Classical models are subjected to black-box generic attacks, while transformers are evaluated with attention-guided targeting. Each model is tested across three attack types and intensity levels, with performance measured by the Robustness Degradation Ratio (RDR). The results reveal a distinct architectural boundary: classical models experience near-catastrophic failure under character obfuscation and structural perturbation (RDR up to 0.988), whereas transformers demonstrate significantly greater resilience (RDR up to 0.351), with structural perturbation representing their most pronounced vulnerability. Effect-size analysis (Cliff's d) indicates a substantial difference between the two model categories. Within the transformer group, XLM-RoBERTa, despite achieving a higher clean-text baseline, exhibits greater degradation than mBERT. These findings demonstrate that clean-text performance is not a reliable predictor of adversarial robustness. Statistical validation using Mann-Whitney U and Friedman tests confirms that these patterns are attributable to model architecture rather than sampling. The results underscore the necessity for architecture-specific defences and frame smishing detection as an adversarial cybersecurity challenge rather than a static classification task.",
+      "title": "MEMORY Wins All: Indirect Bias Injection Attacks via Social Media Feeds",
+      "abstract": "Personal AI agents routinely consume external content while performing tasks such as web browsing, email processing, and SNS feed summarization, and they retain selected information or execution results in persistent memory for later use. We show that this ordinary ingestion of external content opens an indirect path for manipulating subsequent agent behavior. Based on this observation, we present IBIA, an Indirect Bias Injection Attack that plants an adversary-aligned stance on a specific topic into a victim agent's memory through external content, without direct access to the agent, its memory, or future user queries. For this, IBIA combines three mechanisms: comment cloaking, which keeps the crafted content consistent with the surrounding discussion, comment watermarking, which enables lightweight identification during curation, and category anchoring, which makes the retained stance salient under later related requests. We evaluate IBIA on BiasBench, a benchmark of 6,000 adversary-crafted social comments and 120 email instances. The watermark-based curation identifies 95.9% of the injected comments. Under the OpenClaw setting, IBIA achieves adversary-aligned response rates (AARs) of 91.2% on average across four downstream tasks, including 86.6% on the frontier GPT-5.5. We further propose a memory boundary defense that detects the injected bias and reduces AARs to 80.6%.",
       "authors": [
-        "Denzel Chiuseni",
-        "Athanase Bahizire",
-        "Silva Hama",
-        "Jema David Ndibwile"
+        "Minjae Seo",
+        "Wonwoo Choi",
+        "Geonwoo Han",
+        "Taekyoung Kwon",
+        "Yongsu Kim",
+        "Sang Seo",
+        "Jaewon Noh",
+        "Hankyul Baek",
+        "Seongyun Seo",
+        "Myoungsung You"
       ],
-      "primary_category": "cs.CR",
+      "primary_category": "cs.AI",
       "categories": [
-        "cs.CR"
+        "cs.AI",
+        "cs.CY"
       ],
-      "published": "2026-08-13T07:12:13+00:00",
-      "link": "https://arxiv.org/pdf/2608.12889v1",
+      "published": "2026-08-22T18:03:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.22061v1",
       "tags": [
         "keyword:as",
         "query:as"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "Adversarial robustness in text (smishing) detection; attacks on text classifiers",
-      "llm_evidence_cn": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-      "llm_evidence": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-      "canonical_evidence": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-      "llm_tldr_en": "This study compares adversarial fragility of classical and transformer-based smishing detection models under character obfuscation, code-switching, and structural perturbation attacks.",
-      "llm_tldr_cn": "短信钓鱼检测系统常在干净单语文本上训练，而攻击者通过字符混淆、跨语言代码切换等扰动绕过系统。本文对五种经典与Transformer架构的检测模型进行对抗鲁棒性比较，经典模型采用黑盒通用攻击，Transformer采用注意力引导攻击。结果显示不同模型在不同攻击类型和强度下表现出显著的脆弱性差异，为低资源环境下文本对抗防御提供了实证依据。",
-      "llm_tldr": "短信钓鱼检测系统常在干净单语文本上训练，而攻击者通过字符混淆、跨语言代码切换等扰动绕过系统。本文对五种经典与Transformer架构的检测模型进行对抗鲁棒性比较，经典模型采用黑盒通用攻击，Transformer采用注意力引导攻击。结果显示不同模型在不同攻击类型和强度下表现出显著的脆弱性差异，为低资源环境下文本对抗防御提供了实证依据。",
+      "llm_evidence_en": "Indirect bias injection attack on AI agent memory via external social media content; adversarial attack in text/agent context",
+      "llm_evidence_cn": "通过外部社交媒体内容向智能体记忆注入偏见的间接攻击，属于文本/智能体对抗攻击",
+      "llm_evidence": "通过外部社交媒体内容向智能体记忆注入偏见的间接攻击，属于文本/智能体对抗攻击",
+      "canonical_evidence": "通过外部社交媒体内容向智能体记忆注入偏见的间接攻击，属于文本/智能体对抗攻击",
+      "llm_tldr_en": "IBIA shows personal AI agents can be manipulated indirectly by injecting adversary-aligned bias into persistent memory via external content, using comment cloaking and other mechanisms without direct access to the agent or queries; relevant to adversarial attacks on text-consuming agents.",
+      "llm_tldr_cn": "个人AI智能体在浏览网页、处理邮件或摘要社交源时会把外部内容存入持久记忆，本文据此提出IBIA间接偏见注入攻击：通过构造与周围讨论一致的外部评论等机制，把攻击者立场写入受害者智能体记忆，无需接触智能体、记忆或未来查询即可诱导后续行为。该工作揭示了文本消费型智能体面临的新型记忆污染风险。对文本对抗攻击与智能体安全研究具有重要意义。",
+      "llm_tldr": "个人AI智能体在浏览网页、处理邮件或摘要社交源时会把外部内容存入持久记忆，本文据此提出IBIA间接偏见注入攻击：通过构造与周围讨论一致的外部评论等机制，把攻击者立场写入受害者智能体记忆，无需接触智能体、记忆或未来查询即可诱导后续行为。该工作揭示了文本消费型智能体面临的新型记忆污染风险。对文本对抗攻击与智能体安全研究具有重要意义。",
       "llm_tags": [
         "query:as"
       ],
       "matched_query_tag": "query:as",
       "matched_query_text": "adversarial attack text",
       "matched_requirement_id": "req-2",
-      "selection_source": "carryover_cache",
-      "paper_id": "2608.12889v1",
-      "quick_tier": "8plus"
-    },
-    {
-      "id": "2608.22089v1",
-      "source": "arxiv",
-      "title": "On Predicting Vulnerability Severity Using In-Context Learning: An Industrial Case Study",
-      "abstract": "Modern software systems require earlier and more scalable vulnerability severity assessment to reduce exposure to high-impact security flaws. Security analysts typically assign CVSS scores, but this manual triage does not scale with the growth of disclosed vulnerabilities and often depends on cloud LLM services that raise confidentiality concerns. This paper presents an industrial case study on predicting CVSS v3.1 scores directly from vulnerable C/C++ snippets using in-context learning with locally deployable, open-source LLMs. We compare proprietary data with the Big-Vul dataset, showing sufficiently aligned CVSS distributions to justify Big-Vul as a proxy for industrial data when constructing prompt-based testbeds. We then vary in-context configurations and model parameters, evaluating CodeLlama2-7B, CodeLlama2-13B, Mistral-7B, gpt-oss, and GPT4o-mini using mean squared error (MSE) and feasibility metrics. Our results show that medium-sized open-source code models, particularly CodeLlama2-7B, can approximate the best cloud performance for CVSS regression when guided by lightweight, output-constraining prompts, offering a practical, privacy-preserving building block for severity triage in industrial settings.",
-      "authors": [
-        "Daniel Rodriguez-Cardenas",
-        "David Nader Palacio",
-        "Anna Schmedding",
-        "Yiyang Lu",
-        "Aadil Mallick",
-        "Bill Hudson",
-        "Chris Gourley",
-        "Michael Roytman",
-        "Chris Shenefiel",
-        "Evgenia Smirni",
-        "Denys Poshyvanyk"
-      ],
-      "primary_category": "cs.CR",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
-      ],
-      "published": "2026-08-22T19:40:42+00:00",
-      "link": "https://arxiv.org/pdf/2608.22089v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "LLM-based vulnerability severity prediction in software security; supports vulnerability triage and mining",
-      "llm_evidence_cn": "基于LLM的漏洞严重性预测，属于软件安全漏洞评估，支撑漏洞挖掘与分流",
-      "llm_evidence": "基于LLM的漏洞严重性预测，属于软件安全漏洞评估，支撑漏洞挖掘与分流",
-      "canonical_evidence": "基于LLM的漏洞严重性预测，属于软件安全漏洞评估，支撑漏洞挖掘与分流",
-      "llm_tldr_en": "Industrial case study predicting CVSS v3.1 severity from vulnerable C/C++ snippets via in-context learning with locally deployed open-source LLMs, showing Big-Vul can proxy industrial data for building prompt-based testbeds.",
-      "llm_tldr_cn": "漏洞严重性评估对安全管理至关重要，但手工分配CVSS分数难以规模化且云LLM存在保密风险。该文提出使用本地可部署的开源LLM，基于上下文学习直接从易受攻击的C/C++代码片段预测CVSS v3.1分数。工业数据与Big-Vul分布对比表明数据可替代性，为构建提示测试台提供依据。该工作实现可扩展且保护隐私的漏洞严重性预测。",
-      "llm_tldr": "漏洞严重性评估对安全管理至关重要，但手工分配CVSS分数难以规模化且云LLM存在保密风险。该文提出使用本地可部署的开源LLM，基于上下文学习直接从易受攻击的C/C++代码片段预测CVSS v3.1分数。工业数据与Big-Vul分布对比表明数据可替代性，为构建提示测试台提供依据。该工作实现可扩展且保护隐私的漏洞严重性预测。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "vulnerability mining software security",
-      "matched_requirement_id": "req-3",
       "selection_source": "fresh_fetch",
-      "quick_tier": "7"
+      "quick_tier": "8plus"
     },
     {
       "id": "2608.21656v1",
@@ -484,14 +319,14 @@
         "keyword:as",
         "query:as"
       ],
-      "llm_score": 6.0,
-      "llm_evidence_en": "Defends RAG systems against prompt injection via keyword-grounded fact substitution",
-      "llm_evidence_cn": "通过关键词接地事实替换防御RAG提示注入攻击",
-      "llm_evidence": "通过关键词接地事实替换防御RAG提示注入攻击",
-      "canonical_evidence": "通过关键词接地事实替换防御RAG提示注入攻击",
-      "llm_tldr_en": "KFS-RAG defends RAG against prompt injection by selecting influential keywords via attention and causal perturbation, generating keyword-grounded facts with an auxiliary LLM, and rewriting retrieved context to reduce sensitive database leakage.",
-      "llm_tldr_cn": "检索增强生成系统容易受到提示注入攻击，导致检索器或生成器泄露数据库敏感内容。KFS-RAG先通过注意力展开和因果扰动识别上下文中的关键影响词，再引导辅助大模型生成紧凑的关键词接地事实，并以此改写出检索上下文。该方法从源头上重构可能泄露的信息，为RAG提供了一种轻量且可解释的防御手段。",
-      "llm_tldr": "检索增强生成系统容易受到提示注入攻击，导致检索器或生成器泄露数据库敏感内容。KFS-RAG先通过注意力展开和因果扰动识别上下文中的关键影响词，再引导辅助大模型生成紧凑的关键词接地事实，并以此改写出检索上下文。该方法从源头上重构可能泄露的信息，为RAG提供了一种轻量且可解释的防御手段。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "defense against prompt injection attacks in RAG to prevent sensitive text leakage",
+      "llm_evidence_cn": "针对RAG中提示注入攻击的防御方法，缓解敏感文本数据库泄露",
+      "llm_evidence": "针对RAG中提示注入攻击的防御方法，缓解敏感文本数据库泄露",
+      "canonical_evidence": "针对RAG中提示注入攻击的防御方法，缓解敏感文本数据库泄露",
+      "llm_tldr_en": "KFS-RAG mitigates database leakage in RAG by identifying influential keywords via attention rollout and causal perturbation, then substituting retrieved context with keyword-grounded facts.",
+      "llm_tldr_cn": "RAG系统易受提示注入攻击，攻击者可误导检索器或生成器泄露敏感数据库内容。本文提出KFS-RAG防御方法：先用注意力展开与因果扰动识别少量有影响力的关键词，再引导辅助语言模型生成关键词锚定的事实替换检索上下文，从而在不损失有用信息的前提下阻断泄露路径。实验验证了该方法能有效缓解数据库泄露，为文本生成管线的对抗防御提供了可落地的修复策略。",
+      "llm_tldr": "RAG系统易受提示注入攻击，攻击者可误导检索器或生成器泄露敏感数据库内容。本文提出KFS-RAG防御方法：先用注意力展开与因果扰动识别少量有影响力的关键词，再引导辅助语言模型生成关键词锚定的事实替换检索上下文，从而在不损失有用信息的前提下阻断泄露路径。实验验证了该方法能有效缓解数据库泄露，为文本生成管线的对抗防御提供了可落地的修复策略。",
       "llm_tags": [
         "query:as"
       ],
@@ -499,139 +334,80 @@
       "matched_query_text": "adversarial attack text",
       "matched_requirement_id": "req-2",
       "selection_source": "fresh_fetch",
-      "quick_tier": "6"
+      "quick_tier": "7"
     },
     {
-      "id": "2608.16195v1",
+      "id": "2608.22161v1",
       "source": "arxiv",
-      "title": "RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing",
-      "abstract": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing. While Multi-Agent Reinforcement Learning offers a principled framework for strategic interaction, its direct application to unstructured raw motor spaces inevitably leads to joint-level physical collapse, preventing the emergence of any viable combat tactics. To resolve this fundamental conflict between strategic exploration and physical feasibility, we formulate the humanoid combat task as a novel two-player latent-space zero-sum Markov game. Under standard regularity and approximate best-response assumptions, we show that the latent formulation induces an equivalent game over the decoder-reachable action manifold, providing an approximate-Nash interpretation of the resulting self-play dynamics. To instantiate this theoretical formulation, we propose RoboStriker, a hierarchical framework that decouples high-level reasoning from low-level execution. It first distills the tracking expertise of predefined boxing motions into a topologically bounded latent manifold. This structured latent foundation subsequently drives multi-agent co-evolution via Latent-Space Neural Fictitious Self-Play. Extensive experimental results demonstrate that gaming within this structured latent space substantially outperforms direct exploration. By constraining strategic exploration through a pretrained motion decoder, RoboStriker substantially reduces the catastrophic balance failures observed in raw action-space methods and achieves superior tactical performance in both competitive win rates and striking efficiency. Finally, we successfully deploy and validate our learned combat policies on real-world humanoid robots. Our code and video and supplementary materials are available at RoboStriker.",
+      "title": "Aggregation-Aware Synthetic Text Generation Against Authorship Re-Identification",
+      "abstract": "Online users often release multiple texts under the same identity, giving attackers an author profile that can reveal more than any single text. Existing authorship obfuscation methods optimize privacy independently for each document, leaving them blind to cross-document correlations that make aggregation dangerous. We propose Aggregation-Aware Synthetic Text Generation (AAST), a framework that addresses this gap by jointly selecting synthetic texts at the bundle level rather than optimizing each text in isolation. AAST targets attribution and verification attacks, including cross-genre settings where attacker references come from a genre not observed during generation or selection. Experiments across same-genre, cross-genre, neural, and independent non-neural stylometric attacks show that AAST lowers account-level linkability as bundle size grows, while preserving semantic quality, linguistic acceptability, and sentiment alignment.",
       "authors": [
-        "Kangning Yin",
-        "Kaige Liu",
-        "Zhe Cao",
-        "Wentao Dong",
-        "Weishuai Zeng",
-        "Tianyi Zhang",
-        "Qiang Zhang",
-        "Jingbo Wang",
-        "Jiangmiao Pang",
-        "Yang Li",
-        "Ming Zhou",
-        "Weinan Zhang"
-      ],
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "published": "2026-08-17T07:19:09+00:00",
-      "link": "https://arxiv.org/pdf/2608.16195v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "two-player latent-space zero-sum Markov game and self-play for humanoid boxing",
-      "llm_evidence_cn": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-      "llm_evidence": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-      "canonical_evidence": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-      "llm_tldr_en": "Formulates humanoid combat as a two-player latent-space zero-sum Markov game, preventing physical collapse while enabling strategic skills via multi-agent self-play RL.",
-      "llm_tldr_cn": "人形机器人拳击需要同时具备竞争智能与物理可行性，直接在多智能体强化学习中应用原始运动空间会导致关节崩溃。本文提出双人潜在空间零和马尔可夫博弈框架，在潜空间中开展自博弈训练，既避免物理塌缩又能涌现战斗策略。理论上证明该潜在形式与原始形式近似最优反应等价，实验显示能实现稳定且高水平的对抗拳击行为。该方法为接触丰富、动态性强的机器人对抗任务提供了可扩展的训练范式。",
-      "llm_tldr": "人形机器人拳击需要同时具备竞争智能与物理可行性，直接在多智能体强化学习中应用原始运动空间会导致关节崩溃。本文提出双人潜在空间零和马尔可夫博弈框架，在潜空间中开展自博弈训练，既避免物理塌缩又能涌现战斗策略。理论上证明该潜在形式与原始形式近似最优反应等价，实验显示能实现稳定且高水平的对抗拳击行为。该方法为接触丰富、动态性强的机器人对抗任务提供了可扩展的训练范式。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "self-play reinforcement learning",
-      "matched_requirement_id": "req-1",
-      "selection_source": "carryover_cache",
-      "paper_id": "2608.16195v1",
-      "quick_tier": "8plus"
-    },
-    {
-      "id": "2608.27260v1",
-      "source": "arxiv",
-      "title": "What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents",
-      "abstract": "LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interactions, and success signals while producing experience that is useful rather than merely abundant. Existing work spans many agent domains, but domain-centered organization and heterogeneous evaluation often obscure common generation mechanisms and conflate candidate construction with verification and selection. This work develops a two-level framework for the field. First, we represent agentic data as a common factorized object $(E,q,τ,v)$, comprising an environment specification, task signal, interaction realization, and optional verifier. We organize generation paradigms by their primary anchor and dependency structure. Second, we formulate generation as constrained distribution design through the Accuracy-Complexity-divErsity (ACE) lens. Accuracy establishes the feasible support of grounded and internally consistent data. Within this support, Complexity places learning mass relative to the capability of a declared learner and execution configuration, while divErsity controls coverage and redundancy of data. Using this framework, we explore how prior work verifies generated experience, constructs and calibrates difficulty, and expands behavioral coverage. The literature reveals a shift toward execution-grounded accuracy, learner-relative complexity, and diversity beyond surface variation or dataset size. We further discuss broader directions and emerging trends in agentic data generation through the ACE lens, including their implications for scaling, data sources, training regimes and adaptive learning. Overall, the central challenge is not simply to generate more data, but to continually allocate valid, informative, and non-redundant experience as agents and environments evolve.",
-      "authors": [
-        "Xingshan Zeng",
-        "Zishan Xu",
-        "Boju Zhang",
-        "Yuzhou Wu",
-        "Lingzhi Wang",
-        "Jianghao Lin",
-        "Liangyou Li",
-        "Yasheng Wang",
-        "Lifeng Shang",
-        "Xin Jiang",
-        "Weinan Zhang",
-        "Yong Yu",
-        "Qun Liu",
-        "Weiwen Liu"
+        "Qian Ma",
+        "Anna Squicciarini",
+        "Sarah Rajtmajer"
       ],
       "primary_category": "cs.AI",
       "categories": [
         "cs.AI",
         "cs.CL"
       ],
-      "published": "2026-08-27T15:43:50+00:00",
-      "link": "https://arxiv.org/pdf/2608.27260v1",
-      "tags": [
-        "keyword:as",
-        "query:as"
-      ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "Agentic data generation framework for LLM agents; transferable to text data augmentation with agents",
-      "llm_evidence_cn": "面向LLM智能体的数据生成框架，可迁移至智能体驱动的文本数据增强",
-      "llm_evidence": "面向LLM智能体的数据生成框架，可迁移至智能体驱动的文本数据增强",
-      "canonical_evidence": "面向LLM智能体的数据生成框架，可迁移至智能体驱动的文本数据增强",
-      "llm_tldr_en": "Proposes a factorized representation (E,q,tau,v) and two-level framework for agentic data generation, clarifying consistency, verification, and selection for LLM agents; useful for agent-based data augmentation techniques.",
-      "llm_tldr_cn": "智能体数据生成是训练LLM智能体的关键，但现有研究按领域割裂，评估标准不一。该文提出统一的因子化表示(E,q,τ,v)，将智能体数据拆解为环境、任务、交互与验证器，并建立两层分析框架，厘清候选构建与验证选择的关系。该框架有助于设计高质量智能体数据生成流程，对文本数据增强等依赖智能体生成数据的任务具有参考价值。",
-      "llm_tldr": "智能体数据生成是训练LLM智能体的关键，但现有研究按领域割裂，评估标准不一。该文提出统一的因子化表示(E,q,τ,v)，将智能体数据拆解为环境、任务、交互与验证器，并建立两层分析框架，厘清候选构建与验证选择的关系。该框架有助于设计高质量智能体数据生成流程，对文本数据增强等依赖智能体生成数据的任务具有参考价值。",
-      "llm_tags": [
-        "query:as"
-      ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "data augmentation agent text generation",
-      "matched_requirement_id": "req-6",
-      "selection_source": "fresh_fetch",
-      "quick_tier": "7"
-    },
-    {
-      "id": "2608.22847v1",
-      "source": "arxiv",
-      "title": "GSAR: Goal-State-Anchor Rewards for Mobile GUI Agents with Self-Evolving Data Synthesis",
-      "abstract": "Vision-Language Models (VLMs) based GUI agents stand to benefit significantly from online reinforcement learning (RL). However, their training is bottlenecked by two fundamental issues: current data synthesis methods for GUI Agents rely on specific environments and struggle to generate diverse data, while existing evaluators either suffer from limited scalability or provide inaccurate and unreliable reward signals. To overcome these challenges, we introduce GSAR (Goal-State-Anchor Reward), a RL reward framework that supports scalable task generation and delivers reliable reward signals for stable and efficient policy optimization. Our approach features self-evolving data synthesis, which produces multiple environments through task execution and generates diverse tasks and goal states. Complementing this, a state-anchor mechanism automatically annotates task-relevant UI elements in successful goal states as reference anchors. During RL training, these reference anchors provide accurate, scalable reward signals that substantially enhance efficiency. Extensive evaluations demonstrate that our framework achieves over 90% accuracy on offline trajectory verification and performs closest to rule-based methods. Furthermore, agents trained using our reward framework exhibit strong performance on both AndroidWorld and our constructed benchmark, establishing a scalable approach for GUI agent training.",
-      "authors": [
-        "Long Zhang",
-        "Yuhan Chen",
-        "Chaoran Zhang",
-        "Wanxia Cao",
-        "Kun Huang",
-        "Pengzhi Gao",
-        "Wei Liu",
-        "Jian Luan",
-        "Chenliang Li",
-        "Lixin Zou"
-      ],
-      "primary_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "published": "2026-08-24T06:27:47+00:00",
-      "link": "https://arxiv.org/pdf/2608.22847v1",
+      "published": "2026-08-23T01:26:07+00:00",
+      "link": "https://arxiv.org/pdf/2608.22161v1",
       "tags": [
         "keyword:as",
         "query:as"
       ],
       "llm_score": 6.0,
-      "llm_evidence_en": "Self-evolving data synthesis with RL rewards for GUI agents; methodological bridge to agent-based data augmentation",
-      "llm_evidence_cn": "面向GUI智能体的自进化数据合成与RL奖励框架，可为智能体数据增强提供方法借鉴",
-      "llm_evidence": "面向GUI智能体的自进化数据合成与RL奖励框架，可为智能体数据增强提供方法借鉴",
-      "canonical_evidence": "面向GUI智能体的自进化数据合成与RL奖励框架，可为智能体数据增强提供方法借鉴",
-      "llm_tldr_en": "Introduces GSAR reward framework with self-evolving data synthesis for VLM-based GUI agents, enabling scalable task generation and reliable reward signals for stable RL policy optimization; transferable to agent data augmentation.",
-      "llm_tldr_cn": "面向VLMs的GUI智能体可受益于在线强化学习，但受限于数据多样性不足和奖励信号不准确。该文提出GSAR目标状态锚定奖励框架，通过自进化数据合成在任务执行中自动生成多样化环境，并提供可靠奖励信号。实验表明该方法支持可扩展任务生成，实现稳定高效的策略优化。该范式可迁移至其他智能体场景的数据增强与奖励设计。",
-      "llm_tldr": "面向VLMs的GUI智能体可受益于在线强化学习，但受限于数据多样性不足和奖励信号不准确。该文提出GSAR目标状态锚定奖励框架，通过自进化数据合成在任务执行中自动生成多样化环境，并提供可靠奖励信号。实验表明该方法支持可扩展任务生成，实现稳定高效的策略优化。该范式可迁移至其他智能体场景的数据增强与奖励设计。",
+      "llm_evidence_en": "synthetic text generation to defend against authorship re-identification, transferable to text data augmentation",
+      "llm_evidence_cn": "合成文本生成用于防御作者身份再识别，可迁移至文本数据增强",
+      "llm_evidence": "合成文本生成用于防御作者身份再识别，可迁移至文本数据增强",
+      "canonical_evidence": "合成文本生成用于防御作者身份再识别，可迁移至文本数据增强",
+      "llm_tldr_en": "AAST jointly selects synthetic texts at the bundle level to evade authorship re-identification, improving privacy against attribute and verification attacks across genres.",
+      "llm_tldr_cn": "在线用户发布的多个文本可能被攻击者聚合为作者画像，导致隐私泄露。现有混淆方法逐篇优化，忽略跨文档关联。本文提出聚合感知合成文本生成（AAST），从包级联合选择合成文本，而非逐篇独立优化。实验覆盖同体裁、跨体裁、神经与判别式分类器，验证了该方法能有效防御作者身份归因与验证攻击。",
+      "llm_tldr": "在线用户发布的多个文本可能被攻击者聚合为作者画像，导致隐私泄露。现有混淆方法逐篇优化，忽略跨文档关联。本文提出聚合感知合成文本生成（AAST），从包级联合选择合成文本，而非逐篇独立优化。实验覆盖同体裁、跨体裁、神经与判别式分类器，验证了该方法能有效防御作者身份归因与验证攻击。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.24777v1",
+      "source": "arxiv",
+      "title": "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing",
+      "abstract": "LLM-based agents can interact with external environments through tool invocation, but this capability also introduces security risks such as file modification, information leakage, and unauthorized actions. Existing guardrails often evaluate completed trajectories, leaving pre-execution monitoring of step-level actions underexplored. We propose StepGuard, a step-level guard model that can audit completed agent trajectories and check tool actions before they are executed. To train StepGuard, we introduce StepGen, an automatic data engine that generates safe and unsafe trajectories with the same context but different actions at the risky step. To further reduce over-defense and under-defense, we propose Balance-GRPO, which dynamically balances learning between safe and unsafe actions based on their observed accuracy. Experiments show that StepGuard achieves the highest average accuracy among open-weight guard models, with performance comparable to GPT-5.4. When used to guard agents on AgentDojo and AgentDyn, StepGuard reduces mean attack success rate by 77.3% relative to the no-guard setting, while mean utility drops by only 2.8 percentage points.",
+      "authors": [
+        "Zhijie Zheng",
+        "Yu Li",
+        "Chen Qian",
+        "Yuqian Fu",
+        "Yanwei Fu",
+        "Lu Sheng",
+        "Jing Shao",
+        "Dongrui Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-08-25T16:17:27+00:00",
+      "link": "https://arxiv.org/pdf/2608.24777v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "automatic data engine generates safe/unsafe agent trajectories for training guard models",
+      "llm_evidence_cn": "自动数据引擎生成安全/不安全智能体轨迹以训练护栏模型",
+      "llm_evidence": "自动数据引擎生成安全/不安全智能体轨迹以训练护栏模型",
+      "canonical_evidence": "自动数据引擎生成安全/不安全智能体轨迹以训练护栏模型",
+      "llm_tldr_en": "StepGuard trains step-level guard models for LLM agents; StepGen generates paired safe/unsafe trajectories, Balance-GRPO balances safety and utility.",
+      "llm_tldr_cn": "LLM智能体在调用工具时可能引发文件修改、信息泄露等安全风险，现有护栏通常在整段轨迹完成后评估。StepGuard提出步骤级护栏模型，可在动作执行前检查。为训练该模型，StepGen自动生成同上下文不同动作的安全与不安全轨迹，Balance-GRPO进一步减少过度防御和防御不足。实验表明StepGuard在保障安全的同时保持较高利用率，为智能体安全提供可扩展方案。",
+      "llm_tldr": "LLM智能体在调用工具时可能引发文件修改、信息泄露等安全风险，现有护栏通常在整段轨迹完成后评估。StepGuard提出步骤级护栏模型，可在动作执行前检查。为训练该模型，StepGen自动生成同上下文不同动作的安全与不安全轨迹，Balance-GRPO进一步减少过度防御和防御不足。实验表明StepGuard在保障安全的同时保持较高利用率，为智能体安全提供可扩展方案。",
       "llm_tags": [
         "query:as"
       ],
@@ -639,36 +415,42 @@
       "matched_query_text": "data augmentation agent text generation",
       "matched_requirement_id": "req-6",
       "selection_source": "fresh_fetch",
-      "quick_tier": "6"
+      "quick_tier": "8plus"
     },
     {
-      "id": "2608.19982v1",
+      "id": "2608.23471v1",
       "source": "arxiv",
-      "title": "COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense",
-      "abstract": "LLMs remain vulnerable to prompt injection attacks, where adversarial instructions embedded in user inputs or external content manipulate model behavior and bypass safeguards. Existing defenses are predominantly static, relying on fixed alignment objectives or attack-specific filtering mechanisms that require redesign as new attack strategies emerge. While recent lifelong alignment methods address shifting user preferences, they do not account for adaptive adversaries that continually evolve to exploit weaknesses in previously learned defenses. This limitation is particularly important in real-world deployments, where evolving attack distributions necessitate continual adaptation without sacrificing robustness to previously encountered threats. We present COPA, a continual preference optimization framework that treats prompt-injection defense as a lifelong learning problem. Instead of one-time alignment, COPA incrementally incorporates feedback from newly observed attacks via GRPO-based optimization and uses margin-weighted experience replay to retain defenses against prior attack classes. This enables continuous adaptation to emerging threats while mitigating catastrophic forgetting and preserving general-purpose model capabilities. Across lifelong prompt injection attack streams, COPA reduces attack success rate by up to 6.3x and 4.4x on average compared to state-of-the-art defenses. These results highlight continual preference optimization as an effective paradigm for defending LLMs against adaptive adversaries.",
+      "title": "InjecMEM: Memory Injection Attack on LLM Agent Memory Systems",
+      "abstract": "Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities into agents? Thus we propose InjecMEM, a novel memory injection attack paradigm that requires only a single interaction (no read/edit access to memory store) to steer later responses of related queries toward a pre-specified output. Guided by the retrieval-then-generate mechanism of memory systems, we craft the injection with a retriever-agnostic anchor and an adversarial command. The anchor contains high-recall topical cues so that downstream retrieval consistently associates the record with the target topic. The command is a short sequence optimized to remain effective under uncertain fused contexts, variable placements, and long prompts so that it reliably steers outputs once retrieved. We learn the command via gradient-based coordinate search, averaging over synthetic prompt templates and insertion positions, and extend it to joint optimization across backbones to study transfer. Evaluated across multiple memory systems and backbone models, InjecMEM achieves reliable topic-conditioned retrieval and targeted generation, remains effective under memory drift, and leaves non-target queries unaffected. Our results underscore the need to harden memory systems and provide a reproducible framework for studying agent memory.",
       "authors": [
-        "Roshan Sood",
-        "Onat Gungor",
-        "Tajana Rosing"
+        "Hanling Tian",
+        "Gengyu Zhang",
+        "Zeyang Sha",
+        "Jingying Wang",
+        "Yuhang Liu",
+        "Zhehao Huang",
+        "Kun Yang",
+        "Xiaolin Huang"
       ],
       "primary_category": "cs.CR",
       "categories": [
-        "cs.CR"
+        "cs.CR",
+        "cs.AI"
       ],
-      "published": "2026-08-20T12:52:55+00:00",
-      "link": "https://arxiv.org/pdf/2608.19982v1",
+      "published": "2026-08-24T16:37:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.23471v1",
       "tags": [
         "keyword:as",
         "query:as"
       ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "Adaptive defense against prompt injection adversarial attacks in text; continual preference optimization",
-      "llm_evidence_cn": "面向文本提示注入对抗攻击的自适应防御，采用持续偏好优化",
-      "llm_evidence": "面向文本提示注入对抗攻击的自适应防御，采用持续偏好优化",
-      "canonical_evidence": "面向文本提示注入对抗攻击的自适应防御，采用持续偏好优化",
-      "llm_tldr_en": "Proposes COPA, continual preference optimization for adaptive prompt injection defense, adapting to evolving attack distributions while retaining robustness to known threats; supports lifelong alignment against adversarial text attacks.",
-      "llm_tldr_cn": "LLM面对不断进化的提示注入攻击，现有静态防御难以持续有效。该文提出COPA持续偏好优化方法，在适应新攻击分布的同时保持对已知威胁的鲁棒性，避免为防御新攻击而遗忘旧知识。实验验证其能应对动态攻击分布，为真实部署中的自适应提示注入防御提供可行框架。",
-      "llm_tldr": "LLM面对不断进化的提示注入攻击，现有静态防御难以持续有效。该文提出COPA持续偏好优化方法，在适应新攻击分布的同时保持对已知威胁的鲁棒性，避免为防御新攻击而遗忘旧知识。实验验证其能应对动态攻击分布，为真实部署中的自适应提示注入防御提供可行框架。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "Memory injection attack using crafted adversarial text to hijack LLM agent responses",
+      "llm_evidence_cn": "利用对抗性文本注入攻击LLM智能体记忆，操纵后续响应",
+      "llm_evidence": "利用对抗性文本注入攻击LLM智能体记忆，操纵后续响应",
+      "canonical_evidence": "利用对抗性文本注入攻击LLM智能体记忆，操纵后续响应",
+      "llm_tldr_en": "InjecMEM is a single-interaction memory injection attack on LLM agent memory systems. It uses a retriever-agnostic anchor and an adversarial command so later related queries retrieve the injected record and steer responses, exposing new memory subsystem vulnerabilities.",
+      "llm_tldr_cn": "针对部署于LLM智能体中的持久化记忆子系统，本文提出单次交互即可完成的记忆注入攻击范式InjecMEM，无需读写记忆库权限。攻击者利用检索器无关的锚点与对抗命令构造注入内容，使后续相关查询稳定检索该记录并将响应导向预设输出。实验表明该攻击能有效劫持记忆增强的智能体行为。该工作揭示记忆系统引入的全新安全漏洞类别，为智能体记忆防护提供警示。",
+      "llm_tldr": "针对部署于LLM智能体中的持久化记忆子系统，本文提出单次交互即可完成的记忆注入攻击范式InjecMEM，无需读写记忆库权限。攻击者利用检索器无关的锚点与对抗命令构造注入内容，使后续相关查询稳定检索该记录并将响应导向预设输出。实验表明该攻击能有效劫持记忆增强的智能体行为。该工作揭示记忆系统引入的全新安全漏洞类别，为智能体记忆防护提供警示。",
       "llm_tags": [
         "query:as"
       ],
@@ -676,7 +458,7 @@
       "matched_query_text": "adversarial attack text",
       "matched_requirement_id": "req-2",
       "selection_source": "fresh_fetch",
-      "quick_tier": "8plus"
+      "quick_tier": "7"
     },
     {
       "id": "2608.23959v1",
@@ -704,50 +486,62 @@
         "query:as"
       ],
       "llm_score": 6.0,
-      "llm_evidence_en": "Hardens LLMs against jailbreak prompts and neuron-level attacks by redistributing safety signals",
-      "llm_evidence_cn": "通过重新分配安全信号增强LLM对越狱提示和神经元攻击的鲁棒性",
-      "llm_evidence": "通过重新分配安全信号增强LLM对越狱提示和神经元攻击的鲁棒性",
-      "canonical_evidence": "通过重新分配安全信号增强LLM对越狱提示和神经元攻击的鲁棒性",
-      "llm_tldr_en": "NeuronGuard counters both jailbreak prompts and neuron-pruning attacks by dynamically identifying safety-critical neurons and redistributing refusal behavior across broader neuron sets during fine-tuning.",
-      "llm_tldr_cn": "大模型的安全对齐容易受到越狱提示和神经元剪枝攻击，原因在于安全信息集中在稀疏的神经元子集上。NeuronGuard在微调阶段动态识别安全关键神经元，通过KL散度正则化强制在神经元被消融时仍保持拒绝行为，并将安全信号分散到更多神经元。实验证明该防御能同时抵御两类攻击，提升安全对齐的鲁棒性。",
-      "llm_tldr": "大模型的安全对齐容易受到越狱提示和神经元剪枝攻击，原因在于安全信息集中在稀疏的神经元子集上。NeuronGuard在微调阶段动态识别安全关键神经元，通过KL散度正则化强制在神经元被消融时仍保持拒绝行为，并将安全信号分散到更多神经元。实验证明该防御能同时抵御两类攻击，提升安全对齐的鲁棒性。",
+      "llm_evidence_en": "Defense against jailbreak text attacks and neuron ablation attacks via safety signal redistribution",
+      "llm_evidence_cn": "通过安全信号重分配同时防御越狱文本攻击与神经元剪枝攻击",
+      "llm_evidence": "通过安全信号重分配同时防御越狱文本攻击与神经元剪枝攻击",
+      "canonical_evidence": "通过安全信号重分配同时防御越狱文本攻击与神经元剪枝攻击",
+      "llm_tldr_en": "NeuronGuard hardens LLMs against jailbreak prompts and post-deployment neuron pruning by redistributing safety-critical signals across broader neurons during fine-tuning, using per-layer classifiers and KL divergence regularization.",
+      "llm_tldr_cn": "大模型安全对齐在越狱提示和神经元级攻击面前十分脆弱，根因是安全信息集中于稀疏神经元子集。为此提出NeuronGuard，在微调阶段动态识别安全关键神经元，并在刻意消融时强制拒答，通过KL散度正则将安全信号重分配到更多神经元。该方法同时增强对两类攻击的鲁棒性。该防御为LLM安全对齐提供了兼顾提示攻击与权重攻击的加固思路。",
+      "llm_tldr": "大模型安全对齐在越狱提示和神经元级攻击面前十分脆弱，根因是安全信息集中于稀疏神经元子集。为此提出NeuronGuard，在微调阶段动态识别安全关键神经元，并在刻意消融时强制拒答，通过KL散度正则将安全信号重分配到更多神经元。该方法同时增强对两类攻击的鲁棒性。该防御为LLM安全对齐提供了兼顾提示攻击与权重攻击的加固思路。",
       "llm_tags": [
-        "query:as"
+        "query:as:composite"
       ],
-      "matched_query_tag": "query:as",
-      "matched_query_text": "adversarial attack text",
-      "matched_requirement_id": "req-2",
+      "matched_query_tag": "query:as:composite",
+      "matched_query_text": "Papers central to 帮我查找自博弈、攻防、漏挖、文本数据增强智能体相关的论文, especially work that connects or combines: self-play reinforcement learning; adversarial attack text; vulnerability mining software security; text data augmentation techniques; self-play agent training; data augmentation agent text generation; self play based reinforcement learning for adversarial attack and defense; vulnerability mining using intelligent agents and reinforcement learning; text data augmentation with language model agents; adversarial attack and defense in text using self play.",
+      "matched_requirement_id": "req-composite-as",
       "selection_source": "fresh_fetch",
       "quick_tier": "6"
     },
     {
-      "id": "2608.21929v1",
+      "id": "2608.24977v2",
       "source": "arxiv",
-      "title": "SkillBloat: Token Amplification Attacks via Skill Injection in LLM Coding Agents",
-      "abstract": "Agent skills extend coding agents with task-specific instructions, scripts, and resources, but they also create a trusted   instruction channel that can be abused beyond conventional security attacks. This paper studies token amplification through   skill injection: an economic resource-abuse threat in which a malicious skill causes an agent to consume substantially more   tokens than needed for normal task execution. We present SkillBloat, a two-phase framework that first screens a library of   diverse attack-type conditions across multiple amplification mechanisms and then refines the strongest candidate through   LLM-guided full-document skill rewriting. Evaluated on a real-world skill benchmark, SkillBloat achieves 5.4184x-10.1455x   average best amplification across multiple coding-agent target configurations. An ablation shows that the second-stage   refinement loop consistently improves average best amplification over Phase 1 attack-type screening alone, demonstrating   that iterative optimization provides additional benefit beyond initial attack-type selection. These results show that skill   ecosystems expose a practical resource-amplification attack surface that is orthogonal to existing security-oriented skill   poisoning.",
+      "title": "Retrieved But Not Reliable: A Survey on Attacks, and Defenses in Retrieval-Augmented Generation",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language models by grounding outputs in external knowledge, improving factuality and reducing hallucinations. At the same time, the retrieval-augmented pipeline introduces new robustness and security risks, including corpus poisoning, backdoor attacks, privacy leakage, and fairness violations. Despite rapid progress in this area, existing surveys remain limited in their treatment of attacker objectives, threat models, and stage-specific defenses across the full RAG pipeline. This survey presents a unified and pipeline-aware overview of RAG robustness. We formalize threat models over the corpus, retriever, and generator, and organize attacks into three main objectives: accuracy, privacy, and fairness. We further review defenses from a pipeline-aware perspective, covering the retrieval, rerank, generation, and traceback stages. In addition, we summarize robustness benchmarks and explainability methods for more deeply evaluating and explaining RAG robustness.",
       "authors": [
-        "Yuanjin Zheng",
-        "Jingbang Chen"
+        "Minh Tran",
+        "Cuong Dang",
+        "Tuc Nguyen",
+        "Khanh-Tung Tran",
+        "Minh Huynh Nguyen",
+        "Trinh Chau",
+        "Kien Le",
+        "Do Xuan Long",
+        "Jiahao Zhang",
+        "Fali Wang",
+        "Hoang D. Nguyen",
+        "Thanh Le",
+        "Suhang Wang"
       ],
       "primary_category": "cs.CR",
       "categories": [
         "cs.CR",
-        "cs.CL"
+        "cs.CL",
+        "cs.LG"
       ],
-      "published": "2026-08-22T11:41:48+00:00",
-      "link": "https://arxiv.org/pdf/2608.21929v1",
+      "published": "2026-08-25T16:18:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.24977v2",
       "tags": [
         "keyword:as",
         "query:as"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "token amplification attack via skill injection in LLM coding agents; adversarial attack using crafted textual skills",
-      "llm_evidence_cn": "通过技能注入对LLM编码智能体进行Token放大攻击，属于利用文本技能的对抗攻击",
-      "llm_evidence": "通过技能注入对LLM编码智能体进行Token放大攻击，属于利用文本技能的对抗攻击",
-      "canonical_evidence": "通过技能注入对LLM编码智能体进行Token放大攻击，属于利用文本技能的对抗攻击",
-      "llm_tldr_en": "SkillBloat injects malicious skills into LLM coding agents to amplify token consumption, achieving 5.4x-10.1x average token amplification by screening and refining attack skills.",
-      "llm_tldr_cn": "智能体技能可附带指令、脚本等，但也成为可信指令通道被滥用的攻击面。论文提出SkillBloat，通过两阶段框架筛选多种放大机制的攻击条件，并用LLM引导重写技能文档，使引擎在正常任务中消耗远超所需的token。在真实技能基准上，平均token放大达5.42-10.15倍。该工作揭示了编码智能体面临的经济资源滥用安全威胁。",
-      "llm_tldr": "智能体技能可附带指令、脚本等，但也成为可信指令通道被滥用的攻击面。论文提出SkillBloat，通过两阶段框架筛选多种放大机制的攻击条件，并用LLM引导重写技能文档，使引擎在正常任务中消耗远超所需的token。在真实技能基准上，平均token放大达5.42-10.15倍。该工作揭示了编码智能体面临的经济资源滥用安全威胁。",
+      "llm_evidence_en": "survey unifying attacks and defenses in retrieval-augmented generation, covering text adversarial attacks",
+      "llm_evidence_cn": "系统综述检索增强生成中的攻击与防御，涵盖文本对抗攻击的各类威胁模型",
+      "llm_evidence": "系统综述检索增强生成中的攻击与防御，涵盖文本对抗攻击的各类威胁模型",
+      "canonical_evidence": "系统综述检索增强生成中的攻击与防御，涵盖文本对抗攻击的各类威胁模型",
+      "llm_tldr_en": "This survey formalizes threat models across corpus, retriever, and generator in RAG, organizing attacks and stage-specific defenses into a unified pipeline-aware framework.",
+      "llm_tldr_cn": "检索增强生成在提升事实性的同时引入了语料投毒、后门攻击、隐私泄露与公平性破坏等安全风险。该综述统一梳理RAG流水线中语料、检索器和生成器三个环节的威胁模型，并指出已有综述在处理攻击者目标、威胁模型和阶段化防御上的不足。它将攻击按准确度等主要目标进行组织，并对应给出各阶段防御策略，为文本对抗攻击与防御研究提供了体系化的问题分类和应对框架，有助于后续系统设计。",
+      "llm_tldr": "检索增强生成在提升事实性的同时引入了语料投毒、后门攻击、隐私泄露与公平性破坏等安全风险。该综述统一梳理RAG流水线中语料、检索器和生成器三个环节的威胁模型，并指出已有综述在处理攻击者目标、威胁模型和阶段化防御上的不足。它将攻击按准确度等主要目标进行组织，并对应给出各阶段防御策略，为文本对抗攻击与防御研究提供了体系化的问题分类和应对框架，有助于后续系统设计。",
       "llm_tags": [
         "query:as"
       ],
@@ -782,14 +576,14 @@
         "keyword:as",
         "query:as"
       ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "defense against adversarial document injection in RAG text generation",
-      "llm_evidence_cn": "针对检索增强生成中对抗文档注入的防御方法",
-      "llm_evidence": "针对检索增强生成中对抗文档注入的防御方法",
-      "canonical_evidence": "针对检索增强生成中对抗文档注入的防御方法",
-      "llm_tldr_en": "RAGSentinel is a training-free defense for black-box RAG systems that detects adversarial documents via certifiable geometric consensus on hidden-state shifts, improving robustness against injected attacks.",
-      "llm_tldr_cn": "检索增强生成尽管提高事实性，却容易受到注入知识库的对抗文档影响，使模型输出被导向错误答案。现有防御可被自适应攻击者绕过。RAGSentinel 提出一种无需训练、无需标签的防御，通过替代编码器度量检索文档引起的隐藏状态偏移，去除共享主题方向并利用可证几何一致性识别对抗注入。它在黑盒 RAG 设置下提供可认证的鲁棒性，为文本攻防研究提供了新思路。",
-      "llm_tldr": "检索增强生成尽管提高事实性，却容易受到注入知识库的对抗文档影响，使模型输出被导向错误答案。现有防御可被自适应攻击者绕过。RAGSentinel 提出一种无需训练、无需标签的防御，通过替代编码器度量检索文档引起的隐藏状态偏移，去除共享主题方向并利用可证几何一致性识别对抗注入。它在黑盒 RAG 设置下提供可认证的鲁棒性，为文本攻防研究提供了新思路。",
+      "llm_score": 7.0,
+      "llm_evidence_en": "defense against adversarial text attacks in retrieval-augmented generation",
+      "llm_evidence_cn": "针对RAG中对抗文本攻击的防御",
+      "llm_evidence": "针对RAG中对抗文本攻击的防御",
+      "canonical_evidence": "针对RAG中对抗文本攻击的防御",
+      "llm_tldr_en": "RAGSentinel presents a training-free, label-free defense for black-box RAG systems against adversarial document injection, using a surrogate encoder to measure query-conditioned hidden-state shifts and remove shared topic directions for certifiable geometric consensus.",
+      "llm_tldr_cn": "检索增强生成（RAG）通过外部文档提升事实性，但也面临对抗文档注入劫持输出的安全漏洞。为抵御自适应攻击者，RAGSentinel提出无训练、无标签的黑盒防御：利用代理编码器度量查询条件下的隐状态偏移，去除共享主题方向并实现可认证的几何共识。实验证明该防御能有效抵抗对抗文档注入，为RAG安全提供新思路。",
+      "llm_tldr": "检索增强生成（RAG）通过外部文档提升事实性，但也面临对抗文档注入劫持输出的安全漏洞。为抵御自适应攻击者，RAGSentinel提出无训练、无标签的黑盒防御：利用代理编码器度量查询条件下的隐状态偏移，去除共享主题方向并实现可认证的几何共识。实验证明该防御能有效抵抗对抗文档注入，为RAG安全提供新思路。",
       "llm_tags": [
         "query:as"
       ],
@@ -797,7 +591,45 @@
       "matched_query_text": "adversarial attack text",
       "matched_requirement_id": "req-2",
       "selection_source": "fresh_fetch",
-      "quick_tier": "8plus"
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.24114v1",
+      "source": "arxiv",
+      "title": "AHEAD: Adaptive Hindsight with Environment-Augmented Distillation for Agentic RL",
+      "abstract": "Training multi-turn LLM agents with reinforcement learning typically relies on trajectory-level rewards, which assign a uniform advantage to every step and cannot identify which decisions led to success or failure. Self-distillation methods can provide finer-grained supervision by augmenting RL with privileged information. However, existing approaches usually apply the same type of privileged information to every step in an indistinguishable manner, ignoring a key asymmetry: routine steps need little additional guidance, while critical error steps require corrective direction that environment feedback alone cannot provide. We propose AHEAD, a step-aware framework that matches different supervision sources to different step types. The teacher receives environment feedback on all steps as a grounded dense signal, and additionally receives LLM-generated corrective hints on error steps to supply the direction that environment feedback lacks. The method introduces minimal changes to the standard GRPO algorithm. Across ALFWorld, WebShop, and Search-based QA, and across three model scales, AHEAD raises task success (+13.3 points on ALFWorld and +11.0 on WebShop at 7B over GRPO), reaches a given success rate in fewer training steps, and solves tasks within tighter interaction budgets than outcome-only RL and prior self-distillation baselines.",
+      "authors": [
+        "Xiaolong Jin",
+        "Dingmin Wang",
+        "Vijay Lingam",
+        "Varun Kumar"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-25T06:23:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.24114v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "agentic reinforcement learning with self-distillation and hindsight for multi-turn agent training",
+      "llm_evidence_cn": "面向多轮智能体训练的强化学习与自蒸馏后见之明方法，与自博弈智能体训练方法互补",
+      "llm_evidence": "面向多轮智能体训练的强化学习与自蒸馏后见之明方法，与自博弈智能体训练方法互补",
+      "canonical_evidence": "面向多轮智能体训练的强化学习与自蒸馏后见之明方法，与自博弈智能体训练方法互补",
+      "llm_tldr_en": "AHEAD improves multi-turn LLM agent RL by providing step-aware supervision, distinguishing routine steps from critical error steps via adaptive hindsight and environment-augmented distillation.",
+      "llm_tldr_cn": "在多轮大语言模型智能体的强化学习训练中，轨迹级奖励难以定位成败关键步骤。AHEAD提出步骤感知框架，依据步骤类型匹配不同的监督信号：常规步骤只需少量引导，关键错误步骤借助环境增强蒸馏与自适应后见之明进行修正。该方法缓解了均匀优势分配导致的信用分配问题，为自博弈等智能体训练提供了更细粒度的奖励塑造思路。",
+      "llm_tldr": "在多轮大语言模型智能体的强化学习训练中，轨迹级奖励难以定位成败关键步骤。AHEAD提出步骤感知框架，依据步骤类型匹配不同的监督信号：常规步骤只需少量引导，关键错误步骤借助环境增强蒸馏与自适应后见之明进行修正。该方法缓解了均匀优势分配导致的信用分配问题，为自博弈等智能体训练提供了更细粒度的奖励塑造思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
     },
     {
       "id": "2608.25711v1",
@@ -821,21 +653,60 @@
         "query:as"
       ],
       "llm_score": 8.0,
-      "llm_evidence_en": "defense against multi-turn text attacks on LLM agents via trajectory-conditioned generation",
-      "llm_evidence_cn": "轨迹条件动作生成防御LLM代理多轮文本攻击",
-      "llm_evidence": "轨迹条件动作生成防御LLM代理多轮文本攻击",
-      "canonical_evidence": "轨迹条件动作生成防御LLM代理多轮文本攻击",
-      "llm_tldr_en": "This paper proposes ReDiR, a generation-time defense that conditions action generation on trajectory-level security evidence to counter multi-turn decomposition attacks on tool-using LLM agents. It compresses long-horizon risk evidence before each action, reducing inference cost while improving safety.",
-      "llm_tldr_cn": "针对工具型LLM代理面临的多轮分解攻击，论文提出ReDiR生成时防御，在生成每个动作前基于轨迹级安全证据进行条件生成，避免依赖事后评估或额外在线推理。该方法将长程风险证据压缩后用于动作生成，兼顾安全与推理开销。实验证明能有效识别跨请求累积的危险意图。该工作聚焦多轮文本代理攻击与防御，与自博弈方法不同。",
-      "llm_tldr": "针对工具型LLM代理面临的多轮分解攻击，论文提出ReDiR生成时防御，在生成每个动作前基于轨迹级安全证据进行条件生成，避免依赖事后评估或额外在线推理。该方法将长程风险证据压缩后用于动作生成，兼顾安全与推理开销。实验证明能有效识别跨请求累积的危险意图。该工作聚焦多轮文本代理攻击与防御，与自博弈方法不同。",
+      "llm_evidence_en": "Generation-time defense against multi-turn decomposition attacks on tool-using LLM agents; direct adversarial attack/defense in text and agent actions",
+      "llm_evidence_cn": "面向多轮分解攻击的生成时防御，直接涉及文本与智能体动作的对抗攻防",
+      "llm_evidence": "面向多轮分解攻击的生成时防御，直接涉及文本与智能体动作的对抗攻防",
+      "canonical_evidence": "面向多轮分解攻击的生成时防御，直接涉及文本与智能体动作的对抗攻防",
+      "llm_tldr_en": "ReDiR defends tool-using LLM agents against multi-turn decomposition attacks by conditioning each action on compressed trajectory-level security evidence before generation, avoiding costly online reasoning and runtime-specific action representations.",
+      "llm_tldr_cn": "工具调用智能体在交互中可能被多轮分解攻击把恶意目标分布到多个看似合理的请求与工具调用中。本文提出ReDiR，在每次动作生成前把轨迹级安全证据压缩为条件，使动作生成依赖完整轨迹的安全判断，从而在不依赖额外在线推理的前提下检测并阻断跨轮次累积风险。该方法面向生成时防御，降低推理开销并兼容不同动作表示。相关实验表明其能有效提升多轮智能体安全。",
+      "llm_tldr": "工具调用智能体在交互中可能被多轮分解攻击把恶意目标分布到多个看似合理的请求与工具调用中。本文提出ReDiR，在每次动作生成前把轨迹级安全证据压缩为条件，使动作生成依赖完整轨迹的安全判断，从而在不依赖额外在线推理的前提下检测并阻断跨轮次累积风险。该方法面向生成时防御，降低推理开销并兼容不同动作表示。相关实验表明其能有效提升多轮智能体安全。",
       "llm_tags": [
         "query:as"
       ],
       "matched_query_tag": "query:as",
-      "matched_query_text": "adversarial attack and defense in text using self play",
-      "matched_requirement_id": "req-10",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
       "selection_source": "fresh_fetch",
       "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.26031v1",
+      "source": "arxiv",
+      "title": "Vulnerable Code Search: Transferable Attack for Code Language Models",
+      "abstract": "Reliable code retrieval is crucial for developer productivity and effective code reuse. However, current neural code language models (CLMs) powering search tools are susceptible to adversarial attacks targeting non-functional textual elements. In this paper, we introduce a programming language-agnostic, transferable, adversarial attack that exploits this CLM vulnerability. Our approach perturbs identifiers within a code snippet without altering the snippet's functionality to artificially align the code with a target query. We demonstrate that our attack, even when computed using smaller code embedding models, such as CodeT5+, is highly effective and transferable to larger, closed-source embedding models, like Voyage-code-3, or LLMs like Gemini-3.1-Pro. Our attack can increase the similarity between the query and arbitrary, irrelevant code snippets, consequently degrading key retrieval metrics such as the Mean Reciprocal Rank (MRR) of state-of-the-art models by up to 77%. The experimental results highlight the fragility of current code search methods and underscore the need for more robust, semantic-aware approaches.",
+      "authors": [
+        "Kaicheng Wang",
+        "Liyan Huang",
+        "Jesse Thomason",
+        "Weihang Wang"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2026-08-26T17:11:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.26031v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "transferable adversarial attack on code language models",
+      "llm_evidence_cn": "针对代码语言模型的可迁移对抗攻击",
+      "llm_evidence": "针对代码语言模型的可迁移对抗攻击",
+      "canonical_evidence": "针对代码语言模型的可迁移对抗攻击",
+      "llm_tldr_en": "This paper introduces a language-agnostic transferable adversarial attack that perturbs identifiers in code snippets to align with target queries, effectively attacking code search models even when computed with smaller models and transferred to larger proprietary ones.",
+      "llm_tldr_cn": "神经代码检索模型易受对非功能文本元素的对抗攻击。本文提出编程语言无关、可迁移的对抗攻击：扰动代码片段中的标识符但不改变功能，使代码与目标查询对齐。用小模型CodeT5+生成的攻击可有效迁移到大型闭源模型Voyage-code-3和LLM如Gemini-3.1-Pro。暴露了代码语言模型的检索可靠性风险。",
+      "llm_tldr": "神经代码检索模型易受对非功能文本元素的对抗攻击。本文提出编程语言无关、可迁移的对抗攻击：扰动代码片段中的标识符但不改变功能，使代码与目标查询对齐。用小模型CodeT5+生成的攻击可有效迁移到大型闭源模型Voyage-code-3和LLM如Gemini-3.1-Pro。暴露了代码语言模型的检索可靠性风险。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
     }
   ]
 }
