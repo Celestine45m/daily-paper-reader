@@ -1,41 +1,42 @@
 {
-  "generated_at": "2026-08-28T06:33:39.847929+00:00",
-  "updated_date": "20260730-20260828",
+  "generated_at": "2026-08-29T03:30:44.320073+00:00",
+  "updated_date": "20260829",
   "carryover_days": 9,
   "tag_states": {
     "as": {
-      "updated_date": "20260730-20260828",
+      "updated_date": "20260829",
       "carryover_days": 9,
       "items": [
         {
-          "id": "2608.12889v1",
+          "id": "2608.26031v1",
           "source": "arxiv",
-          "title": "Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems",
-          "abstract": "Smishing detection systems are commonly trained and evaluated on clean, monolingual text. In low-resource settings, however, attackers frequently circumvent these systems through character obfuscation, cross-lingual code-switching, and structural perturbation. This study evaluates adversarial robustness for five model architectures: three classical lexical models (Random Forest, XGBoost, CNN+BiLSTM) and two multilingual transformers (mBERT, XLM-RoBERTa), using a dataset of 27,037 messages. Classical models are subjected to black-box generic attacks, while transformers are evaluated with attention-guided targeting. Each model is tested across three attack types and intensity levels, with performance measured by the Robustness Degradation Ratio (RDR). The results reveal a distinct architectural boundary: classical models experience near-catastrophic failure under character obfuscation and structural perturbation (RDR up to 0.988), whereas transformers demonstrate significantly greater resilience (RDR up to 0.351), with structural perturbation representing their most pronounced vulnerability. Effect-size analysis (Cliff's d) indicates a substantial difference between the two model categories. Within the transformer group, XLM-RoBERTa, despite achieving a higher clean-text baseline, exhibits greater degradation than mBERT. These findings demonstrate that clean-text performance is not a reliable predictor of adversarial robustness. Statistical validation using Mann-Whitney U and Friedman tests confirms that these patterns are attributable to model architecture rather than sampling. The results underscore the necessity for architecture-specific defences and frame smishing detection as an adversarial cybersecurity challenge rather than a static classification task.",
+          "title": "Vulnerable Code Search: Transferable Attack for Code Language Models",
+          "abstract": "Reliable code retrieval is crucial for developer productivity and effective code reuse. However, current neural code language models (CLMs) powering search tools are susceptible to adversarial attacks targeting non-functional textual elements. In this paper, we introduce a programming language-agnostic, transferable, adversarial attack that exploits this CLM vulnerability. Our approach perturbs identifiers within a code snippet without altering the snippet's functionality to artificially align the code with a target query. We demonstrate that our attack, even when computed using smaller code embedding models, such as CodeT5+, is highly effective and transferable to larger, closed-source embedding models, like Voyage-code-3, or LLMs like Gemini-3.1-Pro. Our attack can increase the similarity between the query and arbitrary, irrelevant code snippets, consequently degrading key retrieval metrics such as the Mean Reciprocal Rank (MRR) of state-of-the-art models by up to 77%. The experimental results highlight the fragility of current code search methods and underscore the need for more robust, semantic-aware approaches.",
           "authors": [
-            "Denzel Chiuseni",
-            "Athanase Bahizire",
-            "Silva Hama",
-            "Jema David Ndibwile"
+            "Kaicheng Wang",
+            "Liyan Huang",
+            "Jesse Thomason",
+            "Weihang Wang"
           ],
-          "primary_category": "cs.CR",
+          "primary_category": "cs.SE",
           "categories": [
+            "cs.SE",
             "cs.CR"
           ],
-          "published": "2026-08-13T07:12:13+00:00",
-          "link": "https://arxiv.org/pdf/2608.12889v1",
+          "published": "2026-08-26T17:11:36+00:00",
+          "link": "https://arxiv.org/pdf/2608.26031v1",
           "tags": [
             "keyword:as",
             "query:as"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Adversarial robustness in text (smishing) detection; attacks on text classifiers",
-          "llm_evidence_cn": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-          "llm_evidence": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-          "canonical_evidence": "针对文本检测系统的对抗攻击鲁棒性评估与分析",
-          "llm_tldr_en": "This study compares adversarial fragility of classical and transformer-based smishing detection models under character obfuscation, code-switching, and structural perturbation attacks.",
-          "llm_tldr_cn": "短信钓鱼检测系统常在干净单语文本上训练，而攻击者通过字符混淆、跨语言代码切换等扰动绕过系统。本文对五种经典与Transformer架构的检测模型进行对抗鲁棒性比较，经典模型采用黑盒通用攻击，Transformer采用注意力引导攻击。结果显示不同模型在不同攻击类型和强度下表现出显著的脆弱性差异，为低资源环境下文本对抗防御提供了实证依据。",
-          "llm_tldr": "短信钓鱼检测系统常在干净单语文本上训练，而攻击者通过字符混淆、跨语言代码切换等扰动绕过系统。本文对五种经典与Transformer架构的检测模型进行对抗鲁棒性比较，经典模型采用黑盒通用攻击，Transformer采用注意力引导攻击。结果显示不同模型在不同攻击类型和强度下表现出显著的脆弱性差异，为低资源环境下文本对抗防御提供了实证依据。",
+          "llm_evidence_en": "transferable adversarial attack on code language models; adversarial attack on textual/code inputs",
+          "llm_evidence_cn": "针对代码语言模型的迁移对抗攻击，属于对文本/代码输入的对抗攻击",
+          "llm_evidence": "针对代码语言模型的迁移对抗攻击，属于对文本/代码输入的对抗攻击",
+          "canonical_evidence": "针对代码语言模型的迁移对抗攻击，属于对文本/代码输入的对抗攻击",
+          "llm_tldr_en": "A transferable adversarial attack for code language models that perturbs identifiers to align code with a target query, effective against small and large closed-source encoders.",
+          "llm_tldr_cn": "代码检索模型易受针对非功能文本元素的对抗攻击，影响开发效率。论文提出一种语言无关的迁移对抗攻击，通过修改代码标识符而不改变功能，使代码与目标查询对齐。实验表明，即使使用小型嵌入模型计算，也能有效迁移到大型闭源嵌入模型与LLM。该工作揭示了代码模型检索存在的安全隐患。",
+          "llm_tldr": "代码检索模型易受针对非功能文本元素的对抗攻击，影响开发效率。论文提出一种语言无关的迁移对抗攻击，通过修改代码标识符而不改变功能，使代码与目标查询对齐。实验表明，即使使用小型嵌入模型计算，也能有效迁移到大型闭源嵌入模型与LLM。该工作揭示了代码模型检索存在的安全隐患。",
           "llm_tags": [
             "query:as"
           ],
@@ -43,139 +44,7 @@
           "matched_query_text": "adversarial attack text",
           "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.12889v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.20820v1",
-          "source": "arxiv",
-          "title": "Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence",
-          "abstract": "Large language models (LLMs) are vulnerable to multi-turn jailbreak attacks that progressively manipulate conversation context. Existing certified robustness methods are limited to single-turn inputs; naive multi-turn composition yields bounds that degrade exponentially in the number of turns. We introduce Multi-Turn Certified Robustness (MTCR), a framework that models conversational safety via State-Adversarial MDPs and defines $k$-turn certified robustness as the worst-case safety probability across $k$ adversarial turns. MTCR comprises: (i) compositional certification via embedding-space mode decomposition, yielding tighter certified lower bounds than naive multiplication; (ii) $(α,β)$-safety persistence, improving the degradation rate from $\\underline{p}^{k}$ to $β^k$ (with $β> \\underline{p}$) and yielding interpretable horizon estimates; (iii) matching information-theoretic upper bounds establishing tightness; and (iv) a unified algorithm combining these results. Experiments on six LLMs under $ε$-bounded and Crescendo-style attacks confirm that empirical safety consistently exceeds the certified bounds.",
-          "authors": [
-            "Yang Liu",
-            "Bin Chong",
-            "Wenkai Yang",
-            "Shuai Zhang",
-            "Yancheng Chen",
-            "Feiyu Han",
-            "GuoZhen",
-            "Cheng Zhang",
-            "Huaibing Xie",
-            "Changze Lv",
-            "Shihan Dou",
-            "Pluto Zhou"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-08-21T07:43:06+00:00",
-          "link": "https://arxiv.org/pdf/2608.20820v1",
-          "tags": [
-            "keyword:as",
-            "query:as"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Certified robustness against multi-turn jailbreak adversarial attacks on LLM text inputs",
-          "llm_evidence_cn": "面向LLM多轮对抗越狱攻击的可认证鲁棒性方法",
-          "llm_evidence": "面向LLM多轮对抗越狱攻击的可认证鲁棒性方法",
-          "canonical_evidence": "面向LLM多轮对抗越狱攻击的可认证鲁棒性方法",
-          "llm_tldr_en": "Introduces MTCR, a certified robustness framework that models conversational safety via State-Adversarial MDPs and derives tighter compositional bounds against multi-turn jailbreak attacks.",
-          "llm_tldr_cn": "大语言模型易受多轮越狱攻击逐步操纵上下文，而现有认证鲁棒性仅限单轮，朴素多轮组合会使边界指数退化。本文提出MTCR框架，用状态对抗MDP建模对话安全，定义k轮认证鲁棒性，并通过嵌入空间模式分解获得更紧的下界，同时提出安全持续性改进退化速度。该方法显著提升多轮攻击下安全保证的可扩展性，为LLM安全认证提供了新工具。",
-          "llm_tldr": "大语言模型易受多轮越狱攻击逐步操纵上下文，而现有认证鲁棒性仅限单轮，朴素多轮组合会使边界指数退化。本文提出MTCR框架，用状态对抗MDP建模对话安全，定义k轮认证鲁棒性，并通过嵌入空间模式分解获得更紧的下界，同时提出安全持续性改进退化速度。该方法显著提升多轮攻击下安全保证的可扩展性，为LLM安全认证提供了新工具。",
-          "llm_tags": [
-            "query:as"
-          ],
-          "matched_query_tag": "query:as",
-          "matched_query_text": "adversarial attack text",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.20820v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.16195v1",
-          "source": "arxiv",
-          "title": "RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing",
-          "abstract": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing. While Multi-Agent Reinforcement Learning offers a principled framework for strategic interaction, its direct application to unstructured raw motor spaces inevitably leads to joint-level physical collapse, preventing the emergence of any viable combat tactics. To resolve this fundamental conflict between strategic exploration and physical feasibility, we formulate the humanoid combat task as a novel two-player latent-space zero-sum Markov game. Under standard regularity and approximate best-response assumptions, we show that the latent formulation induces an equivalent game over the decoder-reachable action manifold, providing an approximate-Nash interpretation of the resulting self-play dynamics. To instantiate this theoretical formulation, we propose RoboStriker, a hierarchical framework that decouples high-level reasoning from low-level execution. It first distills the tracking expertise of predefined boxing motions into a topologically bounded latent manifold. This structured latent foundation subsequently drives multi-agent co-evolution via Latent-Space Neural Fictitious Self-Play. Extensive experimental results demonstrate that gaming within this structured latent space substantially outperforms direct exploration. By constraining strategic exploration through a pretrained motion decoder, RoboStriker substantially reduces the catastrophic balance failures observed in raw action-space methods and achieves superior tactical performance in both competitive win rates and striking efficiency. Finally, we successfully deploy and validate our learned combat policies on real-world humanoid robots. Our code and video and supplementary materials are available at RoboStriker.",
-          "authors": [
-            "Kangning Yin",
-            "Kaige Liu",
-            "Zhe Cao",
-            "Wentao Dong",
-            "Weishuai Zeng",
-            "Tianyi Zhang",
-            "Qiang Zhang",
-            "Jingbo Wang",
-            "Jiangmiao Pang",
-            "Yang Li",
-            "Ming Zhou",
-            "Weinan Zhang"
-          ],
-          "primary_category": "cs.RO",
-          "categories": [
-            "cs.RO"
-          ],
-          "published": "2026-08-17T07:19:09+00:00",
-          "link": "https://arxiv.org/pdf/2608.16195v1",
-          "tags": [
-            "keyword:as",
-            "query:as"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "two-player latent-space zero-sum Markov game and self-play for humanoid boxing",
-          "llm_evidence_cn": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-          "llm_evidence": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-          "canonical_evidence": "双人潜在空间零和马尔可夫博弈与自博弈训练人形机器人拳击",
-          "llm_tldr_en": "Formulates humanoid combat as a two-player latent-space zero-sum Markov game, preventing physical collapse while enabling strategic skills via multi-agent self-play RL.",
-          "llm_tldr_cn": "人形机器人拳击需要同时具备竞争智能与物理可行性，直接在多智能体强化学习中应用原始运动空间会导致关节崩溃。本文提出双人潜在空间零和马尔可夫博弈框架，在潜空间中开展自博弈训练，既避免物理塌缩又能涌现战斗策略。理论上证明该潜在形式与原始形式近似最优反应等价，实验显示能实现稳定且高水平的对抗拳击行为。该方法为接触丰富、动态性强的机器人对抗任务提供了可扩展的训练范式。",
-          "llm_tldr": "人形机器人拳击需要同时具备竞争智能与物理可行性，直接在多智能体强化学习中应用原始运动空间会导致关节崩溃。本文提出双人潜在空间零和马尔可夫博弈框架，在潜空间中开展自博弈训练，既避免物理塌缩又能涌现战斗策略。理论上证明该潜在形式与原始形式近似最优反应等价，实验显示能实现稳定且高水平的对抗拳击行为。该方法为接触丰富、动态性强的机器人对抗任务提供了可扩展的训练范式。",
-          "llm_tags": [
-            "query:as"
-          ],
-          "matched_query_tag": "query:as",
-          "matched_query_text": "self-play reinforcement learning",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.16195v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.19982v1",
-          "source": "arxiv",
-          "title": "COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense",
-          "abstract": "LLMs remain vulnerable to prompt injection attacks, where adversarial instructions embedded in user inputs or external content manipulate model behavior and bypass safeguards. Existing defenses are predominantly static, relying on fixed alignment objectives or attack-specific filtering mechanisms that require redesign as new attack strategies emerge. While recent lifelong alignment methods address shifting user preferences, they do not account for adaptive adversaries that continually evolve to exploit weaknesses in previously learned defenses. This limitation is particularly important in real-world deployments, where evolving attack distributions necessitate continual adaptation without sacrificing robustness to previously encountered threats. We present COPA, a continual preference optimization framework that treats prompt-injection defense as a lifelong learning problem. Instead of one-time alignment, COPA incrementally incorporates feedback from newly observed attacks via GRPO-based optimization and uses margin-weighted experience replay to retain defenses against prior attack classes. This enables continuous adaptation to emerging threats while mitigating catastrophic forgetting and preserving general-purpose model capabilities. Across lifelong prompt injection attack streams, COPA reduces attack success rate by up to 6.3x and 4.4x on average compared to state-of-the-art defenses. These results highlight continual preference optimization as an effective paradigm for defending LLMs against adaptive adversaries.",
-          "authors": [
-            "Roshan Sood",
-            "Onat Gungor",
-            "Tajana Rosing"
-          ],
-          "primary_category": "cs.CR",
-          "categories": [
-            "cs.CR"
-          ],
-          "published": "2026-08-20T12:52:55+00:00",
-          "link": "https://arxiv.org/pdf/2608.19982v1",
-          "tags": [
-            "keyword:as",
-            "query:as"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Adaptive prompt injection defense via continual preference optimization",
-          "llm_evidence_cn": "通过持续偏好优化进行自适应提示注入防御",
-          "llm_evidence": "通过持续偏好优化进行自适应提示注入防御",
-          "canonical_evidence": "通过持续偏好优化进行自适应提示注入防御",
-          "llm_tldr_en": "COPA uses continual preference optimization to adaptively defend against prompt injection. It evolves with shifting attack distributions while retaining robustness to old threats, enabling real-world deployment under adaptive adversaries.",
-          "llm_tldr_cn": "LLM仍易受提示注入攻击，而现有防御多为静态，需要随着新攻击策略的出现而重新设计。持续对齐方法虽能处理用户偏好变化，却未考虑会持续演化的对抗者。为此提出COPA，基于持续偏好优化让防御不断适应新的攻击分布，同时保持对已遇到威胁的鲁棒性。该方法满足真实部署中攻击分布持续变化的需求，为LLM提示注入防御提供动态持续适应机制。",
-          "llm_tldr": "LLM仍易受提示注入攻击，而现有防御多为静态，需要随着新攻击策略的出现而重新设计。持续对齐方法虽能处理用户偏好变化，却未考虑会持续演化的对抗者。为此提出COPA，基于持续偏好优化让防御不断适应新的攻击分布，同时保持对已遇到威胁的鲁棒性。该方法满足真实部署中攻击分布持续变化的需求，为LLM提示注入防御提供动态持续适应机制。",
-          "llm_tags": [
-            "query:as"
-          ],
-          "matched_query_tag": "query:as",
-          "matched_query_text": "adversarial attack text",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.19982v1",
+          "paper_id": "2608.26031v1",
           "carry_days": 1
         }
       ]

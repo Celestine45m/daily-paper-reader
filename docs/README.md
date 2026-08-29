@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-30 ~ 2026-08-28</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-29</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 21 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 20 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>10</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>9</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-28 06:48:28 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 03:42:52 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今天聚焦“自我博弈”驱动搜索代理进化，并兼顾LLM对抗攻击与安全防御。</p>
-<p>最值得看：搜索代理通过自问自答、求解和记忆实现技能进化，同时多智能体管道的结构性漏洞与白盒攻击需警惕。</p>
-<p>建议优先精读两篇9分论文，并将代理安全测试纳入后续评估。</p>
+<p>今日20篇论文精读9篇，聚焦LLM多轮安全鲁棒性与零数据推理自博弈两大高分突破。最值得关注：组合界方法可认证多轮对话安全，追逐-逃避自博弈让LLM在无数据下学会推理。下一步可结合速读中的提示注入防御与人形机器人策略，探索安全与具身智能交叉方向。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">10 篇</strong>
+    <strong class="dpr-home-dashboard-count">9 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember">Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember</span></li><li><span class="dpr-home-dashboard-paper-title" title="SearchMaster: Grounded and Regulated Self-Play for Search Agents">SearchMaster: Grounded and Regulated Self-Play for Search Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Robust Context-Aware Detection of Malicious Instructions in Text">Robust Context-Aware Detection of Malicious Instructions in Text</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence">Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence</span></li><li><span class="dpr-home-dashboard-paper-title" title="The Chase Is the Curriculum, the Capture Anchors the Credit: Pursuit-Evasion Self-Play for Zero-Data LLM Reasoning">The Chase Is the Curriculum, the Capture Anchors the Credit: Pursuit-Evasion Self-Play for Zero-Data LLM Reasoning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Whitewashing Hate, Smearing Harmless Content: Annotator-Style Rebuttal Attacks on LLM-Based Moderation">Whitewashing Hate, Smearing Harmless Content: Annotator-Style Rebuttal Attacks on LLM-Based Moderation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>10</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>9</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -89,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Efficient LLM Adversarial Training via Low-Rank Defense and Circuit-Guided Surrogates">Efficient LLM Adversarial Training via Low-Rank Defense and Circuit-Guided Surrogates</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures">Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures</span></li><li><span class="dpr-home-dashboard-paper-title" title="Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks">Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems">Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems</span></li><li><span class="dpr-home-dashboard-paper-title" title="RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing">RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing</span></li><li><span class="dpr-home-dashboard-paper-title" title="COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense">COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>11</strong></span></div>
 </section>
