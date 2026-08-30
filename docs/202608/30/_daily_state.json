@@ -1,0 +1,249 @@
+{
+  "date": "20260830",
+  "date_label": "",
+  "generated_at": "2026-08-30 23:02:51 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.21929v1",
+      "route": "202608/30/2608.21929v1-skillbloat-token-amplification-attacks-via-skill-injection-in-llm-coding-agents",
+      "title": "SkillBloat: Token Amplification Attacks via Skill Injection in LLM Coding Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过技能注入对LLM编码智能体实施令牌放大对抗攻击",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.22248v1",
+      "route": "202608/30/2608.22248v1-beyond-over-refusal-defending-indirect-prompt-injection-via-latent-instruction-manifolds",
+      "title": "Beyond Over-Refusal: Defending Indirect Prompt Injection via Latent Instruction Manifolds",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "LLM间接提示注入攻击防御",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.23391v1",
+      "route": "202608/30/2608.23391v1-cross-domain-multi-task-data-to-text-generation-without-in-domain-training-data",
+      "title": "Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向数据到文本生成的结构保持数据增强",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.23959v1",
+      "route": "202608/30/2608.23959v1-neuronguard-robust-llm-safety-alignment-via-ablation-aware-safety-signal-redistribution",
+      "title": "NeuronGuard: Robust LLM Safety Alignment via Ablation-Aware Safety Signal Redistribution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对LLM的越狱与神经元级攻击的防御",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.24069v1",
+      "route": "202608/30/2608.24069v1-poisoning-agentic-alpha-adversarial-vulnerabilities-across-roles-and-architectures-in-multi-agent-trading-systems",
+      "title": "Poisoning Agentic Alpha: Adversarial Vulnerabilities Across Roles and Architectures in Multi-Agent Trading Systems",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对LLM多智能体系统的提示词投毒对抗攻击",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.25776v1",
+      "route": "202608/30/2608.25776v1-evomal-self-poisoning-in-self-evolving-coding-agents",
+      "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对自演化编码智能体的对抗性自投毒攻击",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.25905v1",
+      "route": "202608/30/2608.25905v1-answer-is-cheap-show-me-the-evidence-augmenting-automated-vulnerability-assessment-with-evidence",
+      "title": "Answer Is Cheap, Show Me the Evidence! Augmenting Automated Vulnerability Assessment with Evidence",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用LLM智能体进行自动化漏洞评估并生成证据",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.25922v1",
+      "route": "202608/30/2608.25922v1-query-side-attacks-on-gnn-based-kgqa-tracing-failures-from-entity-linking-to-answer-generation",
+      "title": "Query-Side Attacks on GNN-Based KGQA: Tracing Failures from Entity Linking to Answer Generation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对KGQA输入问题的对抗扰动",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.26008v1",
+      "route": "202608/30/2608.26008v1-a-self-evolving-multi-agent-framework-defense-against-llm-jailbreak-attacks",
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "自演化多智能体越狱防御",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.23375v1",
+      "route": "202608/30/2608.23375v1-adversarial-entropy-inflation-against-gumbel-based-inference-verification",
+      "title": "Adversarial Entropy Inflation Against Gumbel-Based Inference Verification",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于文本提示的对抗攻击，针对LLM推理验证机制",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.25817v1",
+      "route": "202608/30/2608.25817v1-skillshield-prompt-space-security-skills-for-llm-coding-agents",
+      "title": "SkillShield: Prompt-Space Security Skills for LLM Coding Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对编程智能体恶意请求的提示空间防御",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.21946v2",
+      "route": "202608/30/2608.21946v2-edge-experience-distillation-for-guided-exploration-in-agentic-reinforcement-learning",
+      "title": "EDGE: Experience-Distillation for Guided Exploration in Agentic Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过经验蒸馏引导智能体强化学习探索，虽非自博弈但与自博弈RL训练相关",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.23318v1",
+      "route": "202608/30/2608.23318v1-agent-g2-gaussian-guidance-for-agentic-reinforcement-learning",
+      "title": "Agent-G$^2$: Gaussian Guidance for Agentic Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体强化学习的高斯引导方法",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.26797v1",
+      "route": "202608/30/2608.26797v1-on-the-indistinguishability-of-human-vs-ai-generated-text",
+      "title": "On the Indistinguishability of Human v/s AI Generated Text",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过重复改写使机器文本逼近人类分布，可用于对抗性文本生成与检测规避",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    },
+    {
+      "paper_id": "2608.27260v1",
+      "route": "202608/30/2608.27260v1-what-makes-good-agentic-data-an-ace-lens-on-data-generation-for-llm-agents",
+      "title": "What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "提出智能体数据生成框架，将环境、任务、交互和验证器分解，直接关联LLM智能体的文本数据增强",
+      "first_seen_at": "2026-08-30 23:02:51 UTC",
+      "updated_at": "2026-08-30 23:02:51 UTC"
+    }
+  ]
+}

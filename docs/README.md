@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-29</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-30</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 26 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 15 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>9</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>17</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>9</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-29 22:48:00 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-30 23:02:51 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日26篇论文扫描，9篇精读重点聚焦大模型安全与推理，其中两篇获9.0高分。</p>
-<p>最值得关注的是《Certified Multi-Turn Robustness》提出的组合界与安全持续性方法，以及《Pursuit-Evasion Self-Play》用追逃博弈实现零数据推理训练。</p>
-<p>下一步建议普通读者优先精读这两篇9分论文，并顺带关注RAG安全类速读文章中的几何共识思路。</p>
+<p>今日15篇论文精读6篇、速读9篇，核心聚焦LLM安全攻防与智能体可靠性。</p>
+<p>最值得关注：针对LLM编码代理的Skill注入式token放大攻击，以及绕过过度拒绝的间接提示注入新防御。</p>
+<p>普通读者应警惕：LLM工具越强大，越需验证输入来源与输出依据，安全边界比功能更重要。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">9 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence">Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence</span></li><li><span class="dpr-home-dashboard-paper-title" title="The Chase Is the Curriculum, the Capture Anchors the Credit: Pursuit-Evasion Self-Play for Zero-Data LLM Reasoning">The Chase Is the Curriculum, the Capture Anchors the Credit: Pursuit-Evasion Self-Play for Zero-Data LLM Reasoning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Whitewashing Hate, Smearing Harmless Content: Annotator-Style Rebuttal Attacks on LLM-Based Moderation">Whitewashing Hate, Smearing Harmless Content: Annotator-Style Rebuttal Attacks on LLM-Based Moderation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SkillBloat: Token Amplification Attacks via Skill Injection in LLM Coding Agents">SkillBloat: Token Amplification Attacks via Skill Injection in LLM Coding Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Beyond Over-Refusal: Defending Indirect Prompt Injection via Latent Instruction Manifolds">Beyond Over-Refusal: Defending Indirect Prompt Injection via Latent Instruction Manifolds</span></li><li><span class="dpr-home-dashboard-paper-title" title="Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data">Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>9</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">17 篇</strong>
+    <strong class="dpr-home-dashboard-count">9 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="MEMORY Wins All: Indirect Bias Injection Attacks via Social Media Feeds">MEMORY Wins All: Indirect Bias Injection Attacks via Social Media Feeds</span></li><li><span class="dpr-home-dashboard-paper-title" title="RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation">RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation</span></li><li><span class="dpr-home-dashboard-paper-title" title="StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing">StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Answer Is Cheap, Show Me the Evidence! Augmenting Automated Vulnerability Assessment with Evidence">Answer Is Cheap, Show Me the Evidence! Augmenting Automated Vulnerability Assessment with Evidence</span></li><li><span class="dpr-home-dashboard-paper-title" title="Query-Side Attacks on GNN-Based KGQA: Tracing Failures from Entity Linking to Answer Generation">Query-Side Attacks on GNN-Based KGQA: Tracing Failures from Entity Linking to Answer Generation</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks">A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>17</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>9</strong></span></div>
 </section>
 </div>
 

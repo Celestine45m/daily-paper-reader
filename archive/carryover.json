@@ -1,51 +1,12 @@
 {
-  "generated_at": "2026-08-29T22:41:57.630238+00:00",
-  "updated_date": "20260829",
+  "generated_at": "2026-08-30T22:53:53.275933+00:00",
+  "updated_date": "20260830",
   "carryover_days": 9,
   "tag_states": {
     "as": {
-      "updated_date": "20260829",
+      "updated_date": "20260830",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2608.26008v1",
-          "source": "arxiv",
-          "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
-          "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
-          "authors": [
-            "Tongyan Hu",
-            "Bryan Hooi"
-          ],
-          "primary_category": "cs.CR",
-          "categories": [
-            "cs.CR",
-            "cs.CL"
-          ],
-          "published": "2026-08-26T16:52:06+00:00",
-          "link": "https://arxiv.org/pdf/2608.26008v1",
-          "tags": [
-            "keyword:as",
-            "query:as"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "self-evolving multi-agent defense against LLM jailbreak attacks, text adversarial attack/defense with self-play-like iteration",
-          "llm_evidence_cn": "自进化多智能体防御大语言模型越狱攻击，属于文本攻防且具有类自博弈的持续对抗迭代",
-          "llm_evidence": "自进化多智能体防御大语言模型越狱攻击，属于文本攻防且具有类自博弈的持续对抗迭代",
-          "canonical_evidence": "自进化多智能体防御大语言模型越狱攻击，属于文本攻防且具有类自博弈的持续对抗迭代",
-          "llm_tldr_en": "This paper proposes a self-evolving multi-agent test-time defense that abstracts successful jailbreak attacks into reusable method-level rules, enabling continued adaptation to unseen text adversarial attacks.",
-          "llm_tldr_cn": "大语言模型仍易被角色扮演、混淆、代码转换和多步间接引导等越狱技术诱使产生有害输出，而现有防御大多在部署后固定不变，难以积累防御经验并适应新攻击。本文提出一种自进化的测试时多智能体防御框架：当攻击成功时，框架将失败抽象为捕获攻击结构包装的方法级规则而非有害主题，并跨交互复用该规则。实验表明该框架能在攻防对抗中持续积累规则记忆，提升对未见越狱策略的鲁棒性，为文本攻防方向提供了自博弈式持续学习的可行范式。",
-          "llm_tldr": "大语言模型仍易被角色扮演、混淆、代码转换和多步间接引导等越狱技术诱使产生有害输出，而现有防御大多在部署后固定不变，难以积累防御经验并适应新攻击。本文提出一种自进化的测试时多智能体防御框架：当攻击成功时，框架将失败抽象为捕获攻击结构包装的方法级规则而非有害主题，并跨交互复用该规则。实验表明该框架能在攻防对抗中持续积累规则记忆，提升对未见越狱策略的鲁棒性，为文本攻防方向提供了自博弈式持续学习的可行范式。",
-          "llm_tags": [
-            "query:as"
-          ],
-          "matched_query_tag": "query:as",
-          "matched_query_text": "adversarial attack and defense in text using self play",
-          "matched_requirement_id": "req-10",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.26008v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }

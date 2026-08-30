@@ -1,0 +1,629 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-30T22:53:53.274356+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 9,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2608.21929v1",
+      "source": "arxiv",
+      "title": "SkillBloat: Token Amplification Attacks via Skill Injection in LLM Coding Agents",
+      "abstract": "Agent skills extend coding agents with task-specific instructions, scripts, and resources, but they also create a trusted   instruction channel that can be abused beyond conventional security attacks. This paper studies token amplification through   skill injection: an economic resource-abuse threat in which a malicious skill causes an agent to consume substantially more   tokens than needed for normal task execution. We present SkillBloat, a two-phase framework that first screens a library of   diverse attack-type conditions across multiple amplification mechanisms and then refines the strongest candidate through   LLM-guided full-document skill rewriting. Evaluated on a real-world skill benchmark, SkillBloat achieves 5.4184x-10.1455x   average best amplification across multiple coding-agent target configurations. An ablation shows that the second-stage   refinement loop consistently improves average best amplification over Phase 1 attack-type screening alone, demonstrating   that iterative optimization provides additional benefit beyond initial attack-type selection. These results show that skill   ecosystems expose a practical resource-amplification attack surface that is orthogonal to existing security-oriented skill   poisoning.",
+      "authors": [
+        "Yuanjin Zheng",
+        "Jingbang Chen"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-08-22T11:41:48+00:00",
+      "link": "https://arxiv.org/pdf/2608.21929v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial token amplification attack via skill injection in LLM coding agents",
+      "llm_evidence_cn": "通过技能注入对LLM编码智能体实施令牌放大对抗攻击",
+      "llm_evidence": "通过技能注入对LLM编码智能体实施令牌放大对抗攻击",
+      "canonical_evidence": "通过技能注入对LLM编码智能体实施令牌放大对抗攻击",
+      "llm_tldr_en": "SkillBloat injects malicious skills into coding agents to amplify token consumption, an economic resource-abuse attack that achieves 5.4-10.1x overhead.",
+      "llm_tldr_cn": "编码智能体的技能机制提供了受信任指令通道，但也可能被滥用。本文提出SkillBloat，一种通过恶意技能注入实现令牌放大的经济资源滥用攻击，使智能体消耗远超任务需求的token。方法先筛选多种攻击条件，再用LLM引导重写整篇技能以强化效果。在真实技能基准上实现了5.4184-10.1455倍的放大，提示技能系统需要资源约束与安全审计。",
+      "llm_tldr": "编码智能体的技能机制提供了受信任指令通道，但也可能被滥用。本文提出SkillBloat，一种通过恶意技能注入实现令牌放大的经济资源滥用攻击，使智能体消耗远超任务需求的token。方法先筛选多种攻击条件，再用LLM引导重写整篇技能以强化效果。在真实技能基准上实现了5.4184-10.1455倍的放大，提示技能系统需要资源约束与安全审计。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.22248v1",
+      "source": "arxiv",
+      "title": "Beyond Over-Refusal: Defending Indirect Prompt Injection via Latent Instruction Manifolds",
+      "abstract": "Large Language Models (LLMs) have been integrated into complex ecosystems (e.g., Code Agents), while Indirect Prompt Injection (IPI) attacks have emerged as critical barriers to their safe deployment. Attackers exploit LLMs' indistinguishability between \"instructions\" and \"data\" to manipulate LLMs via maliciously injected instructions. Existing defenses, however, face an intractable safety-utility trade-off: most guardrails either incur high latency or suffer from severe over-refusal. In this paper, we first demonstrate that LLMs can separate instruction from data intrinsically with both theoretical and empirical evidence. Inspired by this insight, we propose AEGIS (Adaptive Ensemble Guard for Injection Shielding). AEGIS extracts instruction-sensitive projectors to identify malicious instructions and leverages a Unified Multi-Layer Consensus mechanism that aggregates topologically distinct signals across the network depth. Empirical evaluations show that AEGIS achieves remarkable detection performance against both heuristic and optimization-based attacks compared to baselines, highlighting its potential to mitigate IPI. Code is available at https://github.com/xaddwell/AEGIS",
+      "authors": [
+        "Jiahao Chen",
+        "Rui Yin",
+        "Xinfeng Li",
+        "Qianli Ma",
+        "Tianyu Du",
+        "Zhihui Fu",
+        "Jun Wang",
+        "Zhaoxiang Wang",
+        "Shouling Ji"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-23T07:12:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.22248v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "LLM indirect prompt injection attack defense",
+      "llm_evidence_cn": "LLM间接提示注入攻击防御",
+      "llm_evidence": "LLM间接提示注入攻击防御",
+      "canonical_evidence": "LLM间接提示注入攻击防御",
+      "llm_tldr_en": "This paper tackles over-refusal in defending LLMs against indirect prompt injection, proving models can separate instruction from data and proposing AEGIS, an adaptive ensemble guard that effectively shields against injected instructions.",
+      "llm_tldr_cn": "现有防御在安全性和实用性之间难以权衡，常出现高延迟或过度拒绝问题。该文从理论和经验上证明LLM能内在区分指令与数据，并据此提出自适应集成防护AEGIS，通过提取潜在指令流形抵御间接提示注入攻击。实验表明AEGIS在保持低拒绝率的同时有效防御注入攻击，为LLM安全部署提供了新思路。",
+      "llm_tldr": "现有防御在安全性和实用性之间难以权衡，常出现高延迟或过度拒绝问题。该文从理论和经验上证明LLM能内在区分指令与数据，并据此提出自适应集成防护AEGIS，通过提取潜在指令流形抵御间接提示注入攻击。实验表明AEGIS在保持低拒绝率的同时有效防御注入攻击，为LLM安全部署提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.23391v1",
+      "source": "arxiv",
+      "title": "Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data",
+      "abstract": "Structured data exists in many forms (tables, knowledge graphs, charts, and time series), and converting it into text may involve different generation tasks. However, most prior work on data-to-text (D2T) generation has focused on specific tasks and datasets, relying either on task-specific training data or on the zero-shot capabilities of large language models. We study cross-domain D2T generation in a setting where neither in-domain training text nor test references are available, and where domains, generation goals, and input structures vary substantially. We compare data-driven knowledge distillation (DDKD) against zero-shot inference and fine-tuning on out-of-domain D2T data, and introduce structure-preserving augmentation via structural subsampling and perturbation. Experiments on five benchmarks show that, at constant model size (1.7B parameters), DDKD consistently outperforms both fine-tuning and zero-shot inference. Moreover, the resulting small models outperform a much larger finetuned model on two of the five domains, achieving comparable performance on the remaining three. We further construct QUINTD-5, a fivefold extension of QUINTD-1, and show that simply scaling real target-domain inputs yields only modest gains, whereas our augmentation strategy remains more effective and more cost-efficient for cross-domain distillation.",
+      "authors": [
+        "Yifei Song",
+        "Kun Efimov-Zhang",
+        "Claire Gardent"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-08-24T15:37:19+00:00",
+      "link": "https://arxiv.org/pdf/2608.23391v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "structure-preserving augmentation for data-to-text generation",
+      "llm_evidence_cn": "面向数据到文本生成的结构保持数据增强",
+      "llm_evidence": "面向数据到文本生成的结构保持数据增强",
+      "canonical_evidence": "面向数据到文本生成的结构保持数据增强",
+      "llm_tldr_en": "This paper studies cross-domain data-to-text generation without in-domain data, compares data-driven knowledge distillation with zero-shot baselines, and introduces structure-preserving augmentation to improve generalization.",
+      "llm_tldr_cn": "数据到文本生成通常依赖领域内训练数据或零样本能力，难以适应跨领域多任务场景。本文研究无领域内训练数据和测试参考时的跨域D2T生成，系统比较了数据驱动知识蒸馏与零样本推理及领域外微调。同时提出结构保持的数据增强方法，在不改变输入结构的前提下增强多样性。实验证明该增强能够提升跨领域生成质量和泛化能力，为低资源数据到文本生成提供了可行方案。",
+      "llm_tldr": "数据到文本生成通常依赖领域内训练数据或零样本能力，难以适应跨领域多任务场景。本文研究无领域内训练数据和测试参考时的跨域D2T生成，系统比较了数据驱动知识蒸馏与零样本推理及领域外微调。同时提出结构保持的数据增强方法，在不改变输入结构的前提下增强多样性。实验证明该增强能够提升跨领域生成质量和泛化能力，为低资源数据到文本生成提供了可行方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.23959v1",
+      "source": "arxiv",
+      "title": "NeuronGuard: Robust LLM Safety Alignment via Ablation-Aware Safety Signal Redistribution",
+      "abstract": "Safety alignment in large language models (LLMs) remains brittle against a growing spectrum of attacks. Jailbreak attacks bypass safety mechanisms through crafted prompts, while neuron-level attacks directly prune safety-critical neurons post-deployment. Both exploit a common weakness: safety-relevant information concentrates in a sparse neuron subset. We present NeuronGuard, a fine-tuning-stage defense that simultaneously hardens LLMs against both attack classes by redistributing safety signals across a broader set of neurons. NeuronGuard dynamically identifies safety-critical neurons via periodically refreshed per-layer linear classifiers, forces refusal behavior under deliberate neuron ablation, and applies KL-divergence regularization for distributional consistency. A randomized gradient projection strategy preserves downstream task utility by resolving conflicts between the defense and task objectives. We provide a formal guarantee that NeuronGuard strictly reduces the attack success rate (ASR) upper bound, and experiments across three LLMs, six state-of-the-art attack strategies, and multimodal settings confirm near-zero ASR while maintaining task accuracy, including against white-box adaptive adversaries.",
+      "authors": [
+        "Anjun Gao",
+        "Yueyang Quan",
+        "Yufei Xia",
+        "Zhuqing Liu",
+        "Minghong Fang"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-08-25T01:36:54+00:00",
+      "link": "https://arxiv.org/pdf/2608.23959v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Defense against jailbreak and neuron-level attacks on LLMs",
+      "llm_evidence_cn": "针对LLM的越狱与神经元级攻击的防御",
+      "llm_evidence": "针对LLM的越狱与神经元级攻击的防御",
+      "canonical_evidence": "针对LLM的越狱与神经元级攻击的防御",
+      "llm_tldr_en": "NeuronGuard hardens LLMs against jailbreak and neuron-ablation attacks by redistributing safety signals across a broader neuron set via ablation-aware training.",
+      "llm_tldr_cn": "大语言模型的安全对齐在越狱提示和神经元删除攻击面前仍然脆弱，因为安全信息集中在稀疏神经元子集。NeuronGuard 在微调阶段动态识别安全关键神经元，通过 KL 散度正则化将安全信号重分布到更广的神经元上，并强制在刻意消融下保持拒绝行为。实验表明该防御能同时增强对两类攻击的鲁棒性，缓解了安全信息集中带来的共性弱点。",
+      "llm_tldr": "大语言模型的安全对齐在越狱提示和神经元删除攻击面前仍然脆弱，因为安全信息集中在稀疏神经元子集。NeuronGuard 在微调阶段动态识别安全关键神经元，通过 KL 散度正则化将安全信号重分布到更广的神经元上，并强制在刻意消融下保持拒绝行为。实验表明该防御能同时增强对两类攻击的鲁棒性，缓解了安全信息集中带来的共性弱点。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.24069v1",
+      "source": "arxiv",
+      "title": "Poisoning Agentic Alpha: Adversarial Vulnerabilities Across Roles and Architectures in Multi-Agent Trading Systems",
+      "abstract": "LLM-based multi-agent trading systems, in which specialized agents collaborate through structured communication to produce trading decisions, are moving rapidly from research prototypes to live deployments that control real assets. The same inter-agent communication that makes them effective also exposes them: a corrupted signal can propagate to the final decision and translate into realized financial loss. Unlike prior attacks that presume privileged access to system internals, we restrict the adversary to what is practically reachable---the source data and prompts agents consume---yielding a low-barrier, and thus democratized threat model instantiated as role-specific adversaries.   We present the first systematic empirical study in the financial domain to characterize how an adversarial signal enters a multi-agent trading system and how far it survives toward the decision. Along the role axis, we decompose a widely-used trading pipeline into four functional roles---Analyst, Researcher, Trader, and Risk Manager---and pair each with an attack matched to its interface. Along the structural axis, we evaluate four communication topologies under data- and agent-level attacks, using the Adversarial Signal Preservation Score (APS) as a post-hoc lens on why some designs are more robust than others. We conduct experiments across five assets, two backbones, and two target directions. A central finding is that no architecture is inherently robust. These findings provide insights for the future design of safer and more robust agentic trading systems.",
+      "authors": [
+        "CheolWon Na",
+        "Hao Ni",
+        "Lukasz Szpruch",
+        "Zhangyang Wang",
+        "Dhagash Mehta",
+        "Saurabh Nagrecha",
+        "Alejandro Lopez-Lira",
+        "Chanyeol Choi",
+        "Yongjae Lee",
+        "Jee-Hyong Lee"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.CR",
+        "cs.MA"
+      ],
+      "published": "2026-08-25T05:07:37+00:00",
+      "link": "https://arxiv.org/pdf/2608.24069v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial poisoning attacks on LLM multi-agent systems via prompts",
+      "llm_evidence_cn": "针对LLM多智能体系统的提示词投毒对抗攻击",
+      "llm_evidence": "针对LLM多智能体系统的提示词投毒对抗攻击",
+      "canonical_evidence": "针对LLM多智能体系统的提示词投毒对抗攻击",
+      "llm_tldr_en": "Studies adversarial poisoning attacks on LLM-based multi-agent trading systems, showing low-barrier role-specific adversaries can corrupt signals through source data and prompts, causing financial loss without privileged access.",
+      "llm_tldr_cn": "针对LLM多智能体交易系统，该文提出一种低门槛的对抗投毒攻击范式，攻击者仅通过污染智能体消费的源数据与提示词即可影响最终决策，造成实际经济损失。论文首次系统分析了跨角色和跨架构的多智能体系统中此类漏洞的传播机制。研究揭示了智能体间通信在提升效能的同时也引入了新的攻击面，为多智能体系统安全设计提供警示。",
+      "llm_tldr": "针对LLM多智能体交易系统，该文提出一种低门槛的对抗投毒攻击范式，攻击者仅通过污染智能体消费的源数据与提示词即可影响最终决策，造成实际经济损失。论文首次系统分析了跨角色和跨架构的多智能体系统中此类漏洞的传播机制。研究揭示了智能体间通信在提升效能的同时也引入了新的攻击面，为多智能体系统安全设计提供警示。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.25776v1",
+      "source": "arxiv",
+      "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+      "abstract": "Self-evolving LLM coding agents write their own tools by imitating retrieved skills from shared skill libraries. We identify a vulnerability in this loop: during authoring, a retrieved malicious skill can become the template for a new skill that preserves the payload. We call this self-poisoning: the agent authors, stores, and runs the resulting malicious skill. We exploit it through EvoMal, an attack that amplifies self-poisoning by wrapping an interchangeable payload in a banner, a set of benign-looking structural elements that induces an imitating agent to reproduce the enclosed code. The attacker plants malicious skills in the library without invoking them. The agent then authors and executes new skills carrying the harmful code. Each authored copy can re-enter the library and be imitated again, forming a self-propagating worm that persists after the planted skills are removed. We define the agent self-poisoning rate (ASPR) as the fraction of tasks that add a newly authored malicious skill to the library. Across six models on 153 tool-relevant SWE-bench Verified tasks, ASPR ranges from 20.3% to 41.8%, and the poisoned libraries hold 4.9 to 9.0 times as many malicious skills as were planted. The vulnerability also appears without a banner: DeepSeek-V4-Pro reaches 11.1% ASPR with the payload alone. Tailoring the planted skill descriptions to one task family raises ASPR to 86.7%. After the planted skills are removed, Qwen3 retains a round-5 ASPR of 68% because agent-authored copies remain. These copies evade existing defenses, which focus on attacker-submitted names, code, and signatures. We propose counter-prompt, a defense that discourages banner-style copying and reduces EvoMal's ASPR to at most 6.7% with no significant task-completion loss.",
+      "authors": [
+        "Xiaodong Wu",
+        "Yu Shi",
+        "Qi Li",
+        "Zhimin Zhao",
+        "Xiangman Li",
+        "Bram Adams",
+        "Ahmed E. Hassan",
+        "Jianbing Ni"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-26T13:19:12+00:00",
+      "link": "https://arxiv.org/pdf/2608.25776v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial self-poisoning attack on self-evolving coding agents",
+      "llm_evidence_cn": "针对自演化编码智能体的对抗性自投毒攻击",
+      "llm_evidence": "针对自演化编码智能体的对抗性自投毒攻击",
+      "canonical_evidence": "针对自演化编码智能体的对抗性自投毒攻击",
+      "llm_tldr_en": "EvoMal exploits self-poisoning in self-evolving LLM coding agents, planting malicious skills that the agent imitates, authors, executes, and re-enters into the library.",
+      "llm_tldr_cn": "自演化LLM编码智能体会从共享技能库模仿并编写新技能，这引入了安全脆弱性。本文提出EvoMal攻击，通过在良性结构元素中包裹恶意载荷，诱导智能体在模仿时繁殖并执行恶意技能，实现自投毒并在库中再次传播。该攻击揭示了自演化循环中的安全风险，并展示了智能体如何被操纵执行有害代码。",
+      "llm_tldr": "自演化LLM编码智能体会从共享技能库模仿并编写新技能，这引入了安全脆弱性。本文提出EvoMal攻击，通过在良性结构元素中包裹恶意载荷，诱导智能体在模仿时繁殖并执行恶意技能，实现自投毒并在库中再次传播。该攻击揭示了自演化循环中的安全风险，并展示了智能体如何被操纵执行有害代码。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.25905v1",
+      "source": "arxiv",
+      "title": "Answer Is Cheap, Show Me the Evidence! Augmenting Automated Vulnerability Assessment with Evidence",
+      "abstract": "Software vulnerability (SV) assessment helps prioritize remediation by characterizing reported vulnerabilities. Existing   automated methods predict assessment results from SV reports (SVRs), but often overlook information in rich text, such as   screenshots and code snippets, as well as contextual information about vulnerable projects. They also focus on prediction   accuracy without providing explanations or supporting evidence, limiting their practical use when analysts must validate   imperfect predictions. We propose EAVA, a framework that uses large language models (LLMs) to assess SVs and provide   supporting evidence. EAVA employs specialized LLM agents to process rich-text content and project information, and builds a   dedicated assessment model through a two-stage training pipeline. It first uses supervised instruction tuning on automatically   annotated reasoning trajectories to inject domain knowledge, and then applies reinforcement learning to improve intrinsic   reasoning. EAVA also retrieves similar historical vulnerabilities as supplementary evidence. Experiments on a newly collected   SVR dataset show that EAVA outperforms the strongest baseline by 5.3 to 35.2 percent across multiple metrics. Ablation studies   confirm the effectiveness of assessment-specific model training and information enrichment. A user study with security experts   further demonstrates that the evidence provided by EAVA is useful and practical for real-world SV assessment.",
+      "authors": [
+        "Shengyi Pan",
+        "Zelong Zheng",
+        "Jiayuan Zhou",
+        "Xing Hu",
+        "Xin Xia",
+        "Shanping Li"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-08-26T15:23:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.25905v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "automated vulnerability assessment with LLM agents and evidence",
+      "llm_evidence_cn": "利用LLM智能体进行自动化漏洞评估并生成证据",
+      "llm_evidence": "利用LLM智能体进行自动化漏洞评估并生成证据",
+      "canonical_evidence": "利用LLM智能体进行自动化漏洞评估并生成证据",
+      "llm_tldr_en": "Proposes EAVA, an LLM-agent-based framework for software vulnerability assessment that processes rich text and project context to predict assessment results while providing supporting evidence, improving explainability and practical usability in analysts' validation workflows.",
+      "llm_tldr_cn": "针对现有自动化漏洞评估忽略富文本与项目上下文、且只给预测不给证据的问题，提出EAVA框架，利用专门的LLM智能体处理富文本内容和项目信息，在评估漏洞的同时生成支持证据。实验表明EAVA在提升评估性能的同时提供可解释证据，便于分析人员验证，增强了漏洞评估的实用性。",
+      "llm_tldr": "针对现有自动化漏洞评估忽略富文本与项目上下文、且只给预测不给证据的问题，提出EAVA框架，利用专门的LLM智能体处理富文本内容和项目信息，在评估漏洞的同时生成支持证据。实验表明EAVA在提升评估性能的同时提供可解释证据，便于分析人员验证，增强了漏洞评估的实用性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.23375v1",
+      "source": "arxiv",
+      "title": "Adversarial Entropy Inflation Against Gumbel-Based Inference Verification",
+      "abstract": "Gumbel-based inference verification bounds LLM weight exfiltration by only forgiving token choices that plausibly arise from honest GPU nondeterminism, reporting a >200x slowdown for a steganographic adversary under benign prompt traffic. This bound assumes a passive attacker; we show it degrades sharply against an adversary who instead controls the prompt distribution. Because the verifier's admissible-token-set size is driven by the model's own output entropy, prompts engineered to break grammatical and sub-word structure -- rather than benign conversational traffic -- widen that set and open a materially larger covert channel. Across six instruction-tuned models spanning 1B to 32B parameters and three random seeds, our strongest attack (character- and script-level disruption) roughly doubles bits leaked per token relative to benign prompts, cutting the slowdown factor to 60x - 118x. These results indicate that static, benign-traffic-calibrated thresholds are insufficient for this defense, and that jitter-forgiveness thresholds should instead be calibrated dynamically against local token entropy.",
+      "authors": [
+        "Nikita Kezins"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-24T15:20:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.23375v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "adversarial attack with text prompts against LLM inference verification",
+      "llm_evidence_cn": "基于文本提示的对抗攻击，针对LLM推理验证机制",
+      "llm_evidence": "基于文本提示的对抗攻击，针对LLM推理验证机制",
+      "canonical_evidence": "基于文本提示的对抗攻击，针对LLM推理验证机制",
+      "llm_tldr_en": "Shows Gumbel-based inference verification is vulnerable to adversarial prompts that inflate output entropy, widening the covert channel and breaking passive-attacker bounds.",
+      "llm_tldr_cn": "基于Gumbel的推理验证机制假设被动的窃取者，从而限制LLM权重外泄。本文提出对抗熵膨胀攻击：攻击者控制提示分布，使模型输出熵增大，从而扩大可接受token集合，打开更大隐蔽信道。在六个指令微调模型（1B-32B）上的实验显示该攻击显著削弱验证界的有效性。该工作揭示了基于熵的验证方法在主动攻击者面前的安全短板。",
+      "llm_tldr": "基于Gumbel的推理验证机制假设被动的窃取者，从而限制LLM权重外泄。本文提出对抗熵膨胀攻击：攻击者控制提示分布，使模型输出熵增大，从而扩大可接受token集合，打开更大隐蔽信道。在六个指令微调模型（1B-32B）上的实验显示该攻击显著削弱验证界的有效性。该工作揭示了基于熵的验证方法在主动攻击者面前的安全短板。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.21946v2",
+      "source": "arxiv",
+      "title": "EDGE: Experience-Distillation for Guided Exploration in Agentic Reinforcement Learning",
+      "abstract": "Reinforcement learning with outcome-based objectives such as GRPO enables LLM-based agents to solve complex, long-horizon tasks, yet the reusable exploration patterns embedded in interaction trajectories are largely discarded after a single policy update. Existing experience-augmented approaches retrieve historical guidance at inference time, but they apply experiences without accounting for the policy's evolving capability and create persistent dependencies on external retrieval. We propose EDGE (Experience-Distillation for Guided Exploration), a framework that treats retrieved experiences as temporary training-time scaffolds and progressively internalizes their benefits into the parametric policy. Concretely, EDGE partitions each rollout group into experience-conditioned and experience-free trajectories to estimate and admit only positive marginal gains without extra sampling, then distills the induced behavior into the base policy via a reverse-KL objective on its own empirical support. A co-evolutionary experience bank further synthesizes guidance from emerging failure modes and prunes obsolete entries as the policy evolves. Across embodied, web, and search-based QA tasks, EDGE improves over strong RL baselines by up to 12.5 points and remains effective without inference-time scaffolds or a proprietary reflector. The code is available at https://github.com/xvolcano02/EDGE.",
+      "authors": [
+        "Can Xie",
+        "Yuyi Zhou",
+        "Wen Yang",
+        "Ziyi zhang",
+        "Siyao Song",
+        "Yingzhuo Deng",
+        "Shuo Ren",
+        "Jiajun Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-08-22T13:16:25+00:00",
+      "link": "https://arxiv.org/pdf/2608.21946v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL framework for agent exploration via experience distillation, not self-play but relevant to self-play RL training",
+      "llm_evidence_cn": "通过经验蒸馏引导智能体强化学习探索，虽非自博弈但与自博弈RL训练相关",
+      "llm_evidence": "通过经验蒸馏引导智能体强化学习探索，虽非自博弈但与自博弈RL训练相关",
+      "canonical_evidence": "通过经验蒸馏引导智能体强化学习探索，虽非自博弈但与自博弈RL训练相关",
+      "llm_tldr_en": "EDGE addresses the waste of reusable exploration patterns in agentic RL (e.g., GRPO) by treating retrieved experiences as temporary training-time scaffolds and distilling them into the policy, avoiding inference-time retrieval dependencies and improving learning for long-horizon agentic tasks.",
+      "llm_tldr_cn": "当前基于结果目标的强化学习（如GRPO）让大模型智能体能够解决复杂长程任务，但轨迹中可复用的探索模式往往在一次策略更新后就被丢弃；已有的经验增强方法在推理时检索历史指导，却不考虑策略能力的变化且依赖外部检索。为此提出EDGE（经验蒸馏引导探索）框架，把检索到的经验当作训练期的临时脚手架，并通过划分卷逐步将经验收益内化到参数化策略中。实验表明该方法能持续利用历史探索模式，减少推理期外部依赖，为智能体强化学习提供了更高效的训练范式。",
+      "llm_tldr": "当前基于结果目标的强化学习（如GRPO）让大模型智能体能够解决复杂长程任务，但轨迹中可复用的探索模式往往在一次策略更新后就被丢弃；已有的经验增强方法在推理时检索历史指导，却不考虑策略能力的变化且依赖外部检索。为此提出EDGE（经验蒸馏引导探索）框架，把检索到的经验当作训练期的临时脚手架，并通过划分卷逐步将经验收益内化到参数化策略中。实验表明该方法能持续利用历史探索模式，减少推理期外部依赖，为智能体强化学习提供了更高效的训练范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.25922v1",
+      "source": "arxiv",
+      "title": "Query-Side Attacks on GNN-Based KGQA: Tracing Failures from Entity Linking to Answer Generation",
+      "abstract": "GNN-based Knowledge Graph Question Answering (KGQA) pipelines process queries through four discrete stages: entity linking, subgraph retrieval, GNN reasoning, and answer generation. Standard robustness evaluations conflate stage-level failures into a single end-to-end metric, obscuring both the source of brittleness and the appropriate mitigation target. We ask which stage fails, and why, when the pipeline is subjected to adversarial perturbations on the input question. We introduce a stage-isolation protocol with two answer-preserving adversarial perturbations verified against the knowledge graph: Compositional Restructuring (CR) and Relation Synonym Swap (RS) target distinct stages while leaving entity seeds intact. Evaluated across ComplexWebQuestions and WebQSP, the results run counter to prevailing assumptions: the GNN reasoning stage retains near-baseline accuracy when the subgraph is intact, while subgraph construction accounts for over 99\\% of the end-to-end collapse under CR, occurring even when the gold answer is present in 74\\% of retrieved subgraphs. This exposes a fundamental distinction between answer presence and answer reachability that end-to-end metrics cannot detect, and places the mitigation target firmly at the subgraph construction stage rather than the reasoning model. Perturbed datasets and evaluation infrastructure are released at https://anonymous.4open.science/r/atkgrag-E85C .",
+      "authors": [
+        "Pankaj Kumar",
+        "Subhankar Mishra"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "published": "2026-08-26T15:34:29+00:00",
+      "link": "https://arxiv.org/pdf/2608.25922v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial perturbations on input question in KGQA pipeline",
+      "llm_evidence_cn": "针对KGQA输入问题的对抗扰动",
+      "llm_evidence": "针对KGQA输入问题的对抗扰动",
+      "canonical_evidence": "针对KGQA输入问题的对抗扰动",
+      "llm_tldr_en": "This paper proposes a stage-isolation protocol with two answer-preserving adversarial perturbations to trace which KGQA stage fails under query-side attacks, revealing stage-specific brittleness.",
+      "llm_tldr_cn": "现有GNN知识图谱问答的鲁棒性评估通常将各阶段错误混为端到端指标，难以定位脆弱环节。本文引入阶段隔离协议，提出两种保持答案的对抗扰动（合成重构与关系同义词替换），分别作用于不同流水线阶段。实验定位了从实体链接到答案生成的具体失败来源，揭示了中间阶段的脆弱性。该工作为多阶段NLP系统的可解释鲁棒性评估提供了新思路。",
+      "llm_tldr": "现有GNN知识图谱问答的鲁棒性评估通常将各阶段错误混为端到端指标，难以定位脆弱环节。本文引入阶段隔离协议，提出两种保持答案的对抗扰动（合成重构与关系同义词替换），分别作用于不同流水线阶段。实验定位了从实体链接到答案生成的具体失败来源，揭示了中间阶段的脆弱性。该工作为多阶段NLP系统的可解释鲁棒性评估提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.25817v1",
+      "source": "arxiv",
+      "title": "SkillShield: Prompt-Space Security Skills for LLM Coding Agents",
+      "abstract": "A coding agent edits files and executes shell commands with its developer's privileges, allowing malicious requests to translate directly into harmful actions or functional malware. Existing defenses have complementary limitations: weight-level alignment is unavailable to API-only deployers, whereas input filters and execution-boundary monitors require auxiliary classification or checking components along the agent's trajectory. We therefore introduce SkillShield, a system-prompt defense that synthesizes security skills offline from known attacks or recorded agent failures. These skills are injected into the system prompt at session start and remain active throughout the tool-use loop. Unlike a reference monitor, they protect the system by defining the security policies the model should follow during execution. Due to the limited system-prompt space, we examine three fixed-budget provisioning scopes: all-classes, with one skill covering all threat classes, per-bundle, with one skill targeting a related subset, and per-class, with one skill dedicated to a single known class and used as the upper-bound reference. None requires runtime request classification or routing. Across six large language models on RedCode, the default all-classes skill reduces malware-generation severity from 3.37 to 0.58 and achieves a 43.6% execution attack success rate, comparable to Llama Guard 3's 42.7% without its separate 8B classifier. The per-bundle and class-fixed per-class settings further reduce this rate to 36.2% and 14.5%, respectively. Under two non-adaptive jailbreak families, SkillShield continues to outperform all baselines on malware generation. Across 731 benign task descriptions, SkillShield yields a mean safety-refusal rate of 0.14%. These results demonstrate the potential of prompt-space security skills to prevent harmful actions and malware generation for LLM coding agents.",
+      "authors": [
+        "Xiaodong Wu",
+        "Zhimin Zhao",
+        "Qi Li",
+        "Xiangman Li",
+        "Yu Shi",
+        "Bram Adams",
+        "Jianbing Ni"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-26T14:00:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.25817v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Prompt-space defense against malicious requests for coding agents",
+      "llm_evidence_cn": "针对编程智能体恶意请求的提示空间防御",
+      "llm_evidence": "针对编程智能体恶意请求的提示空间防御",
+      "canonical_evidence": "针对编程智能体恶意请求的提示空间防御",
+      "llm_tldr_en": "SkillShield synthesizes security skills offline from known attacks and injects them into a coding agent's system prompt to block malicious requests throughout the tool-use loop.",
+      "llm_tldr_cn": "LLM 编程智能体拥有编辑文件和执行命令的权限，恶意请求可能直接造成有害操作或恶意软件。现有防御要么依赖不可用的权重级对齐，要么需要额外检查组件。SkillShield 离线从已知攻击或失败记录中合成安全技能，并在会话开始时注入系统提示，使其在工具调用循环中持续生效。该方案为 API 部署者提供无需辅助分类器的轻量提示空间防御。",
+      "llm_tldr": "LLM 编程智能体拥有编辑文件和执行命令的权限，恶意请求可能直接造成有害操作或恶意软件。现有防御要么依赖不可用的权重级对齐，要么需要额外检查组件。SkillShield 离线从已知攻击或失败记录中合成安全技能，并在会话开始时注入系统提示，使其在工具调用循环中持续生效。该方案为 API 部署者提供无需辅助分类器的轻量提示空间防御。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.23318v1",
+      "source": "arxiv",
+      "title": "Agent-G$^2$: Gaussian Guidance for Agentic Reinforcement Learning",
+      "abstract": "Hint-based reinforcement learning addresses reward sparsity in long-horizon agentic tasks by retaining a prefix of an expert trajectory before each rollout, letting the policy explore from a state closer to success. Its effectiveness hinges on the guidance depth: how much of the trajectory to keep. Existing methods treat this depth as a deterministic scalar. Scheduled approaches share one value across samples and ignore per-task heterogeneity; per-sample probing estimates it separately at the cost of extra rollouts. We find that useful guidance occupies a band of depths whose informativeness profile is approximately Gaussian around the band center, rather than concentrating at a single optimal point. We propose Agent-G$^2$, a Gaussian guidance framework that draws the depth per task from a Gaussian whose center and spread are estimated online from rollouts already collected for policy optimization, requiring no probe rollouts or learned depth predictor. The center combines a global baseline with per-cluster difficulty, and the spread tracks within-cluster variance. We evaluate Agent-G$^2$ on ALFWorld and WebShop on Qwen2.5-1.5B / 7B-Instruct. Agent-G$^2$ outperforms the strongest hint-based, hint-free, and Aux-RL baselines on ALFWorld by 2.3 / 3.9 / 7.4 points at under one-third the rollout cost of per-sample probing.",
+      "authors": [
+        "Zixuan Wang",
+        "Yanrui Miao",
+        "Zhengxi Lu",
+        "Teng Pan",
+        "Yiwen Qiu",
+        "Hongxing Li",
+        "Peng Qiu",
+        "Ruiqing Zhang",
+        "Yongliang Shen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-08-24T14:34:34+00:00",
+      "link": "https://arxiv.org/pdf/2608.23318v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Gaussian guidance method for agentic RL training",
+      "llm_evidence_cn": "面向智能体强化学习的高斯引导方法",
+      "llm_evidence": "面向智能体强化学习的高斯引导方法",
+      "canonical_evidence": "面向智能体强化学习的高斯引导方法",
+      "llm_tldr_en": "Proposes Agent-G2, a Gaussian guidance framework for hint-based reinforcement learning that models guidance depth as a Gaussian band, improving exploration in long-horizon agentic tasks without per-sample probing overhead.",
+      "llm_tldr_cn": "针对hint-based强化学习中将引导深度设为固定标量、忽略任务差异且逐样本探测成本高的问题，提出高斯引导框架Agent-G²，将有价值引导深度建模为带中心的高斯区间。该方法在长时程智能体任务中提升探索效率，避免额外rollout开销，为奖励稀疏场景提供更灵活的引导策略。",
+      "llm_tldr": "针对hint-based强化学习中将引导深度设为固定标量、忽略任务差异且逐样本探测成本高的问题，提出高斯引导框架Agent-G²，将有价值引导深度建模为带中心的高斯区间。该方法在长时程智能体任务中提升探索效率，避免额外rollout开销，为奖励稀疏场景提供更灵活的引导策略。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.26008v1",
+      "source": "arxiv",
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
+      "authors": [
+        "Tongyan Hu",
+        "Bryan Hooi"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-08-26T16:52:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.26008v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Self-evolving multi-agent defense against jailbreak attacks",
+      "llm_evidence_cn": "自演化多智能体越狱防御",
+      "llm_evidence": "自演化多智能体越狱防御",
+      "canonical_evidence": "自演化多智能体越狱防御",
+      "llm_tldr_en": "A test-time defense that stores method-level rules from failed attacks in persistent memory and reuses them to counter unseen jailbreak strategies.",
+      "llm_tldr_cn": "大语言模型仍易受角色扮演、混淆、代码转换等多步越狱攻击影响，而多数防御在部署后固定不变，无法积累经验。该框架提出一种自演化的测试时防御，通过跨交互的规则记忆将每次攻击失败抽象为方法级规则，在后续输入中重复使用。这样模型能持续适应未见过的越狱策略，在攻防对抗中不断积累防御经验，弥补静态防御的不足。",
+      "llm_tldr": "大语言模型仍易受角色扮演、混淆、代码转换等多步越狱攻击影响，而多数防御在部署后固定不变，无法积累经验。该框架提出一种自演化的测试时防御，通过跨交互的规则记忆将每次攻击失败抽象为方法级规则，在后续输入中重复使用。这样模型能持续适应未见过的越狱策略，在攻防对抗中不断积累防御经验，弥补静态防御的不足。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.26797v1",
+      "source": "arxiv",
+      "title": "On the Indistinguishability of Human v/s AI Generated Text",
+      "abstract": "The rapid improvement of LLMs has made distinguishing AI-generated text from human writing a pressing problem. This challenge is further amplified by paraphrasing tools designed to make machine-generated text appear more \"human\". We study how access to human writing samples can be used to strategically paraphrase machine-generated responses toward the human distribution. Under a multi-sample setting with human and machine responses to the same prompts, we show that repeated paraphrasing moves the machine distribution toward the empirical human distribution under simple mixing and stability conditions. Our results derive an explicit convergence rate, extend the analysis to a finite-sample setting, and characterize how the required number of human samples and paraphrasing rounds scale with the desired error.",
+      "authors": [
+        "Jaee Ponde",
+        "Aritra Das",
+        "Mihir More",
+        "Debayan Gupta"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-27T08:34:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.26797v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "strategic paraphrasing to make AI text resemble human text, relevant to adversarial text generation",
+      "llm_evidence_cn": "通过重复改写使机器文本逼近人类分布，可用于对抗性文本生成与检测规避",
+      "llm_evidence": "通过重复改写使机器文本逼近人类分布，可用于对抗性文本生成与检测规避",
+      "canonical_evidence": "通过重复改写使机器文本逼近人类分布，可用于对抗性文本生成与检测规避",
+      "llm_tldr_en": "Shows that repeated paraphrasing moves machine-generated text toward the human distribution, with convergence guarantees, relevant for adversarial text attacks and detection evasion.",
+      "llm_tldr_cn": "区分AI生成文本与人类写作越来越困难，改写工具可让机器文本更接近人类。本文研究在同时拥有同一提示下的人类与机器回复的多样本设定中，如何利用人类写作样本对机器输出进行策略性改写，使其向经验人类分布移动。作者证明在简单混合与稳定性条件下，反复改写能使机器分布收敛到人类分布，并给出显式收敛率，刻画所需人类样本数与改写次数。结果对对抗文本生成和文本检测攻防具有理论指导意义。",
+      "llm_tldr": "区分AI生成文本与人类写作越来越困难，改写工具可让机器文本更接近人类。本文研究在同时拥有同一提示下的人类与机器回复的多样本设定中，如何利用人类写作样本对机器输出进行策略性改写，使其向经验人类分布移动。作者证明在简单混合与稳定性条件下，反复改写能使机器分布收敛到人类分布，并给出显式收敛率，刻画所需人类样本数与改写次数。结果对对抗文本生成和文本检测攻防具有理论指导意义。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.27260v1",
+      "source": "arxiv",
+      "title": "What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents",
+      "abstract": "LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interactions, and success signals while producing experience that is useful rather than merely abundant. Existing work spans many agent domains, but domain-centered organization and heterogeneous evaluation often obscure common generation mechanisms and conflate candidate construction with verification and selection. This work develops a two-level framework for the field. First, we represent agentic data as a common factorized object $(E,q,τ,v)$, comprising an environment specification, task signal, interaction realization, and optional verifier. We organize generation paradigms by their primary anchor and dependency structure. Second, we formulate generation as constrained distribution design through the Accuracy-Complexity-divErsity (ACE) lens. Accuracy establishes the feasible support of grounded and internally consistent data. Within this support, Complexity places learning mass relative to the capability of a declared learner and execution configuration, while divErsity controls coverage and redundancy of data. Using this framework, we explore how prior work verifies generated experience, constructs and calibrates difficulty, and expands behavioral coverage. The literature reveals a shift toward execution-grounded accuracy, learner-relative complexity, and diversity beyond surface variation or dataset size. We further discuss broader directions and emerging trends in agentic data generation through the ACE lens, including their implications for scaling, data sources, training regimes and adaptive learning. Overall, the central challenge is not simply to generate more data, but to continually allocate valid, informative, and non-redundant experience as agents and environments evolve.",
+      "authors": [
+        "Xingshan Zeng",
+        "Zishan Xu",
+        "Boju Zhang",
+        "Yuzhou Wu",
+        "Lingzhi Wang",
+        "Jianghao Lin",
+        "Liangyou Li",
+        "Yasheng Wang",
+        "Lifeng Shang",
+        "Xin Jiang",
+        "Weinan Zhang",
+        "Yong Yu",
+        "Qun Liu",
+        "Weiwen Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-08-27T15:43:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.27260v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Agentic data generation framework with environment-task-interaction-verifier decomposition; directly informs data augmentation for LLM agents",
+      "llm_evidence_cn": "提出智能体数据生成框架，将环境、任务、交互和验证器分解，直接关联LLM智能体的文本数据增强",
+      "llm_evidence": "提出智能体数据生成框架，将环境、任务、交互和验证器分解，直接关联LLM智能体的文本数据增强",
+      "canonical_evidence": "提出智能体数据生成框架，将环境、任务、交互和验证器分解，直接关联LLM智能体的文本数据增强",
+      "llm_tldr_en": "LLM agents need generated interaction data, but generation often conflates construction with verification. This paper presents a factorized ACE representation and a two-level framework that separates candidate generation from verification and selection, clarifying what makes agentic data useful and reusable.",
+      "llm_tldr_cn": "LLM智能体依赖生成的交互数据来学习，但现有数据生成常把候选构建与验证选择混为一谈。该文提出ACE视角，将智能体数据统一表示为环境、任务、交互与可选验证器的分解对象，并建立两层面组织框架，区分生成机制与验证选择机制。该框架帮助研究人员理解并改进面向智能体的数据生成，为文本数据增强与智能体训练提供了系统化指导。",
+      "llm_tldr": "LLM智能体依赖生成的交互数据来学习，但现有数据生成常把候选构建与验证选择混为一谈。该文提出ACE视角，将智能体数据统一表示为环境、任务、交互与可选验证器的分解对象，并建立两层面组织框架，区分生成机制与验证选择机制。该框架帮助研究人员理解并改进面向智能体的数据生成，为文本数据增强与智能体训练提供了系统化指导。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "data augmentation agent text generation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
