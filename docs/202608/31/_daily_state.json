@@ -1,0 +1,233 @@
+{
+  "date": "20260831",
+  "date_label": "",
+  "generated_at": "2026-09-01 00:40:16 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.27757v1",
+      "route": "202608/31/2608.27757v1-beyond-search-imitation-prior-directed-exploration-for-searchless-chess",
+      "title": "Beyond Search-Imitation: Prior-Directed Exploration for Searchless Chess",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用自博弈强化学习优化无搜索国际象棋网络，属于自博弈RL",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.27844v1",
+      "route": "202608/31/2608.27844v1-evoharmbench-breaking-content-moderation-with-iterative-human-like-evasion",
+      "title": "EvoHarmBench: Breaking Content Moderation with Iterative Human-Like Evasion",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "迭代人类化规避内容审核；文本对抗攻击评测框架",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.27990v1",
+      "route": "202608/31/2608.27990v1-caitlyn-can-llm-agents-autonomously-synthesize-defenses-against-emerging-injection-attacks",
+      "title": "CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks?",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对LLM智能体的提示注入攻击与自动防御合成；直接的文本对抗攻防研究",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.28389v1",
+      "route": "202608/31/2608.28389v1-camodocs-a-poisoning-attack-against-retrieval-augmented-language-models-using-camouflaged-documents",
+      "title": "CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向RAG文本检索的伪装文档投毒攻击",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.27928v1",
+      "route": "202608/31/2608.27928v1-graftyvul-synthesising-insecure-programs-through-real-world-vulnerability-grafting",
+      "title": "GraftyVul: Synthesising Insecure Programs Through Real-World Vulnerability Grafting",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过嫁接真实漏洞合成脆弱程序，直接支撑漏洞挖掘与检测",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.28009v1",
+      "route": "202608/31/2608.28009v1-beyond-global-scalars-synergizing-token-level-statistics-and-deep-semantics-for-adversarial-aigc-text-detection",
+      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对对抗攻击下的AI生成文本检测，提出对抗基准与融合检测方法",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.28327v1",
+      "route": "202608/31/2608.28327v1-layered-llm-defenses-as-an-ensemble-access-tiers-inference-cost-and-the-measured-failure-correlation-between-defense-layers",
+      "title": "Layered LLM Defenses as an Ensemble: Access Tiers, Inference Cost, and the Measured Failure Correlation Between Defense Layers",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向LLM的分层防御与对抗访问层级分析，属于文本对抗防御",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.28499v1",
+      "route": "202608/31/2608.28499v1-replicant-learning-policies-for-evading-and-hardening-malware-detectors",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于强化学习的恶意检测器逃逸与加固，契合攻防与智能体主题",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.24588v2",
+      "route": "202608/31/2608.24588v2-iapo-influence-aware-policy-optimization-for-credit-assignment-in-multi-turn-service-agents",
+      "title": "IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向多轮LLM智能体训练的影响力感知策略优化，可迁移至自博弈智能体训练",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.24747v1",
+      "route": "202608/31/2608.24747v1-skillforge-evolving-verifiable-skills-for-reinforcement-learning-agents",
+      "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向LLM智能体的强化学习技能演化框架，可作为自博弈智能体训练的桥接方法",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.24870v1",
+      "route": "202608/31/2608.24870v1-spo-stream-aligned-policy-optimization-for-asynchronous-agentic-rl",
+      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对异步智能体强化学习的策略优化方法，可服务于智能体训练",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.25683v1",
+      "route": "202608/31/2608.25683v1-psrl-efficient-training-for-agentic-ai-via-training-time-prefix-sharing",
+      "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体强化学习训练的前缀共享优化，可服务于自博弈训练流程",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.27288v1",
+      "route": "202608/31/2608.27288v1-low-asr-backdoors-exploiting-attack-success-rate-reduction-and-attacker-defender-asymmetry",
+      "title": "Low-ASR Backdoors: Exploiting Attack Success Rate Reduction and Attacker-Defender Asymmetry",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "深度学习中的后门攻击与防御，与攻防主题相关但不针对文本",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    },
+    {
+      "paper_id": "2608.27954v1",
+      "route": "202608/31/2608.27954v1-not-to-break-but-to-attest-adversarial-probes-for-privacy-preserving-llm-verification",
+      "title": "Not to Break, but to Attest: Adversarial Probes for Privacy-Preserving LLM Verification",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "在文本输入上构造对抗性探针用于大模型审计，与文本对抗攻击方法相关",
+      "first_seen_at": "2026-09-01 00:40:16 UTC",
+      "updated_at": "2026-09-01 00:40:16 UTC"
+    }
+  ]
+}
