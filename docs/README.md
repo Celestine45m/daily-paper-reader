@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-31</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-01</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 14 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-01 00:40:16 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-01 22:36:48 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读聚焦两篇高分论文：象棋“无搜索”智能体探索新范式，以及内容审核的对抗性逃逸攻击，均获9/10高分。最值得关注的方向是“先验引导探索”提升象棋决策效率，以及“类人迭代逃逸”暴露审核系统漏洞。建议普通读者优先精读这两篇论文，速读部分可关注多层防御成本与失效相关性分析。</p>
+<p>今日聚焦LLM安全与红队攻击，精读2篇高分论文并速读3篇相关基准与方法。最值得关注的是硬标签黑盒文本攻击优化（OASIS）与计算代理自改进红队（SIR）。建议普通读者优先研读这两篇，并结合长上下文提示注入基准验证实际效果。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Beyond Search-Imitation: Prior-Directed Exploration for Searchless Chess">Beyond Search-Imitation: Prior-Directed Exploration for Searchless Chess</span></li><li><span class="dpr-home-dashboard-paper-title" title="EvoHarmBench: Breaking Content Moderation with Iterative Human-Like Evasion">EvoHarmBench: Breaking Content Moderation with Iterative Human-Like Evasion</span></li><li><span class="dpr-home-dashboard-paper-title" title="CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks?">CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks?</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks">OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks</span></li><li><span class="dpr-home-dashboard-paper-title" title="SIR: Self-improving Red-teaming for Compute Use Agents">SIR: Self-improving Red-teaming for Compute Use Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection">Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Layered LLM Defenses as an Ensemble: Access Tiers, Inference Cost, and the Measured Failure Correlation Between Defense Layers">Layered LLM Defenses as an Ensemble: Access Tiers, Inference Cost, and the Measured Failure Correlation Between Defense Layers</span></li><li><span class="dpr-home-dashboard-paper-title" title="REPLICANT: Learning Policies for Evading and Hardening Malware Detectors">REPLICANT: Learning Policies for Evading and Hardening Malware Detectors</span></li><li><span class="dpr-home-dashboard-paper-title" title="IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents">IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="LongPIBench: A Long-Context Benchmark for Prompt Injection">LongPIBench: A Long-Context Benchmark for Prompt Injection</span></li><li><span class="dpr-home-dashboard-paper-title" title="S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?">S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?</span></li><li><span class="dpr-home-dashboard-paper-title" title="HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees">HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>8</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
 </section>
 </div>
 

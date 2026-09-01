@@ -1,0 +1,432 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-01T22:28:57.826102+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2608.29568v1",
+      "source": "arxiv",
+      "title": "OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks",
+      "abstract": "Different attack methods follow different search trajectories, they succeed on different subsets of samples, whereas existing hard-label black-box text attacks mainly focus on improving individual attackers or manually combining them. We present {\\OURS}, a method for optimizing attacker sequences in hard-label black-box text attacks. {\\OURS} first performs a one-time bi-objective attack chain search over candidate sequences to balance attack success rate and perturbation, and then reuses the selected fixed global chain during attack chain execution. Experiments across multiple datasets, victim models, and large language models show that {\\OURS} consistently outperforms strong standalone baselines and simple manually constructed chains. These results suggest that attacker composition is not merely an implementation choice, but a practical optimization target for improving hard-label black-box text attacks.",
+      "authors": [
+        "Qian Chen",
+        "Shiliang Xiao",
+        "Yuzhi Liang"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-08-30T05:26:19+00:00",
+      "link": "https://arxiv.org/pdf/2608.29568v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "optimizing attacker sequences for hard-label black-box text attacks",
+      "llm_evidence_cn": "硬标签黑盒文本攻击的攻击者序列优化",
+      "llm_evidence": "硬标签黑盒文本攻击的攻击者序列优化",
+      "canonical_evidence": "硬标签黑盒文本攻击的攻击者序列优化",
+      "llm_tldr_en": "OASIS optimizes attacker sequences for hard-label black-box text attacks via bi-objective attack chain search, reusing a fixed global chain that outperforms standalone baselines and manual chains across datasets, victim models, and LLMs.",
+      "llm_tldr_cn": "现有硬标签黑盒文本攻击仅改进单个攻击者或人工组合，存在子集局限性。本文提出OASIS，通过双目标攻击链搜索自动优化攻击者序列，并在执行阶段复用固定全局链。实验覆盖多数据集、受害模型和大语言模型，结果显示OASIS显著优于强基线和手工链条，提升了攻击的自动化和综合性能。",
+      "llm_tldr": "现有硬标签黑盒文本攻击仅改进单个攻击者或人工组合，存在子集局限性。本文提出OASIS，通过双目标攻击链搜索自动优化攻击者序列，并在执行阶段复用固定全局链。实验覆盖多数据集、受害模型和大语言模型，结果显示OASIS显著优于强基线和手工链条，提升了攻击的自动化和综合性能。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30207v1",
+      "source": "arxiv",
+      "title": "SIR: Self-improving Red-teaming for Compute Use Agents",
+      "abstract": "Computer use agents (CUAs) are vision-language models that perceive a screen and act on a real operating system through mouse, keyboard, and terminal, and they are increasingly deployed to automate everyday digital tasks. Because they can be exposed to untrusted content while operating, they are vulnerable to indirect prompt injection (IPI), in which an adversary plants instructions in content the agent will read and redirects it toward actions that violate the user's intent. Existing CUA safety benchmarks evaluate fixed injections written by hand, which may underestimate the risk posed by an adaptive adversary. We present SIR, a black box IPI attack that (i) composes stealthy injections from a small library of reusable principles stated in plain language and (ii) wraps composition in an iterative feedback loop that diagnoses the victim's failed trajectories and distills the bypasses into new, named strategies that are reapplied across tasks. Unlike prior red teaming of web agents, we target CUAs at the operating system level and score attacks with a fully deterministic oracle, using checks on filesystem, service, and permission state rather than an LLM judge. On experiment, we evaluate three frontier CUAs. Composing principles with feedback raises the attack success rate over a baseline written by hand, for example from 4% to 24% on Claude Opus 4.8 and from 0% to 28% on Gemini 3.5 Flash, while the benign task still completes. Principles discovered against one model further transfer to a different architecture with no additional feedback.",
+      "authors": [
+        "Chen Xiong",
+        "Zhiyuan He",
+        "Pin-Yu Chen",
+        "Stjepan Picek",
+        "Tsung-Yi Ho"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-31T03:39:43+00:00",
+      "link": "https://arxiv.org/pdf/2608.30207v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "black-box indirect prompt injection attack for compute use agents, self-improving red-teaming",
+      "llm_evidence_cn": "针对计算使用代理的黑盒间接提示注入攻击与自我改进红队测试",
+      "llm_evidence": "针对计算使用代理的黑盒间接提示注入攻击与自我改进红队测试",
+      "canonical_evidence": "针对计算使用代理的黑盒间接提示注入攻击与自我改进红队测试",
+      "llm_tldr_en": "SIR is a self-improving black-box IPI attack on computer use agents, composing stealthy injections from reusable principles and outperforming fixed hand-written benchmarks against adaptive adversaries.",
+      "llm_tldr_cn": "计算机使用代理易受间接提示注入攻击，而现有基准仅评估固定手工注入，低估自适应对手。本文提出SIR，一种黑盒IPI攻击方法，从可重用原则库中组合隐蔽注入，并通过自我改进适应代理配置。实验显示SIR能生成比固定注入更有效的攻击，提升了红队评估的威胁真实性和全面性。",
+      "llm_tldr": "计算机使用代理易受间接提示注入攻击，而现有基准仅评估固定手工注入，低估自适应对手。本文提出SIR，一种黑盒IPI攻击方法，从可重用原则库中组合隐蔽注入，并通过自我改进适应代理配置。实验显示SIR能生成比固定注入更有效的攻击，提升了红队评估的威胁真实性和全面性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30041v1",
+      "source": "arxiv",
+      "title": "Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection",
+      "abstract": "Large language model agents place outputs from external skills into their execution context, allowing attacker-controlled data to influence later privileged actions. Existing defenses mainly classify untrusted content or authorize proposed operations. They do not directly address how an agent's future authority should change once untrusted data enters its state. We present SkillGuard, a harness-level enforcement layer that treats this event as contamination and restricts future capabilities to disconnect the resulting state from deployer-defined forbidden states. Given sound skill summaries and policies, SkillGuard represents security-relevant transitions with a Skill Impact Graph, specifies admissible control over skill parameters via steerability signatures, and mediates invocations with an inline reference monitor. Following contamination, it computes weighted capability restrictions using binary, fractional, or fractional-flow strategies without auxiliary language-model inference. We evaluate SkillGuard on four AgentDojo suites with two backend LLMs, Gemini 2.5 Flash and Llama3.3-70B, against an LLM-only No Defense baseline and three defenses at different system layers: Spotlighting, CaMeL, and AttriGuard. We construct a compositional attack benchmark in which each attack combines observations individually insufficient to induce target violation and evaluate the same baselines on it. Under AgentDojo's Tool Knowledge attacks, SkillGuard eliminates attack success on three of four suites for both backends and reduces it to 4.8% and 14.3% on Slack. Against compositional attacks, it outperforms every baseline on Llama and matches the strongest baseline on Gemini at higher benign utility. Fractional-flow restriction preserves substantially more capabilities than binary restriction at the same attack success rate. Across both settings, SkillGuard adds no model calls or token overhead.",
+      "authors": [
+        "Wujie Xiong",
+        "Rabimba Karanjai",
+        "Yang Lu",
+        "Weidong Shi",
+        "Lei Xu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-30T20:57:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.30041v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "defense against indirect prompt injection attack in text-based LLM agents",
+      "llm_evidence_cn": "针对基于文本的LLM智能体间接提示注入攻击的防御",
+      "llm_evidence": "针对基于文本的LLM智能体间接提示注入攻击的防御",
+      "canonical_evidence": "针对基于文本的LLM智能体间接提示注入攻击的防御",
+      "llm_tldr_en": "Proposes SkillGuard, a harness-level enforcement layer that restricts LLM agent capabilities when untrusted skill output enters context, using a Skill Impact Graph to prevent indirect prompt injection from reaching forbidden states.",
+      "llm_tldr_cn": "大语言模型智能体将外部技能输出放入执行上下文时，攻击者可能通过间接提示注入操纵后续特权操作，而现有防御仅对内容分类或操作授权，未改变智能体未来权限。本文提出SkillGuard，一种进程级强制层，将不可信数据进入状态视为污染事件，并用技能影响图限制后续能力，断开与禁止状态的可达关系。该方法将安全策略转化为参数控制约束，从机制上阻断间接提示注入攻击，提升智能体执行链路的鲁棒性。",
+      "llm_tldr": "大语言模型智能体将外部技能输出放入执行上下文时，攻击者可能通过间接提示注入操纵后续特权操作，而现有防御仅对内容分类或操作授权，未改变智能体未来权限。本文提出SkillGuard，一种进程级强制层，将不可信数据进入状态视为污染事件，并用技能影响图限制后续能力，断开与禁止状态的可达关系。该方法将安全策略转化为参数控制约束，从机制上阻断间接提示注入攻击，提升智能体执行链路的鲁棒性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30441v1",
+      "source": "arxiv",
+      "title": "ECLIPSE: Self-Evolving Stealthy Prompt Injection Attack against Long-Horizon Agentic Systems",
+      "abstract": "Recently, large language model (LLM) agents, such as Codex, Claude Code, and OpenClaw, have become capable of planning and executing long-horizon tasks through repeated tool calls. This capability also creates new opportunities for prompt injection. Existing attacks either place the malicious objective in one explicit instruction, making it easy to detect, or distribute the intent across multiple execution stages, making successful completion unreliable.   In this work, we propose ECLIPSE, a self-evolving and stealthy prompt-injection framework for long-horizon agentic systems. ECLIPSE combines direct user-prompt injection with indirect tool-side injection through two components. On the one hand, Stealthy Attack Trajectory Synthesis uses a sandbox to generate and iteratively verify candidate tool chains, then renders a verified chain as a natural one-shot prompt to serve as the direct instruction. Then, Tool-Chain Steering transfers this plan to the target environment through Static Workflow Encoding (SWE), which embeds state-transition cues in target-tool descriptions, and Dynamic Trajectory Correction (DTC), which supplies corrective signals when execution deviates from the planned chain.   To enable systematic evaluation, we further introduce LASE-Bench, a long-horizon agent-safety benchmark with 120 malicious tasks and 198 unique tools; 96.7% of its tasks make at least five tool calls. The experimental results show that ECLIPSE is highly effective: it achieves up to 96.7% attack success without defense and 69.2% under the common safety filter, exceeding the strongest baseline by 27.5% in the defended setting. Evaluations against representative defenses further show that existing safeguards do not reliably defend it, which raises the need for more effective defenses.",
+      "authors": [
+        "Shiqian Zhao",
+        "Yangfan Zhou",
+        "Xinfeng Li",
+        "Runyi Hu",
+        "Yechao Zhang",
+        "Yi Xie",
+        "Tianwei Zhang",
+        "Luu Anh Tuan"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-31T08:32:22+00:00",
+      "link": "https://arxiv.org/pdf/2608.30441v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial text attack via prompt injection on agentic systems",
+      "llm_evidence_cn": "针对智能体系统的提示注入文本攻击",
+      "llm_evidence": "针对智能体系统的提示注入文本攻击",
+      "canonical_evidence": "针对智能体系统的提示注入文本攻击",
+      "llm_tldr_en": "Proposes ECLIPSE, a self-evolving stealthy prompt injection framework for long-horizon LLM agents, combining direct user-prompt and indirect tool-side injection to create reliable multi-stage attacks. It highlights detection challenges of distributed malicious intents.",
+      "llm_tldr_cn": "针对现有提示注入攻击要么意图明显易被检测、要么多阶段执行成功率低的问题，提出ECLIPSE自进化隐蔽提示注入框架，面向长时程智能体系统。该方法结合直接用户提示注入与间接工具侧注入，通过自进化的攻击轨迹合成实现可靠的多阶段攻击。实验显示其能有效规避检测并提升攻击成功率，提示了智能体系统安全防护的紧迫性。",
+      "llm_tldr": "针对现有提示注入攻击要么意图明显易被检测、要么多阶段执行成功率低的问题，提出ECLIPSE自进化隐蔽提示注入框架，面向长时程智能体系统。该方法结合直接用户提示注入与间接工具侧注入，通过自进化的攻击轨迹合成实现可靠的多阶段攻击。实验显示其能有效规避检测并提升攻击成功率，提示了智能体系统安全防护的紧迫性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30635v1",
+      "source": "arxiv",
+      "title": "Test-time Reinforcement Learning in Imperfect Information Games",
+      "abstract": "Test-time reasoning has significantly improved performance in domains ranging from games to language models. However, test-time policy changes with formal guarantees on the performance of the resulting strategy remain a challenge in two-player zero-sum imperfect-information games. Existing solutions are limited to tabular methods or single gradient step updates. In this work, we investigate policy-gradient algorithms as a method for scalable test-time reasoning. We extend the concept of gadget game, tabular technique for test-time search, to the reinforcement learning setting. Unlike prior approaches, we represent the gadget game implicitly by modified sampling and neural policy rather then explicitly by constructing it, thereby removing constraints on subgame size. Furthermore, we formally prove that, unlike prior tabular algorithms, regularized policy-gradient algorithms limit possible strategy degradation caused by test-time reasoning, even without the gadget games. Our evaluation across small- and large-scale games confirms that additional test-time training often substantially improves performance relative to the blueprint strategy.",
+      "authors": [
+        "Ondrej Kubicek",
+        "Viliam Lisy",
+        "Tuomas Sandholm"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT"
+      ],
+      "published": "2026-08-31T11:44:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.30635v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "policy-gradient test-time RL in two-player zero-sum imperfect-information games",
+      "llm_evidence_cn": "双人零和不完全信息博弈中的测试时强化学习",
+      "llm_evidence": "双人零和不完全信息博弈中的测试时强化学习",
+      "canonical_evidence": "双人零和不完全信息博弈中的测试时强化学习",
+      "llm_tldr_en": "Extends gadget-game test-time search to RL via implicitly represented gadget games and neural policies, enabling scalable policy-gradient test-time reasoning in imperfect-information games.",
+      "llm_tldr_cn": "现有测试时推理在双人零和且信息不完美的博弈中缺乏可扩展方法，表格法或单步梯度更新的能力有限。本文将博弈论中的小工具博弈概念扩展到强化学习，以修改采样与神经策略隐式表示小工具博弈，不再显式构建子博弈。该方法用策略梯度算法进行测试时推理，突破了对子博弈规模的限制，为可扩展的测试时策略改进提供了新途径。",
+      "llm_tldr": "现有测试时推理在双人零和且信息不完美的博弈中缺乏可扩展方法，表格法或单步梯度更新的能力有限。本文将博弈论中的小工具博弈概念扩展到强化学习，以修改采样与神经策略隐式表示小工具博弈，不再显式构建子博弈。该方法用策略梯度算法进行测试时推理，突破了对子博弈规模的限制，为可扩展的测试时策略改进提供了新途径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.28411v1",
+      "source": "arxiv",
+      "title": "LongPIBench: A Long-Context Benchmark for Prompt Injection",
+      "abstract": "Prompt injection attacks pose a serious security risk to large language models in real-world applications. However, existing prompt injection benchmarks primarily focus on short-context inputs, leaving the attacks and defenses in long-context settings largely unexplored. This gap leads to a substantial overestimation of the effectiveness of current defenses. In this paper, we bridge the gap by introducing LongPIBench, a long-context benchmark for prompt injection covering 4 realistic application scenarios: paper peer review, resume screening, code review, and email summary. For each scenario, we construct a synthetic dataset and a real-world dataset, with context lengths ranging from thousands to tens of thousands of tokens. The evaluation results on LongPIBench reveal significant vulnerabilities of prompt injection defenses under long-context settings: even simple heuristic prompt injection attacks achieve high success rates and frequently bypass state-of-the-art defenses. We hope LongPIBench can serve as a practical benchmark for systematically evaluating prompt injection defenses in realistic long-context scenarios.",
+      "authors": [
+        "Yupei Liu",
+        "Yuqi Jia",
+        "Neil Zhenqiang Gong",
+        "Jinyuan Jia"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-08-28T15:00:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.28411v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Prompt injection attack benchmark on LLMs, adversarial text attack",
+      "llm_evidence_cn": "关于LLM的提示注入攻击基准，属于文本对抗攻击",
+      "llm_evidence": "关于LLM的提示注入攻击基准，属于文本对抗攻击",
+      "canonical_evidence": "关于LLM的提示注入攻击基准，属于文本对抗攻击",
+      "llm_tldr_en": "LongPIBench constructs long-context prompt injection benchmarks across four real-world scenarios, revealing that current defenses are overestimated and enabling future attack and defense research.",
+      "llm_tldr_cn": "现有提示注入基准大多只针对短上下文，导致当前防御效果被明显高估。本文提出 LongPIBench，覆盖论文评审、简历筛选、代码评审和邮件摘要四个场景，每个场景均包含合成与真实数据，上下文长度从数千到数万 token。评测结果揭示长上下文下防御性能大幅下降，为长文本对抗攻击与防御研究提供了基础和标准。",
+      "llm_tldr": "现有提示注入基准大多只针对短上下文，导致当前防御效果被明显高估。本文提出 LongPIBench，覆盖论文评审、简历筛选、代码评审和邮件摘要四个场景，每个场景均包含合成与真实数据，上下文长度从数千到数万 token。评测结果揭示长上下文下防御性能大幅下降，为长文本对抗攻击与防御研究提供了基础和标准。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.28158v1",
+      "source": "arxiv",
+      "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees",
+      "abstract": "Agentic reinforcement learning (RL) often produces irregular rollout trees with shared histories. Training root-to-leaf trajectories independently recomputes these shared prefixes. Existing systems primarily target full-attention models and lack dense, differentiable hybrid-attention execution compatible with activation recomputation. We present HARTS (Hybrid-Attention RL over Tree Structures). HARTS jointly plans microbatches, data-parallel (DP) replica assignments, and microbatch-slot schedules using non-replay compact-token work after prefix compression. For chunkwise linear attention, a linear-time algorithm coordinates chunk-boundary state recovery and replay and produces the minimum number of sequential linear-attention calls under our packed execution model. HARTS preserves the chunkwise state partitioning of trajectory-wise training: it does not repeat projections, MLP/MoE computation, or final outputs, and performs only bounded state replay for numerical alignment. Per round, HARTS batches all branches into one packed call, propagates gradients through differentiable state handoffs, supports activation recomputation, and restores per-token log-probabilities. For deterministic, no-token-drop top-$k$ MoE routing, semantic multiplicities restore MoE-objective token weights and load statistics. Existing RL objectives retain their interface. To our knowledge, HARTS is the first system to demonstrate arbitrary-rollout-tree prefix-sharing speedups on a real hybrid-attention model. On an Agentic RL workload generated from SWE-bench tasks, HARTS achieves $4.81$--$4.87\\times$ forward/backward/gradient speedup with activation recomputation across multiple parallel configurations. Its numerical differences are comparable to baseline self-rerun variation, and its reward trend is similar to the baseline over the first 120 steps of $τ^3$-Bench training.",
+      "authors": [
+        "Boyuan Meng",
+        "Peihua Bao",
+        "Hong Liu",
+        "Xiaowei Zhu",
+        "Chao Wang",
+        "Gen Li",
+        "Zhenxuan Pan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "published": "2026-08-28T10:18:54+00:00",
+      "link": "https://arxiv.org/pdf/2608.28158v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "efficient agentic RL over rollout trees supports self-play agent training",
+      "llm_evidence_cn": "面向展开树的高效智能体强化学习系统，可支持自博弈智能体训练",
+      "llm_evidence": "面向展开树的高效智能体强化学习系统，可支持自博弈智能体训练",
+      "canonical_evidence": "面向展开树的高效智能体强化学习系统，可支持自博弈智能体训练",
+      "llm_tldr_en": "Presents HARTS, an efficient agentic RL framework for hybrid-attention models over arbitrary rollout trees, jointly planning microbatches, DP replicas, and schedules with non-replay compact-token work, achieving minimal sequential linear-attention recomputation.",
+      "llm_tldr_cn": "智能体强化学习常产生不规则且共享前缀的展开树，逐个轨迹训练会重复计算公共前缀，现有系统又主要面向全注意力模型，缺少与激活重计算兼容的混合注意力执行。本文提出HARTS，在压缩前缀后以非重放的紧致token工作联合规划微批、DP副本和槽调度，并用线性时间算法协调块边界状态恢复与重放。该方法显著降低共享前缀的重计算开销，为混合注意力模型上的智能体训练提供高效基础设施。",
+      "llm_tldr": "智能体强化学习常产生不规则且共享前缀的展开树，逐个轨迹训练会重复计算公共前缀，现有系统又主要面向全注意力模型，缺少与激活重计算兼容的混合注意力执行。本文提出HARTS，在压缩前缀后以非重放的紧致token工作联合规划微批、DP副本和槽调度，并用线性时间算法协调块边界状态恢复与重放。该方法显著降低共享前缀的重计算开销，为混合注意力模型上的智能体训练提供高效基础设施。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.31100v1",
+      "source": "arxiv",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "abstract": "Large language models (LLMs) increasingly interact with external environments and accumulate substantial behavioral experience, yet existing agent benchmarks largely evaluate them as fixed policies. It therefore remains unclear whether an agent can actively test its behavior, judge the resulting experience, and use that experience to improve future decisions. We introduce \\textbf{S\\textsuperscript{3}Gym}, an interactive benchmark for evaluating LLM self-improvement through three coupled capabilities: \\textbf{Self-Testing}, \\textbf{Self-Judging}, and \\textbf{Self-Improvement}. S$^3$Gym separates permissive exploration from strict held-out evaluation and instantiates this protocol in seven text-based games with executable environment verifiers. We evaluate three pathways for incorporating interaction experience: direct History ICL, score-conditioned Summary Memory, and parameter Training.   Our experiments reveal that self-improvement is neither automatic nor uniform. Context-level experience improves performance for several model--game pairs, but the most effective pathway depends strongly on the task structure: summaries are beneficial when experience can be compressed into reusable strategic rules, yet often underperform raw history when success depends on precise, state-contingent information. Parameter training produces substantial gains on some tasks, but also exhibits unstable improvement and severe negative transfer on others. These findings show that recognizing successful actions is insufficient; agents must also transform feedback into executable and transferable policies. S$^3$Gym provides a unified framework for diagnosing this process and identifying the bottlenecks that prevent agents from translating interaction experience into reliable self-improvement.",
+      "authors": [
+        "Jiajun Shi",
+        "Siyuan Tao",
+        "Yuhao Wu",
+        "Zexuan Wang",
+        "Jingyuan Zhang",
+        "Jiaheng Liu",
+        "Xinping Lei",
+        "Xinrong Zhang",
+        "Siyuan Fang",
+        "Zhewen Tan",
+        "Tianle Cai",
+        "Junhao Fang",
+        "Jiameng Huang",
+        "Yueyang Wang",
+        "Jinkai Liu",
+        "Yuxuan Zhang",
+        "Jian Yang",
+        "Zhoujun Li",
+        "Shen Yan",
+        "Wenhao Huang",
+        "Ge Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-08-31T17:05:41+00:00",
+      "link": "https://arxiv.org/pdf/2608.31100v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Interactive benchmark for LLM self-improvement via self-testing and self-judging in text-based games; strongly relevant to self-play agent training",
+      "llm_evidence_cn": "面向LLM自测试、自判断和自改进的交互式基准，与自博弈智能体训练高度相关",
+      "llm_evidence": "面向LLM自测试、自判断和自改进的交互式基准，与自博弈智能体训练高度相关",
+      "canonical_evidence": "面向LLM自测试、自判断和自改进的交互式基准，与自博弈智能体训练高度相关",
+      "llm_tldr_en": "Introduces S3Gym, an interactive benchmark evaluating whether LLM agents can improve through self-testing, self-judging, and self-improvement in seven text-based games, separating exploration from held-out evaluation.",
+      "llm_tldr_cn": "当前智能体基准多将模型视为固定策略，无法衡量其自我改进能力。为此提出S3Gym，在七个文本游戏环境中评估LLM的自我测试、自我判断和自我改进三项能力，并通过分隔探索与严格保留测试来保证评估有效性。实验显示不同模型在自我改进上存在显著差距，表明该基准为研究智能体自主演化提供了可复现的评测平台。该工作为自博弈式的智能体训练与评测提供了新思路。",
+      "llm_tldr": "当前智能体基准多将模型视为固定策略，无法衡量其自我改进能力。为此提出S3Gym，在七个文本游戏环境中评估LLM的自我测试、自我判断和自我改进三项能力，并通过分隔探索与严格保留测试来保证评估有效性。实验显示不同模型在自我改进上存在显著差距，表明该基准为研究智能体自主演化提供了可复现的评测平台。该工作为自博弈式的智能体训练与评测提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.28499v1",
+      "source": "arxiv",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "abstract": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors.",
+      "authors": [
+        "Shae McFadden",
+        "Ilias Tsingenopoulos",
+        "Mario D'Onghia",
+        "Alexander Herzog",
+        "Myles Foley",
+        "Chris Hicks",
+        "Lorenzo Cavallaro",
+        "Fabio Pierazzi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "published": "2026-08-28T16:29:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.28499v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Deep RL framework for adversarial evasion of malware detectors under black-box threat model; relevant to attack-defense and RL for security",
+      "llm_evidence_cn": "基于深度强化学习的恶意软件检测器规避框架，与攻防与安全强化学习主题相关",
+      "llm_evidence": "基于深度强化学习的恶意软件检测器规避框架，与攻防与安全强化学习主题相关",
+      "canonical_evidence": "基于深度强化学习的恶意软件检测器规避框架，与攻防与安全强化学习主题相关",
+      "llm_tldr_en": "Presents Replicant, a deep RL framework that learns realistic label-only black-box evasion policies for malware detectors, transferring across samples, detectors, and feature spaces. Evaluate on seven Android malware detectors.",
+      "llm_tldr_cn": "针对现有恶意软件检测攻击假设敌手具有过多特权信息的问题，提出基于深度强化学习的Replicant框架，在仅标签的黑盒威胁模型下学习恶意软件规避策略。学习到的策略可跨样本、检测器和特征空间迁移，并在七个Android恶意软件检测器上验证了其有效性与可迁移性。该工作为评估和加固机器学习检测系统提供了现实可用的对抗攻防工具。",
+      "llm_tldr": "针对现有恶意软件检测攻击假设敌手具有过多特权信息的问题，提出基于深度强化学习的Replicant框架，在仅标签的黑盒威胁模型下学习恶意软件规避策略。学习到的策略可跨样本、检测器和特征空间迁移，并在七个Android恶意软件检测器上验证了其有效性与可迁移性。该工作为评估和加固机器学习检测系统提供了现实可用的对抗攻防工具。",
+      "llm_tags": [
+        "query:as:composite"
+      ],
+      "matched_query_tag": "query:as:composite",
+      "matched_query_text": "Papers central to 帮我查找自博弈、攻防、漏挖、文本数据增强智能体相关的论文, especially work that connects or combines: self-play reinforcement learning; adversarial attack text; vulnerability mining software security; text data augmentation techniques; self-play agent training; data augmentation agent text generation; self play based reinforcement learning for adversarial attack and defense; vulnerability mining using intelligent agents and reinforcement learning; text data augmentation with language model agents; adversarial attack and defense in text using self play.",
+      "matched_requirement_id": "req-composite-as",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.30288v1",
+      "source": "arxiv",
+      "title": "Extracting Knowledge from Tools in LLM Agents",
+      "abstract": "LLM agents commonly use knowledge-based tools and access their underlying files, databases, and search indexes through tool invocation. This integration improves agents' ability to provide domain-specific services but also introduces the risk of tool-mediated knowledge extraction: source content exposed to an agent for legitimate responses may be progressively recovered from its outputs, enabling reconstruction of the knowledge source behind a target tool. This paper systematically investigates this risk and identifies two challenges introduced by tool invocation: tool-selection uncertainty, where an agent may invoke a competing tool instead of the target tool, and tool-argument compression, where fine-grained query information may be lost when the agent generates tool arguments. To tackle these challenges, we propose ToolSiphon, a query-only extraction attack that introduces two complementary signals: a target-discriminative signal, implemented through Tool Contrastive Analysis, to steer queries toward the target tool; and a response-grounded factual signal, implemented through Evidence Chained Feedback, to mitigate argument compression and progressively expand extraction coverage. Across three types of knowledge-based tools and six domain-specific datasets, ToolSiphon recovers 74.3% of source records on average when coarse-grained information about non-target tools is available, with 83.2% textual recovery and 90.2% semantic similarity. Even without such information, it recovers 66.3% of source records. ToolSiphon also remains effective against representative defenses and on three real-world agent platforms.",
+      "authors": [
+        "Chuanchao Zang",
+        "Jianing Wang",
+        "Wenyu Chen",
+        "Xiangtao Meng",
+        "Li Wang",
+        "Xinyu Gao",
+        "Yingkai Dong",
+        "Zheng Li",
+        "Shanqing Guo"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-31T05:55:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.30288v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "knowledge extraction attack on LLM agent tools, adversarial vulnerability in text-based agent outputs",
+      "llm_evidence_cn": "针对LLM代理工具的知识提取攻击，文本代理输出的对抗性漏洞",
+      "llm_evidence": "针对LLM代理工具的知识提取攻击，文本代理输出的对抗性漏洞",
+      "canonical_evidence": "针对LLM代理工具的知识提取攻击，文本代理输出的对抗性漏洞",
+      "llm_tldr_en": "Investigates tool-mediated knowledge extraction in LLM agents, identifying tool-selection uncertainty and argument compression as challenges in recovering tool source content from outputs.",
+      "llm_tldr_cn": "LLM代理调用工具时会接触到底层文件、数据库等敏感内容，存在通过输出逐步恢复知识源的风险。本文系统研究了这一工具介导的知识提取风险，识别出工具选择不确定性和工具参数压缩两个关键挑战，为代理安全评估提供了新视角。",
+      "llm_tldr": "LLM代理调用工具时会接触到底层文件、数据库等敏感内容，存在通过输出逐步恢复知识源的风险。本文系统研究了这一工具介导的知识提取风险，识别出工具选择不确定性和工具参数压缩两个关键挑战，为代理安全评估提供了新视角。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "date": "20260901",
+  "date_label": "",
+  "generated_at": "2026-09-01 22:36:48 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.29568v1",
+      "route": "202609/01/2608.29568v1-oasis-optimizing-attacker-sequences-for-hard-label-black-box-text-attacks",
+      "title": "OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "硬标签黑盒文本攻击的攻击者序列优化",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.30207v1",
+      "route": "202609/01/2608.30207v1-sir-self-improving-red-teaming-for-compute-use-agents",
+      "title": "SIR: Self-improving Red-teaming for Compute Use Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对计算使用代理的黑盒间接提示注入攻击与自我改进红队测试",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.30041v1",
+      "route": "202609/01/2608.30041v1-reachability-based-capability-confinement-for-llm-agents-under-indirect-prompt-injection",
+      "title": "Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对基于文本的LLM智能体间接提示注入攻击的防御",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.30441v1",
+      "route": "202609/01/2608.30441v1-eclipse-self-evolving-stealthy-prompt-injection-attack-against-long-horizon-agentic-systems",
+      "title": "ECLIPSE: Self-Evolving Stealthy Prompt Injection Attack against Long-Horizon Agentic Systems",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对智能体系统的提示注入文本攻击",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.30635v1",
+      "route": "202609/01/2608.30635v1-test-time-reinforcement-learning-in-imperfect-information-games",
+      "title": "Test-time Reinforcement Learning in Imperfect Information Games",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "双人零和不完全信息博弈中的测试时强化学习",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.28411v1",
+      "route": "202609/01/2608.28411v1-longpibench-a-long-context-benchmark-for-prompt-injection",
+      "title": "LongPIBench: A Long-Context Benchmark for Prompt Injection",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "关于LLM的提示注入攻击基准，属于文本对抗攻击",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.31100v1",
+      "route": "202609/01/2608.31100v1-s3gym-can-llms-turn-self-testing-and-self-judging-into-self-improvement",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向LLM自测试、自判断和自改进的交互式基准，与自博弈智能体训练高度相关",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.28158v1",
+      "route": "202609/01/2608.28158v1-harts-efficient-agentic-reinforcement-learning-for-hybrid-attention-models-over-arbitrary-rollout-trees",
+      "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向展开树的高效智能体强化学习系统，可支持自博弈智能体训练",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.28499v1",
+      "route": "202609/01/2608.28499v1-replicant-learning-policies-for-evading-and-hardening-malware-detectors",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于深度强化学习的恶意软件检测器规避框架，与攻防与安全强化学习主题相关",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    },
+    {
+      "paper_id": "2608.30288v1",
+      "route": "202609/01/2608.30288v1-extracting-knowledge-from-tools-in-llm-agents",
+      "title": "Extracting Knowledge from Tools in LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对LLM代理工具的知识提取攻击，文本代理输出的对抗性漏洞",
+      "first_seen_at": "2026-09-01 22:36:48 UTC",
+      "updated_at": "2026-09-01 22:36:48 UTC"
+    }
+  ]
+}
