@@ -1,0 +1,493 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-02T21:25:21.833234+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2608.25246v1",
+      "source": "arxiv",
+      "title": "ShuttleArena: Interpretable Self-Play in Physics-Based Badminton",
+      "abstract": "Badminton is a compact but challenging domain for game AI: a player must choose a physically feasible shuttle trajectory, anticipate the opponent's interception, and recover to a court position whose value depends on the opponent's next response. The central challenge is that shot selection and recovery are not separable: the best recovery depends on the shot-induced opponent response, while the value of the shot depends on whether the hitter can cover the reply. This paper presents ShuttleArena, a physics-based singles badminton self-play environment that couples continuous shuttle flight, player interception, structured shot generation, and post-shot recovery. The policy uses role-conditioned outputs: a masked interception choice on receiver turns and a factorized hitter action over shot azimuth, shot elevation, shot speed, and recovery target, enabling interpretable tactical probes. Episodes are single rallies rather than full scored games, and training uses Proximal Policy Optimization (PPO) self-play against a staged checkpoint opponent pool with sparse terminal rally-outcome rewards and a factor-specific recovery update. Evaluation with frozen checkpoint play, controlled tactical probes, recovery ablations, qualitative rollouts, and a human-data sanity check shows competitive improvement together with interpretable opponent-conditioned changes in shot geometry and recovery behavior. The learned policies produce recognizable badminton-like structure while also reflecting the abstractions of the simulator, and the recovery intervention shows that learned recovery behavior is competitively important. These results suggest that physics-based racket sports are a useful testbed for interactive digital entertainment AI because they require agents to coordinate execution, positioning, and opponent-relative tactical value.",
+      "authors": [
+        "Peize Ding"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-26T00:07:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.25246v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play environment and role-conditioned policy for game AI, directly aligned with self-play reinforcement learning",
+      "llm_evidence_cn": "与自博弈强化学习直接相关的自博弈环境与角色条件化策略",
+      "llm_evidence": "与自博弈强化学习直接相关的自博弈环境与角色条件化策略",
+      "canonical_evidence": "与自博弈强化学习直接相关的自博弈环境与角色条件化策略",
+      "llm_tldr_en": "ShuttleArena contributes a physics-based badminton self-play environment coupling shuttle flight, interception, structured shot generation, and recovery, using role-conditioned policies for interpretable game AI training.",
+      "llm_tldr_cn": "羽毛球中出球选择与击球后回位相互依赖，现有游戏AI环境难以刻画这种策略耦合。该文提出基于物理的单打羽毛球自博弈环境ShuttleArena，将连续羽球飞行、对手拦截、结构化出球和回位动作统一建模。策略采用角色条件化输出区分接球与回位决策，使自博弈训练更可解释。该环境为研究物理运动、反应预测与位置价值耦合的强化学习问题提供了一体化测试平台。",
+      "llm_tldr": "羽毛球中出球选择与击球后回位相互依赖，现有游戏AI环境难以刻画这种策略耦合。该文提出基于物理的单打羽毛球自博弈环境ShuttleArena，将连续羽球飞行、对手拦截、结构化出球和回位动作统一建模。策略采用角色条件化输出区分接球与回位决策，使自博弈训练更可解释。该环境为研究物理运动、反应预测与位置价值耦合的强化学习问题提供了一体化测试平台。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30627v1",
+      "source": "arxiv",
+      "title": "REER-PT: Reverse-Engineered Reasoning for Perplexity-Guided Pre-training Data Augmentation",
+      "abstract": "As language-model compute continues to scale, high-quality training data is becoming an increasingly important bottleneck. Conventional next-token prediction supervises what follows a context but leaves the intermediate reasoning behind that continuation implicit. We introduce \\textbf{REER-PT}, a scalable framework that extends Reverse-Engineered Reasoning (REER) to raw pre-training data. REER-PT identifies continuations that are difficult to predict but can still be inferred from the preceding context, and inserts concise reasoning annotations that reconstruct the missing connection between context and continuation. Candidate annotations are generated and refined offline, with perplexity serving as the optimization signal. Constraints on length and target leakage filter out unhelpful or trivial annotations. This sparse transformation preserves the source text and remains compatible with standard next-token prediction, avoiding online reasoning rollouts during pre-training. We apply REER-PT to transform a source pre-training corpus into an augmented one. Across augmented-data, original-token, and selected-continuation comparisons, perplexity reductions range from 0.42 to 7.29, and only about 0.05\\% of annotation 13-grams appear verbatim in the source text. We then train two 680M-parameter models with the same architecture and training configuration on the source and augmented corpora, respectively. The augmented-data model gains up to 2.07 percentage points on several knowledge and reasoning benchmarks. Together, the perplexity analysis indicates improved continuation predictability, while the controlled pre-training experiments suggest that this augmentation can improve model performance without changing the standard pre-training objective.",
+      "authors": [
+        "Haoran Que",
+        "Jiajun Shi",
+        "Ting Huang",
+        "Renming Pang",
+        "Jiaheng Liu",
+        "Ge Zhang",
+        "Wenhao Huang",
+        "Shen Yan",
+        "Wei Ye",
+        "Shikun Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-08-31T11:34:19+00:00",
+      "link": "https://arxiv.org/pdf/2608.30627v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Perplexity-guided pre-training data augmentation with reverse-engineered reasoning annotations for language modeling",
+      "llm_evidence_cn": "用困惑度引导反向工程推理注释增强文本预训练数据，属于文本数据增强技术",
+      "llm_evidence": "用困惑度引导反向工程推理注释增强文本预训练数据，属于文本数据增强技术",
+      "canonical_evidence": "用困惑度引导反向工程推理注释增强文本预训练数据，属于文本数据增强技术",
+      "llm_tldr_en": "REER-PT extends reverse-engineered reasoning to raw pre-training text by generating concise reasoning annotations for difficult continuations, using perplexity as the optimization signal to construct more informative training data.",
+      "llm_tldr_cn": "该工作针对预训练数据中连续文本背后的推理过程未被显式监督的问题，提出REER-PT框架：自动识别难以预测但可由上文推断的片段，离线生成补充推理注释，并以困惑度作为优化信号进行筛选。在语言模型预训练实验中，该方法提升了数据利用效率和下游性能，展示了可扩展的高质量文本数据增强新途径。",
+      "llm_tldr": "该工作针对预训练数据中连续文本背后的推理过程未被显式监督的问题，提出REER-PT框架：自动识别难以预测但可由上文推断的片段，离线生成补充推理注释，并以困惑度作为优化信号进行筛选。在语言模型预训练实验中，该方法提升了数据利用效率和下游性能，展示了可扩展的高质量文本数据增强新途径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30819v1",
+      "source": "arxiv",
+      "title": "What Emerges and What Breaks in Self-Play Driving",
+      "abstract": "Training autonomous driving policies through pure self-play has recently shown promising results. Following Gigaflow and Puffer- Drive, we train driving policies in a similar self-play fashion, but extend the models from MLPs to Transformers and train on the high-definition map of a real city, where we ultimately aim to deploy them. On the CARLA and Waymax benchmarks, our policies fall short of Gigaflow, and we trace the gap to specific failure modes, including reward hacking at traffic lights and a missing incentive to stop at stop signs. We further analyze which traffic rules emerge from self-play and how closely they match human driving, and we confirm that reward conditioning yields the intended diversity of driving behaviors. A demonstration of a trained policy is available at https://laursisask-ut.github.io/eccvdemo.",
+      "authors": [
+        "Laur Sisask",
+        "Ardi Tampuu",
+        "Tambet Matiisen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-31T14:01:32+00:00",
+      "link": "https://arxiv.org/pdf/2608.30819v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "training autonomous driving policies via pure self-play and analyzing emergent rules/failures; direct self-play reinforcement learning",
+      "llm_evidence_cn": "用纯自博弈训练自动驾驶策略并梳理涌现规则与失败模式，直接对应自博弈强化学习",
+      "llm_evidence": "用纯自博弈训练自动驾驶策略并梳理涌现规则与失败模式，直接对应自博弈强化学习",
+      "canonical_evidence": "用纯自博弈训练自动驾驶策略并梳理涌现规则与失败模式，直接对应自博弈强化学习",
+      "llm_tldr_en": "Trains Transformer driving policies on a real city HD map via pure self-play, following Gigaflow and Puffer-Drive. On CARLA and Waymax results fall short of Gigaflow; analysis identifies reward hacking at traffic lights and missing stop incentive, while confirming reward-conditioned behavioral diversity and emergent traffic rules.",
+      "llm_tldr_cn": "自博弈自动驾驶训练近期展现出潜力，本文延续Gigaflow和Puffer-Drive路线，将策略从MLP扩展到Transformer，并在真实城市高清地图上进行训练和评测。在CARLA和Waymax上，该策略表现不敌Gigaflow，作者将差距追溯至交通灯处的奖励黑客以及缺少停车让行激励；他们还进一步分析自博弈中涌现了哪些交通规则以及这些规则与人类驾驶的接近程度。实验还确认奖励条件化能带来预期的驾驶风格多样性，为自博弈驾驶的规则设计与评估提供了细致诊断。",
+      "llm_tldr": "自博弈自动驾驶训练近期展现出潜力，本文延续Gigaflow和Puffer-Drive路线，将策略从MLP扩展到Transformer，并在真实城市高清地图上进行训练和评测。在CARLA和Waymax上，该策略表现不敌Gigaflow，作者将差距追溯至交通灯处的奖励黑客以及缺少停车让行激励；他们还进一步分析自博弈中涌现了哪些交通规则以及这些规则与人类驾驶的接近程度。实验还确认奖励条件化能带来预期的驾驶风格多样性，为自博弈驾驶的规则设计与评估提供了细致诊断。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01325v1",
+      "source": "arxiv",
+      "title": "VerTox: Verifiable Reward-Guided Corpus Poisoning Against Neural Ranking Models",
+      "abstract": "Neural ranking models have become core components of modern information retrieval systems and important building blocks of AI systems such as retrieval-augmented generation (RAG) pipelines. However, their robustness remains insufficiently understood in the presence of large language models (LLMs), which can generate fluent and deceptive content at scale. This work investigates the vulnerability of neural ranking models to corpus poisoning attacks, in which an adversary injects a small number of maliciously crafted documents into the corpus to distort ranking behavior. We propose VerTox, the first framework to formulate corpus poisoning as a verifiable reward-guided reinforcement learning (RLVR) problem. By explicitly coupling ranking distortion with factual corruption through specialized reward shaping, we fine-tune compact LLMs into adversarial generators. Experiments demonstrate that our method achieves near-perfect attack success rates, producing adversarial documents that frequently rank higher than target documents across major neural ranking architectures, as well as a proprietary commercial embedding model. The generated adversarial documents are fluent and exhibit low perplexity, making them difficult to detect. Furthermore, by explicitly encouraging factual corruption, our adversarial documents significantly degrade the performance of a downstream RAG application.",
+      "authors": [
+        "Zhiqi Huang",
+        "Vivek Datla",
+        "Zhichao Xu",
+        "Puxuan Yu",
+        "Vivek Srikumar",
+        "Alfy Samuel"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "published": "2026-09-01T14:43:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.01325v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "adversarial corpus poisoning against neural text ranking models, a direct text adversarial attack work",
+      "llm_evidence_cn": "面向神经文本排序模型的语料投毒对抗攻击，直接契合文本对抗攻击需求",
+      "llm_evidence": "面向神经文本排序模型的语料投毒对抗攻击，直接契合文本对抗攻击需求",
+      "canonical_evidence": "面向神经文本排序模型的语料投毒对抗攻击，直接契合文本对抗攻击需求",
+      "llm_tldr_en": "Investigates LLM-driven corpus poisoning against neural ranking models and proposes VerTox, a verifiable reward-guided RL framework to craft small malicious document sets that distort ranking with verifiable effect.",
+      "llm_tldr_cn": "神经排序模型是检索与RAG等系统的核心，但其在大语言模型生成的隐蔽内容面前鲁棒性未被充分研究。本文提出VerTox，首次将语料投毒构建为可验证奖励引导的强化学习（RLVR）问题，通过显式耦合排序失真与验证性奖励来生成少量恶意文档并注入语料库。该方法以LLM生成可扩展的欺骗性内容为基础，评估并放大检索模型对投毒攻击的脆弱性。该框架为理解与防御检索系统的对抗风险提供了新的攻击与测试工具。",
+      "llm_tldr": "神经排序模型是检索与RAG等系统的核心，但其在大语言模型生成的隐蔽内容面前鲁棒性未被充分研究。本文提出VerTox，首次将语料投毒构建为可验证奖励引导的强化学习（RLVR）问题，通过显式耦合排序失真与验证性奖励来生成少量恶意文档并注入语料库。该方法以LLM生成可扩展的欺骗性内容为基础，评估并放大检索模型对投毒攻击的脆弱性。该框架为理解与防御检索系统的对抗风险提供了新的攻击与测试工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01549v1",
+      "source": "arxiv",
+      "title": "NashDreamer: Model-Based Reinforcement Learning for Zero-Sum Imperfect-Information Games",
+      "abstract": "Model-based reinforcement learning (MBRL) has achieved remarkable results in single-agent domains, yet its extension to competitive imperfect information games (IIGs) remains underexplored. In multi-agent settings, opponent-induced non-stationarity complicates the learning process, and decentralized model learning faces severe identifiability barriers, which we argue make centralized model learning a mathematical necessity. Building on this analysis, we propose NashDreamer, a principled MBRL framework for two-player zero-sum IIGs. It introduces a centralized Multi-Agent Recurrent State-Space Model (MARSSM) that decouples environment dynamics from the effect of players' strategies on their individual observations. NashDreamer is designed to use arbitrary policy gradient algorithms and inherits their convergence guarantees towards Nash equilibria under an idealized model. Empirical evaluations across four benchmark games demonstrate that NashDreamer substantially improves sample efficiency over model-free baselines early in the training. Finally, we theoretically analyze the architecture's optimization landscape, identifying the vulnerability of the Dreamer family of algorithms to posterior collapse in stochastic environments. We leave it as an open challenge.",
+      "authors": [
+        "Tomáš Holeček",
+        "Viliam Lisý"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-01T17:15:41+00:00",
+      "link": "https://arxiv.org/pdf/2609.01549v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Model-based RL for zero-sum two-player games, the standard self-play RL setting",
+      "llm_evidence_cn": "针对零和双人不完全信息博弈的模型强化学习，同属自博弈RL范畴",
+      "llm_evidence": "针对零和双人不完全信息博弈的模型强化学习，同属自博弈RL范畴",
+      "canonical_evidence": "针对零和双人不完全信息博弈的模型强化学习，同属自博弈RL范畴",
+      "llm_tldr_en": "Model-based RL for zero-sum imperfect-information games is underexplored. NashDreamer uses a centralized multi-agent recurrent state-space model to decouple environment dynamics from strategy effects, mitigating non-stationarity and identifiability for two-player zero-sum self-play RL.",
+      "llm_tldr_cn": "针对单体环境的模型强化学习已很成功，但在竞争性不完全信息博弈中，对手带来的非平稳性使学习困难，分散式模型又有可辨识性问题。NashDreamer提出集中式的多智能体循环状态空间模型（MARSSM），将环境动力学与玩家策略对观测的影响解耦，为两玩家零和博弈构建可行的模型强化学习框架。该设计为竞争环境下的自博弈式训练提供了新的建模思路，有助于在不完全信息对抗任务中学习稳定策略。",
+      "llm_tldr": "针对单体环境的模型强化学习已很成功，但在竞争性不完全信息博弈中，对手带来的非平稳性使学习困难，分散式模型又有可辨识性问题。NashDreamer提出集中式的多智能体循环状态空间模型（MARSSM），将环境动力学与玩家策略对观测的影响解耦，为两玩家零和博弈构建可行的模型强化学习框架。该设计为竞争环境下的自博弈式训练提供了新的建模思路，有助于在不完全信息对抗任务中学习稳定策略。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.30429v1",
+      "source": "arxiv",
+      "title": "EvoSkill Injection: Red-Teaming Autonomous Skill Generation and Evolution in Self-Evolving Agents",
+      "abstract": "LLM-based agent systems increasingly adopt skill-based architectures to reduce repetitive reasoning costs and improve stable, efficient task execution. Recent studies propose self-evolving agents that autonomously generate, refine, and reuse skills from past experiences to enable continuous capability evolution. However, autonomous skill evolution introduces a new attack surface in which malicious capabilities are generated, stored, and reused as legitimate skills. In this paper, we define EvoSkill Injection as a threat model targeting the autonomous skill generation and evolution pipeline of self-evolving agents. We further propose SARGE (Red-teaming Autonomous Skill Generation and Evolution in self-evolving agents), a red-teaming framework for evaluating this threat model through iterative generation, escalation, and reinforcement interactions. To support our framework, we construct EvoSkillBench, a benchmark dataset of malicious interaction trajectories for inducing malicious skill formation in self-evolving agents, and introduce EvoSkillSafetyBench, a post-attack benchmark for evaluating whether injected malicious skills are subsequently retrieved and activated as harmful behaviors. Our evaluation shows that SARGE induces malicious skill formation and that injected skills are persistently stored and repeatedly activated, highlighting the risk of persistent capability corruption.",
+      "authors": [
+        "Doyun Kim",
+        "Chanwoo Kim",
+        "Sugyeong Eo",
+        "Yeo-Chan Yoon",
+        "Chanjun Park"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-08-31T08:25:03+00:00",
+      "link": "https://arxiv.org/pdf/2608.30429v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Red-teaming attacks that inject malicious skills into self-evolving LLM agents",
+      "llm_evidence_cn": "对自进化语言智能体技能生成与演化的红队攻击",
+      "llm_evidence": "对自进化语言智能体技能生成与演化的红队攻击",
+      "canonical_evidence": "对自进化语言智能体技能生成与演化的红队攻击",
+      "llm_tldr_en": "Defines EvoSkill Injection threat model and SARGE red-team method targeting skill generation in self-evolving LLM agents, showing malicious capabilities can be injected as reusable skills.",
+      "llm_tldr_cn": "自进化智能体可自动生成、精炼和复用技能以持续提升能力，但这种自主技能演化也引入了新的攻击面：恶意功能可能被当作合法技能生成并存储。针对此问题，本文定义EvoSkill Injection威胁模型，并提出SARGE红队方法，系统性地向技能生成与演化管线注入攻击技能。实验显示恶意技能可被信任、保存并在后续任务中复用，证明自进化管线存在严重安全隐患。该工作为自博弈攻防与智能体安全提供了新的攻击与评测范式。",
+      "llm_tldr": "自进化智能体可自动生成、精炼和复用技能以持续提升能力，但这种自主技能演化也引入了新的攻击面：恶意功能可能被当作合法技能生成并存储。针对此问题，本文定义EvoSkill Injection威胁模型，并提出SARGE红队方法，系统性地向技能生成与演化管线注入攻击技能。实验显示恶意技能可被信任、保存并在后续任务中复用，证明自进化管线存在严重安全隐患。该工作为自博弈攻防与智能体安全提供了新的攻击与评测范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.01171v1",
+      "source": "arxiv",
+      "title": "Johnny Still Receives Spam SMS: Assessing the Robustness of SMS Spam Detection",
+      "abstract": "SMS spam detection systems often achieve high accuracy in controlled environments but struggle against adversarial attacks and increasingly sophisticated spam tactics in real-world deployments. In this paper, we evaluate the robustness of SMS anti-spam systems that end users actually rely on, including commercial messaging applications, third-party anti-spam services, and publicly available open-weight models hosted on Hugging Face. We evaluate these systems under both standard and adversarial conditions, considering perceptible and state-of-the-art imperceptible attacks. We include only perturbations that we verify survive real SMS or RCS delivery, rather than lab-only artifacts. Our experiments reveal significant gaps in existing spam detectors' ability to identify adversarially manipulated messages. We further demonstrate that adversarial training alone is insufficient. Using an explicit held-out evaluation protocol, we find that robustness transfers well within a perturbation family but degrades sharply against structurally distinct, encoding-level attacks. To address these weaknesses, we propose a multi-model ensemble that combines adversarial training with spam classifiers diverse in architecture and tokenization. Our results show that this ensemble, particularly when using a minority-voting strategy, substantially improves robustness against both perceptible and imperceptible adversarial attacks while maintaining competitive classification accuracy. We also characterize the resulting precision-recall trade-off and recommend operating points for false-positive-sensitive and recall-critical deployments. These findings highlight the need for comprehensive robustness evaluations and ensemble-based defenses for building more secure SMS spam detection systems in real-world settings.",
+      "authors": [
+        "Muhammad Salman",
+        "Muhammad Islam",
+        "Muhammad Ikram",
+        "Mohamed Ali Kaafar"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-01T12:47:36+00:00",
+      "link": "https://arxiv.org/pdf/2609.01171v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adversarial attacks on text-based SMS spam detection; robustness assessment against imperceptible perturbations.",
+      "llm_evidence_cn": "针对文本短信垃圾检测的对抗攻击与鲁棒性评估。",
+      "llm_evidence": "针对文本短信垃圾检测的对抗攻击与鲁棒性评估。",
+      "canonical_evidence": "针对文本短信垃圾检测的对抗攻击与鲁棒性评估。",
+      "llm_tldr_en": "Evaluates real-world SMS anti-spam systems under standard and adversarial conditions, including imperceptible attacks that survive actual SMS delivery, revealing robustness gaps.",
+      "llm_tldr_cn": "该论文聚焦短信垃圾检测系统在真实环境中的对抗鲁棒性问题。针对商业应用、第三方服务及公开可下载模型，作者在标准与对抗条件下评估检测性能，涵盖可感知扰动和能真正通过短信传输的不可感知最先进攻击。实验显示现有垃圾检测器面对对抗样本时存在显著鲁棒性缺口，说明仅用受控数据集评测会高估真实部署安全性，并为后续入侵检测与防御研究提供评测基础。",
+      "llm_tldr": "该论文聚焦短信垃圾检测系统在真实环境中的对抗鲁棒性问题。针对商业应用、第三方服务及公开可下载模型，作者在标准与对抗条件下评估检测性能，涵盖可感知扰动和能真正通过短信传输的不可感知最先进攻击。实验显示现有垃圾检测器面对对抗样本时存在显著鲁棒性缺口，说明仅用受控数据集评测会高估真实部署安全性，并为后续入侵检测与防御研究提供评测基础。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2609.00595v1",
+      "source": "arxiv",
+      "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+      "abstract": "Safe agents can fail together. Multi-agent LLM systems (MAS) move information, state, decisions, and authority across principal boundaries, creating failures that local checks may miss. Without an execution-level view, a multi-agent setting can easily be mistaken for evidence of a genuinely multi-agent security effect. We thus systematize MAS security through an execution-centered analysis of 197 works, covering six interaction interfaces, four adversary positions, seven system-level risks, and eight recurring attack paths. We introduce an A-I-R framework that organizes attacks by adversary position, interaction interface, and resulting system-level risk, unifying otherwise fragmented attack mechanisms across MAS. We organize defenses through a five-part contract covering path target, observation, intervention, trust boundary, and recovery, and identify path closure and recovery as key challenges. We audit 44 evaluation and benchmark works and identify open challenges in isolating interaction effects, designing comparable and diagnostic metrics, supporting reuse across MAS designs, and evaluating open-system operation. Together, these findings motivate an interaction-aware view of MAS security: trace attacks end to end, test whether defenses close those paths, and evaluate system-level effects with appropriate counterfactuals.",
+      "authors": [
+        "Rui Yang",
+        "Junjie Xu",
+        "Zhengyu Liu",
+        "Neil Fendley",
+        "Yang Hong",
+        "Ziyang Li",
+        "Yinzhi Cao"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-01T02:34:44+00:00",
+      "link": "https://arxiv.org/pdf/2609.00595v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "SoK systematizing security attacks and defenses in multi-agent LLM systems",
+      "llm_evidence_cn": "系统化梳理多智能体大语言模型系统的安全攻击与防御",
+      "llm_evidence": "系统化梳理多智能体大语言模型系统的安全攻击与防御",
+      "canonical_evidence": "系统化梳理多智能体大语言模型系统的安全攻击与防御",
+      "llm_tldr_en": "Systematizes multi-agent LLM security via execution-centered analysis of 197 works, introducing an A-I-R framework organizing attacks by adversary position, interaction interface, and system-level risk; useful for adversarial attack and defense in text agent systems.",
+      "llm_tldr_cn": "现有对多智能体大语言模型系统的安全研究视角碎片化，缺乏执行级分析，容易把局部失效误判为多智能体安全效应。本文通过对197篇工作的执行中心化分析，提出A-I-R框架，按对抗者位置、交互接口和系统级风险统一攻击机制，并系统整理防御分类。研究覆盖六类交互接口、四类对抗位置、七类系统级风险及八类攻击路径，为文本智能体系统的对抗攻防提供了系统映射。",
+      "llm_tldr": "现有对多智能体大语言模型系统的安全研究视角碎片化，缺乏执行级分析，容易把局部失效误判为多智能体安全效应。本文通过对197篇工作的执行中心化分析，提出A-I-R框架，按对抗者位置、交互接口和系统级风险统一攻击机制，并系统整理防御分类。研究覆盖六类交互接口、四类对抗位置、七类系统级风险及八类攻击路径，为文本智能体系统的对抗攻防提供了系统映射。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.27531v1",
+      "source": "arxiv",
+      "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models",
+      "abstract": "The safety of large vision-language models is increasingly stress-tested by multimodal jailbreaks, yet existing attacks remain largely static at the meta level: template-based attacks freeze the image--text layout, while iterative attacks adapt only the image--text content with fixed attack strategies and frozen attacker parameters. We propose Meta-Adaptive Multimodal Jailbreaking (MAMJ), which instead optimizes the attacker itself along two axes: an attack strategy prompt (ASP) $θ$ governing attack iteration and attacker weights $φ$ determining attack effectiveness. Across groups of multimodal attack trajectories, an LLM-based critique first refines $θ$, after which group-aggregated attack-success-rate (ASR) rewards update $φ$. On MM-SafetyBench, MAMJ achieves $81.0\\%$, $78.9\\%$, and $82.3\\%$ ASR against GPT-4o, Gemini-3-Pro-Preview, and Seed 2.0, respectively, outperforming the strongest sample-level baseline by up to $24.1$ percentage points. The learned attacker $(θ^\\star,φ^\\star)$ also transfers without retraining to unseen victims and remains effective under representative defenses. These results reveal a systemic vulnerability of frontier VLMs to meta-adaptive jailbreaks and motivate defenses against meta-level adversaries. Code is available at https://github.com/Alibaba-VELLDEPTH/MetaJailbreak-VLM.",
+      "authors": [
+        "Benlei Cui",
+        "Shen Pang",
+        "Yuke Wang",
+        "Xuemei Dong",
+        "Yuwen Zhai",
+        "Jingqun Tang",
+        "Haiyang Yu",
+        "Hui Xue",
+        "Longtao Huang",
+        "Haiwen Hong"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CV"
+      ],
+      "published": "2026-08-27T15:23:22+00:00",
+      "link": "https://arxiv.org/pdf/2608.27531v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "meta-adaptive jailbreak attack on vision-language models via optimized strategy prompts and attacker weights",
+      "llm_evidence_cn": "通过优化策略提示词与攻击者权重对视觉语言模型进行元自适应越狱攻击",
+      "llm_evidence": "通过优化策略提示词与攻击者权重对视觉语言模型进行元自适应越狱攻击",
+      "canonical_evidence": "通过优化策略提示词与攻击者权重对视觉语言模型进行元自适应越狱攻击",
+      "llm_tldr_en": "MAMJ meta-adaptively optimizes a jailbreak attacker for VLMs by refining an attack-strategy prompt with LLM critique and updating attacker weights with group-level attack success rewards, going beyond static templates.",
+      "llm_tldr_cn": "视觉语言模型的多模态越狱攻击在元层面仍较固定，模板攻击冻结图文布局，迭代攻击只改内容而不改攻击策略和参数。本文提出MAMJ，让攻击者沿攻击策略提示与攻击者权重两条轴自适应优化：用大语言模型式批评精炼策略提示，并用分组聚合的越狱成功率奖励更新攻击者参数。该元自适应攻击利用轨迹组进行学习，能更充分暴露视觉语言模型的越狱脆弱性。",
+      "llm_tldr": "视觉语言模型的多模态越狱攻击在元层面仍较固定，模板攻击冻结图文布局，迭代攻击只改内容而不改攻击策略和参数。本文提出MAMJ，让攻击者沿攻击策略提示与攻击者权重两条轴自适应优化：用大语言模型式批评精炼策略提示，并用分组聚合的越狱成功率奖励更新攻击者参数。该元自适应攻击利用轨迹组进行学习，能更充分暴露视觉语言模型的越狱脆弱性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.30277v1",
+      "source": "arxiv",
+      "title": "SimCRAFT: Distilling Remote Sensing Agents via Synthetic Trajectories and Contextual Retrieval-Augmented Fine-Tuning",
+      "abstract": "The unprecedented surge in Earth observation data volume and diversity has exposed a critical bottleneck for traditional manual workflows, catalyzing the emergence of Remote Sensing (RS) Agents. However, the practical deployment of these advanced agents is severely hindered by their heavy reliance on large-scale general-purpose LLMs, which lack deep domain expertise and impose prohibitive infrastructure demands. To resolve this, we propose SimCRAFT, a model-agnostic framework that distills sophisticated RS orchestration capabilities into a compact 7B-scale model. Addressing data scarcity, we first pair a multiagent synthesis engine with a Mock Execution Engine that checks schema correctness, inter-tool dependencies, and sensor/tool compatibility, producing SimRS-14k, a large-scale, constraint-validated workflow planning corpus. Second, we propose Contextual Retrieval-Augmented Fine-Tuning (CRAFT) that finetunes the model to reason analogically by adapting retrieved Standard Operating Procedures to novel queries under a noise-robust objective, generalizing RAFT to multi-step RS workflow planning without mechanical copying. Extensive experiments demonstrate that SimCRAFT-7B significantly outperforms openweights LLMs and rivals advanced closedsource models and specialized RS agents, while reproducing across three 7B backbones. This work contributes a competitive open-weights baseline for lightweight RS intelligence, enabling efficient autonomous deployment under resource-constrained or resource-conserving conditions.",
+      "authors": [
+        "Haoran Wang",
+        "Jing Yao",
+        "Xu Yang",
+        "Zeqing Wang",
+        "Yang Zhang",
+        "Pedram Ghamisi",
+        "Zhengchao Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-31T05:45:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.30277v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multiagent synthesis engine creates synthetic trajectories to augment fine-tuning data, serving as language-model-agent-driven data augmentation",
+      "llm_evidence_cn": "用多智能体合成引擎生成合成轨迹扩充微调数据，属于语言模型智能体驱动的数据增强",
+      "llm_evidence": "用多智能体合成引擎生成合成轨迹扩充微调数据，属于语言模型智能体驱动的数据增强",
+      "canonical_evidence": "用多智能体合成引擎生成合成轨迹扩充微调数据，属于语言模型智能体驱动的数据增强",
+      "llm_tldr_en": "SimCRAFT generates synthetic agent trajectories with a multiagent synthesis engine and mock execution validator, then uses contextual retrieval-augmented fine-tuning to distill remote-sensing agents into a compact 7B model.",
+      "llm_tldr_cn": "遥感智能体部署依赖大规模通用大模型，成本高且领域知识不足。作者提出SimCRAFT，先由多智能体合成引擎生成轨迹，再用模拟执行引擎校验格式与工具依赖，最后通过上下文检索增强微调将编排能力蒸馏到约七十亿参数模型。该方法用智能体合成数据缓解数据稀缺，可作为智能体轨迹数据增强与蒸馏的参考。",
+      "llm_tldr": "遥感智能体部署依赖大规模通用大模型，成本高且领域知识不足。作者提出SimCRAFT，先由多智能体合成引擎生成轨迹，再用模拟执行引擎校验格式与工具依赖，最后通过上下文检索增强微调将编排能力蒸馏到约七十亿参数模型。该方法用智能体合成数据缓解数据稀缺，可作为智能体轨迹数据增强与蒸馏的参考。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation with language model agents",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.00051v1",
+      "source": "arxiv",
+      "title": "From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling",
+      "abstract": "Despite extensive alignment efforts, Large Language Models (LLMs) remain vulnerable to generating unsafe content under adversarial prompting, yet the internal mechanisms by which safety behaviors are implemented remain poorly understood. We study LLM safety from a mechanistic interpretability perspective and characterize a multi-stage *safety circuit* that organizes refusal behavior, consisting of (i) $\\textbf{Harmful Detection Heads}$ that respond to harmful inputs, (ii) $\\textbf{Safety Neurons}$ that mediate and stabilize safety signals in the residual stream, and (iii) $\\textbf{Refusal Heads}$ that translate these signals into safe response generation. Using targeted attention-head and neuron-level interventions, we provide causal evidence consistent with this circuit organization, showing that suppressing upstream Harmful Detection Heads disrupts downstream refusal behavior and that safety neurons mediate this interaction. We validate that this decomposition recurs across multiple LLM architectures and adversarial attack settings, and use simple, architecture-preserving weight scaling as a mechanistic probe to test its functional relevance. Across six LLMs, circuit-guided scaling improves safety rates under attacks by 26.5%, while incurring only a 1.7% accuracy drop across four standard benchmarks. Overall, our results support a circuit-level interpretation of LLM safety and suggest that mechanistic abstractions can reveal stable and transferable patterns underlying aligned behavior.",
+      "authors": [
+        "Kuan-Lin Chu",
+        "Chung-En Sun",
+        "Tsui-Wei Weng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-08-30T08:01:42+00:00",
+      "link": "https://arxiv.org/pdf/2609.00051v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial prompting text defense in LLMs, related to text adversarial attack-defense",
+      "llm_evidence_cn": "针对大语言模型对抗性文本提示的防御研究，属于文本对抗攻防方向",
+      "llm_evidence": "针对大语言模型对抗性文本提示的防御研究，属于文本对抗攻防方向",
+      "canonical_evidence": "针对大语言模型对抗性文本提示的防御研究，属于文本对抗攻防方向",
+      "llm_tldr_en": "This paper mechanistically interprets LLM safety circuits and proposes circuit-guided weight scaling to strengthen refusal, mitigating unsafe outputs under adversarial text prompting.",
+      "llm_tldr_cn": "大语言模型即使经过对齐，仍可能在对抗性文本提示下生成不安全内容，而其内部拒答机制不够明确。作者从机制可解释性出发刻画了包含有害检测头、安全神经元与拒答头的多层安全电路，并提出电路引导的权重缩放来增强拒答行为。通过注意头与神经元级定向干预提供了因果证据，表明该策略能降低对抗提示下的不安全输出。该工作将文本对抗防御与可解释安全机制联系起来，为攻防研究提供新启示。",
+      "llm_tldr": "大语言模型即使经过对齐，仍可能在对抗性文本提示下生成不安全内容，而其内部拒答机制不够明确。作者从机制可解释性出发刻画了包含有害检测头、安全神经元与拒答头的多层安全电路，并提出电路引导的权重缩放来增强拒答行为。通过注意头与神经元级定向干预提供了因果证据，表明该策略能降低对抗提示下的不安全输出。该工作将文本对抗防御与可解释安全机制联系起来，为攻防研究提供新启示。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.00829v1",
+      "source": "arxiv",
+      "title": "HarnessEvolve: Learning from Reference Trajectories for Reliable Agent Self-Evolution",
+      "abstract": "Self-evolving agents advance toward autonomy by optimizing their harness---prompts, skills, tools, and execution logic---based on environmental feedback. This paradigm, however, is hampered by three challenges: \\textit{credit assignment failure}, where terminal success/failure feedback makes it ambiguous which step caused the error; \\textit{shortcut learning}, where agents memorize task-specific patterns rather than acquire generalizable capabilities; and \\textit{catastrophic forgetting}, where unguarded updates degrade previously acquired competence. In this paper, we introduce HarnessEvolve, a self-evolving framework that learns from reference trajectories to achieve reliable agent self-evolution. HarnessEvolve decouples the execution agent from the evolutionary pipeline, assigning execution, evaluation, optimization, and gating to independent agent modules, enabling generalizable and stable harness improvements. Specifically, HarnessEvolve overcomes credit assignment failure by generating reference trajectories (execution paths produced when given the ground-truth answers) and aligning failed executions against them to extract error signals, which are clustered to reveal systematic failure patterns. To prevent shortcut learning and catastrophic forgetting, candidate harness updates must pass two gates: a quality gate that filters data leakage and prompt bloat, and a performance gate that accepts each update if it improves on the current batch without degrading recent batches, with epoch-end validation on a held-out set selecting the best-performing accepted agent snapshot. We conduct extensive experiments on several benchmarks spanning open-domain and enterprise scenarios, using different models and agent frameworks. Results demonstrate that HarnessEvolve consistently outperforms state-of-the-art baselines across all benchmarks and settings, confirming reliability across task domains.",
+      "authors": [
+        "Wen Jiang",
+        "Mingmin Chu",
+        "Yimeng Tian",
+        "Qianxin Zhang",
+        "Haofei Yang",
+        "Rui Yang",
+        "Yang Liu",
+        "Tao Lv",
+        "Fangming Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-01T07:31:18+00:00",
+      "link": "https://arxiv.org/pdf/2609.00829v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reliable agent self-evolution via reference trajectories; relevant to self-improving/self-play style agent training methodology",
+      "llm_evidence_cn": "利用参考轨迹增强智能体自进化的稳定性，可为自博弈智能体训练提供方法借鉴",
+      "llm_evidence": "利用参考轨迹增强智能体自进化的稳定性，可为自博弈智能体训练提供方法借鉴",
+      "canonical_evidence": "利用参考轨迹增强智能体自进化的稳定性，可为自博弈智能体训练提供方法借鉴",
+      "llm_tldr_en": "HarnessEvolve improves reliability of self-evolving agents by learning from reference trajectories, decoupling execution to address credit-assignment failure, shortcut learning and catastrophic forgetting in prompt-skill-tool harness optimization. It is a methodological bridge to self-play agent training, though it does not use self-play opponents.",
+      "llm_tldr_cn": "自进化智能体通过环境反馈优化自身提示、技能、工具和执行逻辑，但往往遇到信用分配失败、捷径学习和灾难性遗忘。HarnessEvolve引入参考轨迹学习，并将执行过程解耦，使智能体能够区分哪一步真正导致了最终成败，避免只记住表面模式或覆盖已有能力。该框架针对的是智能体自主进化中的训练稳定性，虽未采用自我对弈的对抗训练，但可为用户所关注的自博弈智能体训练提供可靠的进化与质量约束方法。",
+      "llm_tldr": "自进化智能体通过环境反馈优化自身提示、技能、工具和执行逻辑，但往往遇到信用分配失败、捷径学习和灾难性遗忘。HarnessEvolve引入参考轨迹学习，并将执行过程解耦，使智能体能够区分哪一步真正导致了最终成败，避免只记住表面模式或覆盖已有能力。该框架针对的是智能体自主进化中的训练稳定性，虽未采用自我对弈的对抗训练，但可为用户所关注的自博弈智能体训练提供可靠的进化与质量约束方法。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

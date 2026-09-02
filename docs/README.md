@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-01</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-02</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-01 22:36:48 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-02 21:33:55 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦LLM安全与红队攻击，精读2篇高分论文并速读3篇相关基准与方法。最值得关注的是硬标签黑盒文本攻击优化（OASIS）与计算代理自改进红队（SIR）。建议普通读者优先研读这两篇，并结合长上下文提示注入基准验证实际效果。</p>
+<p>今日共读12篇论文，精读6篇，重点聚焦可解释博弈与数据增强两大方向。最值得关注《ShuttleArena》和《REER-PT》，分别用物理羽毛球对局实现自博弈可解释性、以逆向推理提升预训练数据质量。普通读者可顺带留意垃圾短信检测与多智能体安全议题，但优先消化上述两篇高星工作即可。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks">OASIS: Optimizing Attacker Sequences for Hard-Label Black-Box Text Attacks</span></li><li><span class="dpr-home-dashboard-paper-title" title="SIR: Self-improving Red-teaming for Compute Use Agents">SIR: Self-improving Red-teaming for Compute Use Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection">Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt Injection</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ShuttleArena: Interpretable Self-Play in Physics-Based Badminton">ShuttleArena: Interpretable Self-Play in Physics-Based Badminton</span></li><li><span class="dpr-home-dashboard-paper-title" title="REER-PT: Reverse-Engineered Reasoning for Perplexity-Guided Pre-training Data Augmentation">REER-PT: Reverse-Engineered Reasoning for Perplexity-Guided Pre-training Data Augmentation</span></li><li><span class="dpr-home-dashboard-paper-title" title="What Emerges and What Breaks in Self-Play Driving">What Emerges and What Breaks in Self-Play Driving</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="LongPIBench: A Long-Context Benchmark for Prompt Injection">LongPIBench: A Long-Context Benchmark for Prompt Injection</span></li><li><span class="dpr-home-dashboard-paper-title" title="S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?">S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?</span></li><li><span class="dpr-home-dashboard-paper-title" title="HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees">HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Johnny Still Receives Spam SMS: Assessing the Robustness of SMS Spam Detection">Johnny Still Receives Spam SMS: Assessing the Robustness of SMS Spam Detection</span></li><li><span class="dpr-home-dashboard-paper-title" title="SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems">SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems</span></li><li><span class="dpr-home-dashboard-paper-title" title="Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models">Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>
 </div>
 
