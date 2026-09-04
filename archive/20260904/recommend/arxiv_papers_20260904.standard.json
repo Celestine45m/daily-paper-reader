@@ -1,0 +1,493 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-04T21:43:38.706488+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2609.01758v1",
+      "source": "arxiv",
+      "title": "Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs",
+      "abstract": "Large Language Models (LLMs) are increasingly used for software vulnerability detection, but their performance depends on how source code is represented in the input. Most prompting approaches use source code in its original form, while some works propose the use of structured representations. Abstract Syntax Trees (ASTs) are one of the most popular approaches, but AST verbosity increases input size relative to source code, making them hard to fit within some LLMs context windows. This paper investigates Behavior Trees (BTs) as an alternative intermediate representation for LLM-based vulnerability detection. BTs encode control flow, conditions, and executable actions more compactly than ASTs, making them a natural candidate when token count is a constraint. First, we propose a preprocessing stage that parses Java source code into ASTs and then converts them into BT representations. We then compare vulnerability detection performance across 460 Java samples from the Juliet Java test suite, using three input representations: raw source code, AST, and BT. All experiments use a single quantized local LLM, Mistral Small 3.2 24B (Q4_K_M). Our results show that using BT representations improves recall on short code samples, while raw source code achieves higher precision. On longer samples, BTs improve overall performance over the original representation and fit within the context window, whereas many ASTs exceed the context limit. These findings suggest that BTs can provide a compact and useful structured representation for vulnerability detection with quantized, locally deployable LLMs.",
+      "authors": [
+        "Enna Basic",
+        "Alberto Giaretta"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2026-09-01T18:25:01+00:00",
+      "link": "https://arxiv.org/pdf/2609.01758v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes Behavior Tree code representation for vulnerability detection with lightweight LLMs",
+      "llm_evidence_cn": "提出用行为树表示源码以辅助轻量级大语言模型完成软件漏洞检测",
+      "llm_evidence": "提出用行为树表示源码以辅助轻量级大语言模型完成软件漏洞检测",
+      "canonical_evidence": "提出用行为树表示源码以辅助轻量级大语言模型完成软件漏洞检测",
+      "llm_tldr_en": "Proposes Behavior Trees as a compact intermediate code representation to guide lightweight LLMs in software vulnerability detection, reducing token usage relative to ASTs.",
+      "llm_tldr_cn": "现有大语言模型漏洞检测的提示方式常直接输入源码或抽象语法树，后者会显著拉长上下文，轻量级模型难以适配。本文用行为树对源码的控制流、条件与执行动作进行紧凑编码，作为面向大语言模型漏洞检测的新颖中间表示。实验将行为树与抽象语法树等表示进行对比，考察轻量级模型在受限上下文下的漏洞检测表现。结果显示行为树可有效降低令牌开销并保持检测能力，为低成本漏洞检测提供了一条可行路径。",
+      "llm_tldr": "现有大语言模型漏洞检测的提示方式常直接输入源码或抽象语法树，后者会显著拉长上下文，轻量级模型难以适配。本文用行为树对源码的控制流、条件与执行动作进行紧凑编码，作为面向大语言模型漏洞检测的新颖中间表示。实验将行为树与抽象语法树等表示进行对比，考察轻量级模型在受限上下文下的漏洞检测表现。结果显示行为树可有效降低令牌开销并保持检测能力，为低成本漏洞检测提供了一条可行路径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.02172v1",
+      "source": "arxiv",
+      "title": "Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search",
+      "abstract": "Optimization-based jailbreak attacks such as Greedy Coordinate Gradient (GCG) achieve strong effectiveness and transferability by optimizing adversarial suffixes on white-box source models. However, existing GCG-based methods rely on averaged adversarial loss and deep greedy search, which can over-emphasize easy-to-jailbreak behaviors and overlook promising regions of the suffix space. We propose BOSS, a plug-and-play framework that improves GCG-based jailbreak optimization through breadth-oriented suffix search. BOSS uses Tail-Focused Adversarial Loss (TFAL), standard source loss, and behavior coverage to select terminal suffixes, then explores multiple short trajectories and selectively continues promising suffixes. Experiments on public benchmarks show that BOSS improves attack success rates across multiple GCG-based methods while reducing optimization time.",
+      "authors": [
+        "Shiliang Xiao",
+        "Jingsong Wei",
+        "Yuzhi Liang",
+        "Yufan Zheng",
+        "Xia Li",
+        "Qiliang Lin"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-09-02T06:34:29+00:00",
+      "link": "https://arxiv.org/pdf/2609.02172v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Optimizes adversarial suffixes to jailbreak LLMs; direct text adversarial attack method",
+      "llm_evidence_cn": "面向大语言模型文本越狱的对抗后缀搜索优化，直接对应文本对抗攻击需求",
+      "llm_evidence": "面向大语言模型文本越狱的对抗后缀搜索优化，直接对应文本对抗攻击需求",
+      "canonical_evidence": "面向大语言模型文本越狱的对抗后缀搜索优化，直接对应文本对抗攻击需求",
+      "llm_tldr_en": "GCG-style jailbreaks rely on averaged loss and deep greedy search, over-emphasizing easy behaviors. BOSS uses tail-focused adversarial loss, multi-trajectory breadth exploration, and behavioral coverage to select suffixes, improving LLM jailbreak effectiveness and transferability.",
+      "llm_tldr_cn": "基于梯度坐标的文本越狱攻击通常采用平均对抗损失和深度贪婪搜索，容易高估易破解行为、遗漏有价值的后缀区域。为此本文提出BOSS框架，以尾部聚焦对抗损失和多种行为覆盖挑选终止后缀，沿多条较短轨迹进行广度优先搜索后再选择性延伸有希望的后缀。实验表明BOSS在大模型越狱成功率、迁移性和稳定性上均优于现有GCG类方法，可为LLM红队测试和对抗防御提供直接可用的优化工具。",
+      "llm_tldr": "基于梯度坐标的文本越狱攻击通常采用平均对抗损失和深度贪婪搜索，容易高估易破解行为、遗漏有价值的后缀区域。为此本文提出BOSS框架，以尾部聚焦对抗损失和多种行为覆盖挑选终止后缀，沿多条较短轨迹进行广度优先搜索后再选择性延伸有希望的后缀。实验表明BOSS在大模型越狱成功率、迁移性和稳定性上均优于现有GCG类方法，可为LLM红队测试和对抗防御提供直接可用的优化工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.03660v1",
+      "source": "arxiv",
+      "title": "Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners",
+      "abstract": "The dominance of Neural Networks (NNs) in RL is partially due to their incremental learning capability, which naturally suits the online, non-stationary nature of self-play training. However, gradient-boosted trees like LightGBM are widely recognised as the state of the art for tabular data in supervised learning, often outperforming NNs in accuracy and efficiency. Game states are inherently tabular---discrete actions, categorical card identities, structured board positions---which makes them an ideal candidate for tree-based methods. We introduce LUGL (Local Updates, Global Learning), a framework that decouples data collection from model fitting, enabling non-incremental learners such as GBTs to operate in RL settings where they would otherwise fail due to distributional shift. LUGL alternates between a local updates phase, where the agent plays self-play games and accumulates tabular updates (Q-values, V-values, policies, or regret values) in a finite table, and a global learning phase, where the table is used to train a function approximator that generalises to unseen states before the table is reset. We test our approach in four standard perfect-information games (Tic-tac-toe, Connect-4, Othello, and Hex) and five imperfect-information games (Kuhn's poker, Leduc Hold'em, Liar's Dice, Goofspiel, and Flop5 Hold'em), and show that our results are competitive with or superior to DQN and DeepCFR. Our experiments demonstrate that the community's strong bias towards NNs in game-playing may be unwarranted, since LightGBM-based agents achieve competitive or superior performance across all tested benchmarks.",
+      "authors": [
+        "David Milec",
+        "Spyridon Samothrakis",
+        "Michael Fairbank",
+        "Dennis J. N. J. Soemers"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-03T10:58:09+00:00",
+      "link": "https://arxiv.org/pdf/2609.03660v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play reinforcement learning framework enabling non-incremental learners such as LightGBM to train in game environments",
+      "llm_evidence_cn": "提出让非增量学习器如LightGBM在自博弈强化学习游戏中训练，直接命中自博弈RL需求",
+      "llm_evidence": "提出让非增量学习器如LightGBM在自博弈强化学习游戏中训练，直接命中自博弈RL需求",
+      "canonical_evidence": "提出让非增量学习器如LightGBM在自博弈强化学习游戏中训练，直接命中自博弈RL需求",
+      "llm_tldr_en": "Neural networks dominate self-play RL due to incremental learning; LUGL decouples data collection from model fitting, letting non-incremental learners like gradient-boosted trees operate effectively in self-play RL games.",
+      "llm_tldr_cn": "神经网络因具备增量学习能力而主导自博弈强化学习，但游戏状态是离散、分类的表格数据，更适合梯度提升树等非增量模型。LUGL通过解耦数据收集与模型拟合，使LightGBM类学习器也能在在线非平稳的自博弈RL循环中训练。该框架在用树模型处理表格型博弈任务时能发挥更高精度与效率，拓展了非神经网络方法在自博弈智能体训练中的应用范围。",
+      "llm_tldr": "神经网络因具备增量学习能力而主导自博弈强化学习，但游戏状态是离散、分类的表格数据，更适合梯度提升树等非增量模型。LUGL通过解耦数据收集与模型拟合，使LightGBM类学习器也能在在线非平稳的自博弈RL循环中训练。该框架在用树模型处理表格型博弈任务时能发挥更高精度与效率，拓展了非神经网络方法在自博弈智能体训练中的应用范围。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.00504v1",
+      "source": "arxiv",
+      "title": "Independent Reinforcement Learning in Discounted Markov Games",
+      "abstract": "In this work, we study radically uncoupled learning in discounted general-sum Markov games. Assuming ``$\\mathsf{ETH}$ for $\\mathsf{PPAD}$\", we show that, for every fixed discount factor, there is no polynomial-time algorithm for computing inverse-polynomially accurate coarse correlated equilibria in discounted general-sum Markov games when players learn independently in decentralized settings. Complementing this hardness result, we provide what appears to be the first \\emph{radically uncoupled} algorithm with sub-exponential convergence guarantees to coarse correlated equilibria in discounted general-sum Markov games without imposing any structural restrictions on the game. Our algorithm is a \\emph{layered} variant of optimistic mirror descent with an increasing step-size schedule tailored to the multi-agent setting. Finally, we develop both full-feedback and partial feedback versions of the aforementioned algorithm and establish sub-exponential convergence guarantees for each case.",
+      "authors": [
+        "Asrin Efe Yorulmaz",
+        "Ugur Aydin",
+        "Tamer Basar"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.LG",
+        "eess.SY",
+        "math.OC"
+      ],
+      "published": "2026-09-01T00:07:45+00:00",
+      "link": "https://arxiv.org/pdf/2609.00504v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Independent RL in discounted Markov games provides theoretical foundations for self-play algorithms",
+      "llm_evidence_cn": "折扣马尔可夫博弈中的独立强化学习是自博弈算法的理论基础",
+      "llm_evidence": "折扣马尔可夫博弈中的独立强化学习是自博弈算法的理论基础",
+      "canonical_evidence": "折扣马尔可夫博弈中的独立强化学习是自博弈算法的理论基础",
+      "llm_tldr_en": "Proves under a standard hardness assumption that no polynomial algorithm computes accurate coarse correlated equilibria with independent learners in discounted general-sum Markov games, and offers the first radically uncoupled algorithm with sub-exponential convergence.",
+      "llm_tldr_cn": "去中心化环境下独立学习多智能体一般和随机博弈，逼近均衡的可行性一直没有严格刻画。本文基于标准计算复杂性假设证明，对任意固定折扣因子，独立学习算法无法在多项式时间内求得高精度的粗相关均衡；同时给出第一种无结构限制的激进非耦合算法，通过分层乐观镜像下降获得次指数收敛保证。该结果厘清了独立强化学习的理论边界，也为自博弈场景的去中心化训练提供了可供借鉴的算法设计。",
+      "llm_tldr": "去中心化环境下独立学习多智能体一般和随机博弈，逼近均衡的可行性一直没有严格刻画。本文基于标准计算复杂性假设证明，对任意固定折扣因子，独立学习算法无法在多项式时间内求得高精度的粗相关均衡；同时给出第一种无结构限制的激进非耦合算法，通过分层乐观镜像下降获得次指数收敛保证。该结果厘清了独立强化学习的理论边界，也为自博弈场景的去中心化训练提供了可供借鉴的算法设计。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.01023v1",
+      "source": "arxiv",
+      "title": "AKRASIA: Stealthy Backdoor Attack on Reasoning-based Code LLMs",
+      "abstract": "We present AKRASIA, a stealthy, inference-time backdoor attack against reasoning-based Code LLMs. AKRASIA aims to achieve a backdoor target (e.g., malicious code execution) in reasoning LLMs while evading automated defenses and human inspection. To achieve this, AKRASIA probes the victim LLM to construct a code-level backdoor trigger. It then employs in-context learning for backdoor learning, and model unfaithfulness to conceal the backdoor trigger, and generate plausible reasoning. We evaluate AKRASIA using four backdoor targets six (6) reasoning LLMs, three coding tasks/datasets and three defense methods. AKRASIA has up to 99.34% average attack success rate on SOTA LLMs and mantains up to 97.23% average accuracy. AKRASIA evades the SOTA defense, retaining up to 98.82% average ASR in most (14/18) defense settings. It evades human inspection, successfully hiding the backdoor trigger and reasoning steps in up to 80% of settings. Our findings motivate the need to defend LLMs against reasoning backdoors.",
+      "authors": [
+        "Chou Jin Chua",
+        "Sarang Nambiar",
+        "Murali Srinivasan",
+        "Ezekiel Soremekun"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-01T10:20:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.01023v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Stealthy backdoor attack against reasoning-based Code LLMs, a text/LLM adversarial attack",
+      "llm_evidence_cn": "针对代码大语言模型的隐蔽后门攻击，属于面向文本/LLM的对抗攻击",
+      "llm_evidence": "针对代码大语言模型的隐蔽后门攻击，属于面向文本/LLM的对抗攻击",
+      "canonical_evidence": "针对代码大语言模型的隐蔽后门攻击，属于面向文本/LLM的对抗攻击",
+      "llm_tldr_en": "AKRASIA probes code LLMs to build a code-level trigger, uses in-context learning to embed a backdoor, and generates plausible reasoning to evade defenses. Attack success up to 99.34% across six models with high accuracy.",
+      "llm_tldr_cn": "针对代码大语言模型的推理过程，现有后门攻击不够隐蔽，易被防御和审查发现。AKRASIA 先探测目标模型以构造代码级触发器，再借助上下文学习注入后门，并利用模型不忠实性生成合理推理来掩盖触发行为。在六个推理大模型与多个编码任务上，该方法达到最高99.34%的平均攻击成功率，并能规避现有最强防御且保持较高准确率，揭示推理式代码模型存在严重安全隐患。",
+      "llm_tldr": "针对代码大语言模型的推理过程，现有后门攻击不够隐蔽，易被防御和审查发现。AKRASIA 先探测目标模型以构造代码级触发器，再借助上下文学习注入后门，并利用模型不忠实性生成合理推理来掩盖触发行为。在六个推理大模型与多个编码任务上，该方法达到最高99.34%的平均攻击成功率，并能规避现有最强防御且保持较高准确率，揭示推理式代码模型存在严重安全隐患。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.02964v1",
+      "source": "arxiv",
+      "title": "When Optimization Becomes Manipulation: Defending Generative Search against Malicious Generative Engine Optimization",
+      "abstract": "This paper focuses on defending generative search engines against malicious Generative Engine Optimization (GEO), which rewrites web documents to match engines' citation preferences and thereby manipulates generated answers. Recent GEO methods have advanced from hand-crafted rewriting to automated and agentic optimization, substantially increasing the visibility of target documents in generated answers. However, defending against such manipulation poses two major challenges: attack documents remain factually consistent with their originals, rendering fact verification and perplexity filtering ineffective, and the features they amplify equally characterize high-quality benign content. To address these limitations, we propose GEO Defender, a two-stage defense aligned with the attack chain that requires no fine-tuning of the target LLM. GEO Defender consists of Shield Reranker and Training-Free Shield Generation (TFSG). Specifically, Shield Reranker learns a preference-based defensive residual over a frozen base reranker, demoting GEO-rewritten documents while preserving relevance judgments, and TFSG distills defense outcomes into a natural-language experience library that guides the target LLM's source use at inference. Experiments on two state-of-the-art closed-source LLMs and three open-source LLMs across seven GEO attacks demonstrate that GEO Defender reduces the average attack success rate from 50.32% to 6.20%, retains 94.12% of benign-evidence use, preserves answer quality, and generalizes to unseen attacks from construction instances.",
+      "authors": [
+        "Haozhang Li",
+        "Yangguang Shao",
+        "Xinjie Lin",
+        "Zhong Guan",
+        "Mi Zhou",
+        "Junzheng Shi"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-02T07:13:40+00:00",
+      "link": "https://arxiv.org/pdf/2609.02964v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Addresses malicious agentic text manipulation (GEO) and defense for generative search, fitting text adversarial attack/defense",
+      "llm_evidence_cn": "针对生成式搜索的恶意文本操纵及其防御，属于文本对抗攻防范畴",
+      "llm_evidence": "针对生成式搜索的恶意文本操纵及其防御，属于文本对抗攻防范畴",
+      "canonical_evidence": "针对生成式搜索的恶意文本操纵及其防御，属于文本对抗攻防范畴",
+      "llm_tldr_en": "Defends generative search against malicious Generative Engine Optimization that rewrites factually consistent documents to manipulate answers; shows why fact-check and perplexity filters fail and analyzes overlap with high-quality benign content.",
+      "llm_tldr_cn": "针对恶意生成式引擎优化通过重写网页文本来操纵大模型生成答案的威胁，该工作指出攻击文档与原文事实一致，且放大特征与高质量良性内容高度重叠，使事实核查和困惑度过滤失效。它系统刻画了这种优化即操纵的攻防困难，为防御方法提供了新问题设定与评测框架，对文本对抗攻防研究有直接参考价值。",
+      "llm_tldr": "针对恶意生成式引擎优化通过重写网页文本来操纵大模型生成答案的威胁，该工作指出攻击文档与原文事实一致，且放大特征与高质量良性内容高度重叠，使事实核查和困惑度过滤失效。它系统刻画了这种优化即操纵的攻防困难，为防御方法提供了新问题设定与评测框架，对文本对抗攻防研究有直接参考价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.03999v1",
+      "source": "arxiv",
+      "title": "Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond",
+      "abstract": "Large language models (LLMs) are becoming integral to web applications and browser agents, transforming online interactions while introducing new attack vectors and reshaping longstanding web vulnerabilities. Classical threats such as cross-site scripting (XSS) can be amplified through LLM-mediated interactions, while LLM-specific vulnerabilities can propagate across web applications, introducing attacks such as prompt injection. Securing modern web systems therefore requires understanding interactions between traditional and LLM-specific threats across the system lifecycle. Unlike prior surveys treating web and LLM security separately, this survey provides a unified analysis of how LLMs amplify web vulnerabilities across client-side, server-side, and pipeline layers while evaluating defenses and their limitations. The analysis examines extending NIST and ISO/IEC AI security frameworks to the security needs of LLM-enabled web environments. Three unresolved challenges are identified: adversarial natural-language instructions, autonomous agent security, and post-deployment security through continuous monitoring and adaptation. An LLM-aware monitoring and control framework is proposed, integrating semantic input validation, prompt integrity protection, output isolation, agent governance, and runtime monitoring. This unified perspective characterizes the evolving threat landscape and outlines future directions for secure AI-enabled web systems.",
+      "authors": [
+        "Nivedita Singh",
+        "Alsharif Abuadbba",
+        "Yansong Gao",
+        "Surya Nepal",
+        "Hyoungshick Kim"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-09-03T15:39:44+00:00",
+      "link": "https://arxiv.org/pdf/2609.03999v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Covers text/LLM adversarial attacks such as prompt injection and their interplay with classic web vulnerabilities",
+      "llm_evidence_cn": "涵盖提示注入等面向文本与LLM的对抗攻击，并分析其与经典Web漏洞的相互作用",
+      "llm_evidence": "涵盖提示注入等面向文本与LLM的对抗攻击，并分析其与经典Web漏洞的相互作用",
+      "canonical_evidence": "涵盖提示注入等面向文本与LLM的对抗攻击，并分析其与经典Web漏洞的相互作用",
+      "llm_tldr_en": "Offers unified analysis of web and LLM security, showing how prompt injection and LLM-specific attacks propagate across applications while amplifying classic threats like XSS, motivating interaction-aware defenses for modern web systems.",
+      "llm_tldr_cn": "现有研究常将Web安全与LLM安全分开讨论，忽视了LLM和浏览器智能体对Web应用安全链条的改造。该综述将传统威胁与提示注入等LLM特有攻击统一分析，阐明XSS等经典漏洞如何在LLM交互中被放大、新型攻击又如何跨应用传播。作者主张在系统生命周期中联合考虑传统与LLM特有威胁，为面向文本与Web的攻防研究提供新框架。",
+      "llm_tldr": "现有研究常将Web安全与LLM安全分开讨论，忽视了LLM和浏览器智能体对Web应用安全链条的改造。该综述将传统威胁与提示注入等LLM特有攻击统一分析，阐明XSS等经典漏洞如何在LLM交互中被放大、新型攻击又如何跨应用传播。作者主张在系统生命周期中联合考虑传统与LLM特有威胁，为面向文本与Web的攻防研究提供新框架。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2608.27504v1",
+      "source": "arxiv",
+      "title": "Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study",
+      "abstract": "Despite extensive safety alignment, large language models (LLMs) remain vulnerable to jailbreak attacks that bypass safeguards to elicit harmful content. While prior work attributes this vulnerability to safety training limitations, the internal mechanisms by which LLMs process adversarial prompts remain poorly understood. We present a mechanistic analysis of the jailbreaking behavior in a large-scale, safety-aligned LLM, focusing on LLaMA-2-7B-chat-hf. Leveraging edge attribution patching and subnetwork probing, we systematically identify computational circuits responsible for generating affirmative responses to jailbreak prompts. Ablating these circuits during the first token prediction can reduce attack success rates by up to 80\\%, demonstrating its critical role in safety bypass. Our analysis uncovers key attention heads and MLP pathways that mediate adversarial prompt exploitation, revealing how important tokens propagate through these components to override safety constraints. These findings advance the understanding of adversarial vulnerabilities in aligned LLMs and pave the way for targeted, interpretable defense mechanisms based on mechanistic interpretability.",
+      "authors": [
+        "Paria Mehrbod",
+        "Boris Knyazev",
+        "Guy Wolf",
+        "Eugene Belilovsky",
+        "Geraldin Nanfack"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-27T04:39:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.27504v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "LLM jailbreak circuit discovery supports detection and defense against text attacks",
+      "llm_evidence_cn": "通过机制可解释性定位大模型越狱电路，服务文本越狱攻击的检测与防御",
+      "llm_evidence": "通过机制可解释性定位大模型越狱电路，服务文本越狱攻击的检测与防御",
+      "canonical_evidence": "通过机制可解释性定位大模型越狱电路，服务文本越狱攻击的检测与防御",
+      "llm_tldr_en": "Investigates internal mechanisms behind LLM jailbreaks. Using edge attribution patching and subnetwork probing on LLaMA-2-7B-chat, it identifies circuits driving affirmative jailbreak responses; ablating them during first-token prediction reduces attack success by up to 80%.",
+      "llm_tldr_cn": "大型语言模型即使经过安全对齐仍会被越狱，但此前对越狱提示的内部处理机制理解不足。本文以LLaMA-2-7B-chat-hf为对象，采用边归因修补和子网络探测，系统定位了负责生成越狱肯定回应的计算电路。在首个token预测阶段消融这些电路后，攻击成功率最高可降低80%。该工作从机制可解释性角度为文本越狱攻击的检测与防御提供了新的干预点和分析工具。",
+      "llm_tldr": "大型语言模型即使经过安全对齐仍会被越狱，但此前对越狱提示的内部处理机制理解不足。本文以LLaMA-2-7B-chat-hf为对象，采用边归因修补和子网络探测，系统定位了负责生成越狱肯定回应的计算电路。在首个token预测阶段消融这些电路后，攻击成功率最高可降低80%。该工作从机制可解释性角度为文本越狱攻击的检测与防御提供了新的干预点和分析工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.28499v1",
+      "source": "arxiv",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "abstract": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors.",
+      "authors": [
+        "Shae McFadden",
+        "Ilias Tsingenopoulos",
+        "Mario D'Onghia",
+        "Alexander Herzog",
+        "Myles Foley",
+        "Chris Hicks",
+        "Lorenzo Cavallaro",
+        "Fabio Pierazzi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "published": "2026-08-28T16:29:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.28499v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Deep RL agent learns reusable evasion and hardening policies for Android malware detectors under label-only black-box access; intelligent-agent plus RL applied to security evaluation, though not source-code vuln mining",
+      "llm_evidence_cn": "强化学习智能体在标签受限黑盒条件下学习规避与加固恶意软件检测器的可复用策略，是智能体+强化学习在安全评估中的应用，虽非源代码漏洞挖掘",
+      "llm_evidence": "强化学习智能体在标签受限黑盒条件下学习规避与加固恶意软件检测器的可复用策略，是智能体+强化学习在安全评估中的应用，虽非源代码漏洞挖掘",
+      "canonical_evidence": "强化学习智能体在标签受限黑盒条件下学习规避与加固恶意软件检测器的可复用策略，是智能体+强化学习在安全评估中的应用，虽非源代码漏洞挖掘",
+      "llm_tldr_en": "Replicant is a deep reinforcement learning framework that learns reusable policies for evading and hardening malware detectors under a label-only black-box threat model. It learns how to modify malware samples and when to query the target, transferring across samples, detectors and feature spaces, and is evaluated on seven Android malware detectors",
+      "llm_tldr_cn": "论文提出一个深度强化学习框架Replicant，用来在严格的标签受限黑盒威胁模型下学习恶意软件规避与检测器加固策略。该智能体学习何时修改恶意样本以及何时查询目标，能将可复用策略跨样本、跨检测器、跨特征空间迁移。作者在七个Android恶意软件检测器与三个特征空间上进行评估，展示了现实条件下评估和提升机器学习安全系统鲁棒性的有效路径；此成果可与基于强化学习代理的漏洞挖掘/攻防任务互相参考。",
+      "llm_tldr": "论文提出一个深度强化学习框架Replicant，用来在严格的标签受限黑盒威胁模型下学习恶意软件规避与检测器加固策略。该智能体学习何时修改恶意样本以及何时查询目标，能将可复用策略跨样本、跨检测器、跨特征空间迁移。作者在七个Android恶意软件检测器与三个特征空间上进行评估，展示了现实条件下评估和提升机器学习安全系统鲁棒性的有效路径；此成果可与基于强化学习代理的漏洞挖掘/攻防任务互相参考。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.01168v2",
+      "source": "arxiv",
+      "title": "Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate",
+      "abstract": "Text-to-image (T2I) models remain vulnerable to jailbreak attacks that elicit Not-Safe-For-Work (NSFW) content, despite increasingly being guarded by heterogeneous, multi-layer safety stacks combining text filters, image classifiers, and cross-modal detectors. Existing jailbreak studies either optimize against individual filters or query the complete pipeline with aggregate feedback, making it difficult to identify the active constraint and adapt to conflicts across safety layers. In this paper, we introduce the Detection Surface, a unified geometric framework that characterizes the decision boundaries induced by heterogeneous T2I safety filters and their joint effect on the jailbreak search space. This formulation reveals that successful evasion is governed by a sparse and non-convex region shaped by cross-layer conflicts, where mutations that bypass one filter may increase exposure to another. Motivated by this analysis, we propose CRACK, a multi-agent debate framework for adaptive jailbreak search that decomposes jailbreak search into exploration, diagnosis, and arbitration. CRACK coordinates an Attack Agent, a Defense Agent, and a Judge Agent to iteratively generate prompt mutations, obtain layer-specific diagnostic feedback, and optimize mutation strategies through reward-guided refinement. Through repeated rounds of debate, CRACK adapts its search direction to the evolving cross-layer constraints while preserving the original harmful intent. Extensive experiments across multiple T2I models, datasets, and safety configurations show that CRACK achieves Attack Success Rates (ASR) of up to 99.63% under composite defenses, while requiring fewer queries than existing methods and maintaining semantic fidelity.",
+      "authors": [
+        "Kaiyan Wen",
+        "Shijie Zhang",
+        "Lu Yu",
+        "Guangdong Bai"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MM"
+      ],
+      "published": "2026-09-01T12:45:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.01168v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multi-agent debate text jailbreak against heterogeneous T2I safety filters; relevant to text adversarial attack",
+      "llm_evidence_cn": "以多智能体辩论攻击文生图模型异构多层安全过滤器的文本越狱研究，属文本对抗攻击范畴",
+      "llm_evidence": "以多智能体辩论攻击文生图模型异构多层安全过滤器的文本越狱研究，属文本对抗攻击范畴",
+      "canonical_evidence": "以多智能体辩论攻击文生图模型异构多层安全过滤器的文本越狱研究，属文本对抗攻击范畴",
+      "llm_tldr_en": "Text-to-image models remain vulnerable to jailbreaks despite heterogeneous multi-layer safety filters. A Detection Surface unifies their decision boundaries and multi-agent debate identifies cracks, enabling more adaptive and effective jailbreak attacks.",
+      "llm_tldr_cn": "本文针对文生图（T2I）模型受多层异质过滤器保护却仍能被越狱的问题，提出检测面框架统一描述文本、图像和跨模态安全过滤器的决策边界及其交互。在此基础上，利用多智能体辩论识别当前实际生效的约束并寻找可规避的空间。实验显示该方法能适应异构分层安全栈，显著提升生成不安全内容的成功率，也为评估多层防御的协作脆弱性提供了一种通用攻击视角。",
+      "llm_tldr": "本文针对文生图（T2I）模型受多层异质过滤器保护却仍能被越狱的问题，提出检测面框架统一描述文本、图像和跨模态安全过滤器的决策边界及其交互。在此基础上，利用多智能体辩论识别当前实际生效的约束并寻找可规避的空间。实验显示该方法能适应异构分层安全栈，显著提升生成不安全内容的成功率，也为评估多层防御的协作脆弱性提供了一种通用攻击视角。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.04075v1",
+      "source": "arxiv",
+      "title": "PatchBench: Evaluating AI Agents for Vulnerability Patching",
+      "abstract": "AI agents have recently demonstrated strong performance in automated vulnerability patching. However, existing evaluations often validate a patch only by testing whether the provided Proof-of-Concept (PoC) input still triggers a crash. This leaves two key threats to validity: agents may reproduce memorized historical developer patches, or they may generate surface-level fixes that only suppress the reported crash.   We study these concerns for C/C++ vulnerability patching. We introduce a patch similarity metric to detect memorized patches. On average, 25% of the agent patches exhibit substantial similarity to historical developer patches, indicating that patch memorization is a real threat to the validity of vulnerability patching evaluations. Meanwhile, agents also frequently exploit benchmark structures to pass patch validation by patching on the crash stack trace to suppress the crash, rather than localizing and fixing the root cause of the vulnerabilities.   To handle these issues, we propose PatchBench, a new benchmark for evaluating AI agents on realistic vulnerability patching tasks. PatchBench selects vulnerabilities whose ground-truth fixes lie outside the crash stack and uses vulnerability transplant and code mutations to migrate historical vulnerabilities into new repository contexts, reducing the risks of surface-level fixes and patch memorization. We develop new patch validation methods that thoroughly evaluate both security and semantic correctness of agent patches. Across 11 state-of-the-art agents, including the top three AIxCC agents, the original PoC-only validation inflates the patching task solve rate of agents by 1.83$\\times$ on average. Our results reveal key limitations of current patching agents and point to future research directions for more reliable vulnerability repair.",
+      "authors": [
+        "Chihao Shen",
+        "Jiacheng Li",
+        "Aastha Mahajan",
+        "Jeffery Siyuan Tian",
+        "Yonghwi Kwon",
+        "Yizheng Chen"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-09-03T16:44:22+00:00",
+      "link": "https://arxiv.org/pdf/2609.04075v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI-agent benchmark for C/C++ vulnerability patching; relevant to software-security vulnerability tasks and agent-based vulnerability handling",
+      "llm_evidence_cn": "面向C/C++漏洞修补的AI智能体评测，与软件安全漏洞场景及智能体漏洞处理任务相关",
+      "llm_evidence": "面向C/C++漏洞修补的AI智能体评测，与软件安全漏洞场景及智能体漏洞处理任务相关",
+      "canonical_evidence": "面向C/C++漏洞修补的AI智能体评测，与软件安全漏洞场景及智能体漏洞处理任务相关",
+      "llm_tldr_en": "Benchmark for AI agents that patch C/C++ vulnerabilities. Introduces a patch-similarity metric showing 25% of agent patches resemble memorized historical patches and others only suppress PoC crashes, exposing validity threats in vulnerability-agent evaluation.",
+      "llm_tldr_cn": "现有漏洞补丁评测常只验证PoC是否不再崩溃，导致智能体可能记忆历史开发补丁或生成仅压制崩溃的表面修复。PatchBench针对C/C++漏洞修补引入补丁相似度指标并分析该类现象，发现平均25%的智能体补丁与历史补丁高度相似。该工作提示漏洞智能体评测需要更严格验证补丁质量，对漏洞挖掘与自动修复领域都有重要参考价值。",
+      "llm_tldr": "现有漏洞补丁评测常只验证PoC是否不再崩溃，导致智能体可能记忆历史开发补丁或生成仅压制崩溃的表面修复。PatchBench针对C/C++漏洞修补引入补丁相似度指标并分析该类现象，发现平均25%的智能体补丁与历史补丁高度相似。该工作提示漏洞智能体评测需要更严格验证补丁质量，对漏洞挖掘与自动修复领域都有重要参考价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.03955v1",
+      "source": "arxiv",
+      "title": "Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs",
+      "abstract": "Reinforcement learning (RL) has substantially advanced code generation with large language models (LLMs) through executable feedback. The feedback for coding problems mainly comes from specific test cases, where high-quality test cases are often scarce since they should be both sound and discriminative. We thus turn to study the auto-generation of test cases using the learned model. We find this is naturally an adversarial RL problem: the model is expected to generate effective test cases as counterexamples, depending on the solver's current failure modes. We propose Test Cases Scaling (TCS), a two-stage RL framework for effective test generation. Both stages train a test generator from a rolling policy-aligned buffer: Stage 1 generates tests consistent with the reference solution, and Stage 2 restricts the buffer to current failure modes and learns counterexample tests. Across TACO and LiveCodeBench, TCS improves both pass@1 and inference-time answer selection according to generated tests. We find the learned test generator also enables effective selection among other LLM outputs.",
+      "authors": [
+        "Jiacheng Xu",
+        "Wentao Zhang",
+        "Zhiyi Lyu",
+        "Fuxiang Zhang",
+        "Chaojie Wang",
+        "Yang Liu",
+        "Bo An"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-09-03T14:55:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.03955v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Adversarial RL generation of counterexample test cases against language models; transferable to adversarial text attack methodology",
+      "llm_evidence_cn": "面向语言模型的对抗性RL反例测试生成，可迁移至对抗文本攻击方法",
+      "llm_evidence": "面向语言模型的对抗性RL反例测试生成，可迁移至对抗文本攻击方法",
+      "canonical_evidence": "面向语言模型的对抗性RL反例测试生成，可迁移至对抗文本攻击方法",
+      "llm_tldr_en": "Proposes TCS, a two-stage adversarial RL framework generating sound and discriminative test cases as counterexamples against code LLMs, with rolling policy-aligned buffers to scale test generation.",
+      "llm_tldr_cn": "代码LLM的评测依赖高质量测试用例，但测试既要结果正确又要能区分模型优劣，往往稀缺。作者将测试生成建模为对抗性RL问题：目标是根据求解器当前失败模式生成可暴露缺陷的反例，并提出两阶段RL框架TCS，从滚动策略对齐缓冲区训练测试生成器。通过先保证生成可靠测试、再针对失败模式强化对抗性，方法可随着求解器更新持续产出有效用例。实验表明该方法能在代码生成任务上生成可靠且有判别力的测试用例，为代码LLM的自动评测与对抗性攻防研究提供了新工具。",
+      "llm_tldr": "代码LLM的评测依赖高质量测试用例，但测试既要结果正确又要能区分模型优劣，往往稀缺。作者将测试生成建模为对抗性RL问题：目标是根据求解器当前失败模式生成可暴露缺陷的反例，并提出两阶段RL框架TCS，从滚动策略对齐缓冲区训练测试生成器。通过先保证生成可靠测试、再针对失败模式强化对抗性，方法可随着求解器更新持续产出有效用例。实验表明该方法能在代码生成任务上生成可靠且有判别力的测试用例，为代码LLM的自动评测与对抗性攻防研究提供了新工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

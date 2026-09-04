@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-02</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-04</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 12 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-02 21:33:55 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-04 21:50:50 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共读12篇论文，精读6篇，重点聚焦可解释博弈与数据增强两大方向。最值得关注《ShuttleArena》和《REER-PT》，分别用物理羽毛球对局实现自博弈可解释性、以逆向推理提升预训练数据质量。普通读者可顺带留意垃圾短信检测与多智能体安全议题，但优先消化上述两篇高星工作即可。</p>
+<p>今日聚焦AI安全：精读2篇高分研究，聚焦轻量级LLM的漏洞检测与跨模型越狱攻击优化；速读覆盖Web安全、机制可解释性与文生图越狱新视角。最值关注的是“行为树引导检测”以9.0分领跑，以及“广度优先搜索”显著提升越狱攻击效能，凸显攻防对抗新趋势。建议读者优先精读这两篇，并留意多智能体与电路分析在安全评估中的潜力。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -74,7 +74,7 @@
     <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ShuttleArena: Interpretable Self-Play in Physics-Based Badminton">ShuttleArena: Interpretable Self-Play in Physics-Based Badminton</span></li><li><span class="dpr-home-dashboard-paper-title" title="REER-PT: Reverse-Engineered Reasoning for Perplexity-Guided Pre-training Data Augmentation">REER-PT: Reverse-Engineered Reasoning for Perplexity-Guided Pre-training Data Augmentation</span></li><li><span class="dpr-home-dashboard-paper-title" title="What Emerges and What Breaks in Self-Play Driving">What Emerges and What Breaks in Self-Play Driving</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs">Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search">Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search</span></li><li><span class="dpr-home-dashboard-paper-title" title="Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners">Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>
@@ -87,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Johnny Still Receives Spam SMS: Assessing the Robustness of SMS Spam Detection">Johnny Still Receives Spam SMS: Assessing the Robustness of SMS Spam Detection</span></li><li><span class="dpr-home-dashboard-paper-title" title="SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems">SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems</span></li><li><span class="dpr-home-dashboard-paper-title" title="Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models">Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond">Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond</span></li><li><span class="dpr-home-dashboard-paper-title" title="Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study">Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study</span></li><li><span class="dpr-home-dashboard-paper-title" title="Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate">Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>

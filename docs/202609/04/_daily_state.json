@@ -1,0 +1,201 @@
+{
+  "date": "20260904",
+  "date_label": "",
+  "generated_at": "2026-09-04 21:50:50 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.01758v1",
+      "route": "202609/04/2609.01758v1-towards-behavior-tree-guided-vulnerability-detection-with-lightweight-llms",
+      "title": "Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出用行为树表示源码以辅助轻量级大语言模型完成软件漏洞检测",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.02172v1",
+      "route": "202609/04/2609.02172v1-breadth-beats-depth-improving-gcg-based-jailbreak-optimization-with-breadth-oriented-suffix-search",
+      "title": "Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向大语言模型文本越狱的对抗后缀搜索优化，直接对应文本对抗攻击需求",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.03660v1",
+      "route": "202609/04/2609.03660v1-local-updates-global-learning-lugl-playing-games-with-non-incremental-learners",
+      "title": "Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出让非增量学习器如LightGBM在自博弈强化学习游戏中训练，直接命中自博弈RL需求",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.00504v1",
+      "route": "202609/04/2609.00504v1-independent-reinforcement-learning-in-discounted-markov-games",
+      "title": "Independent Reinforcement Learning in Discounted Markov Games",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "折扣马尔可夫博弈中的独立强化学习是自博弈算法的理论基础",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.01023v1",
+      "route": "202609/04/2609.01023v1-akrasia-stealthy-backdoor-attack-on-reasoning-based-code-llms",
+      "title": "AKRASIA: Stealthy Backdoor Attack on Reasoning-based Code LLMs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对代码大语言模型的隐蔽后门攻击，属于面向文本/LLM的对抗攻击",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.02964v1",
+      "route": "202609/04/2609.02964v1-when-optimization-becomes-manipulation-defending-generative-search-against-malicious-generative-engine-optimization",
+      "title": "When Optimization Becomes Manipulation: Defending Generative Search against Malicious Generative Engine Optimization",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "针对生成式搜索的恶意文本操纵及其防御，属于文本对抗攻防范畴",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.03999v1",
+      "route": "202609/04/2609.03999v1-shifting-from-injection-to-interaction-rethinking-web-security-in-the-age-of-llms-and-beyond",
+      "title": "Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "涵盖提示注入等面向文本与LLM的对抗攻击，并分析其与经典Web漏洞的相互作用",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2608.27504v1",
+      "route": "202609/04/2608.27504v1-circuit-discovery-helps-detect-llm-jailbreaking-a-mechanistic-interpretability-study",
+      "title": "Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过机制可解释性定位大模型越狱电路，服务文本越狱攻击的检测与防御",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.01168v2",
+      "route": "202609/04/2609.01168v2-jailbreaking-text-to-image-models-through-cracks-navigating-heterogeneous-safety-filters-via-multi-agent-debate",
+      "title": "Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "以多智能体辩论攻击文生图模型异构多层安全过滤器的文本越狱研究，属文本对抗攻击范畴",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.03955v1",
+      "route": "202609/04/2609.03955v1-two-stage-reinforcement-learning-for-sound-and-adversarial-test-generation-in-code-llms",
+      "title": "Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向语言模型的对抗性RL反例测试生成，可迁移至对抗文本攻击方法",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2608.28499v1",
+      "route": "202609/04/2608.28499v1-replicant-learning-policies-for-evading-and-hardening-malware-detectors",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "强化学习智能体在标签受限黑盒条件下学习规避与加固恶意软件检测器的可复用策略，是智能体+强化学习在安全评估中的应用，虽非源代码漏洞挖掘",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    },
+    {
+      "paper_id": "2609.04075v1",
+      "route": "202609/04/2609.04075v1-patchbench-evaluating-ai-agents-for-vulnerability-patching",
+      "title": "PatchBench: Evaluating AI Agents for Vulnerability Patching",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向C/C++漏洞修补的AI智能体评测，与软件安全漏洞场景及智能体漏洞处理任务相关",
+      "first_seen_at": "2026-09-04 21:50:50 UTC",
+      "updated_at": "2026-09-04 21:50:50 UTC"
+    }
+  ]
+}
