@@ -1,0 +1,89 @@
+{
+  "date": "20260905",
+  "date_label": "",
+  "generated_at": "2026-09-05 21:01:55 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.00487v1",
+      "route": "202609/05/2609.00487v1-evoflint-an-evolutionary-atlas-of-multi-turn-llm-vulnerabilities",
+      "title": "EvoFlint: An Evolutionary Atlas of Multi-Turn LLM Vulnerabilities",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过演化质量多样性搜索对LLM进行多轮对抗红队攻击",
+      "first_seen_at": "2026-09-05 21:01:55 UTC",
+      "updated_at": "2026-09-05 21:01:55 UTC"
+    },
+    {
+      "paper_id": "2609.01058v1",
+      "route": "202609/05/2609.01058v1-arise-rl-agentic-rubric-grounded-iterative-self-evolution-with-reinforcement-learning",
+      "title": "ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "未明说自博弈，但生成器与求解器协同演化的强化学习构成类自博弈的智能体自进化训练",
+      "first_seen_at": "2026-09-05 21:01:55 UTC",
+      "updated_at": "2026-09-05 21:01:55 UTC"
+    },
+    {
+      "paper_id": "2609.02035v1",
+      "route": "202609/05/2609.02035v1-implicit-manipulation-for-skill-selection-in-llm-agents-with-semantic-matching",
+      "title": "Implicit Manipulation for Skill Selection in LLM Agents with Semantic Matching",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过语义匹配对LLM智能体技能选择实施隐式文本对抗攻击",
+      "first_seen_at": "2026-09-05 21:01:55 UTC",
+      "updated_at": "2026-09-05 21:01:55 UTC"
+    },
+    {
+      "paper_id": "2609.00705v1",
+      "route": "202609/05/2609.00705v1-phantomcall-evading-ml-malware-detectors-via-function-call-graph-perturbation",
+      "title": "PhantomCall: Evading ML Malware Detectors via Function Call Graph Perturbation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过函数调用图扰动对软件安全检测器进行对抗攻击",
+      "first_seen_at": "2026-09-05 21:01:55 UTC",
+      "updated_at": "2026-09-05 21:01:55 UTC"
+    },
+    {
+      "paper_id": "2609.01487v1",
+      "route": "202609/05/2609.01487v1-defense-as-skill-evolving-runtime-guard-skill-for-skill-augmented-agents",
+      "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对智能体恶意技能的运行时防御，与智能体攻防主题相关",
+      "first_seen_at": "2026-09-05 21:01:55 UTC",
+      "updated_at": "2026-09-05 21:01:55 UTC"
+    }
+  ]
+}

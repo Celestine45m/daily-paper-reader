@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-04</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-05</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-04 21:50:50 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-05 21:01:55 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日聚焦AI安全：精读2篇高分研究，聚焦轻量级LLM的漏洞检测与跨模型越狱攻击优化；速读覆盖Web安全、机制可解释性与文生图越狱新视角。最值关注的是“行为树引导检测”以9.0分领跑，以及“广度优先搜索”显著提升越狱攻击效能，凸显攻防对抗新趋势。建议读者优先精读这两篇，并留意多智能体与电路分析在安全评估中的潜力。</p>
+<p>今日精读聚焦大模型多轮安全漏洞与自我进化方法，并速读两篇智能体防御相关论文。</p>
+<p>最值得关注《EvoFlint》揭示多轮LLM漏洞演化图谱，及《ARISE-RL》用规则反馈驱动智能体自我进化。</p>
+<p>建议延伸关注恶意软件检测规避（PhantomCall）与运行时防御技能（Defense-as-Skill）的对抗博弈。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs">Towards Behavior Tree-Guided Vulnerability Detection with Lightweight LLMs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search">Breadth Beats Depth: Improving GCG-Based Jailbreak Optimization with Breadth-Oriented Suffix Search</span></li><li><span class="dpr-home-dashboard-paper-title" title="Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners">Local Updates, Global Learning (LUGL): Playing Games with non-incremental Learners</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="EvoFlint: An Evolutionary Atlas of Multi-Turn LLM Vulnerabilities">EvoFlint: An Evolutionary Atlas of Multi-Turn LLM Vulnerabilities</span></li><li><span class="dpr-home-dashboard-paper-title" title="ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning">ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Implicit Manipulation for Skill Selection in LLM Agents with Semantic Matching">Implicit Manipulation for Skill Selection in LLM Agents with Semantic Matching</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>3</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond">Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond</span></li><li><span class="dpr-home-dashboard-paper-title" title="Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study">Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study</span></li><li><span class="dpr-home-dashboard-paper-title" title="Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate">Jailbreaking Text-to-Image Models Through Cracks: Navigating Heterogeneous Safety Filters via Multi-Agent Debate</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="PhantomCall: Evading ML Malware Detectors via Function Call Graph Perturbation">PhantomCall: Evading ML Malware Detectors via Function Call Graph Perturbation</span></li><li><span class="dpr-home-dashboard-paper-title" title="Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents">Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>2</strong></span></div>
 </section>
 </div>
 
