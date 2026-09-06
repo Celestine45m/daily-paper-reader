@@ -1,0 +1,185 @@
+{
+  "date": "20260906",
+  "date_label": "",
+  "generated_at": "2026-09-06 22:13:21 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.03652v1",
+      "route": "202609/06/2609.03652v1-the-impact-of-synthetic-data-augmentation-on-discourse-pragmatic-function-classification",
+      "title": "The Impact of Synthetic Data Augmentation on Discourse-Pragmatic Function Classification",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "研究合成文本数据增强对分类的影响，特别是增强样本与真实训练数据的几何关系",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.00470v1",
+      "route": "202609/06/2609.00470v1-tris-a-tri-layer-retrieval-integrity-sieve-against-knowledge-poisoning",
+      "title": "TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "抵御针对RAG的知识投毒攻击，通过对抗文本检测与过滤净化检索证据，属文本攻防",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.03693v1",
+      "route": "202609/06/2609.03693v1-alcatraz---anchored-tree-rule-defense-against-jailbreaks",
+      "title": "AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对提示对抗攻击的文本级防御，以规则向输入文本施加受控字符扰动防御越狱攻击",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2608.31077v1",
+      "route": "202609/06/2608.31077v1-reconciling-process-supervision-with-outcome-based-credit-in-agentic-policy-optimization",
+      "title": "Reconciling Process Supervision with Outcome-Based Credit in Agentic Policy Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向语言智能体的策略优化和信用分配方法，可迁移到自博弈强化学习训练",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.00833v1",
+      "route": "202609/06/2609.00833v1-dense-process-supervision-for-search-agents-via-fact-utility-estimation",
+      "title": "Dense Process Supervision for Search Agents via Fact Utility Estimation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向搜索智能体的强化学习信用分配方法，与强化学习需求相关但不包含自博弈。",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.01245v1",
+      "route": "202609/06/2609.01245v1-explore-more-drift-less-outcome-only-reinforcement-learning-can-suffice-for-long-horizon-interactive-agents",
+      "title": "Explore More, Drift Less: Outcome-Only Reinforcement Learning Can Suffice for Long-Horizon Interactive Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长程交互智能体的强化学习训练方法，与智能体训练需求相关但不含自博弈。",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.01663v1",
+      "route": "202609/06/2609.01663v1-context-inference-attacks-without-jailbreaks",
+      "title": "Context Inference Attacks Without Jailbreaks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对智能体AI发起免越狱的上下文推断攻击，具有对抗性与防御测评价值。",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.02054v1",
+      "route": "202609/06/2609.02054v1-a-tri-agent-framework-for-evaluating-and-aligning-question-clarification-capabilities-of-large-language-models",
+      "title": "A Tri-Agent Framework for Evaluating and Aligning Question Clarification Capabilities of Large Language Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "多个LLM智能体模拟用户回答生成对话数据，可迁移至基于智能体的文本数据增强",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.02265v1",
+      "route": "202609/06/2609.02265v1-capture-disentangling-preference-drift-from-memory-poisoning-in-personalized-llm-agents",
+      "title": "CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "个性化LLM智能体的记忆投毒攻防研究，属于文本智能体安全领域。",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.02293v1",
+      "route": "202609/06/2609.02293v1-seal-reinforcing-global-safety-in-mixture-of-experts-through-shared-expert-alignment",
+      "title": "SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对MoE大语言模型的对抗攻击与防御，涉及文本越狱提示",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    },
+    {
+      "paper_id": "2609.02440v1",
+      "route": "202609/06/2609.02440v1-towards-one-for-all-robustness-across-a-continuum-of-threat-levels",
+      "title": "Towards One-for-All Robustness Across a Continuum of Threat Levels",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "威胁条件网络在连续攻击预算下实现统一防御，直接对应对抗攻防中鲁棒性研究。",
+      "first_seen_at": "2026-09-06 22:13:21 UTC",
+      "updated_at": "2026-09-06 22:13:21 UTC"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-06T22:06:36.994699+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2609.03652v1",
+      "source": "arxiv",
+      "title": "The Impact of Synthetic Data Augmentation on Discourse-Pragmatic Function Classification",
+      "abstract": "Synthetic data augmentation has become a common strategy for addressing class imbalance in NLP, but most approaches focus on the quantity and diversity of generated examples rather than their geometric relationship to real training data. We investigate this question in the context of discourse pragmatic function classification, a task where data sparsity is a structural feature rather than a collection artefact. Using 410 manually annotated instances of the English word look drawn from the British National Corpus, spanning four functions: Attention Signal, Directive, Discourse Marker, and Interjection. We generate synthetic training examples with Llama 3.1 and partition them by their cosine distance from real training data in RoBERTa embedding space. We compare six training conditions that differ in the placement of synthetic examples relative to the empirical decision boundary, while holding augmentation quantity constant across conditions. All augmented conditions improve macro F and accuracy over the real only baseline, but core proximal examples (NEAR) yield the largest gains in macro F (0.113), while a distance balanced mix achieves the highest accuracy (0.748). No condition improves AUC, indicating that augmentation shifts the decision boundary rather than improving the model's underlying probability estimates. These findings suggest that where synthetic examples land in representation space matters as much as how many are generated, with implications for low resource pragmatic classification more broadly.",
+      "authors": [
+        "Sara Sorahi",
+        "Kevin Tang",
+        "Reza Kazemian"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-03T10:50:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.03652v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Examines synthetic text data augmentation and its geometric relationship to real data for low-resource classification",
+      "llm_evidence_cn": "研究合成文本数据增强对分类的影响，特别是增强样本与真实训练数据的几何关系",
+      "llm_evidence": "研究合成文本数据增强对分类的影响，特别是增强样本与真实训练数据的几何关系",
+      "canonical_evidence": "研究合成文本数据增强对分类的影响，特别是增强样本与真实训练数据的几何关系",
+      "llm_tldr_en": "Studies how synthetic data augmentation affects discourse-pragmatic classification, using Llama-generated examples partitioned by cosine distance from real data. Shows geometric location of generated examples matters beyond quantity and diversity.",
+      "llm_tldr_cn": "合成数据增强常用于应对NLP类别不平衡，但大多数工作只关注生成样本的数量和多样性，忽略其与真实训练数据的几何关系。论文以话语-语用功能分类为任务，基于BNC中410条手工标注语料，用Llama 3.1生成合成样本并按与真实样本的余弦距离进行分组分析。研究揭示生成样本在表示空间中的位置会显著影响分类效果，为数据增强策略提供更细化的指导。该工作对低资源文本分类与基于LLM的文本增强具有方法学参考价值。",
+      "llm_tldr": "合成数据增强常用于应对NLP类别不平衡，但大多数工作只关注生成样本的数量和多样性，忽略其与真实训练数据的几何关系。论文以话语-语用功能分类为任务，基于BNC中410条手工标注语料，用Llama 3.1生成合成样本并按与真实样本的余弦距离进行分组分析。研究揭示生成样本在表示空间中的位置会显著影响分类效果，为数据增强策略提供更细化的指导。该工作对低资源文本分类与基于LLM的文本增强具有方法学参考价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.00470v1",
+      "source": "arxiv",
+      "title": "TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning",
+      "abstract": "Retrieval-Augmented Generation (RAG) grounds large language models in external corpora, but implicit trust in retrieved documents creates a critical attack surface: PoisonedRAG shows that a handful of crafted passages can dominate dense retrieval and steer generation toward attacker-chosen answers. We present the Tri-Layer Sieve, a middleware defense that sanitizes retrieved evidence through cross-embedding-space clustering with an independent judge model, structural filtering of trigger-payload artifacts, and LLM consistency verification. The design exploits a key weakness of retrieval-stage poisoning: a single document must satisfy one embedding geometry, one internal Trigger-Payload structure, and one generation objective - rarely all three simultaneously, a fragility that persists even against an adaptive attacker who paraphrases around it. On Natural Questions, HotpotQA, and MS-MARCO with Contriever retrieval (k=50), the Sieve reduces black-box Attack Success Rate from 67.0/87.0/64.0% to 3.0/14.0/4.0%, mitigates white-box HotFlip attacks from ~74% to 27.8% on NQ with Layer 3 enabled, and drives poisoned-document MRR to 0.000, while restoring clean accuracy from 13-33% under attack to 58-76%. Under an architecture-aware adversary who paraphrases triggers to evade the structural filter, enabling the consistency layer halves adaptive ASR (32.0% to 15.0% on NQ) while raising clean accuracy by 18 points, at an added latency of ~16-19 s/query under live retrieval.",
+      "authors": [
+        "Muhaimin Bin Munir",
+        "Akib Jawad Ononto",
+        "Nazia Shehnaz Joynab",
+        "Bhavani Thuraisingham",
+        "Latifur Khan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CR",
+        "cs.IR"
+      ],
+      "published": "2026-08-31T23:21:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.00470v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Defense against knowledge-poisoning attacks on RAG, using adversarial text detection and sanitization",
+      "llm_evidence_cn": "抵御针对RAG的知识投毒攻击，通过对抗文本检测与过滤净化检索证据，属文本攻防",
+      "llm_evidence": "抵御针对RAG的知识投毒攻击，通过对抗文本检测与过滤净化检索证据，属文本攻防",
+      "canonical_evidence": "抵御针对RAG的知识投毒攻击，通过对抗文本检测与过滤净化检索证据，属文本攻防",
+      "llm_tldr_en": "Presents TRIS, a tri-layer retrieval integrity sieve that defends RAG against knowledge poisoning. Sanitizes retrieved evidence via cross-embedding clustering, structural filtering, and LLM consistency verification, exploiting constraints that poisoned documents must satisfy three objectives at once.",
+      "llm_tldr_cn": "检索增强生成系统隐式信任外部文档，导致少量精心构造的段落即可主导稠密检索并操控生成答案，构成知识投毒攻击面。论文提出TRIS三层检索完整性筛，作为中间件通过跨嵌入空间聚类、触发器-载荷结构过滤以及LLM一致性验证来净化检索证据。该设计利用投毒检索文档很难同时满足嵌入几何、内部结构和生成目标三重约束的特点，从而有效识别并抑制恶意文本。工作为RAG抵御文本对抗投毒提供多层防御框架。",
+      "llm_tldr": "检索增强生成系统隐式信任外部文档，导致少量精心构造的段落即可主导稠密检索并操控生成答案，构成知识投毒攻击面。论文提出TRIS三层检索完整性筛，作为中间件通过跨嵌入空间聚类、触发器-载荷结构过滤以及LLM一致性验证来净化检索证据。该设计利用投毒检索文档很难同时满足嵌入几何、内部结构和生成目标三重约束的特点，从而有效识别并抑制恶意文本。工作为RAG抵御文本对抗投毒提供多层防御框架。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.31077v1",
+      "source": "arxiv",
+      "title": "Reconciling Process Supervision with Outcome-Based Credit in Agentic Policy Optimization",
+      "abstract": "Outcome-based reinforcement learning provides verified feedback for language-model agents, but assigns trajectory-level advantage uniformly to all decisions, yielding coarse credit over long-horizon interactions. On-policy self-distillation offers finer supervision by re-evaluating sampled behavior with privileged information (PI) available only during training. However, fine-grained supervision is not necessarily fine-grained credit: PI-induced likelihood changes describe how additional information alters policy preference, but do not directly determine how an executable action should inherit the verified task outcome. This creates a supervision-credit gap. Privileged signals may be irrelevant to the current interaction state, operate at a token granularity misaligned with executable decisions, and lack the outcome semantics required for reinforcement. We introduce TASPO, which converts privileged supervision into outcome-grounded action credit. TASPO constructs decision-applicable PI from verified successful experience, aggregates PI-induced likelihood shifts at the executable-action level, and converts relative action support into positive, bounded, mean-preserving weights on the original trajectory advantage. Thus, the verified outcome determines the update direction and average scale, while PI only redistributes credit across actions. Across three agentic benchmarks, TASPO improves over GRPO by 10.6\\% and generalizes better to unseen tasks. Further analysis indicates that TASPO reduces supervision mismatch and that action-level assignment stabilizes the policy optimization process. These findings offer the community another interesting perspective.",
+      "authors": [
+        "Jingxiao Yang",
+        "Wangjie Gan",
+        "Yingxuan Zhuang",
+        "Wenqi Zhang",
+        "Jintao Chen",
+        "Xuhong Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-31T16:51:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.31077v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "agentic policy optimization and credit assignment; transferable to self-play RL agent training",
+      "llm_evidence_cn": "面向语言智能体的策略优化和信用分配方法，可迁移到自博弈强化学习训练",
+      "llm_evidence": "面向语言智能体的策略优化和信用分配方法，可迁移到自博弈强化学习训练",
+      "canonical_evidence": "面向语言智能体的策略优化和信用分配方法，可迁移到自博弈强化学习训练",
+      "llm_tldr_en": "Proposes a method that reconciles process supervision with outcome-based credit in agentic policy optimization, resolving the supervision-credit gap to improve credit assignment from trajectory-level outcomes to executable actions.",
+      "llm_tldr_cn": "在语言模型智能体使用结果型强化学习训练时，同一轨迹内的所有决策被均匀赋予回报，导致长程交互中信用分配粗糙；而过程监督提供的细粒度信号并不一定等同于细粒度回报。本文提出弥合监督-信用差距的策略，通过结合结果回报、过程监督与训练期特权信息，更准确地将验证过的结果回报分配给可执行动作。实验显示所提方法能改善智能体策略的优化质量，为自博弈、自动化攻防等需要稀疏反馈的智能体训练提供了可迁移的优化思路。",
+      "llm_tldr": "在语言模型智能体使用结果型强化学习训练时，同一轨迹内的所有决策被均匀赋予回报，导致长程交互中信用分配粗糙；而过程监督提供的细粒度信号并不一定等同于细粒度回报。本文提出弥合监督-信用差距的策略，通过结合结果回报、过程监督与训练期特权信息，更准确地将验证过的结果回报分配给可执行动作。实验显示所提方法能改善智能体策略的优化质量，为自博弈、自动化攻防等需要稀疏反馈的智能体训练提供了可迁移的优化思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.03693v1",
+      "source": "arxiv",
+      "title": "AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks",
+      "abstract": "Large language models (LLMs) are vulnerable to jailbreak attacks that bypass safety alignment through carefully crafted prompts. Many existing defenses require access to model weights or internals, making them difficult to apply to black-box deployments. We propose AlcaTRAz (Anchored Tree-Rule defense Against jailbreaks), a prompt-level defense based on rule trees that operates exclusively on the input text and requires no modification or retraining of the target model. The method automatically learns a transferable transformation rule that inserts controlled character-level perturbations at selected positions, thereby disrupting structural regularities exploited by jailbreak attacks while largely preserving the model's utility on benign queries. We evaluate the proposed method across 33 open-weight models, 22 jailbreak attack types, and a benchmark of short, single-turn benign questions, comparing against three representative prompt-level baselines (Llama Guard, RA-LLM, Goal Prioritization). Among the compared defenses, AlcaTRAz achieves the best composite security and functionality score in 73.4 % of model-attack combinations and shifts the aggregate score from a modal value of 10 (maximal-severity response to the malicious request) in the undefended setting to a modal value of 2 (near-refusal) after defense, while keeping the mean benign score within 0.27 points of the undefended baseline (8.35 vs. 8.62 on a 0-10 scale). AlcaTRAz substantially reduces but does not eliminate jailbreak success: a high-severity tail remains, and we do not consider adaptive attackers, so we position it as one layer within a defense-in-depth strategy rather than a standalone guarantee.",
+      "authors": [
+        "Jakub Reš",
+        "Petr Kaška",
+        "Martin Perešíni",
+        "Martin Ukrop",
+        "Kamil Malinka"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-03T11:30:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.03693v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Text-level defense against jailbreak adversarial prompts via perturbation rule, directly applicable to adversarial attack/defense in text",
+      "llm_evidence_cn": "针对提示对抗攻击的文本级防御，以规则向输入文本施加受控字符扰动防御越狱攻击",
+      "llm_evidence": "针对提示对抗攻击的文本级防御，以规则向输入文本施加受控字符扰动防御越狱攻击",
+      "canonical_evidence": "针对提示对抗攻击的文本级防御，以规则向输入文本施加受控字符扰动防御越狱攻击",
+      "llm_tldr_en": "Presents AlcaTRAz, a black-box prompt-level defense against jailbreaks. It learns a transferable rule tree inserting character-level perturbations to disrupt attack patterns while preserving utility on benign queries, requiring no weight access or retraining.",
+      "llm_tldr_cn": "大语言模型极易被精心设计的越狱提示绕过安全对齐，而许多防御需要访问模型权重或内部结构，难以用于黑盒部署。论文提出AlcaTRAz，一种仅操作输入文本的规则树防御，自动学习可迁移的字符级扰动变换，在破坏越狱攻击所依赖的结构规律的同时，尽量保持良性查询上的模型效用。该方法无需修改或重训目标模型，为黑盒场景提供实用防御手段。工作直接面向文本对抗攻防，增强LLM安全性。",
+      "llm_tldr": "大语言模型极易被精心设计的越狱提示绕过安全对齐，而许多防御需要访问模型权重或内部结构，难以用于黑盒部署。论文提出AlcaTRAz，一种仅操作输入文本的规则树防御，自动学习可迁移的字符级扰动变换，在破坏越狱攻击所依赖的结构规律的同时，尽量保持良性查询上的模型效用。该方法无需修改或重训目标模型，为黑盒场景提供实用防御手段。工作直接面向文本对抗攻防，增强LLM安全性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.00833v1",
+      "source": "arxiv",
+      "title": "Dense Process Supervision for Search Agents via Fact Utility Estimation",
+      "abstract": "Reinforcement learning (RL) for search agents typically relies on outcome rewards. However, it often fails to achieve effective credit assignment, due to the unclear value of intermediate steps. It is hard to separate their contributions from the final result. In this paper, we propose a dense process supervision method based on fact utility estimation, which models the reasoning process as the accumulation of discrete evidence facts. We first extract structured facts from raw observations and organize them into an explicit fact store. To support credit assignment, we then cluster semantically equivalent facts and infer the posterior utility of each fact cluster using Bayesian estimation over group rollouts. Finally, we convert the estimated fact utilities into dense step-level rewards to guide RL training. Experiments on seven single-hop and multi-hop QA benchmarks show that our method consistently outperforms existing baselines. Ablation studies validate clear relative improvements on multi-hop QA compared to outcome reward-only training.",
+      "authors": [
+        "Rongzhi Zhu",
+        "Xiangyu Liu",
+        "Yi Liu",
+        "Shuo Zhang",
+        "Ruirui Zhang",
+        "Rui Wu",
+        "Tao Jiang",
+        "Zequn Sun",
+        "Wenhao Xu",
+        "Wei Hu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-09-01T07:34:33+00:00",
+      "link": "https://arxiv.org/pdf/2609.00833v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reinforcement-learning credit assignment for search agents; relevant to RL requirement but no self-play.",
+      "llm_evidence_cn": "面向搜索智能体的强化学习信用分配方法，与强化学习需求相关但不包含自博弈。",
+      "llm_evidence": "面向搜索智能体的强化学习信用分配方法，与强化学习需求相关但不包含自博弈。",
+      "canonical_evidence": "面向搜索智能体的强化学习信用分配方法，与强化学习需求相关但不包含自博弈。",
+      "llm_tldr_en": "Dense process supervision for RL-based search agents estimates posterior utilities of clustered fact stores over group rollouts, improving intermediate-step credit assignment over outcome-only rewards.",
+      "llm_tldr_cn": "搜索智能体的强化学习通常只有最终结果奖励，难以判断中间步骤的贡献。本文提出基于事实效用估计的稠密过程监督：先从原始观测中抽取结构化事实并聚类，再利用群体rollout通过贝叶斯估计各事实簇的后验效用，最后将其转为过程监督信号。该方法能更好地在长程搜索推理中对每一步进行信用分配，弥补结果奖励的不足。",
+      "llm_tldr": "搜索智能体的强化学习通常只有最终结果奖励，难以判断中间步骤的贡献。本文提出基于事实效用估计的稠密过程监督：先从原始观测中抽取结构化事实并聚类，再利用群体rollout通过贝叶斯估计各事实簇的后验效用，最后将其转为过程监督信号。该方法能更好地在长程搜索推理中对每一步进行信用分配，弥补结果奖励的不足。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.01245v1",
+      "source": "arxiv",
+      "title": "Explore More, Drift Less: Outcome-Only Reinforcement Learning Can Suffice for Long-Horizon Interactive Agents",
+      "abstract": "Reinforcement learning is a natural way to post-train LLM agents for long-horizon interactive tasks judged only by end-of-task verification, yet a shared belief holds that outcome-only RL soon hits a ceiling on small open models. Recent work therefore compensates around the training with denser rewards, SFT priors, skill libraries, curated memory, or multi-agent orchestration. We argue the ceiling is an artifact of two failures of common practice. Signal starvation: group-relative RL with sparse outcome-only rewards yields a gradient only when a task's rollout group mixes successes and failures, so under-scaled exploration silences exactly the hardest, most instructive tasks. Policy drift: squeezing many updates out of a small task pool degrades the policy itself, as an unanchored objective lets the sampling distribution collapse exactly when saturation has already made informative groups rare. We present CANOPY (Coverage-ANchored On-PolicY RL), a minimalist protocol attacking both directly: scale same-task exploration until the natural signal reappears, keep every update on-policy, KL-anchored, and confined to the agent's own action tokens, then cash in an enlarged interaction budget at test time. On AppWorld, a long-horizon interactive coding benchmark, a Qwen3-14B policy trained with CANOPY through environment interaction alone--without task-specific supervision, auxiliary credit signals, or elaborate agent scaffolding--topped the public leaderboard (Feb. 2026; Test-Normal TGC 86.9, Test-Challenge 67.6), and the same design principles lift Qwen3.5-9B on SWE-bench Verified by 16.6 points. Agentic RL alone thus internalizes long-horizon capability directly into a small open model; we plan to release the complete training stack at https://github.com/AlibabaResearch/SignalCoverageRL.",
+      "authors": [
+        "Liming Pu",
+        "Xiaoxia Li",
+        "Yifu Liu",
+        "Teng Cao",
+        "Bin Yang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-01T13:44:40+00:00",
+      "link": "https://arxiv.org/pdf/2609.01245v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL training strategies for long-horizon interactive agents; relevant to agent-training requirement though not self-play.",
+      "llm_evidence_cn": "面向长程交互智能体的强化学习训练方法，与智能体训练需求相关但不含自博弈。",
+      "llm_evidence": "面向长程交互智能体的强化学习训练方法，与智能体训练需求相关但不含自博弈。",
+      "canonical_evidence": "面向长程交互智能体的强化学习训练方法，与智能体训练需求相关但不含自博弈。",
+      "llm_tldr_en": "Outcome-only RL for long-horizon LLM agents is argued viable when addressing signal starvation and policy drift; group-relative gradient silence and over-update drift explain the apparent ceiling.",
+      "llm_tldr_cn": "人们普遍认为仅使用最终验证结果奖励来强化训练小模型智能体很快会遇到上限。本文指出信号饥饿和策略漂移是造成该上限的常见实践问题：奖励信号只在rollout组同时包含成功与失败时出现，而过多次更新会使策略漂移。通过针对性分析和训练实践，作者论证结果奖励强化学习对长程交互智能体依然可行。",
+      "llm_tldr": "人们普遍认为仅使用最终验证结果奖励来强化训练小模型智能体很快会遇到上限。本文指出信号饥饿和策略漂移是造成该上限的常见实践问题：奖励信号只在rollout组同时包含成功与失败时出现，而过多次更新会使策略漂移。通过针对性分析和训练实践，作者论证结果奖励强化学习对长程交互智能体依然可行。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.01663v1",
+      "source": "arxiv",
+      "title": "Context Inference Attacks Without Jailbreaks",
+      "abstract": "Agentic AI systems are increasingly deployed to process sensitive data at inference time, such as healthcare records or financial documents assembled into a hidden \\emph{context} before the system answers. Prior work has studied privacy risks primarily through \\emph{jailbreaking} attacks that induce models to directly disclose sensitive content, but has largely overlooked the agentic setting where the context is assembled by the agent's own tool calls. We show that the agents we evaluate remain vulnerable to hidden-context leakage despite the controls we test against them, namely an instruction not to disclose the context, logit suppression, and context dilution. For instance, a web-browsing agent answering benign user queries still carries exploitable signals about records silently loaded into its context. We introduce and formalize \\emph{context-inference attacks} through a security game and evaluate three settings under decreasing attacker knowledge and increasingly indirect delivery of the context: a known context, an unknown context, and a context the agent retrieves through its own tool calls. We distinguish a grey-box setting, in which the target model is used to score observations, from black-box settings in which the attacker scores with a surrogate it controls. We further characterize how leakage varies with query budget, context size, and target-model size. A single attack carries through all three settings without modification, reaching $100\\%$ ASR on small candidate sets and $63\\%$ at $1024$ candidates against a known context, $78.9$ AUROC when the template and surrounding records are unknown, $92.5$ AUROC when a 14B surrogate scores a 32B target, and $81.8$ AUROC when the records arrive as an agent's retrieval returns, against chance rates of $1/|\\mathcal{Z}|$ and $50$ respectively.",
+      "authors": [
+        "Prince Jha",
+        "Samuele Poppi",
+        "Nils Lukas"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-08-31T21:53:52+00:00",
+      "link": "https://arxiv.org/pdf/2609.01663v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Adversarial inference attacks that extract hidden context from agentic AI without jailbreaks; defense controls tested.",
+      "llm_evidence_cn": "对智能体AI发起免越狱的上下文推断攻击，具有对抗性与防御测评价值。",
+      "llm_evidence": "对智能体AI发起免越狱的上下文推断攻击，具有对抗性与防御测评价值。",
+      "canonical_evidence": "对智能体AI发起免越狱的上下文推断攻击，具有对抗性与防御测评价值。",
+      "llm_tldr_en": "Even without jailbreaks, agentic systems leak hidden contextual data through their own tool calls; tested controls such as no-disclosure instructions, logit suppression, and context dilution fail to prevent inference.",
+      "llm_tldr_cn": "智能体AI在推理时会通过工具调用拼装隐藏上下文，现有隐私攻击多集中于越狱式直接泄露。本文在无越狱条件下尝试从智能体回答中推断隐藏记录中的信息，发现网页浏览等智能体仍携带可利用信号。即使加入不披露指令、logit抑制和上下文稀释等控制，隐藏上下文泄露依然存在。这揭示了一个独立于越狱的智能体隐私攻击面，需要新的防护方向。",
+      "llm_tldr": "智能体AI在推理时会通过工具调用拼装隐藏上下文，现有隐私攻击多集中于越狱式直接泄露。本文在无越狱条件下尝试从智能体回答中推断隐藏记录中的信息，发现网页浏览等智能体仍携带可利用信号。即使加入不披露指令、logit抑制和上下文稀释等控制，隐藏上下文泄露依然存在。这揭示了一个独立于越狱的智能体隐私攻击面，需要新的防护方向。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.02054v1",
+      "source": "arxiv",
+      "title": "A Tri-Agent Framework for Evaluating and Aligning Question Clarification Capabilities of Large Language Models",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in interactive systems where understanding user intent precisely is paramount. A key capability for such systems is effective question clarification, especially when user queries are ambiguous or underspecified. This paper introduces a novel tri-agent framework for the robust evaluation of an LLM's ability to engage in clarifying dialogue. Our framework comprises three distinct LLM-based agents: (1) a Question Clarifying Agent (QCA), the system under evaluation, tasked with identifying ambiguities and posing clarifying questions; (2) a Respondent Agent (RA), designed to simulate human user responses, potentially including irrelevant or challenging replies; and (3) an Evaluator Agent (EA), an LLM-as-a-judge, which assesses the quality of the dialogue based on a comprehensive set of metrics. We detail a methodology for synthetic data generation in the supply chain domain as an example. We propose metrics evaluating ambiguity handling, question quality, dialogue efficiency, language appropriateness, and final intent alignment. We also briefly discuss the validation of the EA against human judgments. This work provides a structured approach to benchmark, validate, and improve the clarification capabilities of conversational LLM applications.",
+      "authors": [
+        "Yikai Zhao",
+        "Saurabh Pandey",
+        "Pradeep Kumar Misra"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-02T03:33:40+00:00",
+      "link": "https://arxiv.org/pdf/2609.02054v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-agent framework with LLM agents simulating user responses for dialogue evaluation, transferable to agent-based text augmentation",
+      "llm_evidence_cn": "多个LLM智能体模拟用户回答生成对话数据，可迁移至基于智能体的文本数据增强",
+      "llm_evidence": "多个LLM智能体模拟用户回答生成对话数据，可迁移至基于智能体的文本数据增强",
+      "canonical_evidence": "多个LLM智能体模拟用户回答生成对话数据，可迁移至基于智能体的文本数据增强",
+      "llm_tldr_en": "Presents a tri-agent framework where a clarifying agent interacts with a simulated respondent agent, enabling systematic evaluation and alignment of LLM clarification behavior; the multi-agent text generation scheme is reusable for synthetic dialogue data augmentation.",
+      "llm_tldr_cn": "交互式系统中大模型需要对模糊的用户查询进行澄清，但现有评测难以模拟复杂真实用户反应。为此提出由三个LLM角色组成的交互框架，其中待评测的提问澄清智能体向受访者智能体提问，后者可以模拟无关或刁难回答，并由另一个智能体形成闭环评价。该框架可用于系统评测并引导模型澄清能力对齐。其多智能体对话生成机制也为构造多样自然语言训练与评测数据提供了可迁移的数据增强思路。",
+      "llm_tldr": "交互式系统中大模型需要对模糊的用户查询进行澄清，但现有评测难以模拟复杂真实用户反应。为此提出由三个LLM角色组成的交互框架，其中待评测的提问澄清智能体向受访者智能体提问，后者可以模拟无关或刁难回答，并由另一个智能体形成闭环评价。该框架可用于系统评测并引导模型澄清能力对齐。其多智能体对话生成机制也为构造多样自然语言训练与评测数据提供了可迁移的数据增强思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation with language model agents",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.02265v1",
+      "source": "arxiv",
+      "title": "CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents",
+      "abstract": "Personalized language agents use persistent memory to adapt to users over time, but the same mechanism creates an attack surface. When new information conflicts with stored preferences, an agent must distinguish genuine preference drift from temporary context shifts, ambiguity, or adversarial memory poisoning. We formulate this problem as a continuous-time partially observable decision process over a latent user state and show why rules based only on recency and provenance are insufficient. CAPTURE addresses this ambiguity with a neural differential-equation belief tracker, a multi-timescale memory ledger, uncertainty-triggered clarification, and counterfactual auditing of cited memories. On 480 held-out episodes from 96 users, CAPTURE achieves a 71.5% win rate, compared with 69.3% for an identically supervised baseline and 66.1% for the strongest heuristic baseline. It limits fixed-policy poisoning success to 11.5% while accepting 83.5% of genuine preference updates. Under an adaptive attacker with access to the released weights, attack success rises to 24.7%, exposing a real adaptation-security tradeoff. We further evaluate the frozen system zero-shot on an independently constructed benchmark and replay longitudinal interaction histories from 40 users collected over two to three weeks. These results suggest that modeling preference authenticity explicitly can improve both personalization and robustness in memory-augmented LLM agents.",
+      "authors": [
+        "S M Asif Hossain",
+        "Ruksat Khan Shayoni",
+        "Md Kishor Morol"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-02T08:10:26+00:00",
+      "link": "https://arxiv.org/pdf/2609.02265v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Memory-poisoning adversarial attack and defense in personalized LLM agents; text-based agent security.",
+      "llm_evidence_cn": "个性化LLM智能体的记忆投毒攻防研究，属于文本智能体安全领域。",
+      "llm_evidence": "个性化LLM智能体的记忆投毒攻防研究，属于文本智能体安全领域。",
+      "canonical_evidence": "个性化LLM智能体的记忆投毒攻防研究，属于文本智能体安全领域。",
+      "llm_tldr_en": "CAPTURE distinguishes preference drift from adversarial memory poisoning via a neural ODE belief tracker, multi-timescale memory ledger, uncertainty-triggered clarification, and counterfactual auditing of cited memories.",
+      "llm_tldr_cn": "个性化语言智能体使用持久记忆来适应用户，但也因此面临记忆投毒的攻击面。本文把该问题建模为连续时间部分可观测决策过程，指出仅凭时效与来源规则不足。CAPTURE采用神经微分方程信念追踪、多时间尺度记忆账本、不确定性触发澄清及反事实审计来区分真实偏好漂移与投毒。在96位用户共480条情节上的实验表明，CAPTURE能有效缓解混淆。",
+      "llm_tldr": "个性化语言智能体使用持久记忆来适应用户，但也因此面临记忆投毒的攻击面。本文把该问题建模为连续时间部分可观测决策过程，指出仅凭时效与来源规则不足。CAPTURE采用神经微分方程信念追踪、多时间尺度记忆账本、不确定性触发澄清及反事实审计来区分真实偏好漂移与投毒。在96位用户共480条情节上的实验表明，CAPTURE能有效缓解混淆。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.02293v1",
+      "source": "arxiv",
+      "title": "SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment",
+      "abstract": "Mixture-of-Experts (MoE) is a scaling architecture for large language models that activates only a small subset of expert modules per token, enabling massive parameter growth with nearly constant computation. Recent Hybrid MoE architecture adds \\textit{shared experts} to capture consistently useful representations, further improving stability and generalization. MoE now powers many flagship open-source and commercial models, yet remains vulnerable to adversarial attacks. Specifically, sparse routing introduces a structural vulnerability: MoE safety hinges on which experts are activated, and adversaries can subvert this selection through jailbreak prompts, malicious fine-tuning, and weight-level pruning of safety-critical neurons. Existing defenses primarily focus on hardening the router, but an adversary may still manipulate or bypass the routing trajectory due to the routing process's nondeterministic nature, thereby collapsing the defense. To cope with this problem, we first identify theoretically and empirically that shared expert, an always-activated component containing a small proportion of safety-critical neurons, can overcome the uncertainty of sparsely activated routing path and serve as a router-independent anchor to enhance global safety alignment. Based on this insight, we propose SEAL, a training-time parameter-efficient defense that produces a plug-and-play adapter attached to shared expert, and SEAL++, a variant that adds an orthogonal constraint preserving pre-existing safety subspaces during training. We evaluate SEAL and SEAL++ across six attack scenarios that combine three adversarial inputs (harmful prompting, jailbreak, malicious fine-tuning) with and without neuron pruning. SEAL reduces attack success rate (ASR) by up to 60\\%, at a capability cost of at most 1.4\\% on a five-benchmark average. Additionally, SEAL can seamlessly integrate with router-level ......",
+      "authors": [
+        "Qingyu Meng",
+        "Yiwei Zha",
+        "Jiahuan Pei",
+        "Koen Hindriks",
+        "Herbert Bos",
+        "Min Chen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-09-02T08:40:19+00:00",
+      "link": "https://arxiv.org/pdf/2609.02293v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial attacks on MoE LLMs via jailbreak prompts and malicious fine-tuning",
+      "llm_evidence_cn": "针对MoE大语言模型的对抗攻击与防御，涉及文本越狱提示",
+      "llm_evidence": "针对MoE大语言模型的对抗攻击与防御，涉及文本越狱提示",
+      "canonical_evidence": "针对MoE大语言模型的对抗攻击与防御，涉及文本越狱提示",
+      "llm_tldr_en": "SEAL targets adversarial attacks on MoE large language models, where jailbreak prompts, fine-tuning, or pruning manipulate sparse expert routing; it proposes shared-expert alignment to restore safe model behavior.",
+      "llm_tldr_cn": "混合专家大模型因其稀疏路由结构面临新的安全风险，攻击者可以通过越狱提示、恶意微调或神经元剪枝操纵专家激活。SEAL提出共享专家对齐机制，把安全知识注入共享专家，以恢复被对抗攻击破坏的安全路由行为。相关工作在模型安全评测中显示可显著缓解此类对抗攻击，为MoE模型的可信部署提供重要保障。",
+      "llm_tldr": "混合专家大模型因其稀疏路由结构面临新的安全风险，攻击者可以通过越狱提示、恶意微调或神经元剪枝操纵专家激活。SEAL提出共享专家对齐机制，把安全知识注入共享专家，以恢复被对抗攻击破坏的安全路由行为。相关工作在模型安全评测中显示可显著缓解此类对抗攻击，为MoE模型的可信部署提供重要保障。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.02440v1",
+      "source": "arxiv",
+      "title": "Towards One-for-All Robustness Across a Continuum of Threat Levels",
+      "abstract": "Adversarially robust models often overfit to a specific attack budget, necessitating multiple specialized models for diverse and dynamic adversarial environments, a strategy that becomes fundamentally intractable as the threat space grows. This raises an open challenge: can we achieve strong robustness across a continuum of threat levels within a single model? We propose the Threat Conditional Network (TCN), grounded in a representation factorization framework that decomposes representation learning into a threat-invariant shared backbone and a lightweight threat-conditional adaptor. TCN conditions a single model on the perturbation level via Fourier-based embeddings and channel-wise affine modulation, and is trained against a distribution over perturbation budgets, enabling flexible and seamless adaptation across an infinite continuum of threat levels during inference. Extensive experiments on CIFAR-10, CIFAR-100, and Tiny-ImageNet show that TCN matches or surpasses a full ensemble of budget-specialized models with a single set of parameters, generalizes to unseen perturbation budgets, and transfers robustly under mismatched threat conditions, with only 4.6\\% parameter overhead. These contributions chart a promising path toward adaptive and generalizable robustness in dynamic and diverse threat environments.",
+      "authors": [
+        "Zhichao Hou",
+        "Xiaorui Liu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-02T11:02:53+00:00",
+      "link": "https://arxiv.org/pdf/2609.02440v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Threat-conditional network achieves robustness across continuous attack budgets; directly relevant to adversarial defense research.",
+      "llm_evidence_cn": "威胁条件网络在连续攻击预算下实现统一防御，直接对应对抗攻防中鲁棒性研究。",
+      "llm_evidence": "威胁条件网络在连续攻击预算下实现统一防御，直接对应对抗攻防中鲁棒性研究。",
+      "canonical_evidence": "威胁条件网络在连续攻击预算下实现统一防御，直接对应对抗攻防中鲁棒性研究。",
+      "llm_tldr_en": "TCN trains a single model robust across a continuum of adversarial threat levels by factorizing representations into a threat-invariant backbone and a lightweight threat-conditional adaptor, conditioned via Fourier embeddings and affine modulation.",
+      "llm_tldr_cn": "对抗训练模型通常只对某一特定攻击预算过拟合，面对威胁空间增长时需要维护多个专用模型，代价巨大。该文提出威胁条件网络TCN，将表示学习分解为威胁无关的共享骨干和轻量威胁条件适配器，通过傅里叶嵌入和逐通道仿射调制控制扰动级别，并在扰动水平分布上训练单一模型以覆盖连续的攻击强度。实验结果表明，该设计能在持续变化的威胁环境中提供更具扩展性的一体化防御。",
+      "llm_tldr": "对抗训练模型通常只对某一特定攻击预算过拟合，面对威胁空间增长时需要维护多个专用模型，代价巨大。该文提出威胁条件网络TCN，将表示学习分解为威胁无关的共享骨干和轻量威胁条件适配器，通过傅里叶嵌入和逐通道仿射调制控制扰动级别，并在扰动水平分布上训练单一模型以覆盖连续的攻击强度。实验结果表明，该设计能在持续变化的威胁环境中提供更具扩展性的一体化防御。",
+      "llm_tags": [
+        "query:as:composite"
+      ],
+      "matched_query_tag": "query:as:composite",
+      "matched_query_text": "Papers central to 帮我查找自博弈、攻防、漏挖、文本数据增强智能体相关的论文, especially work that connects or combines: self-play reinforcement learning; adversarial attack text; vulnerability mining software security; text data augmentation techniques; self-play agent training; data augmentation agent text generation; self play based reinforcement learning for adversarial attack and defense; vulnerability mining using intelligent agents and reinforcement learning; text data augmentation with language model agents; adversarial attack and defense in text using self play.",
+      "matched_requirement_id": "req-composite-as",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
