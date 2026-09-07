@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-06</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 11 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 7 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>10</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>3</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-06 22:13:21 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-07 22:16:53 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共阅读11篇论文，其中精读1篇、速读10篇（重点列出3篇）。</p>
-<p>最值得关注的是精读论文《The Impact of Synthetic Data Augmentation on Discourse-Pragmatic Function Classification》（8.0分），聚焦合成数据增强在语篇—语用分类中的效果；另可速读《TRIS》与《AlcaTRAz》两篇，均涉及针对知识投毒与越狱攻击的安全防御。</p>
-<p>建议优先细读精读论文，重点关注合成数据增强的适用条件与潜在局限；速读论文可按兴趣快速浏览安全防御思路。</p>
+<p>今日精读7篇论文，聚焦Text-to-SQL与CVE补丁检测两大方向，均获9/10高分；速读覆盖实体抽取、代码定位及呼吸音分类等主题。最值得关注的是SQL-Zero自进化框架与“历史即检测器”的补丁分析思路，两者均展现出强实用价值。建议普通读者优先精读这两篇满分论文，并顺带浏览LentEx合成数据方法，其余可作背景了解。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="The Impact of Synthetic Data Augmentation on Discourse-Pragmatic Function Classification">The Impact of Synthetic Data Augmentation on Discourse-Pragmatic Function Classification</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SQL-Zero: Self-Evolving Text-to-SQL">SQL-Zero: Self-Evolving Text-to-SQL</span></li><li><span class="dpr-home-dashboard-paper-title" title="The History Is the Detector: Executing CVE Patch History, End-to-End">The History Is the Detector: Executing CVE Patch History, End-to-End</span></li><li><span class="dpr-home-dashboard-paper-title" title="Rethinking Indirect Prompt Injection as a Test-Time Search Problem">Rethinking Indirect Prompt Injection as a Test-Time Search Problem</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>3</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">10 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning">TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning</span></li><li><span class="dpr-home-dashboard-paper-title" title="AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks">AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Reconciling Process Supervision with Outcome-Based Credit in Agentic Policy Optimization">Reconciling Process Supervision with Outcome-Based Credit in Agentic Policy Optimization</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="LentEx: Generalizable Latent Entity Extraction via Synthetic Data and Instruction-Tuned LLMs">LentEx: Generalizable Latent Entity Extraction via Synthetic Data and Instruction-Tuned LLMs</span></li><li><span class="dpr-home-dashboard-paper-title" title="A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents">A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Zero-Shot Respiratory Sound Classification through LLM-Augmented Audio-Text Alignment">Zero-Shot Respiratory Sound Classification through LLM-Augmented Audio-Text Alignment</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>10</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
 </section>
 </div>
 

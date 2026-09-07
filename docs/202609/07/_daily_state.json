@@ -1,0 +1,121 @@
+{
+  "date": "20260907",
+  "date_label": "",
+  "generated_at": "2026-09-07 22:16:53 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.04697v1",
+      "route": "202609/07/2609.04697v1-sql-zero-self-evolving-text-to-sql",
+      "title": "SQL-Zero: Self-Evolving Text-to-SQL",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出者-求解者自博弈，GRPO交替更新",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2609.05335v1",
+      "route": "202609/07/2609.05335v1-the-history-is-the-detector-executing-cve-patch-history-end-to-end",
+      "title": "The History Is the Detector: Executing CVE Patch History, End-to-End",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "从CVE补丁历史自动挖掘可执行漏洞检测规则，直接对应漏洞挖掘软件安全需求",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2609.04495v1",
+      "route": "202609/07/2609.04495v1-rethinking-indirect-prompt-injection-as-a-test-time-search-problem",
+      "title": "Rethinking Indirect Prompt Injection as a Test-Time Search Problem",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "将间接提示注入构造为智能体测试时搜索，涉及文本对抗攻击与脆弱性发现",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2609.04511v1",
+      "route": "202609/07/2609.04511v1-lentex-generalizable-latent-entity-extraction-via-synthetic-data-and-instruction-tuned-llms",
+      "title": "LentEx: Generalizable Latent Entity Extraction via Synthetic Data and Instruction-Tuned LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "提出面向隐式实体抽取的合成数据生成与指令微调，与文本数据增强技术相符",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2608.29831v1",
+      "route": "202609/07/2608.29831v1-a2agent-action-aware-reinforcement-learning-for-repository-level-code-localization-agents",
+      "title": "A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向代码智能体的动作感知强化学习，可迁移到漏洞代码定位任务",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2609.00055v1",
+      "route": "202609/07/2609.00055v1-zero-shot-respiratory-sound-classification-through-llm-augmented-audio-text-alignment",
+      "title": "Zero-Shot Respiratory Sound Classification through LLM-Augmented Audio-Text Alignment",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "利用医学大语言模型合成文本报告以缓解配对数据稀缺，属于大语言模型文本数据增强方法",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    },
+    {
+      "paper_id": "2609.02236v1",
+      "route": "202609/07/2609.02236v1-pgpo-potential-guided-policy-optimization-for-multi-turn-agentic-tasks",
+      "title": "PGPO: Potential-Guided Policy Optimization for Multi-Turn Agentic Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向多轮智能体任务的细粒度强化学习策略优化，可适配自博弈强化学习场景",
+      "first_seen_at": "2026-09-07 22:16:53 UTC",
+      "updated_at": "2026-09-07 22:16:53 UTC"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-07T22:10:29.287517+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.04697v1",
+      "source": "arxiv",
+      "title": "SQL-Zero: Self-Evolving Text-to-SQL",
+      "abstract": "Training a competitive Text-to-SQL agent usually depends on human-annotated natural-language/SQL pairs, which are expensive, domain-specific, and a bottleneck for scaling to new databases. We show it is possible to train a competitive solver with zero annotated pairs. We introduce SQL-Zero, a proposer-solver self-play in which a challenger and a solver start from the same base LLM and the only ground truth is execution against the database itself. The challenger generates SQL pairs calibrated to the solver's current difficulty (targeting \"hard but solvable\"), and both roles are updated with GRPO in alternating turns, with a template-level repetition penalty on the challenger to prevent diversity collapse. Training on BIRD databases with no labels, self-play improves over the zero-shot base on BIRD dev by 6.6 points at 3B and 7.3 points at 7B. It also scores higher than a matched control trained under the same recipe on human BIRD gold over the same databases, although an exact paired test does not resolve that margin. Transfer depends on scale: at 3B every iteration outperforms the base on unseen Spider databases and under lexical perturbation (Spider-Syn), where it also degrades less than the matched BIRD-gold control, whereas at 7B only the first iteration preserves transfer.",
+      "authors": [
+        "Daniel Machado Pedrozo",
+        "Julia Soares Dollis",
+        "Bryan Lincoln Marques de Oliveira",
+        "Vinicius Alboneti Aguiar",
+        "Sávio Salvarino Teles de Oliveira",
+        "Telma Woerle de Lima Soares"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-04T04:00:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.04697v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Self-play with proposer and solver roles, GRPO alternating updates",
+      "llm_evidence_cn": "提出者-求解者自博弈，GRPO交替更新",
+      "llm_evidence": "提出者-求解者自博弈，GRPO交替更新",
+      "canonical_evidence": "提出者-求解者自博弈，GRPO交替更新",
+      "llm_tldr_en": "SQL-Zero trains a competitive Text-to-SQL solver with zero annotated pairs via proposer-solver self-play, using database execution as the only ground truth.",
+      "llm_tldr_cn": "Text-to-SQL 训练通常依赖昂贵、领域受限的人工标注配对，成为扩展瓶颈。SQL-Zero 采用提议者-求解者自博弈，挑战者和求解器从同一基础 LLM 出发，以数据库执行为唯一监督；挑战者按求解器当前难度生成困难但可解的问题，双方用 GRPO 交替更新并加入模板级重复惩罚。在 BIRD 上的无标签训练中，自博弈超越零样本基线。该结果说明自博弈强化学习可以在无人类标注下训练竞争性求解智能体。",
+      "llm_tldr": "Text-to-SQL 训练通常依赖昂贵、领域受限的人工标注配对，成为扩展瓶颈。SQL-Zero 采用提议者-求解者自博弈，挑战者和求解器从同一基础 LLM 出发，以数据库执行为唯一监督；挑战者按求解器当前难度生成困难但可解的问题，双方用 GRPO 交替更新并加入模板级重复惩罚。在 BIRD 上的无标签训练中，自博弈超越零样本基线。该结果说明自博弈强化学习可以在无人类标注下训练竞争性求解智能体。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.05335v1",
+      "source": "arxiv",
+      "title": "The History Is the Detector: Executing CVE Patch History, End-to-End",
+      "abstract": "Public vulnerability databases collect rich information about known software flaws, including their weakness types, affected components, and related patches. Fixing commits provide the exact code changes that removed these flaws. While these records capture why the original code was unsafe, they are documented mainly for human inspection rather than automated reuse. Consequently, the same unsafe conditions may still exist elsewhere in code without a known advisory, leaving much of this detection knowledge unused.   We present BUGSTONE-E2E, a framework that transforms vulnerability history into executable detection rules and validates their findings. First, BUGSTONE-E2E mines reusable rules from verified fixing commits, capturing scan anchors, fix semantics, and CVE provenance and organizing them by CWE and language. Second, detection follows a funnel-shaped pipeline: early stages process a large pool of candidates using lightweight analysis, while later stages apply increasingly capable and expensive models to a shrinking set of targets. Specifically, BUGSTONE-E2E first enumerates call sites matching rule anchors using Tree-sitter, then removes benign sites using lightweight heuristics without LLM calls. Next, LLM-based agents inspect the remaining candidates guided by the rule. Following this inspection, the system re-triages surviving candidates and builds runtime verifications, then generates scope-checked patches validated via two-sided differential tests. Using 19,325 high-severity CVEs from 2022 to 2026, BUGSTONE-E2E identifies 2,710 fixing commits and constructs 1,033 detection rules across 56 CWE families, packaged into 172 skills. When applied across 14 programs, it produced runtime evidence for 644 findings. These results demonstrate that CVE history can be turned into an executable workflow, transforming past vulnerabilities into reproducible detection and repair.",
+      "authors": [
+        "Qiushi Wu",
+        "Kevin Eykholt",
+        "Youngja Park",
+        "Xiaokui Shu",
+        "Dhilung Kirat",
+        "Douglas Lee Schales",
+        "Ian Molloy"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-09-04T16:40:22+00:00",
+      "link": "https://arxiv.org/pdf/2609.05335v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "converts CVE patch history into executable vulnerability detection rules; directly supports vulnerability mining in software security",
+      "llm_evidence_cn": "从CVE补丁历史自动挖掘可执行漏洞检测规则，直接对应漏洞挖掘软件安全需求",
+      "llm_evidence": "从CVE补丁历史自动挖掘可执行漏洞检测规则，直接对应漏洞挖掘软件安全需求",
+      "canonical_evidence": "从CVE补丁历史自动挖掘可执行漏洞检测规则，直接对应漏洞挖掘软件安全需求",
+      "llm_tldr_en": "CVE patch history is written for people, not automated reuse. BUGSTONE-E2E mines reusable rules from verified fixing commits and executes them end-to-end as detection rules, turning vulnerability history into a detector for similar unsafe code beyond known advisories.",
+      "llm_tldr_cn": "现有CVE与补丁历史主要供人工阅读，未转化为自动化检测知识，导致同一类安全隐患可能仍在其他代码中漏检。论文提出BUGSTONE-E2E，从已验证的修复提交中挖掘可复用规则，并将漏洞历史端到端执行为扫描与验证流程。实验证明该方法能把补丁历史变成检测器，主动发现尚无公告的同类不安全条件。这项工作使公开漏洞历史得到自动化复用，为软件漏洞挖掘提供了新的数据驱动范式。",
+      "llm_tldr": "现有CVE与补丁历史主要供人工阅读，未转化为自动化检测知识，导致同一类安全隐患可能仍在其他代码中漏检。论文提出BUGSTONE-E2E，从已验证的修复提交中挖掘可复用规则，并将漏洞历史端到端执行为扫描与验证流程。实验证明该方法能把补丁历史变成检测器，主动发现尚无公告的同类不安全条件。这项工作使公开漏洞历史得到自动化复用，为软件漏洞挖掘提供了新的数据驱动范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.04495v1",
+      "source": "arxiv",
+      "title": "Rethinking Indirect Prompt Injection as a Test-Time Search Problem",
+      "abstract": "We formulate indirect prompt injection as a test-time search over a task-dependent attack surface induced by the environment, user task, and injection task. To operationalize this formulation, we introduce an agentic attacker with a dedicated search harness that performs environment reconnaissance, structured reasoning over attack strategies, and adaptive evaluation using victim-agent feedback. Across heterogeneous tasks, we find that increasing attacker test-time compute improves vulnerability discovery and exploitation, while ablations show that explicit strategy management is important for avoiding redundant search and sustaining gains at larger budgets. These results suggest that agentic security evaluations should characterize both the attacker's search procedure and compute budget, rather than treating attack success as a budget-independent property of the victim. More broadly, our findings identify the attacker's adaptive search over the system attack surfaces as an important and underexplored security risk for tool-using agents.",
+      "authors": [
+        "Duong M. Nguyen",
+        "Joon Sik Kim",
+        "Blazej Manczak",
+        "Vaikkunth Mugunthan"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "published": "2026-09-03T21:28:37+00:00",
+      "link": "https://arxiv.org/pdf/2609.04495v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Agentic attacker formulation of indirect prompt injection as test-time search, relevant to adversarial text vulnerabilities",
+      "llm_evidence_cn": "将间接提示注入构造为智能体测试时搜索，涉及文本对抗攻击与脆弱性发现",
+      "llm_evidence": "将间接提示注入构造为智能体测试时搜索，涉及文本对抗攻击与脆弱性发现",
+      "canonical_evidence": "将间接提示注入构造为智能体测试时搜索，涉及文本对抗攻击与脆弱性发现",
+      "llm_tldr_en": "This paper reframes indirect prompt injection as test-time search and introduces an agentic attacker; increasing attacker test-time compute improves vulnerability discovery, while explicit strategy management avoids redundant search.",
+      "llm_tldr_cn": "间接提示注入常被当作启发式攻击，本文将其重新定义为由环境、用户任务与注入任务共同决定的测试时搜索问题。作者构建了带专用搜索框架的智能体攻击者，进行环境侦察、结构化策略推理和基于受害者反馈的自适应评估。跨任务实验表明，增加攻击测试时计算能提高漏洞发现与利用效果，消融实验显示显式策略管理可避免冗余搜索并维持大预算下的增益。这为智能体安全评测提供了可量化的攻击搜索视角。",
+      "llm_tldr": "间接提示注入常被当作启发式攻击，本文将其重新定义为由环境、用户任务与注入任务共同决定的测试时搜索问题。作者构建了带专用搜索框架的智能体攻击者，进行环境侦察、结构化策略推理和基于受害者反馈的自适应评估。跨任务实验表明，增加攻击测试时计算能提高漏洞发现与利用效果，消融实验显示显式策略管理可避免冗余搜索并维持大预算下的增益。这为智能体安全评测提供了可量化的攻击搜索视角。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.04511v1",
+      "source": "arxiv",
+      "title": "LentEx: Generalizable Latent Entity Extraction via Synthetic Data and Instruction-Tuned LLMs",
+      "abstract": "Latent entity extraction (LEE) tackles the challenge of identifying implicit, contextually inferred entities within free text-an area where traditional entity extraction methods fall short. In this paper, we introduce LentEx, a novel framework for latent entity extraction that leverages synthetic data generation and instruction fine-tuning to optimize smaller, efficient large language models (LLMs). Latent entities, which are often abstract and thematic, are crucial for applications such as retrieval-augmented generation (RAG), customer persona analysis, and knowledge graph enrichment. LentEx addresses the scarcity of labeled datasets by employing a template-based approach to generate diverse, contextually rich synthetic data, ensuring high variability and alignment with real-world distributions. To our knowledge, LentEx is the first to systematically approach LEE through the lens of LLMs. LentEx demonstrates significant performance improvements across multiple tasks, notably surpassing state-of-the-art models on the MTEB Clustering Benchmark. Furthermore, our methodology enables robust generalization to unseen domains, making LentEx highly applicable in real-world NLP tasks, including RAG and clustering, thereby establishing a new paradigm for latent entity understanding and extraction in natural language processing.",
+      "authors": [
+        "Umesh Bodhwani",
+        "Yuan Ling",
+        "Cibi Chakravarthy Senthilkumar",
+        "Shujing Dong",
+        "Yarong Feng",
+        "Hongfei Li",
+        "Ayush Goyal"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-03T22:00:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.04511v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes synthetic data generation and instruction-tuning for latent entity extraction; align with text data augmentation techniques",
+      "llm_evidence_cn": "提出面向隐式实体抽取的合成数据生成与指令微调，与文本数据增强技术相符",
+      "llm_evidence": "提出面向隐式实体抽取的合成数据生成与指令微调，与文本数据增强技术相符",
+      "canonical_evidence": "提出面向隐式实体抽取的合成数据生成与指令微调，与文本数据增强技术相符",
+      "llm_tldr_en": "LentEx generates diverse synthetic data with templates and instruction-tunes efficient smaller LLMs for generalizable latent entity extraction, tackling label scarcity.",
+      "llm_tldr_cn": "隐式实体抽取因标注数据稀缺与实体抽象而困难。作者提出LentEx框架，利用模板化的合成数据生成多样且上下文丰富的样本，并对小型高效大语言模型进行指令微调，从而绕过人工标注瓶颈。相关工作显示该方法在隐式实体抽取任务上具有较好的泛化能力，可服务RAG、用户画像等应用。这项工作为文本数据增强和标注受限场景提供了实用的合成数据路线。",
+      "llm_tldr": "隐式实体抽取因标注数据稀缺与实体抽象而困难。作者提出LentEx框架，利用模板化的合成数据生成多样且上下文丰富的样本，并对小型高效大语言模型进行指令微调，从而绕过人工标注瓶颈。相关工作显示该方法在隐式实体抽取任务上具有较好的泛化能力，可服务RAG、用户画像等应用。这项工作为文本数据增强和标注受限场景提供了实用的合成数据路线。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation techniques",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.29831v1",
+      "source": "arxiv",
+      "title": "A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents",
+      "abstract": "Localizing issue-relevant code regions is a critical step in automated software engineering. However, due to their reliance on sparse trajectory-level signals, existing methods cannot identify which per-turn actions are effective and often discover correct code regions during exploration but fail to commit them. To address these limitations, we propose an action-aware reinforcement learning method that combines a per-turn reward sequence rewarding both the discovery and commitment of gold code regions with an action-level advantage estimation scheme that isolates each action's credit by grouping turns sharing the same exploration context. Extensive evaluations show that our method improves the average F1 over the state-of-the-art (SOTA) by 1.58% on SWE-Bench Verified and 8.55% on SWE-Bench Pro, with our 4B model outperforming baselines up to 8x larger. Our code is available at https://github.com/donian00/A2Agent.",
+      "authors": [
+        "Doyeon Kim",
+        "Suyoung Bae",
+        "Yumin Lee",
+        "Jee-Hyong Lee"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "published": "2026-08-30T14:53:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.29831v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "action-aware RL for code agents, transferable to vulnerability localization tasks",
+      "llm_evidence_cn": "面向代码智能体的动作感知强化学习，可迁移到漏洞代码定位任务",
+      "llm_evidence": "面向代码智能体的动作感知强化学习，可迁移到漏洞代码定位任务",
+      "canonical_evidence": "面向代码智能体的动作感知强化学习，可迁移到漏洞代码定位任务",
+      "llm_tldr_en": "A2Agent introduces action-aware reinforcement learning for repository-level code localization agents, using per-turn reward sequences and action-level advantage estimation to isolate each action's contribution, improving F1 over the state of the art.",
+      "llm_tldr_cn": "仓库级代码定位智能体常因轨迹级信号稀疏，无法分辨哪些探索动作有效，即使发现正确代码区域也未能最终定位。作者提出A2Agent动作感知强化学习方法：通过每轮奖励序列同时奖励对黄金区域的发现与提交，并利用动作级优势估计隔离每个动作的贡献。实验表明该方法在平均F1上优于现有最先进方法。该方法为强化学习驱动的代码智能体提供了更有效的信用分配范式，可推广到漏洞定位等任务。",
+      "llm_tldr": "仓库级代码定位智能体常因轨迹级信号稀疏，无法分辨哪些探索动作有效，即使发现正确代码区域也未能最终定位。作者提出A2Agent动作感知强化学习方法：通过每轮奖励序列同时奖励对黄金区域的发现与提交，并利用动作级优势估计隔离每个动作的贡献。实验表明该方法在平均F1上优于现有最先进方法。该方法为强化学习驱动的代码智能体提供了更有效的信用分配范式，可推广到漏洞定位等任务。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.00055v1",
+      "source": "arxiv",
+      "title": "Zero-Shot Respiratory Sound Classification through LLM-Augmented Audio-Text Alignment",
+      "abstract": "Self-supervised respiratory encoders lack semantic grounding in clinical domain needed for zero-shot inference, limiting their utility without task-specific labeled data. We propose a framework that aligns these encoders with medical terminology in a shared latent space turning them into a zero-shot-capable foundation model. To address paired data scarcity, we use a medical LLM to synthesize structured reports from metadata, creating dense semantic anchors for contrastive learning. Our training combines a sigmoid-based contrastive loss with encoder's native SSL objective and similarity-aware negative sampling to sharpen pathological boundaries. Across 9 tasks on 6 datasets, our method achieves a 61.3% mean zero-shot AUC, surpassing CLAP (51.4%) and Qwen2-Audio (54.9%) while reaching the highest linear probing AUC (71.6%) with only 43% of data used by full-scale baselines, showing that structured semantic alignment outperforms large-scale, general-purpose models in clinical diagnostics.",
+      "authors": [
+        "Mustafa Talha İlerisoy",
+        "Hung Manh Pham",
+        "Mathias Funk",
+        "Mykola Pechenizkiy",
+        "Aaqib Saeed"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "published": "2026-08-30T11:49:54+00:00",
+      "link": "https://arxiv.org/pdf/2609.00055v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM-synthesized structured text reports are used to augment training alignment, offering a transferable text augmentation method",
+      "llm_evidence_cn": "利用医学大语言模型合成文本报告以缓解配对数据稀缺，属于大语言模型文本数据增强方法",
+      "llm_evidence": "利用医学大语言模型合成文本报告以缓解配对数据稀缺，属于大语言模型文本数据增强方法",
+      "canonical_evidence": "利用医学大语言模型合成文本报告以缓解配对数据稀缺，属于大语言模型文本数据增强方法",
+      "llm_tldr_en": "Self-supervised respiratory encoders lack clinical grounding for zero-shot use. The paper uses a medical LLM to synthesize structured reports from metadata as semantic anchors, then aligns audio and text with contrastive learning, yielding 61.3% mean zero-shot AUC across 9 tasks.",
+      "llm_tldr_cn": "自监督呼吸音编码器缺少临床语义监督，零样本推理受限，而配对的文本数据又很稀缺。论文使用医学大语言模型从元数据合成结构化报告，作为密集语义锚点，结合对比学习将音频编码器与医学术语对齐。在6个数据集9项任务上取得61.3%的平均零样本AUC，超过现有基线。结果表明，大语言模型生成的文本锚点可以作为跨模态零样本分类的有效数据增强方案。",
+      "llm_tldr": "自监督呼吸音编码器缺少临床语义监督，零样本推理受限，而配对的文本数据又很稀缺。论文使用医学大语言模型从元数据合成结构化报告，作为密集语义锚点，结合对比学习将音频编码器与医学术语对齐。在6个数据集9项任务上取得61.3%的平均零样本AUC，超过现有基线。结果表明，大语言模型生成的文本锚点可以作为跨模态零样本分类的有效数据增强方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "text data augmentation with language model agents",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.02236v1",
+      "source": "arxiv",
+      "title": "PGPO: Potential-Guided Policy Optimization for Multi-Turn Agentic Tasks",
+      "abstract": "Group-based reinforcement learning (RL) has become an effective paradigm for LLM post-training, but in multi-turn agentic tasks with sparse terminal rewards, it often provides coarse credit for intermediate actions. To obtain more fine-grained credit assignment, recent work such as GiGPO introduces step-level advantages for intermediate actions. However, these step-level signals still rely on the final outcome of each individual trajectory. As a result, actions within failed trajectories can remain poorly differentiated, so effective actions can receive the same unfavorable credit as erroneous ones. In this work, we propose Potential-Guided Policy Optimization (PGPO) for multi-turn agentic tasks. PGPO estimates empirical state potentials from anchor-state-group return statistics within each rollout group. It then derives action advantages from potential differences between adjacent states, enabling cross-trajectory credit propagation. This provides finer-grained step-level credit assignment, especially within failed trajectories. Experiments on ALFWorld and WebShop show strong overall performance relative to recent group-based RL methods. Further analysis provides evidence that PGPO yields more informative failure-side credit signals with negligible training overhead.",
+      "authors": [
+        "Yuyao Zheng",
+        "Haipeng Sun",
+        "Junwei Bao",
+        "Lemao Liu",
+        "Hongfei Jiang",
+        "Yang Song",
+        "Dejing Dou"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-02T07:44:16+00:00",
+      "link": "https://arxiv.org/pdf/2609.02236v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reinforcement learning with fine-grained credit assignment for multi-turn agentic tasks can be adapted to self-play RL",
+      "llm_evidence_cn": "面向多轮智能体任务的细粒度强化学习策略优化，可适配自博弈强化学习场景",
+      "llm_evidence": "面向多轮智能体任务的细粒度强化学习策略优化，可适配自博弈强化学习场景",
+      "canonical_evidence": "面向多轮智能体任务的细粒度强化学习策略优化，可适配自博弈强化学习场景",
+      "llm_tldr_en": "PGPO estimates empirical state potentials from anchor states to produce step-level advantages, improving credit assignment in sparse-reward multi-turn agent tasks; useful for self-play based agent training and attack-defense RL.",
+      "llm_tldr_cn": "多轮智能体任务中的组强化学习常因终端奖励稀疏而难以区分失败轨迹内的中间动作，无法对有效动作与错误动作进行细粒度奖励分配。论文提出势引导策略优化PGPO，从锚状态估计经验状态势并生成更精细的步骤级优势信号，缓解失败轨迹内部信用分配模糊问题。实验表明PGPO能更准确区分高风险交互中的有效动作，提升多轮智能体任务性能。该方法可作为自博弈等稀疏奖励环境下强化学习训练的基础工具。",
+      "llm_tldr": "多轮智能体任务中的组强化学习常因终端奖励稀疏而难以区分失败轨迹内的中间动作，无法对有效动作与错误动作进行细粒度奖励分配。论文提出势引导策略优化PGPO，从锚状态估计经验状态势并生成更精细的步骤级优势信号，缓解失败轨迹内部信用分配模糊问题。实验表明PGPO能更准确区分高风险交互中的有效动作，提升多轮智能体任务性能。该方法可作为自博弈等稀疏奖励环境下强化学习训练的基础工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
