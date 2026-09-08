@@ -1,0 +1,61 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-08T22:46:19.848925+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.30403v1",
+      "source": "arxiv",
+      "title": "Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders",
+      "abstract": "Backdoor attacks pose a serious threat to large language models (LLMs), but existing defenses remain fragmented, failing to pro?vide unified defense against both dirty-label and clean-label attacks. To investigate why such fragmentation arises, we present the first systematic feature-level mechanistic analysis of LLM backdoors using sparse autoencoders (SAEs). Starting from a 2 x 2 comparison of clean and poisoned models on clean and triggered inputs, we trace backdoor-induced logit shifts to high-contributing SAE features and categorize them into four roles: interac?tion, suppressed, mixed, and weight-modified features. This taxonomy reveals system?atic encoding differences: dirty-label back?doors are dominated by isolated interaction features, whereas clean-label backdoors rely more on heterogeneous mixtures of mixed and weight-modified features. These differ?ences explain why existing defenses remain fragmented across attack paradigms. We val?idate this hypothesis through inference-time feature clamping, which reduces ASR to at most 10.8% in most dirty-label settings and at most 15.4% in the majority of clean-label settings, while preserving benign-task perfor?mance. These results show that SAE-based analysis can explain defense fragmentation and guide interpretable backdoor mitigation.",
+      "authors": [
+        "Yizhe Zeng",
+        "Chenxu Niu",
+        "Wei Zhang",
+        "Hao Huang",
+        "Yunpeng Li",
+        "Dongxu Han",
+        "Dan Du",
+        "Cheng Hong",
+        "Hequn Xian",
+        "Yuling Liu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-08-31T07:55:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.30403v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "mechanistic feature-level analysis of dirty-label and clean-label LLM backdoor attacks; supports unified text adversarial defense",
+      "llm_evidence_cn": "用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解",
+      "llm_evidence": "用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解",
+      "canonical_evidence": "用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解",
+      "llm_tldr_en": "Presents a feature-level mechanistic analysis of LLM backdoor attacks using sparse autoencoders, explaining fragmented defenses through a four-role feature taxonomy.",
+      "llm_tldr_cn": "论文围绕大语言模型后门防御在脏标签与干净标签攻击下无法统一的问题，首次用稀疏自编码器进行特征级机制分析。通过在干净与投毒模型及触发输入构成的对比中追踪logit偏移，将高贡献特征分为交互、抑制、混合和权重修改四类角色。分析揭示两类后门在特征编码上存在系统性差异，从而解释了防御碎片化的深层原因。该工作为统一后门防御提供了可解释特征层面的诊断框架。",
+      "llm_tldr": "论文围绕大语言模型后门防御在脏标签与干净标签攻击下无法统一的问题，首次用稀疏自编码器进行特征级机制分析。通过在干净与投毒模型及触发输入构成的对比中追踪logit偏移，将高贡献特征分为交互、抑制、混合和权重修改四类角色。分析揭示两类后门在特征编码上存在系统性差异，从而解释了防御碎片化的深层原因。该工作为统一后门防御提供了可解释特征层面的诊断框架。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

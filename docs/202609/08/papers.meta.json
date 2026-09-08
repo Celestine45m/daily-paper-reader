@@ -1,0 +1,24 @@
+{
+  "label": "2026-09-08",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T22:46:57",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202609/08/2608.30403v1-why-are-llm-backdoor-defenses-fragmented-a-feature-level-explanation-with-sparse-autoencoders",
+      "section": "quick",
+      "title_en": "Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders",
+      "authors": "Yizhe Zeng, Chenxu Niu, Wei Zhang, Hao Huang, Yunpeng Li, Dongxu Han, Dan Du, Cheng Hong, Hequn Xian, Yuling Liu",
+      "date": "2026-08-31",
+      "pdf": "https://arxiv.org/pdf/2608.30403v1",
+      "score": "7.0",
+      "evidence": "用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解",
+      "tldr": "后门攻击严重威胁大语言模型，但现有防御碎片化，难以同时抵御脏标签与干净标签攻击。本文首次用稀疏自编码器(SAE)进行特征级机制分析，将后门相关特征分为交互、抑制、混合和权重修改四类，揭示两类攻击的编码差异，从根源解释防御碎片化。通过推理时特征钳制，在多数场景将攻击成功率降至10.8%或15.4%以下，同时保持良性任务性能。",
+      "tags": "query:as",
+      "abstract_en": "Backdoor attacks pose a serious threat to large language models (LLMs), but existing defenses remain fragmented, failing to pro?vide unified defense against both dirty-label and clean-label attacks. To investigate why such fragmentation arises, we present the first systematic feature-level mechanistic analysis of LLM backdoors using sparse autoencoders (SAEs). Starting from a 2 x 2 comparison of clean and poisoned models on clean and triggered inputs, we trace backdoor-induced logit shifts to high-contributing SAE features and categorize them into four roles: interac?tion, suppressed, mixed, and weight-modified features. This taxonomy reveals system?atic encoding differences: dirty-label back?doors are dominated by isolated interaction features, whereas clean-label backdoors rely more on heterogeneous mixtures of mixed and weight-modified features. These differ?ences explain why existing defenses remain fragmented across attack paradigms. We val?idate this hypothesis through inference-time feature clamping, which reduces ASR to at most 10.8% in most dirty-label settings and at most 15.4% in the majority of clean-label settings, while preserving benign-task perfor?mance. These results show that SAE-based analysis can explain defense fragmentation and guide interpretable backdoor mitigation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

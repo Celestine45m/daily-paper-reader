@@ -1,0 +1,25 @@
+{
+  "date": "20260908",
+  "date_label": "",
+  "generated_at": "2026-09-08 22:46:55 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.30403v1",
+      "route": "202609/08/2608.30403v1-why-are-llm-backdoor-defenses-fragmented-a-feature-level-explanation-with-sparse-autoencoders",
+      "title": "Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解",
+      "first_seen_at": "2026-09-08 22:46:55 UTC",
+      "updated_at": "2026-09-08 22:46:55 UTC"
+    }
+  ]
+}

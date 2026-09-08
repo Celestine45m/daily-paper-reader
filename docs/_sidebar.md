@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-09-08 <!--dpr-date:20260908-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/08/2608.30403v1-why-are-llm-backdoor-defenses-fragmented-a-feature-level-explanation-with-sparse-autoencoders" data-sidebar-item="{&quot;title&quot;: &quot;Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.30403v1-why-are-llm-backdoor-defenses-fragmented-a-feature-level-explanation-with-sparse-autoencoders&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;as&quot;}], &quot;evidence&quot;: &quot;用稀疏自编码器解释LLM后门攻防碎片化，为文本对抗防御提供机制理解&quot;}">Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders</a>
   * 2026-09-07 <!--dpr-date:20260907-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202609/07/2609.04697v1-sql-zero-self-evolving-text-to-sql" data-sidebar-item="{&quot;title&quot;: &quot;SQL-Zero: Self-Evolving Text-to-SQL&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2609.04697v1-sql-zero-self-evolving-text-to-sql&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;as&quot;}], &quot;evidence&quot;: &quot;提出者-求解者自博弈，GRPO交替更新&quot;}">SQL-Zero: Self-Evolving Text-to-SQL</a>
