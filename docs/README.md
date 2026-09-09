@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-08</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-09</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 1 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 16 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-08 22:46:55 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-09 21:24:34 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日仅速读1篇论文，精读为空，聚焦大模型安全前沿。</p>
-<p>最值得关注的方向：LLM后门防御为何碎片化，可用稀疏自编码器从特征层面给出解释（评分7.0/10）。</p>
-<p>建议普通读者先抓住“特征级解释”这一视角，后续可追踪该团队是否提出统一防御框架。</p>
+<p>今日安全与对抗攻防研究为主，聚焦漏洞检测与多模态/文本模型攻击；精读亮点集中在SemVul代码漏洞检测与GRPO对抗翻译文本生成，速读则覆盖越狱攻击与隐形策略注入。最推荐关注SemVul的语义增强图神经网络方法，以及基于GRPO的对抗文本生成思路。建议普通读者优先加深对模型安全边界的理解，后续可追踪作者发布的代码与评测数据。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">8 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SemVul: Semantic-Enhanced Graph Neural Networks for Code Property Graph-based Vulnerability Detection">SemVul: Semantic-Enhanced Graph Neural Networks for Code Property Graph-based Vulnerability Detection</span></li><li><span class="dpr-home-dashboard-paper-title" title="Generating Adversarial Texts for Machine Translation via GRPO">Generating Adversarial Texts for Machine Translation via GRPO</span></li><li><span class="dpr-home-dashboard-paper-title" title="SWE-Test: Benchmarking LLM Vulnerability Discovery via Input Prediction">SWE-Test: Benchmarking LLM Vulnerability Discovery via Input Prediction</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>8</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">8 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders">Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Finger on the Scale: Covert Policy Steering through Agentic Skills">A Finger on the Scale: Covert Policy Steering through Agentic Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement">SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement</span></li><li><span class="dpr-home-dashboard-paper-title" title="Automatic Red Teaming for Implicit Vulnerabilities of Text-to-Image Models">Automatic Red Teaming for Implicit Vulnerabilities of Text-to-Image Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>8</strong></span></div>
 </section>
 </div>
 

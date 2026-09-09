@@ -1,0 +1,265 @@
+{
+  "date": "20260909",
+  "date_label": "",
+  "generated_at": "2026-09-09 21:24:34 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.06035v1",
+      "route": "202609/09/2609.06035v1-semvul-semantic-enhanced-graph-neural-networks-for-code-property-graph-based-vulnerability-detection",
+      "title": "SemVul: Semantic-Enhanced Graph Neural Networks for Code Property Graph-based Vulnerability Detection",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于代码属性图与图神经网络的软件漏洞检测",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.06048v1",
+      "route": "202609/09/2609.06048v1-generating-adversarial-texts-for-machine-translation-via-grpo",
+      "title": "Generating Adversarial Texts for Machine Translation via GRPO",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "生成机器翻译对抗文本",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.06229v1",
+      "route": "202609/09/2609.06229v1-swe-test-benchmarking-llm-vulnerability-discovery-via-input-prediction",
+      "title": "SWE-Test: Benchmarking LLM Vulnerability Discovery via Input Prediction",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "以覆盖引导模糊测试将软件漏洞发现重构为输入预测任务，评测LLM智能体",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.06612v1",
+      "route": "202609/09/2609.06612v1-mechaudit-40-white-box-auditing-across-40-llm-attack-mechanisms",
+      "title": "MechAudit-40: White-Box Auditing across 40 LLM Attack Mechanisms",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "对40种文本LLM攻击机制进行系统白盒审计",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.07344v1",
+      "route": "202609/09/2609.07344v1-staying-on-the-attack-path-structured-state-for-long-horizon-automated-penetration-testing",
+      "title": "Staying on the Attack Path: Structured State for Long-Horizon Automated Penetration Testing",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用LLM智能体进行自动化渗透测试与漏洞发现",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.07529v1",
+      "route": "202609/09/2609.07529v1-corl-co-evolutionary-reinforcement-learning-for-adaptive-indirect-prompt-injection-attacks-and-defenses",
+      "title": "CoRL: Co-Evolutionary Reinforcement Learning for Adaptive Indirect Prompt-Injection Attacks and Defenses",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将文本间接提示注入攻防建模为攻击者-防御者博弈并进行协同演化强化学习，等价于自博弈式文本对抗攻防",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.08093v1",
+      "route": "202609/09/2609.08093v1-llm-based-penetration-testing-in-the-presence-of-honeypots",
+      "title": "LLM-Based Penetration Testing in the Presence of Honeypots",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "LLM智能体自动化漏洞发现与渗透测试，并考虑蜜罐对抗场景",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.09094v1",
+      "route": "202609/09/2609.09094v1-the-surprising-effectiveness-of-approximate-value-iteration-in-self-play",
+      "title": "The Surprising Effectiveness of Approximate Value Iteration in Self-Play",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用近似值迭代进行自博弈训练，替代昂贵的MCTS方法",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.02564v1",
+      "route": "202609/09/2609.02564v1-a-finger-on-the-scale-covert-policy-steering-through-agentic-skills",
+      "title": "A Finger on the Scale: Covert Policy Steering through Agentic Skills",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过智能体技能对LLM智能体实施隐蔽策略操控的对抗攻击",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.05850v1",
+      "route": "202609/09/2609.05850v1-safeguard-detect-optimization-based-jailbreak-attacks-through-harmful-semantic-analysis-and-fluency-measurement",
+      "title": "SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "围绕文本越狱对抗攻击检测，与对抗攻击文本需求契合",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.06094v1",
+      "route": "202609/09/2609.06094v1-automatic-red-teaming-for-implicit-vulnerabilities-of-text-to-image-models",
+      "title": "Automatic Red Teaming for Implicit Vulnerabilities of Text-to-Image Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用策略智能体与评委智能体自动生成隐式对抗文本提示，攻击文本到图像模型",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.08040v1",
+      "route": "202609/09/2609.08040v1-vex-bench-benchmarking-llm-agents-for-assessing-exploitability-of-software-supply-chain-vulnerabilities",
+      "title": "VEX-Bench: Benchmarking LLM Agents for Assessing Exploitability of Software Supply Chain Vulnerabilities",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "评测LLM智能体对软件供应链漏洞可利用性的评估，紧邻漏洞挖掘与软件安全",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.08256v1",
+      "route": "202609/09/2609.08256v1-acea-an-adversarial-co-evolution-arena-for-head-to-head-red-team-and-blue-team-llm-testing",
+      "title": "ACEA: An Adversarial Co-Evolution Arena for Head-to-Head Red-Team and Blue-Team LLM Testing",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过红蓝队对抗共演连接攻击方与防御方进行LLM攻防，高度契合文本自博弈攻防需求",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.08950v1",
+      "route": "202609/09/2609.08950v1-sqlmorph-query-mutation-and-fine-grained-metrics-for-text-to-sql-evaluation",
+      "title": "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "提出文本查询增强与连接查询扩展技术自动扩充文本到SQL评测集，契合文本数据增强主题",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.00705v1",
+      "route": "202609/09/2609.00705v1-phantomcall-evading-ml-malware-detectors-via-function-call-graph-perturbation",
+      "title": "PhantomCall: Evading ML Malware Detectors via Function Call Graph Perturbation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "对基于机器学习的软件安全检测器实施黑盒图扰动攻击以揭示其脆弱性",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    },
+    {
+      "paper_id": "2609.05903v1",
+      "route": "202609/09/2609.05903v1-evosafeharness-evolving-model--and-domain-specific-harnesses-for-securing-agents",
+      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对文本间接提示注入等攻击的LLM智能体安全护栏",
+      "first_seen_at": "2026-09-09 21:24:34 UTC",
+      "updated_at": "2026-09-09 21:24:34 UTC"
+    }
+  ]
+}
