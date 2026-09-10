@@ -1,0 +1,218 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-10T21:53:55.910174+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.09468v1",
+      "source": "arxiv",
+      "title": "Building the Harness Automatically: Self-Play in Code Distills a Text Harness for Black-Box Optimization",
+      "abstract": "Can an agent learn a numerical search strategy through executable practice and then transfer that strategy as text? We study low-budget black-box optimization, where unaided language models remain well below strong classical optimizers. During development, an agent repeatedly writes and evaluates optimizer programs. It then distills the resulting program and practice record once into a 197-word primary Harness A, which is frozen before evaluation. Harness A reduces Gemini Flash regret by 48\\% in an independent $N=30$ study ($p<.001$), enters the GP-BO performance range on the practice family, and lowers mean regret on all three held-out BBOB landscapes. The same text improves every tested Gemini executor and transfers to Claude Sonnet, reducing regret by 43\\% and 49\\% ($p\\leq.005$). An independent end-to-end replication produces Harness B, a different program and text at the same performance tier. The same framework also attains the lowest regret on a sealed YouTube reward-tuning production benchmark. Executable practice is thus a viable way to discover a search policy, and language a portable medium for deploying it.",
+      "authors": [
+        "Yi Wu",
+        "Zheng Ren",
+        "Zhiyu Hu",
+        "Haochen Wang",
+        "Daryl Chang",
+        "Li Wei",
+        "Ting Wang",
+        "Zhen Li",
+        "Pooja Gupta",
+        "Nitin Jindal",
+        "Lukasz Heldt"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-08T21:33:55+00:00",
+      "link": "https://arxiv.org/pdf/2609.09468v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "self-play in code to learn and distill a text harness",
+      "llm_evidence_cn": "通过代码自博弈学习并蒸馏文本脚手架",
+      "llm_evidence": "通过代码自博弈学习并蒸馏文本脚手架",
+      "canonical_evidence": "通过代码自博弈学习并蒸馏文本脚手架",
+      "llm_tldr_en": "An agent learns a numerical search strategy by repeatedly writing and evaluating optimizer programs, then distills this self-play practice into a frozen 197-word text harness that cuts Gemini Flash regret by 48%.",
+      "llm_tldr_cn": "在低预算黑盒优化中，语言模型远逊于经典优化器。本文让智能体在开发阶段反复编写并评估优化器程序，再将其与练习记录一次性蒸馏为冻结的197词文本脚手架。实验显示该脚手架使Gemini Flash遗憾值降低48%，进入GP-BO性能区间，并在三个保留景观上均有提升，表明可执行的自博弈练习能转化为可迁移的文本策略。",
+      "llm_tldr": "在低预算黑盒优化中，语言模型远逊于经典优化器。本文让智能体在开发阶段反复编写并评估优化器程序，再将其与练习记录一次性蒸馏为冻结的197词文本脚手架。实验显示该脚手架使Gemini Flash遗憾值降低48%，进入GP-BO性能区间，并在三个保留景观上均有提升，表明可执行的自博弈练习能转化为可迁移的文本策略。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.08306v2",
+      "source": "arxiv",
+      "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
+      "abstract": "We introduce HoneyRoute, an inference-serving layer that detects whether an incoming request is malicious and, if so, routes it to a dedicated honeypot model, shielding production while the adversary's interaction is continuously harvested for intelligence. Existing defenses embed traps inside model memory or rebuild deception at the protocol layer, leaving the serving tier unprotected and feeding nothing back into detection. HoneyRoute couples (i) a streaming router (a frozen 0.8B-embedding backbone with per-domain MLP heads), (ii) a dual-implementation honeypot (a rule/prompt-engineered code honeypot or a dedicated same-family replica), and (iii) an analysis loop that converts trapped interactions into attacker fingerprints for router retraining. On a production trace plus a seven-domain attack corpus, the router reaches F1=.911 at 38 ms median added latency, matching 96% of a two-tier guard-LLM cascade's F1 at 1/385 of its latency with 0% evasion under 13 adversarial transformations; diverting the malicious share cuts production-model token consumption under concurrent flooding with real GCG-suffix payloads by 97.8%; the trained replica agrees with the production model on 92.9% of benign holdout requests, while naive unconditional bait injection collapses to 7.6% and selective camouflaged injection recovers to 88.9%, mapping the recoverable fidelity-traceability frontier; and a loop-trained correction head cuts misrouting of legitimate security research 9x while raising detection F1 to .933.",
+      "authors": [
+        "Han Jin"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-09-08T06:26:46+00:00",
+      "link": "https://arxiv.org/pdf/2609.08306v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "detects malicious LLM requests and harvests adversary interactions for defense",
+      "llm_evidence_cn": "检测恶意LLM请求并将攻击者交互回收用于防御",
+      "llm_evidence": "检测恶意LLM请求并将攻击者交互回收用于防御",
+      "canonical_evidence": "检测恶意LLM请求并将攻击者交互回收用于防御",
+      "llm_tldr_en": "HoneyRoute adds an inference-serving layer that detects malicious LLM requests, routes them to honeypot models, and harvests attacker interactions to retrain detection.",
+      "llm_tldr_cn": "现有LLM攻防防御多把陷阱嵌入模型内部或协议层，导致服务层缺乏保护且无法从攻击中反馈情报。本文提出HoneyRoute，在推理服务层加入流式路由器、双实现蜜罐模型与情报分析回路，将恶意请求路由至蜜罐并持续采集攻击者交互。系统据此生成攻击者指纹并回训路由器，在生产环境验证中有效屏蔽攻击同时反哺检测能力。该工作为LLM对抗攻防提供了服务层防护与情报闭环的新思路。",
+      "llm_tldr": "现有LLM攻防防御多把陷阱嵌入模型内部或协议层，导致服务层缺乏保护且无法从攻击中反馈情报。本文提出HoneyRoute，在推理服务层加入流式路由器、双实现蜜罐模型与情报分析回路，将恶意请求路由至蜜罐并持续采集攻击者交互。系统据此生成攻击者指纹并回训路由器，在生产环境验证中有效屏蔽攻击同时反哺检测能力。该工作为LLM对抗攻防提供了服务层防护与情报闭环的新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.09647v1",
+      "source": "arxiv",
+      "title": "Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery",
+      "abstract": "Agentic systems are rapidly moving to production, where they read untrusted inputs, call tools with real permissions, and act autonomously, expanding the security surface beyond chat-only models. Yet standard evaluations remain single-turn and fail to capture multi-step agent vulnerabilities. We present a systematic black-box framework for risk-aware agent evaluation requiring only basic system descriptions. Our approach introduces: (1) a seven-domain taxonomy mapping observable behaviors to risk categories, (2) fully automated SAGE-RT red teaming producing 120 adversarial scenarios per domain, and (3) human-validated evaluation using LLM judges. Empirical validation across two agent architectures (CrewAI and AutoGen) with four base models reveals alarming patterns: 56.25\\% average governance risk, 65\\% privacy risk in multi-agent configurations, and agent behavior vulnerabilities reaching 85\\%. Our black-box approach effectively identifies critical architectural vulnerabilities without privileged access, providing a scalable path toward safer agent deployments.",
+      "authors": [
+        "Divyanshu Kumar",
+        "Nitin Aravind Birur",
+        "Tanay Baswa",
+        "Sahil Agarwal",
+        "Prashanth Harshangi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-09T03:00:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.09647v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "automated black-box red teaming to discover multi-step agent vulnerabilities",
+      "llm_evidence_cn": "自动化黑盒红队发现智能体多步漏洞",
+      "llm_evidence": "自动化黑盒红队发现智能体多步漏洞",
+      "canonical_evidence": "自动化黑盒红队发现智能体多步漏洞",
+      "llm_tldr_en": "This framework automates black-box red teaming of agentic AI, using a seven-domain risk taxonomy and SAGE-RT to generate adversarial scenarios and uncover multi-step agent vulnerabilities.",
+      "llm_tldr_cn": "智能体系统读取不可信输入、调用真实权限工具并自主行动，安全面远超纯对话模型，但现有评测多为单轮，难以捕捉多步智能体漏洞。本文提出仅需系统描述的黑盒风险感知评测框架，包含七域风险分类法、自动生成每域120个对抗场景的SAGE-RT红队流程，以及基于LLM裁判的人工验证评估。在CrewAI与AutoGen两种架构上验证了框架发现风险的能力。该工作以自动化智能体红队推动漏洞挖掘与安全评测。",
+      "llm_tldr": "智能体系统读取不可信输入、调用真实权限工具并自主行动，安全面远超纯对话模型，但现有评测多为单轮，难以捕捉多步智能体漏洞。本文提出仅需系统描述的黑盒风险感知评测框架，包含七域风险分类法、自动生成每域120个对抗场景的SAGE-RT红队流程，以及基于LLM裁判的人工验证评估。在CrewAI与AutoGen两种架构上验证了框架发现风险的能力。该工作以自动化智能体红队推动漏洞挖掘与安全评测。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.08747v1",
+      "source": "arxiv",
+      "title": "MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI",
+      "abstract": "Agentic AI systems with persistent memory introduce a distinct attack surface known as memory poisoning, in which adversarially crafted content is stored in long-term memory and subsequently influences future agent behavior. Such attacks can suppress security alerts, facilitate privilege escalation, alter trust relationships, or override security policies without modifying the underlying model weights or system prompts. To address this threat, we present MemSentry, a formal, configuration-driven framework that intercepts proposed persistent-memory writes and produces deterministic Accept, Review, or Quarantine decisions. MemSentry evaluates each write by jointly considering source trust, semantic risk, attack radius over a component-dependency DAG, access risk, and a signed security-state delta that captures whether an operation weakens or strengthens the system's security posture. We instantiate the protected environment using a 20-asset random dependency DAG and a 10 x 20 user access-control matrix, and evaluate the framework over 1,000 GPT-4-generated scenarios using a stratified 70/30 train/test split. Semantic classification is treated as a pluggable component rather than a primary contribution, and we compare four representative approaches: rule-based Regex, TF-IDF+SVM, SBERT+LR, and SetFit. SBERT+LR achieves the best overall performance with 91.7% accuracy and a 0.908 macro-F1 score, while all four methods detect 100% of external quarantine-class threats. For verified insiders, where source trust is maximal (T = 1), MemSentry does not automatically quarantine suspicious operations but instead escalates potentially dangerous writes for human review, making semantic classification important for accurately capturing insider intent.",
+      "authors": [
+        "Ayan Roy",
+        "Kaustuvi Basu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-08T13:40:13+00:00",
+      "link": "https://arxiv.org/pdf/2609.08747v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "memory poisoning by adversarially crafted content in agentic AI",
+      "llm_evidence_cn": "通过对抗性内容对智能体记忆实施投毒攻击",
+      "llm_evidence": "通过对抗性内容对智能体记忆实施投毒攻击",
+      "canonical_evidence": "通过对抗性内容对智能体记忆实施投毒攻击",
+      "llm_tldr_en": "Agentic AI with persistent memory is vulnerable to memory poisoning, where adversarial content stored long-term steers future behavior. MemSentry intercepts memory writes and issues deterministic Accept, Review, or Quarantine decisions.",
+      "llm_tldr_cn": "具备持久记忆的智能体系统引入了记忆投毒这一新型攻击面，攻击者可将对抗性内容写入长期记忆并持续影响后续行为。本文提出MemSentry框架，拦截持久记忆写入，并联合考虑来源可信度、语义风险与组件依赖攻击半径，输出接受、复核或隔离的确定性判定，为智能体记忆安全提供系统化防御。",
+      "llm_tldr": "具备持久记忆的智能体系统引入了记忆投毒这一新型攻击面，攻击者可将对抗性内容写入长期记忆并持续影响后续行为。本文提出MemSentry框架，拦截持久记忆写入，并联合考虑来源可信度、语义风险与组件依赖攻击半径，输出接受、复核或隔离的确定性判定，为智能体记忆安全提供系统化防御。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.10412v1",
+      "source": "arxiv",
+      "title": "Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation",
+      "abstract": "Static analysis remains a cornerstone of software security, yet the effectiveness of tools such as CodeQL is often limited by the substantial manual effort required to develop high-coverage query suites. While large language models (LLMs) have emerged as a potential solution for automated code reasoning, their practical utility in generating structured, executable security queries remains underexplored. In this paper, we conduct an empirical study to evaluate the ability of LLMs to synthesize CodeQL queries using vulnerability data from the National Vulnerability Database. Through this investigation, we explore the potential of using LLMs as an automatic CodeQL query generator. Subsequently, we systematically evaluate the performance of various LLM architectures across a diverse set of real-world vulnerabilities, measuring their ability to improve detection coverage and precision. Our findings reveal that LLM-generated queries significantly enhance the baseline CodeQL queries, yielding 82% improvement in average F1-score. Furthermore, we provide a detailed cost- benefit analysis showing that while direct LLM-based scanning of entire repositories is often computationally and financially prohibitive, leveraging LLMs to synthesize CodeQL queries offers a scalable and cost-effective alternative for large-scale vulnerability detection. Our results suggest that LLMs can effectively bridge the gap between unstructured vulnerability reports and formal static analysis specifications, offering a scalable path toward comprehensive automated vulnerability detection.",
+      "authors": [
+        "Ivana Clairine Irsan",
+        "Ratnadira Widyasari",
+        "Huihui Huang",
+        "Ting Zhang",
+        "Yue Liu",
+        "Ouh Eng Lieh",
+        "Shar Lwin Khin",
+        "Kang Hong Jin",
+        "David Lo"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2026-09-09T16:31:20+00:00",
+      "link": "https://arxiv.org/pdf/2609.10412v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "LLM-based automatic CodeQL query generation for vulnerability detection",
+      "llm_evidence_cn": "利用大语言模型自动生成CodeQL查询进行漏洞检测",
+      "llm_evidence": "利用大语言模型自动生成CodeQL查询进行漏洞检测",
+      "canonical_evidence": "利用大语言模型自动生成CodeQL查询进行漏洞检测",
+      "llm_tldr_en": "This paper empirically studies whether LLMs can automatically synthesize executable CodeQL queries from National Vulnerability Database data, aiming at scalable and cost-efficient vulnerability detection and systematically evaluating their performance and limits.",
+      "llm_tldr_cn": "静态分析工具如CodeQL依赖人工编写高质量查询，成本高昂且覆盖率有限。本文实证评估大语言模型能否利用国家漏洞数据库数据自动合成可执行的CodeQL查询，探索其作为自动查询生成器的可行性，并系统评测生成查询的性能与局限。研究为可扩展、低成本的漏洞检测提供了自动化新思路。",
+      "llm_tldr": "静态分析工具如CodeQL依赖人工编写高质量查询，成本高昂且覆盖率有限。本文实证评估大语言模型能否利用国家漏洞数据库数据自动合成可执行的CodeQL查询，探索其作为自动查询生成器的可行性，并系统评测生成查询的性能与局限。研究为可扩展、低成本的漏洞检测提供了自动化新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

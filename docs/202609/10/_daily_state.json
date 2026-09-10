@@ -1,0 +1,89 @@
+{
+  "date": "20260910",
+  "date_label": "",
+  "generated_at": "2026-09-10 21:56:33 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.09468v1",
+      "route": "202609/10/2609.09468v1-building-the-harness-automatically-self-play-in-code-distills-a-text-harness-for-black-box-optimization",
+      "title": "Building the Harness Automatically: Self-Play in Code Distills a Text Harness for Black-Box Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "通过代码自博弈学习并蒸馏文本脚手架",
+      "first_seen_at": "2026-09-10 21:56:33 UTC",
+      "updated_at": "2026-09-10 21:56:33 UTC"
+    },
+    {
+      "paper_id": "2609.09647v1",
+      "route": "202609/10/2609.09647v1-black-box-red-teaming-of-agentic-ai-a-taxonomy-driven-framework-for-automated-risk-discovery",
+      "title": "Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "自动化黑盒红队发现智能体多步漏洞",
+      "first_seen_at": "2026-09-10 21:56:33 UTC",
+      "updated_at": "2026-09-10 21:56:33 UTC"
+    },
+    {
+      "paper_id": "2609.10412v1",
+      "route": "202609/10/2609.10412v1-towards-scalable-and-cost-efficient-vulnerability-detection-a-study-on-automatic-query-generation",
+      "title": "Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "利用大语言模型自动生成CodeQL查询进行漏洞检测",
+      "first_seen_at": "2026-09-10 21:56:33 UTC",
+      "updated_at": "2026-09-10 21:56:33 UTC"
+    },
+    {
+      "paper_id": "2609.08306v2",
+      "route": "202609/10/2609.08306v2-honeyroute-honeypot-model-routing-for-adversarial-llm-serving",
+      "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "检测恶意LLM请求并将攻击者交互回收用于防御",
+      "first_seen_at": "2026-09-10 21:56:33 UTC",
+      "updated_at": "2026-09-10 21:56:33 UTC"
+    },
+    {
+      "paper_id": "2609.08747v1",
+      "route": "202609/10/2609.08747v1-memsentry-a-framework-for-detecting-persistent-memory-poisoning-in-agentic-ai",
+      "title": "MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过对抗性内容对智能体记忆实施投毒攻击",
+      "first_seen_at": "2026-09-10 21:56:33 UTC",
+      "updated_at": "2026-09-10 21:56:33 UTC"
+    }
+  ]
+}

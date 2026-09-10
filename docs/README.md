@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-09</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-10</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 16 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>8</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>8</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-09 21:24:34 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-10 21:56:33 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日安全与对抗攻防研究为主，聚焦漏洞检测与多模态/文本模型攻击；精读亮点集中在SemVul代码漏洞检测与GRPO对抗翻译文本生成，速读则覆盖越狱攻击与隐形策略注入。最推荐关注SemVul的语义增强图神经网络方法，以及基于GRPO的对抗文本生成思路。建议普通读者优先加深对模型安全边界的理解，后续可追踪作者发布的代码与评测数据。</p>
+<p>今日共生成 5 篇推荐（精读 0 篇，速读 5 篇）</p>
+<p>速读：《Building the Harness Automatically: Self-Play in Code Distills a Text Harness for Black-Box Optimization》（7.0/10）, 《Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery》（7.0/10）, 《Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation》（7.0/10）</p>
+<p>这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SemVul: Semantic-Enhanced Graph Neural Networks for Code Property Graph-based Vulnerability Detection">SemVul: Semantic-Enhanced Graph Neural Networks for Code Property Graph-based Vulnerability Detection</span></li><li><span class="dpr-home-dashboard-paper-title" title="Generating Adversarial Texts for Machine Translation via GRPO">Generating Adversarial Texts for Machine Translation via GRPO</span></li><li><span class="dpr-home-dashboard-paper-title" title="SWE-Test: Benchmarking LLM Vulnerability Discovery via Input Prediction">SWE-Test: Benchmarking LLM Vulnerability Discovery via Input Prediction</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>8</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">8 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Finger on the Scale: Covert Policy Steering through Agentic Skills">A Finger on the Scale: Covert Policy Steering through Agentic Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement">SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement</span></li><li><span class="dpr-home-dashboard-paper-title" title="Automatic Red Teaming for Implicit Vulnerabilities of Text-to-Image Models">Automatic Red Teaming for Implicit Vulnerabilities of Text-to-Image Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Building the Harness Automatically: Self-Play in Code Distills a Text Harness for Black-Box Optimization">Building the Harness Automatically: Self-Play in Code Distills a Text Harness for Black-Box Optimization</span></li><li><span class="dpr-home-dashboard-paper-title" title="Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery">Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery</span></li><li><span class="dpr-home-dashboard-paper-title" title="Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation">Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>8</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
 </section>
 </div>
 
