@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-11T21:58:31.832107+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2609.10945v1",
+      "source": "arxiv",
+      "title": "LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Real Production Repositories",
+      "abstract": "Large language models (LLMs) are increasingly used to generate and assist with software development, yet existing vulnerability datasets largely focus on human-written code or controlled prompting environments. This limits the ability to study security weaknesses in LLM-generated code as it appears in real-world software projects. We present LLMVul, a vulnerability-labeled dataset of LLM-generated C/C++ functions mined from real production repositories. We mine AI-assisted development activity from GitHub over a 4 year period, from November 13, 2022 to September 3, 2026, using provenance signals such as commit metadata and AI-related authorship evidence. After filtering and deduplication, LLMVul contains 21,430 unique C/C++ functions from 226 repositories, together with repository, commit, function, provenance, and AI-tool metadata. We establish vulnerability labels using an ensemble of complementary static-analysis and pattern-based techniques and assign Common Weakness Enumeration (CWE) categories to confirmed vulnerable functions. To assess labeling reliability, we additionally conduct independent manual annotation and measure inter-rater agreement using Cohen's kappa ($k=0.79$). LLMVul contains 1,540 ensemble-vulnerable functions spanning 17 unique CWE categories, providing substantially more real-world LLM-generated vulnerable C/C++ functions than existing vulnerability-oriented LLM code benchmarks. By preserving both code-level vulnerability labels and generation/provenance metadata, LLMVul enables reproducible research on vulnerability detection, security evaluation of LLM-generated code, and analysis of vulnerability patterns in AI-assisted software development. The LLMVul dataset is publicly available at https://doi.org/10.5281/zenodo.22668216.",
+      "authors": [
+        "Mohammad Farhad",
+        "Shuvalaxmi Dass"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-09-10T01:10:12+00:00",
+      "link": "https://arxiv.org/pdf/2609.10945v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "vulnerability-labeled dataset of LLM-generated C/C++ functions from real repositories",
+      "llm_evidence_cn": "真实仓库中LLM生成C/C++函数的漏洞标注数据集",
+      "llm_evidence": "真实仓库中LLM生成C/C++函数的漏洞标注数据集",
+      "canonical_evidence": "真实仓库中LLM生成C/C++函数的漏洞标注数据集",
+      "llm_tldr_en": "Existing vulnerability datasets focus on human-written or controlled-prompt code, leaving LLM-generated code understudied. LLMVul mines AI-assisted GitHub activity over four years to build 21,430 vulnerability-labeled C/C++ functions from real production repositories.",
+      "llm_tldr_cn": "现有漏洞数据集多聚焦人工编写代码或受控提示环境，难以刻画真实项目中大模型生成代码的安全缺陷。本文提出 LLMVul，利用提交元数据与AI署名等溯源信号，从GitHub四年AI辅助开发活动中挖掘并去重得到21430个漏洞标注的C/C++函数。该数据集支持在真实生产语境下研究LLM生成代码的漏洞分布。为软件安全与漏洞挖掘研究提供了大规模实证资源。",
+      "llm_tldr": "现有漏洞数据集多聚焦人工编写代码或受控提示环境，难以刻画真实项目中大模型生成代码的安全缺陷。本文提出 LLMVul，利用提交元数据与AI署名等溯源信号，从GitHub四年AI辅助开发活动中挖掘并去重得到21430个漏洞标注的C/C++函数。该数据集支持在真实生产语境下研究LLM生成代码的漏洞分布。为软件安全与漏洞挖掘研究提供了大规模实证资源。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.08404v1",
+      "source": "arxiv",
+      "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks",
+      "abstract": "Large Language Models demonstrate remarkable proficiency in static reasoning, yet training them as autonomous agents through Reinforcement Learning (RL) for long-horizon tasks is often hindered by severe reward sparsity. While conventional \\textit{agent-side warming} up via supervised fine-tuning (SFT) can alleviate this, it is frequently limited by data scarcity and constrained exploration. To address this, we propose a paradigm shift to \\textit{environment-side adaptation} by constructing \\textbf{F}eedback-\\textbf{E}nriched \\textbf{E}nvironments (\\textbf{FEEs}). Through a pilot study, we establish a feedback design strategy that reformulates environments by transitioning from action guidance to observation enrichment during the later stages of both intra-episode exploration and inter-episode evolution. Large-scale experiments on SciWorld and BFCL benchmarks using various Qwen3 model scales and RL algorithms such as GRPO, GSPO, and DAPO demonstrate that FEEs consistently yield performance improvements over standard settings. Furthermore, our analysis reveals that training with FEEs \\textbf{(1)} stabilizes training dynamics by reducing entropy volatility, \\textbf{(2)} facilitates proactive state-space exploration in difficult tasks, \\textbf{(3) }ensures the internalization of environmental guidance into policy weights rather than acting as a mere inference-time prior, and \\textbf{(4) }identifies intra-group feedback consistency as a critical boundary for stable optimization.",
+      "authors": [
+        "Hongbang Yuan",
+        "Zhuoran Jin",
+        "Yixin Cao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-09-08T08:14:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.08404v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "self-evolving agents trained by RL, feedback-enriched environments",
+      "llm_evidence_cn": "强化学习训练的自演化智能体，反馈增强环境",
+      "llm_evidence": "强化学习训练的自演化智能体，反馈增强环境",
+      "canonical_evidence": "强化学习训练的自演化智能体，反馈增强环境",
+      "llm_tldr_en": "To fight reward sparsity in long-horizon agent RL, this paper shifts to environment-side adaptation, building Feedback-Enriched Environments that move feedback design from action guidance to observation enrichment for self-evolving agents.",
+      "llm_tldr_cn": "针对长时程任务中智能体强化学习奖励稀疏、传统SFT预热受数据稀缺与探索受限的问题，本文提出环境侧自适应范式，构建反馈增强环境，将反馈设计从动作引导转向观测增强。实验表明该策略能引导智能体自演化并缓解奖励稀疏，为自博弈式智能体训练提供了新的环境构造思路。",
+      "llm_tldr": "针对长时程任务中智能体强化学习奖励稀疏、传统SFT预热受数据稀缺与探索受限的问题，本文提出环境侧自适应范式，构建反馈增强环境，将反馈设计从动作引导转向观测增强。实验表明该策略能引导智能体自演化并缓解奖励稀疏，为自博弈式智能体训练提供了新的环境构造思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.08452v1",
+      "source": "arxiv",
+      "title": "SRPO: Setwise Relative Policy Optimization for Multi-Agent LLMs",
+      "abstract": "Multi-agent large language models solve complex tasks by coordinating several policies in a shared environment. However, existing reinforcement learning methods usually optimize each response or trajectory separately, even when several outputs jointly cause one state transition. Consequently, the update unit differs from the action executed by the system. To address this problem, we propose SRPO (Setwise Relative Policy Optimization), which treats the active set the minimal set of outputs consumed by one transition, as one multi-agent action. Specifically, SRPO combines member log-ratios into one cardinality-normalized set ratio, assigns one relative advantage, and clips the set once. This formulation unifies division of labor and joint co-evolution as actions with different set sizes. Experiments on mathematical reasoning and multi-turn search demonstrate one training interface for fixed, mixed, and dynamically routed workflows across four model scales, with the strongest macro-average results among the reported comparisons. Optimization diagnostics further characterize its stability under different event reductions and set sizes.",
+      "authors": [
+        "Shengtian Yang",
+        "Ziyu Xiong",
+        "Yu Li",
+        "Yewen Li",
+        "Qingpeng Cai",
+        "Lei Feng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-08T08:52:23+00:00",
+      "link": "https://arxiv.org/pdf/2609.08452v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-agent RL co-evolution, joint policy optimization",
+      "llm_evidence_cn": "多智能体强化学习协同演化，联合策略优化",
+      "llm_evidence": "多智能体强化学习协同演化，联合策略优化",
+      "canonical_evidence": "多智能体强化学习协同演化，联合策略优化",
+      "llm_tldr_en": "SRPO fixes the mismatch between per-trajectory RL updates and multi-agent actions by treating the active set as one action, combining member log-ratios into a normalized set ratio with a single advantage and clip.",
+      "llm_tldr_cn": "针对多智能体大语言模型中强化学习按单条响应或轨迹分别优化、与系统实际动作单元不一致的问题，本文提出集合相对策略优化SRPO，将一次状态转移所消耗的最小输出集合视为一个多智能体动作，合并成员对数比并分配相对优势。该方法统一了分工与协同演化，提升了多智能体协同优化的效果。",
+      "llm_tldr": "针对多智能体大语言模型中强化学习按单条响应或轨迹分别优化、与系统实际动作单元不一致的问题，本文提出集合相对策略优化SRPO，将一次状态转移所消耗的最小输出集合视为一个多智能体动作，合并成员对数比并分配相对优势。该方法统一了分工与协同演化，提升了多智能体协同优化的效果。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
