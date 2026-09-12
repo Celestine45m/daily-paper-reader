@@ -1,0 +1,89 @@
+{
+  "date": "20260912",
+  "date_label": "",
+  "generated_at": "2026-09-12 21:08:47 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.04865v1",
+      "route": "202609/12/2609.04865v1-coskill-joint-reinforcement-learning-of-reasoning-and-meta-skill-agents-for-hierarchical-skill-evolution",
+      "title": "CoSkill: Joint Reinforcement Learning of Reasoning and Meta-Skill Agents for Hierarchical Skill Evolution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "联合训练推理与元技能智能体的多智能体强化学习框架",
+      "first_seen_at": "2026-09-12 21:08:47 UTC",
+      "updated_at": "2026-09-12 21:08:47 UTC"
+    },
+    {
+      "paper_id": "2609.07110v1",
+      "route": "202609/12/2609.07110v1-discovering-natural-transformation-vulnerabilities-in-black-box-vision-models",
+      "title": "Discovering Natural Transformation Vulnerabilities in Black-Box Vision Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "发现自然变换脆弱性的黑盒对抗攻击",
+      "first_seen_at": "2026-09-12 21:08:47 UTC",
+      "updated_at": "2026-09-12 21:08:47 UTC"
+    },
+    {
+      "paper_id": "2609.08394v1",
+      "route": "202609/12/2609.08394v1-windows-malware-detector-as-a-compound-ai-system-trade-offs-in-accuracy-efficiency-and-adversarial-robustness",
+      "title": "Windows Malware Detector as a Compound AI System: Trade-Offs in Accuracy, Efficiency, and Adversarial Robustness",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "评估复合AI系统中恶意软件检测的准确率与对抗鲁棒性",
+      "first_seen_at": "2026-09-12 21:08:47 UTC",
+      "updated_at": "2026-09-12 21:08:47 UTC"
+    },
+    {
+      "paper_id": "2609.09404v1",
+      "route": "202609/12/2609.09404v1-an-experimental-evaluation-of-multimodal-prompt-injection-attacks-on-agentic-ai-frameworks",
+      "title": "An Experimental Evaluation of Multimodal Prompt Injection Attacks on Agentic AI Frameworks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体AI框架的多模态提示注入攻击",
+      "first_seen_at": "2026-09-12 21:08:47 UTC",
+      "updated_at": "2026-09-12 21:08:47 UTC"
+    },
+    {
+      "paper_id": "2609.10142v1",
+      "route": "202609/12/2609.10142v1-active-adaptation-not-static-defense-temporal-dynamics-of-preventative-steering-in-adversarial-fine-tuning",
+      "title": "Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对LLM恶意微调的防御，属对抗攻防范畴",
+      "first_seen_at": "2026-09-12 21:08:47 UTC",
+      "updated_at": "2026-09-12 21:08:47 UTC"
+    }
+  ]
+}
