@@ -1,0 +1,263 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-13T22:02:50.795652+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.06540v1",
+      "source": "arxiv",
+      "title": "SRD-GUARD: A Defense Framework of LLMs via Semantic Rewriting and Joint Multi-Model Scoring for Latent Intent Exposure",
+      "abstract": "Large language models (LLMs) are increasingly deployed in safety-critical applications, yet jailbreak attacks can conceal harmful intent through role-playing, fictional scenarios, or seemingly benign motivations. Existing inference-time defenses may miss disguised attacks or excessively refuse legitimate requests. We propose SRD-GUARD, a parameter-free, black-box defense framework that exposes concealed intent through semantic rewriting and consensus-based risk assessment. Given an input prompt, SRD-GUARD generates five semantically related rewrites that preserve the underlying objective while removing unnecessary contextual packaging. The original prompt and rewrites are jointly evaluated by multiple independent LLM-based safety scorers on a continuous risk scale. A decision module combines absolute risk thresholds with relative risk changes between the original and rewritten prompts to adaptively intercept, preserve, or warn on requests.   We evaluate SRD-GUARD against UNIATTACK, CIPHER, and DeepInception on Llama-3-8B-Uncensored and DeepSeek-V4-Flash using AdvBench and OR-Bench-Hard. SRD-GUARD achieves average DSRs of 91.44% and 100%, with ORRs of 8.00% and 12.00%, respectively. Compared with evaluated baselines, it provides a more favorable DSR--ORR trade-off. Ablation studies show that rewriting exposes concealed harmful intent, joint scoring improves robustness to individual evaluator behavior, and risk-adaptive decision making enables selective handling of ambiguous inputs. These results demonstrate that semantic intent exposure, consensus-based risk assessment, and relative-risk-aware routing provide an effective and selective approach to black-box jailbreak defense. The artifact is available at https://anonymous.4open.science/status/CICD-Guard-D648.",
+      "authors": [
+        "Qi Wang",
+        "Chengcheng Wan",
+        "Jiangtao Wang"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-06T11:26:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.06540v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "parameter-free black-box defense exposing concealed jailbreak intent via semantic rewriting",
+      "llm_evidence_cn": "通过语义改写暴露隐藏越狱意图的无参黑盒防御",
+      "llm_evidence": "通过语义改写暴露隐藏越狱意图的无参黑盒防御",
+      "canonical_evidence": "通过语义改写暴露隐藏越狱意图的无参黑盒防御",
+      "llm_tldr_en": "Jailbreak attacks hide harmful intent in role-play or benign packaging, and existing inference-time defenses either miss them or over-refuse. SRD-GUARD generates five semantic rewrites preserving the objective while stripping packaging, then jointly scores original and rewrites with multiple models to expose latent intent.",
+      "llm_tldr_cn": "越狱攻击常借助角色扮演或看似无害的包装隐藏恶意意图，现有推理时防御要么漏检、要么过度拒答。本文提出SRD-GUARD，一种无需参数的黑盒防御框架，通过生成五条语义相关但去除包装的改写，再由多模型联合评估原始提示与改写的风险一致性。该方法能在暴露潜在意图的同时减少对合法请求的误拒，为文本对抗防御提供了实用的推理时方案。",
+      "llm_tldr": "越狱攻击常借助角色扮演或看似无害的包装隐藏恶意意图，现有推理时防御要么漏检、要么过度拒答。本文提出SRD-GUARD，一种无需参数的黑盒防御框架，通过生成五条语义相关但去除包装的改写，再由多模型联合评估原始提示与改写的风险一致性。该方法能在暴露潜在意图的同时减少对合法请求的误拒，为文本对抗防御提供了实用的推理时方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.06835v1",
+      "source": "arxiv",
+      "title": "Skynet: Workflow-Level Anomaly Detection for Agentic AI via Semantic and Structural Modeling",
+      "abstract": "Agentic AI systems execute complex tasks through long-horizon workflows of planning, tool use, and multi-agent coordination. Task failures in these systems often originate from a single step, such as an injected prompt or a flawed plan, and are then amplified through downstream dependencies as the corrupted step propagates across many subsequent agents and tool calls. Existing defenses either target a specific class of attacks or failures, or inspect individual prompts and steps in isolation. Both leave the global dependency structure of a workflow unexamined, and miss the inconsistencies that only emerge when the execution is viewed as a whole. We argue that anomaly detection for agentic AI must reason at the workflow level, where global execution structure exposes signals that local checks cannot see. We present Skynet, a principled workflow-level anomaly detection framework that turns observed multi-agent execution into directed workflow graphs and scores them against learned benign behavior. Skynet jointly models the semantic execution context and the structural organization of inter-agent delegation, tool invocation, and data-flow dependencies, and trains only on benign workflows. Because training never sees attacks or failures, this design naturally extends to zero-day detection: any execution that violates benign workflow regularities surfaces as off-manifold geometry under a single decision rule. We evaluate Skynet on three public agentic safety and failure benchmarks. It sustains high recall together with a sub-1% false positive rate, with per-workflow and per-step latencies low enough for online monitoring of agentic AI runtimes.",
+      "authors": [
+        "Chaoyu Zhang",
+        "Hexuan Yu",
+        "Heng Jin",
+        "Shanghao Shi",
+        "Ning Zhang",
+        "Yi Shi",
+        "Yulia R. Gel",
+        "Y. Thomas Hou",
+        "Wenjing Lou"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-06T21:16:42+00:00",
+      "link": "https://arxiv.org/pdf/2609.06835v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "detecting injected prompt attacks in agentic workflows",
+      "llm_evidence_cn": "检测智能体工作流中的注入提示攻击",
+      "llm_evidence": "检测智能体工作流中的注入提示攻击",
+      "canonical_evidence": "检测智能体工作流中的注入提示攻击",
+      "llm_tldr_en": "Skynet performs workflow-level anomaly detection for agentic AI by jointly modeling semantics and dependency structure, catching injected prompts and flaws that step-level defenses miss.",
+      "llm_tldr_cn": "针对智能体AI长程工作流中单步注入提示或错误计划会被下游依赖放大传播的问题，现有防御只关注单类攻击或孤立检查单步提示。本文提出Skynet，从语义与结构两方面对整条工作流建模并做工作流级异常检测。实验表明其能发现仅在整体执行视角下才显现的不一致，为智能体安全提供了更全局的防护思路。",
+      "llm_tldr": "针对智能体AI长程工作流中单步注入提示或错误计划会被下游依赖放大传播的问题，现有防御只关注单类攻击或孤立检查单步提示。本文提出Skynet，从语义与结构两方面对整条工作流建模并做工作流级异常检测。实验表明其能发现仅在整体执行视角下才显现的不一致，为智能体安全提供了更全局的防护思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.06972v1",
+      "source": "arxiv",
+      "title": "AgentDrift: A Step-Labeled Benchmark of Injection-Hijacked LLM Agent Trajectories",
+      "abstract": "LLM agents complete tasks by issuing sequences of tool calls, and every observation they read is a channel through which an indirect prompt injection can enter. A successful injection has a characteristic shape when the trajectory is read in order: a benign prefix gives way to actions that serve the attacker rather than the user. Existing benchmarks measure whether such attacks succeed against live agents, and existing guard models judge a trace as a whole; no public corpus labels, step by step, where an injection enters a trajectory and which steps it corrupts. We present AgentDrift, a benchmark of 12,536 synthetic tool-call trajectories over five agent domains in which every one of the 71,024 steps carries one of four labels: benign, injection point, hijacked, or failed injection. The corpus contains 4,000 benign, 5,536 attacked, 1,500 failed-attack, and 1,500 hard-negative trajectories; attacked trajectories follow three compliance patterns whose label strings obey a stated regular grammar. Failed attacks carry an injection the agent resisted, and hard negatives carry legitimate content that resembles an attack, so a detector must separate attempt from success and deviation from novelty. Trajectories were generated by a single open model under category-specific protocols, enforced by a closed-vocabulary structural validator, screened by an LLM judge, and audited by hand on 1,200 trajectories; we show that the LLM judge was itself fooled by the hard negatives. A surface-feature logistic regression recovers only 55.4% of attacks (F1 0.647), including only 8.2% of partial hijacks and 23.1% of delayed executions, so nearly half of the attacks require modeling the behavioral sequence. We measure template concentration, attack-goal-family collapse, and world-identity leakage in the generated data, and release the corpus with its documentation under CC BY 4.0.",
+      "authors": [
+        "Asif Pinjari",
+        "Mithun Paul Saint-Germain"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-07T03:10:23+00:00",
+      "link": "https://arxiv.org/pdf/2609.06972v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "step-labeled benchmark of prompt injection in LLM agent trajectories",
+      "llm_evidence_cn": "针对LLM智能体注入攻击的逐步标注基准",
+      "llm_evidence": "针对LLM智能体注入攻击的逐步标注基准",
+      "canonical_evidence": "针对LLM智能体注入攻击的逐步标注基准",
+      "llm_tldr_en": "AgentDrift provides 12,536 synthetic tool-call trajectories with step-level labels marking where indirect prompt injections enter and which steps they corrupt.",
+      "llm_tldr_cn": "针对现有基准只判断注入攻击是否成功、缺乏逐步定位的问题，本文提出AgentDrift，构建包含12536条合成工具调用轨迹、共71024步的基准，每步标注良性、注入等四类标签。该基准能刻画注入在轨迹中进入与污染的具体位置，为检测与防御间接提示注入提供了细粒度评测资源，弥补了整体判断粒度的不足。",
+      "llm_tldr": "针对现有基准只判断注入攻击是否成功、缺乏逐步定位的问题，本文提出AgentDrift，构建包含12536条合成工具调用轨迹、共71024步的基准，每步标注良性、注入等四类标签。该基准能刻画注入在轨迹中进入与污染的具体位置，为检测与防御间接提示注入提供了细粒度评测资源，弥补了整体判断粒度的不足。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.08025v1",
+      "source": "arxiv",
+      "title": "Eliciting Self-Verification in Multimodal Reasoning Agents with Reinforcement Learning",
+      "abstract": "Reasoning agents increasingly rely on external tools such as web search to answer complex queries. Reinforcement learning (RL) finetuning algorithms such as GRPO have improved long-form reasoning in text-only language models, particularly for coding and mathematics. Reliable tool use in multimodal agents, however, remains challenging because models must interpret text and images while integrating noisy retrieved evidence, often under sparse outcome-level supervision without explicit verification signals. We present Self-Verification via Reinforcement Learning (SVRL), an RL-only finetuning framework that trains multimodal agents to verify and filter retrieved evidence within their own reasoning traces, reducing reliance on external verifiers at inference time. SVRL also introduces a search-aware penalty that discourages unnecessary tool calls and a query-diversity reward that encourages diverse, well-formed search queries, providing fine-grained feedback on when and what to search. Finetuning Qwen-2.5-VL-7B with SVRL on only 5{,}000 visual question answering examples yields consistent gains in multi-hop VQA generalization and tool efficiency across benchmarks. Overall, SVRL narrows the gap between compact agents and much larger proprietary models while requiring substantially lower training and inference cost.",
+      "authors": [
+        "Vishwas Sathish",
+        "Viresh Ranjan",
+        "Xinliang Zhu",
+        "Arnab Dhua",
+        "Douglas Gray"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-09-07T22:15:47+00:00",
+      "link": "https://arxiv.org/pdf/2609.08025v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL-only finetuning that trains agents to self-verify within their own reasoning traces",
+      "llm_evidence_cn": "用强化学习训练智能体自我验证的智能体训练方法",
+      "llm_evidence": "用强化学习训练智能体自我验证的智能体训练方法",
+      "canonical_evidence": "用强化学习训练智能体自我验证的智能体训练方法",
+      "llm_tldr_en": "Multimodal reasoning agents must integrate noisy evidence under sparse supervision. SVRL is an RL-only finetuning framework that trains agents to verify and filter evidence within their own reasoning traces, cutting reliance on external verifiers.",
+      "llm_tldr_cn": "多模态推理智能体在使用外部工具时，需在稀疏结果监督下整合含噪检索证据，可靠性不足。本文提出仅用强化学习的微调框架SVRL，训练智能体在自身推理轨迹中验证并过滤证据，减少对外部验证器的依赖。该工作把自我验证能力内化为策略的一部分，为智能体工具使用的可靠性与自我改进式训练提供了新思路。",
+      "llm_tldr": "多模态推理智能体在使用外部工具时，需在稀疏结果监督下整合含噪检索证据，可靠性不足。本文提出仅用强化学习的微调框架SVRL，训练智能体在自身推理轨迹中验证并过滤证据，减少对外部验证器的依赖。该工作把自我验证能力内化为策略的一部分，为智能体工具使用的可靠性与自我改进式训练提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.08919v1",
+      "source": "arxiv",
+      "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
+      "abstract": "Autonomous agents powered by large language models (LLMs) continuously accumulate experience through interaction, creating an opportunity to improve future behavior through self-evolution. A fundamental challenge is how to transform abundant, task-specific interaction experience into reusable model competence without sacrificing the ability to adapt rapidly to newly observed evidence. Explicit textual states, such as skills and agent harnesses, provide fast, human-readable and editable adaptation, but incur persistent dependence on external context; parametric policies provide compact and reusable competence, but are substantially slower to update. We present \\textit{Experience Funnel}, a self-evolving framework that couples fast state adaptation with slow policy consolidation in an alternating loop. Interaction trajectories are first distilled into an explicit textual state, where newly acquired experience can be rapidly incorporated and validated. The framework then selectively identifies state-enabled behavior that remains useful across state revisions and consolidates it into the policy through transition-aware distillation. The updated state--policy pair subsequently generates new rollouts, providing fresh evidence for the next round of state adaptation and policy consolidation. Experiments across diverse agent benchmarks show that \\textit{Experience Funnel} consistently improves agent capability over state-only evolution and policy-internalization approaches, while progressively converting useful explicit experience into autonomous policy competence.",
+      "authors": [
+        "Wenbo Gao",
+        "Zhaomou Song",
+        "Zhiyuan Ji",
+        "Renxi Liu",
+        "Xing Li",
+        "Xianzhi Yu",
+        "Xiaoguang Li",
+        "James Chung-wai Cheung",
+        "Weizhe Lin",
+        "Yaoyuan Wang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-08T15:48:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.08919v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "self-evolving agents coupling textual state and parametric policy",
+      "llm_evidence_cn": "耦合文本状态与参数策略的自演化智能体训练",
+      "llm_evidence": "耦合文本状态与参数策略的自演化智能体训练",
+      "canonical_evidence": "耦合文本状态与参数策略的自演化智能体训练",
+      "llm_tldr_en": "LLM agents accumulate experience but struggle to turn it into reusable competence; Experience Funnel couples fast textual state adaptation with slower parametric policy updates in a self-evolving loop.",
+      "llm_tldr_cn": "基于大语言模型的自主智能体在交互中不断积累经验，但如何把大量任务特化经验转化为可复用能力，同时保持对新证据的快速适应，仍是核心难题。文本状态如技能与智能体框架便于快速编辑却依赖外部上下文，参数策略紧凑可复用却更新缓慢。本文提出经验漏斗这一自演化框架，将快速状态适应与参数策略更新交替耦合。该设计在自我演化中兼顾即时适应与长期能力沉淀，为智能体持续自我提升提供新范式。",
+      "llm_tldr": "基于大语言模型的自主智能体在交互中不断积累经验，但如何把大量任务特化经验转化为可复用能力，同时保持对新证据的快速适应，仍是核心难题。文本状态如技能与智能体框架便于快速编辑却依赖外部上下文，参数策略紧凑可复用却更新缓慢。本文提出经验漏斗这一自演化框架，将快速状态适应与参数策略更新交替耦合。该设计在自我演化中兼顾即时适应与长期能力沉淀，为智能体持续自我提升提供新范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.10707v1",
+      "source": "arxiv",
+      "title": "Architecting the Secure AI-SOC: A Neurosymbolic Framework for Pipeline Integrity and Threat Mitigation",
+      "abstract": "The integration of Large Language Models (LLMs) into Security Operations Centers (SOCs) streamlines threat intelligence but introduces critical vulnerabilities, notably indirect prompt injection via log poisoning. Adversaries exploit this vector to execute multistep ``promptware'' kill chains by embedding malicious payloads within system logs to hijack the LLM's operational logic. Securing this pipeline presents a dichotomy: deterministic defenses are computationally efficient yet semantically blind, while purely neural evaluations introduce prohibitive latency and probabilistic flaws. To address this, we propose a novel neurosymbolic defense-in-depth architecture that ensures end-to-end pipeline integrity. The primary layer employs customized SIEM decoders as a deterministic pre-filter, performing immediate structural sanitization to neutralize volumetric padding and signature-based injections at the ingestion edge. The secondary layer leverages NeMo Guardrails to enforce strict semantic boundaries through self-checking validation on the structured SIEM alerts prior to LLM processing. Furthermore, the framework integrates a closed-loop telemetry system, providing critical Human-in-the-Loop (HITL) visibility into thwarted attacks directly within the SOC dashboard. We present a comprehensive experimental evaluation mapped to the MITRE ATLAS taxonomy, assessing the framework against diverse prompt injections. Our results demonstrate that this synergistic approach effectively dismantles the promptware kill chain - bounding LLM stochasticity with verifiable constraints, and delivering a resilient, highly observable defense mechanism for next-generation AI-SOCs.",
+      "authors": [
+        "Anna Gazani",
+        "Spyridon Kounoupidis",
+        "Panagiotis Katsaros",
+        "Nikolaos Kekatos",
+        "Grigorios Tsoumakas",
+        "Georgios Koutidis"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-09T18:03:41+00:00",
+      "link": "https://arxiv.org/pdf/2609.10707v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "neurosymbolic defense against indirect prompt injection in security pipelines",
+      "llm_evidence_cn": "面向安全流水线的间接提示注入神经符号防御",
+      "llm_evidence": "面向安全流水线的间接提示注入神经符号防御",
+      "canonical_evidence": "面向安全流水线的间接提示注入神经符号防御",
+      "llm_tldr_en": "This paper addresses indirect prompt injection via log poisoning in LLM-based SOCs and proposes a neurosymbolic defense-in-depth architecture to preserve end-to-end pipeline integrity against promptware kill chains.",
+      "llm_tldr_cn": "该文针对将LLM引入安全运营中心后出现的日志投毒式间接提示注入漏洞展开研究。作者指出现有确定性防御语义盲、纯神经网络防御延迟高且概率性强，提出一种神经符号纵深防御架构以保障端到端流水线完整性。该框架旨在拦截多步提示武器杀伤链，为安全运营场景下的LLM管线提供可落地的防护思路。",
+      "llm_tldr": "该文针对将LLM引入安全运营中心后出现的日志投毒式间接提示注入漏洞展开研究。作者指出现有确定性防御语义盲、纯神经网络防御延迟高且概率性强，提出一种神经符号纵深防御架构以保障端到端流水线完整性。该框架旨在拦截多步提示武器杀伤链，为安全运营场景下的LLM管线提供可落地的防护思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "date": "20260913",
+  "date_label": "",
+  "generated_at": "2026-09-13 22:05:59 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.06540v1",
+      "route": "202609/13/2609.06540v1-srd-guard-a-defense-framework-of-llms-via-semantic-rewriting-and-joint-multi-model-scoring-for-latent-intent-exposure",
+      "title": "SRD-GUARD: A Defense Framework of LLMs via Semantic Rewriting and Joint Multi-Model Scoring for Latent Intent Exposure",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "通过语义改写暴露隐藏越狱意图的无参黑盒防御",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    },
+    {
+      "paper_id": "2609.06835v1",
+      "route": "202609/13/2609.06835v1-skynet-workflow-level-anomaly-detection-for-agentic-ai-via-semantic-and-structural-modeling",
+      "title": "Skynet: Workflow-Level Anomaly Detection for Agentic AI via Semantic and Structural Modeling",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "检测智能体工作流中的注入提示攻击",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    },
+    {
+      "paper_id": "2609.06972v1",
+      "route": "202609/13/2609.06972v1-agentdrift-a-step-labeled-benchmark-of-injection-hijacked-llm-agent-trajectories",
+      "title": "AgentDrift: A Step-Labeled Benchmark of Injection-Hijacked LLM Agent Trajectories",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对LLM智能体注入攻击的逐步标注基准",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    },
+    {
+      "paper_id": "2609.08025v1",
+      "route": "202609/13/2609.08025v1-eliciting-self-verification-in-multimodal-reasoning-agents-with-reinforcement-learning",
+      "title": "Eliciting Self-Verification in Multimodal Reasoning Agents with Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用强化学习训练智能体自我验证的智能体训练方法",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    },
+    {
+      "paper_id": "2609.08919v1",
+      "route": "202609/13/2609.08919v1-experience-funnel-a-state-policy-alternating-loop-for-self-evolving-agents",
+      "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "耦合文本状态与参数策略的自演化智能体训练",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    },
+    {
+      "paper_id": "2609.10707v1",
+      "route": "202609/13/2609.10707v1-architecting-the-secure-ai-soc-a-neurosymbolic-framework-for-pipeline-integrity-and-threat-mitigation",
+      "title": "Architecting the Secure AI-SOC: A Neurosymbolic Framework for Pipeline Integrity and Threat Mitigation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向安全流水线的间接提示注入神经符号防御",
+      "first_seen_at": "2026-09-13 22:05:59 UTC",
+      "updated_at": "2026-09-13 22:05:59 UTC"
+    }
+  ]
+}
