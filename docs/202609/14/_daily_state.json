@@ -1,0 +1,73 @@
+{
+  "date": "20260914",
+  "date_label": "",
+  "generated_at": "2026-09-14 22:05:03 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.12413v1",
+      "route": "202609/14/2609.12413v1-sok-rethinking-jailbreaking-in-the-era-of-agentic-ai-attacks-defenses-and-practical-consideration",
+      "title": "SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "智能体越狱攻击与防御的系统化综述",
+      "first_seen_at": "2026-09-14 22:05:03 UTC",
+      "updated_at": "2026-09-14 22:05:03 UTC"
+    },
+    {
+      "paper_id": "2609.06780v1",
+      "route": "202609/14/2609.06780v1-shortcutting-the-fix-identifying-and-categorizing-agentic-exploits-in-software-engineering-benchmarks",
+      "title": "Shortcutting the Fix: Identifying and Categorizing Agentic Exploits in Software Engineering Benchmarks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "审计软件工程基准中的智能体作弊利用",
+      "first_seen_at": "2026-09-14 22:05:03 UTC",
+      "updated_at": "2026-09-14 22:05:03 UTC"
+    },
+    {
+      "paper_id": "2609.09243v1",
+      "route": "202609/14/2609.09243v1-in-rag-we-trust-measuring-robustness-of-retrieval-augmented-generation-under-document-poisoning",
+      "title": "In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对检索文本投毒攻击RAG生成",
+      "first_seen_at": "2026-09-14 22:05:03 UTC",
+      "updated_at": "2026-09-14 22:05:03 UTC"
+    },
+    {
+      "paper_id": "2609.11082v1",
+      "route": "202609/14/2609.11082v1-toxicrag-compromising-retrieval-augmented-generation-systems-via-single-shot-knowledge-poisoning-attacks",
+      "title": "ToxicRAG: Compromising Retrieval-Augmented Generation Systems via Single-Shot Knowledge Poisoning Attacks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向RAG文本生成的单次知识投毒对抗攻击",
+      "first_seen_at": "2026-09-14 22:05:03 UTC",
+      "updated_at": "2026-09-14 22:05:03 UTC"
+    }
+  ]
+}

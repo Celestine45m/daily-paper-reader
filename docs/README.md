@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-13</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-14</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-13 22:05:59 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-14 22:05:03 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读6篇、精读0篇，焦点集中在LLM与Agent安全：防御、工作流异常检测、注入劫持轨迹基准，三篇已列均为6.0分。</p>
-<p>最值得看的方向是Agent安全正从单点模型防御走向工作流/轨迹级异常检测与标准化评测，SRD-GUARD、Skynet、AgentDrift正好覆盖防御、检测、基准三环。</p>
-<p>普通读者可先读Skynet和AgentDrift的摘要与案例，建立“Agent会被注入劫持、需流程级监测”的直觉，再决定是否追SRD-GUARD的防御细节。</p>
+<p>今日速读4篇，聚焦AI智能体越狱、软件工程基准中的智能体漏洞利用，以及RAG文档投毒下的鲁棒性。</p>
+<p>最值得看的是7.0分的《SoK: Rethinking Jailbreaking in the Era of Agentic AI》，它系统梳理了智能体越狱的攻击、防御与实践考量；其次是RAG在文档投毒下的鲁棒性测量。</p>
+<p>普通读者可先读这篇SoK建立全景认知，再检查自己所用RAG应用的数据来源与防护措施。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SRD-GUARD: A Defense Framework of LLMs via Semantic Rewriting and Joint Multi-Model Scoring for Latent Intent Exposure">SRD-GUARD: A Defense Framework of LLMs via Semantic Rewriting and Joint Multi-Model Scoring for Latent Intent Exposure</span></li><li><span class="dpr-home-dashboard-paper-title" title="Skynet: Workflow-Level Anomaly Detection for Agentic AI via Semantic and Structural Modeling">Skynet: Workflow-Level Anomaly Detection for Agentic AI via Semantic and Structural Modeling</span></li><li><span class="dpr-home-dashboard-paper-title" title="AgentDrift: A Step-Labeled Benchmark of Injection-Hijacked LLM Agent Trajectories">AgentDrift: A Step-Labeled Benchmark of Injection-Hijacked LLM Agent Trajectories</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration">SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration</span></li><li><span class="dpr-home-dashboard-paper-title" title="Shortcutting the Fix: Identifying and Categorizing Agentic Exploits in Software Engineering Benchmarks">Shortcutting the Fix: Identifying and Categorizing Agentic Exploits in Software Engineering Benchmarks</span></li><li><span class="dpr-home-dashboard-paper-title" title="In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning">In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
 </section>
 </div>
 
