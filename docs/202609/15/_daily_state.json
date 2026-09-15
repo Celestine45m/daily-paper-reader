@@ -1,0 +1,89 @@
+{
+  "date": "20260915",
+  "date_label": "",
+  "generated_at": "2026-09-15 22:31:43 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.14079v1",
+      "route": "202609/15/2609.14079v1-skillsecurer-detecting-and-patching-prompt-injection-vulnerabilities-in-ai-agent-skills",
+      "title": "SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "提示注入攻防智能体",
+      "first_seen_at": "2026-09-15 22:31:43 UTC",
+      "updated_at": "2026-09-15 22:31:43 UTC"
+    },
+    {
+      "paper_id": "2609.15963v1",
+      "route": "202609/15/2609.15963v1-adversarial-testing-of-automated-program-repair-agents-for-security-vulnerabilities",
+      "title": "Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "漏洞修复智能体的对抗测试",
+      "first_seen_at": "2026-09-15 22:31:43 UTC",
+      "updated_at": "2026-09-15 22:31:43 UTC"
+    },
+    {
+      "paper_id": "2609.14723v1",
+      "route": "202609/15/2609.14723v1-detecting-and-localizing-segment-level-poisoning-in-multi-source-llm-agent-inputs",
+      "title": "Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "检测并定位针对LLM智能体输入的投毒攻击",
+      "first_seen_at": "2026-09-15 22:31:43 UTC",
+      "updated_at": "2026-09-15 22:31:43 UTC"
+    },
+    {
+      "paper_id": "2609.12839v2",
+      "route": "202609/15/2609.12839v2-evaluating-context-segmentation-in-locally-deployable-slms-for-cybersecurity-ctf-tasks",
+      "title": "Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "智能体漏洞利用CTF任务",
+      "first_seen_at": "2026-09-15 22:31:43 UTC",
+      "updated_at": "2026-09-15 22:31:43 UTC"
+    },
+    {
+      "paper_id": "2609.15029v1",
+      "route": "202609/15/2609.15029v1-pick-your-poison-learning-to-select-poison-sets-for-stronger-llm-backdoor-attacks",
+      "title": "Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向LLM后门文本攻击的投毒集学习选择",
+      "first_seen_at": "2026-09-15 22:31:43 UTC",
+      "updated_at": "2026-09-15 22:31:43 UTC"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-15T22:25:59.482739+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2609.14079v1",
+      "source": "arxiv",
+      "title": "SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills",
+      "abstract": "Agent skills extend AI agents with reusable instructions, scripts, and configuration, but are also open to new attacks to influence an agent's decisions and actions. To address these risks, we present SkillSecurer, a fully agentic framework for generating, detecting, localising, and remediating security risks in agent skills. Its red agent generates context-compatible injections across nine threat types while recording the exact modification; its blue agent analyses complete skill packages, produces grounded evidence, and proposes patches. For controlled instances, a verifier compares findings and patches with the recorded injection, enabling injection-level evaluation.   We thoroughly evaluate SkillSecurer by selecting the best backend LLM, comparing it with competitors, and manually cross-validating each evaluation stage. With its best performing backend, SkillSecurer is the only scanner to achieve a 100% injection detection rate. Next, we analyse popular skills from skills.sh, finding latent vulnerabilities in more than 17% of the skills examined. Testing some of those skills, we trigger actual incidents, showing the risks of running unverified skills. Our results show that context-aware LLM analysis can provide reliable injection localisation and actionable remediation beyond skill-level flagging alone.",
+      "authors": [
+        "Donato Mecca",
+        "Alberto Verna",
+        "Youness Bouchari",
+        "Nikhil Jha",
+        "Marco Mellia"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-12T17:52:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.14079v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "prompt-injection attack and defense agents",
+      "llm_evidence_cn": "提示注入攻防智能体",
+      "llm_evidence": "提示注入攻防智能体",
+      "canonical_evidence": "提示注入攻防智能体",
+      "llm_tldr_en": "SkillSecurer is a fully agentic framework whose red agent generates nine types of context-compatible prompt injections and whose blue agent detects, localizes, and patches vulnerabilities in AI agent skills.",
+      "llm_tldr_cn": "针对智能体技能中提示注入漏洞带来的安全风险，本文提出全智能体框架SkillSecurer。其红方智能体生成九类上下文兼容的注入并记录改动，蓝方智能体分析完整技能包、给出证据并生成补丁，配合校验器实现注入级评测。实验表明该框架能有效检测、定位并修复技能漏洞，为智能体技能供应链安全提供攻防一体的方案。",
+      "llm_tldr": "针对智能体技能中提示注入漏洞带来的安全风险，本文提出全智能体框架SkillSecurer。其红方智能体生成九类上下文兼容的注入并记录改动，蓝方智能体分析完整技能包、给出证据并生成补丁，配合校验器实现注入级评测。实验表明该框架能有效检测、定位并修复技能漏洞，为智能体技能供应链安全提供攻防一体的方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2609.15963v1",
+      "source": "arxiv",
+      "title": "Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities",
+      "abstract": "Software agents with Large Language Models (LLMs) are designed for Automated Program Repair (APR) tasks, raising the possibility that, in the near future, APR agents will fix bugs automatically without much human intervention. Can we trust an APR agent to produce both functionally correct and secure code in such situations? What if attackers target production APR agents with adversarial issues that seem benign but may influence the agents to produce correct but insecure code? In this paper, we took a first step towards answering these questions by conducting an empirical study. First, we created SWEADV, a benchmark of 750 adversarial issue descriptions constructed from 150 repair tasks in SWE-bench Verified. For each repair task, we created five adversarial issue descriptions, one for each attack type: command execution, deserialization, path traversal, denial of service, and weak hashing. Second, we evaluated mini_swe APR agents from three LLM backends on SWEADV: GPT-5-Mini, MiniMax-M2.5, and DeepSeek-R. We found that on average, adversarial issue descriptions can induce malicious behaviors with successful repair in 51.7% of cases. Third, we investigated whether typical detection mechanisms are sufficient to prevent such malicious patches from being accepted. Pre-repair detection with LLM-as-judge on the adversarial issue descriptions resulted in an average detection accuracy of only 62.3%. Post-repair detection on adversarial APR patches using static analysis tools and LLM-as-judge achieved average detection accuracies of only 39.4% and 55.4%, respectively. We conclude that autonomous APR agents cannot be trusted yet in production deployment, given their susceptibility to adversarial attacks.",
+      "authors": [
+        "Fares Trad",
+        "Simin Chen",
+        "Hung Viet Pham",
+        "Gias Uddin",
+        "Baishakhi Ray"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2026-09-14T17:53:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.15963v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "adversarial testing of security vulnerability repair agents",
+      "llm_evidence_cn": "漏洞修复智能体的对抗测试",
+      "llm_evidence": "漏洞修复智能体的对抗测试",
+      "canonical_evidence": "漏洞修复智能体的对抗测试",
+      "llm_tldr_en": "This empirical study builds SWEADV, a benchmark of 750 adversarial issue descriptions from 150 repair tasks, showing that adversarial inputs can make APR agents produce correct but insecure code.",
+      "llm_tldr_cn": "自动程序修复智能体有望在少人工干预下修漏洞，但攻击者可能用看似良性的对抗性问题诱导其产出功能正确却不安全的代码。本文构建SWEADV基准，基于150个修复任务生成750条对抗性问题描述，开展实证研究。结果显示对抗输入确能诱导智能体产生不安全修复。该工作首次系统评估了程序修复智能体的对抗安全性。",
+      "llm_tldr": "自动程序修复智能体有望在少人工干预下修漏洞，但攻击者可能用看似良性的对抗性问题诱导其产出功能正确却不安全的代码。本文构建SWEADV基准，基于150个修复任务生成750条对抗性问题描述，开展实证研究。结果显示对抗输入确能诱导智能体产生不安全修复。该工作首次系统评估了程序修复智能体的对抗安全性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.14723v1",
+      "source": "arxiv",
+      "title": "Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs",
+      "abstract": "Modern large language model (LLM) agents often construct prompts by aggregating retrieved passages, user reviews, and documents from multiple external sources. This paradigm exposes them to segment-level poisoning attacks, in which an adversary controlling only a small subset of sources injects malicious content to manipulate model outputs. Existing defenses mainly rely on textual patterns, external embeddings, or auxiliary detectors and may therefore fail against fluent, semantically plausible poisoned segments. They also provide limited support for locating the responsible segments. We observe that successful corrupted-evidence and adversarial-instruction attacks induce structured shifts in the LLM's internal activations, forming a consistent activation-space pattern that we call the poison direction. Based on this observation, we propose ActProbe, an internal-state-based framework for detecting and localizing poisoned segments in multi-source LLM inputs. ActProbe projects MLP activations onto a learned poison direction and uses a lightweight linear SVM trained on a small calibration set to detect contaminated prompts. It then applies BinRoL, which combines recursive replacement ablation, Mahalanobis-distance-based branch pruning, and MAD-based robust leaf detection to locate poisoned segments. ActProbe requires no modification to the backend LLM and reduces localization overhead from O(n) exhaustive probing to O(k log n) forward passes. Across three datasets, two attacks, and four open-weight LLMs, ActProbe achieves a 0.01 false-positive rate, a 0.05 false-negative rate, 0.94 localization recall, and a 0.90 localization F1-score. It remains effective against defense-aware adaptive attacks and can protect black-box APIs through surrogate-based poisoned-segment removal.",
+      "authors": [
+        "Xue Tan",
+        "Changhui Wang",
+        "Sanrui Yang",
+        "Hao Luan",
+        "Zhuyang Yu",
+        "Jin Wei",
+        "Ping Chen",
+        "Xiaoyan Sun",
+        "Jun Dai"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-13T18:31:11+00:00",
+      "link": "https://arxiv.org/pdf/2609.14723v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "detecting and localizing poisoning attacks on LLM agent inputs",
+      "llm_evidence_cn": "检测并定位针对LLM智能体输入的投毒攻击",
+      "llm_evidence": "检测并定位针对LLM智能体输入的投毒攻击",
+      "canonical_evidence": "检测并定位针对LLM智能体输入的投毒攻击",
+      "llm_tldr_en": "Detects and localizes segment-level poisoning in multi-source LLM-agent prompts by exploiting structured shifts in internal activations caused by adversarial content.",
+      "llm_tldr_cn": "大模型智能体常聚合多源检索文本构建提示，因而面临片段级投毒攻击，攻击者仅控制少量来源即可操纵输出。现有防御依赖文本模式、外部嵌入或辅助检测器，难以应对流畅且语义合理的投毒片段，也难以定位责任片段。本文观察到成功的攻击会在模型内部激活中引发结构化偏移，据此提出检测与定位方法。该工作为智能体输入安全提供了新的防御与溯源思路。",
+      "llm_tldr": "大模型智能体常聚合多源检索文本构建提示，因而面临片段级投毒攻击，攻击者仅控制少量来源即可操纵输出。现有防御依赖文本模式、外部嵌入或辅助检测器，难以应对流畅且语义合理的投毒片段，也难以定位责任片段。本文观察到成功的攻击会在模型内部激活中引发结构化偏移，据此提出检测与定位方法。该工作为智能体输入安全提供了新的防御与溯源思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.12839v2",
+      "source": "arxiv",
+      "title": "Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks",
+      "abstract": "The proliferation of highly capable open-weight Small Language Models (SLMs) democratizes access to advanced cybersecurity capabilities, posing a escalating risk as these models can bypass proprietary API guardrails when deployed locally. However, SLMs deployed as autonomous agents often struggle with long-horizon, exploratory tasks like cybersecurity Capture The Flag (CTF) challenges due to context bloat and cognitive degradation from accumulated tool-call outputs. To understand and mitigate this cybersecurity threat, we introduce context segmentation, a two-level agentic framework that divides complex exploitation tasks into manageable, contextually isolated sub-problems. Evaluating on the picoCTF dataset using memory-constrained gemma-4 models, we demonstrate that for the E4B model, our strategy acts as an intelligent search, achieving competitive rewards with superior token efficiency compared to brute-force retries, and successfully solving 18.52% of tasks that standard agentic execution fails to complete. Code is available at https://github.com/9xeb/context-segmentation.",
+      "authors": [
+        "Sebastiano Nordio",
+        "Michele Lotto"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-11T13:34:48+00:00",
+      "link": "https://arxiv.org/pdf/2609.12839v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "agentic vulnerability exploitation in CTF",
+      "llm_evidence_cn": "智能体漏洞利用CTF任务",
+      "llm_evidence": "智能体漏洞利用CTF任务",
+      "canonical_evidence": "智能体漏洞利用CTF任务",
+      "llm_tldr_en": "Context segmentation, a two-level agentic framework, splits long-horizon cybersecurity CTF exploitation tasks into contextually isolated sub-problems to mitigate context bloat in memory-constrained small language models.",
+      "llm_tldr_cn": "针对本地部署的小语言模型智能体在长程探索型网络安全CTF任务中因上下文膨胀与认知退化而表现不佳的问题，本文提出上下文分段的两层智能体框架，把复杂利用任务拆分为上下文隔离的子问题。在picoCTF数据集上用内存受限模型评测，显示分段策略能缓解上下文过载。该工作揭示了开源SLM带来的安全威胁并给出可行的缓解思路。",
+      "llm_tldr": "针对本地部署的小语言模型智能体在长程探索型网络安全CTF任务中因上下文膨胀与认知退化而表现不佳的问题，本文提出上下文分段的两层智能体框架，把复杂利用任务拆分为上下文隔离的子问题。在picoCTF数据集上用内存受限模型评测，显示分段策略能缓解上下文过载。该工作揭示了开源SLM带来的安全威胁并给出可行的缓解思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.15029v1",
+      "source": "arxiv",
+      "title": "Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks",
+      "abstract": "Backdoor poisoning attacks add poisoned examples to otherwise-clean finetuning data, pairing a trigger with a target behavior that the model learns to produce when the trigger appears. Existing evaluations typically fix the number of poisoned examples and sample them at random from a candidate pool. We show that this can severely underestimate worst-case vulnerability: across three LLaMA-3-8B backdoor settings, holding the model, clean data, and poison count fixed, attack success ranges from 3% to 80% depending only on which poison set is chosen.   We formalize poison selection as oracle-budgeted set optimization and introduce SAILS (Set-level Audit-Informed Iterative Learned Selection), which learns a set scorer from a few hundred finetune-and-evaluate runs, ranks millions of candidate sets, and audits only a small shortlist. SAILS improves held-out attack success by 30 percentage points on average over the strongest influence baselines, transfers from small-scale to full-scale finetuning, and extends to code-generation, agentic, and API-only backdoors.",
+      "authors": [
+        "Aashiq Muhamed",
+        "Mona T. Diab",
+        "Virginia Smith",
+        "Andrew Ilyas",
+        "Matthew Jagielski"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "published": "2026-09-14T04:44:28+00:00",
+      "link": "https://arxiv.org/pdf/2609.15029v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learned poison set selection for LLM backdoor text attack",
+      "llm_evidence_cn": "面向LLM后门文本攻击的投毒集学习选择",
+      "llm_evidence": "面向LLM后门文本攻击的投毒集学习选择",
+      "canonical_evidence": "面向LLM后门文本攻击的投毒集学习选择",
+      "llm_tldr_en": "The paper shows LLM backdoor attack success varies hugely with which poisoned examples are chosen, then formalizes poison selection as oracle-budgeted set optimization and learns a set scorer SAILS.",
+      "llm_tldr_cn": "论文指出LLM后门攻击评估通常固定投毒数量并随机采样，会严重低估最坏情况脆弱性：固定模型与数据时攻击成功率可随投毒集选择在3%到80%间波动。作者将投毒集选择形式化为带预算的集合优化问题，提出SAILS从少量微调反馈中学习集合评分器以挑选更强投毒集。实验表明该方法显著提升后门攻击强度，为文本模型投毒攻击与防御评估提供新视角。",
+      "llm_tldr": "论文指出LLM后门攻击评估通常固定投毒数量并随机采样，会严重低估最坏情况脆弱性：固定模型与数据时攻击成功率可随投毒集选择在3%到80%间波动。作者将投毒集选择形式化为带预算的集合优化问题，提出SAILS从少量微调反馈中学习集合评分器以挑选更强投毒集。实验表明该方法显著提升后门攻击强度，为文本模型投毒攻击与防御评估提供新视角。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

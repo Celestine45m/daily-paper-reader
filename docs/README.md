@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-14</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-15</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-14 22:05:03 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-15 22:31:43 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读4篇，聚焦AI智能体越狱、软件工程基准中的智能体漏洞利用，以及RAG文档投毒下的鲁棒性。</p>
-<p>最值得看的是7.0分的《SoK: Rethinking Jailbreaking in the Era of Agentic AI》，它系统梳理了智能体越狱的攻击、防御与实践考量；其次是RAG在文档投毒下的鲁棒性测量。</p>
-<p>普通读者可先读这篇SoK建立全景认知，再检查自己所用RAG应用的数据来源与防护措施。</p>
+<p>今日精选5篇：精读2篇聚焦AI Agent技能提示注入漏洞与自动程序修复智能体的对抗测试，速读3篇覆盖LLM-Agent输入投毒、SLM CTF上下文分割及LLM后门投毒集选择。</p>
+<p>最值得看的是两篇8分精读：SkillSecurer关注AI Agent技能中提示注入漏洞的检测与修补，另一篇关注自动程序修复智能体的安全漏洞对抗测试。</p>
+<p>普通读者可先读这两篇8分精读，建立“Agent与修复工具自身也可能被攻击”的安全意识，再按兴趣浏览3篇6~7分速读。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills">SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities">Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration">SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration</span></li><li><span class="dpr-home-dashboard-paper-title" title="Shortcutting the Fix: Identifying and Categorizing Agentic Exploits in Software Engineering Benchmarks">Shortcutting the Fix: Identifying and Categorizing Agentic Exploits in Software Engineering Benchmarks</span></li><li><span class="dpr-home-dashboard-paper-title" title="In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning">In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs">Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks">Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks">Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>3</strong></span></div>
 </section>
 </div>
 
