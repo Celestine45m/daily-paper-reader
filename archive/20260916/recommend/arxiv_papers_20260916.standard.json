@@ -1,0 +1,127 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-16T22:10:27.714018+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.13128v1",
+      "source": "arxiv",
+      "title": "Where to Defend? Layer-Wise Adversarial Training for Robust Transformer-Based Semantic Communications",
+      "abstract": "Deep learning-based semantic communication (DeepSC), a Transformer-based encoder-decoder, achieves semantic fidelity over noisy channels but remains vulnerable to adversarial perturbations injected at multiple stages of the pipeline. We present a layer-wise robustness framework that compares fast gradient sign method (FGSM), projected gradient descent (PGD), and l2-normalized fast gradient method (FGM) defenses at the embedding output, and then uses PGD to analyze three attack and defense points: the embedding output, encoder output, and channel-encoder bottleneck. We evaluate reconstruction on Europarl and UK Hansard and sentiment classification on SST2 and YELP under additive white Gaussian noise (AWGN) and Rayleigh fading. A first-order damage budget, {epsilon} times the l1 norm of the clean-input loss gradient at each injection point, predicts the attack-severity ordering, and the transfer matrix reveals asymmetric defense transfer: the embedding defense transfers strongly to encoder attacks, whereas encoder defenses degrade robustness against upstream attacks. For reconstruction, encoder-point training yields the largest matched gain but fails severely under embedding attacks; joint embedding-plus-encoder training retains comparable gains under encoder attacks while mitigating this mismatch failure, and Rayleigh fading attenuates robustness gains and degradation. For classification, three of four defenses collapse to constant predictors; only the channel-encoder defense remains non-degenerate, suggesting a protective role for the 128D-to-16D bottleneck. At a signal-to-noise ratio (SNR) of 9 dB and perturbation budget {epsilon} = 0.3, the matched encoder defense recovers bilingual evaluation understudy (BLEU) from ~ 0.10 to ~ 0.64 on Europarl/AWGN, whereas the mismatched encoder defense yields a -0.444 BLEU change relative to the undefended baseline under an embedding attack.",
+      "authors": [
+        "Maria Slim",
+        "Razane Tajeddine",
+        "Mariette Awad",
+        "Hadi Sarieddeen"
+      ],
+      "primary_category": "eess.SP",
+      "categories": [
+        "eess.SP"
+      ],
+      "published": "2026-09-11T17:52:17+00:00",
+      "link": "https://arxiv.org/pdf/2609.13128v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial attacks and defenses on transformer text data",
+      "llm_evidence_cn": "针对Transformer文本数据的对抗攻防",
+      "llm_evidence": "针对Transformer文本数据的对抗攻防",
+      "canonical_evidence": "针对Transformer文本数据的对抗攻防",
+      "llm_tldr_en": "Transformer-based semantic communication is vulnerable to adversarial perturbations across pipeline stages. A layer-wise framework compares FGSM, PGD and FGM defenses and analyzes three attack points on Europarl, Hansard, SST2 and YELP.",
+      "llm_tldr_cn": "基于Transformer的语义通信能在噪声信道下保持语义保真，但其流水线多个阶段易受对抗扰动影响。论文提出逐层鲁棒性框架，在嵌入输出处比较FGSM、PGD与FGM三种防御，并进一步用PGD分析嵌入输出、编码器输出和信道编码瓶颈三个攻防点。作者在Europarl、UK Hansard重建任务及SST2、YELP情感分类上，于高斯白噪声与瑞利衰落信道下评估防御效果，为语义通信系统选择最优防御层提供了依据。",
+      "llm_tldr": "基于Transformer的语义通信能在噪声信道下保持语义保真，但其流水线多个阶段易受对抗扰动影响。论文提出逐层鲁棒性框架，在嵌入输出处比较FGSM、PGD与FGM三种防御，并进一步用PGD分析嵌入输出、编码器输出和信道编码瓶颈三个攻防点。作者在Europarl、UK Hansard重建任务及SST2、YELP情感分类上，于高斯白噪声与瑞利衰落信道下评估防御效果，为语义通信系统选择最优防御层提供了依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.13731v1",
+      "source": "arxiv",
+      "title": "Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges",
+      "abstract": "The transition from passive foundation models to autonomous, goal-directed agentic AI systems has introduced unprecedented capabilities by coupling recursive cognitive reasoning loops, persistent memory architectures, live tool execution planes, and multi-agent collaboration topologies. However, granting probabilistic neural cores execution authority across filesystems, networks, and cloud infrastructure dissolves classical security perimeters: natural language simultaneously serves as input data, internal control code, and communication protocols, exposing a Turing-complete blast radius where untrusted data represents executable instructions. This survey delivers a comprehensive systems-security reference framework for trustworthy agentic AI, synthesizing 206 foundational studies and regulatory standards. We formalize the general agent architecture as a stateful 5-tuple and establish a 6-dimensional trustworthiness taxonomy covering security, safety, privacy, explainability, fairness, and accountability. We systematically analyze threat surfaces across intra-execution loops and interaction planes, formulate a multi-layered zero-trust defense-in-depth architecture integrating Dual-LLM isolation, Capability-Based Access Control, kernel eBPF probes, and sandboxed runtimes, review standardized evaluation benchmarks, and map technical controls to international AI governance frameworks.",
+      "authors": [
+        "Seyedakbar Mostafavi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-12T05:51:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.13731v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "survey on agentic AI threat landscapes and defense architectures",
+      "llm_evidence_cn": "智能体AI威胁态势与防御架构综述",
+      "llm_evidence": "智能体AI威胁态势与防御架构综述",
+      "canonical_evidence": "智能体AI威胁态势与防御架构综述",
+      "llm_tldr_en": "This survey examines security threats facing autonomous agentic AI systems that hold execution authority over files, networks and cloud, and reviews defense architectures, threat landscapes and open challenges for trustworthy agentic AI.",
+      "llm_tldr_cn": "随着基础模型向自主、目标驱动的智能体AI演进，系统获得文件、网络与云基础设施的执行权，传统安全边界被瓦解，自然语言同时充当输入数据、内部控制码与通信协议。本综述系统梳理智能体AI的威胁态势，涵盖递归推理、持久记忆、工具执行与多智能体协作带来的攻击面，并归纳防御架构与开放挑战。它为构建可信智能体AI安全体系提供全景参考，并指出未来研究方向。",
+      "llm_tldr": "随着基础模型向自主、目标驱动的智能体AI演进，系统获得文件、网络与云基础设施的执行权，传统安全边界被瓦解，自然语言同时充当输入数据、内部控制码与通信协议。本综述系统梳理智能体AI的威胁态势，涵盖递归推理、持久记忆、工具执行与多智能体协作带来的攻击面，并归纳防御架构与开放挑战。它为构建可信智能体AI安全体系提供全景参考，并指出未来研究方向。",
+      "llm_tags": [
+        "query:as:composite"
+      ],
+      "matched_query_tag": "query:as:composite",
+      "matched_query_text": "Papers central to 帮我查找自博弈、攻防、漏挖、文本数据增强智能体相关的论文, especially work that connects or combines: self-play reinforcement learning; adversarial attack text; vulnerability mining software security; text data augmentation techniques; self-play agent training; data augmentation agent text generation; self play based reinforcement learning for adversarial attack and defense; vulnerability mining using intelligent agents and reinforcement learning; text data augmentation with language model agents; adversarial attack and defense in text using self play.",
+      "matched_requirement_id": "req-composite-as",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.14060v1",
+      "source": "arxiv",
+      "title": "AGENTQ: Quantization-Conditioned Backdoor Attacks on LLM Agents",
+      "abstract": "Quantization is one of the default deployment paths for open-weight LLM agents, but it is not behavior-preserving: an adversary can release a full-precision checkpoint that passes audits yet misbehaves once quantized, termed as quantization-conditioned attack (QCA). Prior QCA work targets free-text generation, where harm is mediated by a human reader. In contrast, the agentic setting poses a more severe risk: the triggered payload is a structured function that can be executed without human oversight. We present the first study of QCA against LLM agents. We find that directly adapting prior backdoor-injection methods can produce malicious behavior after quantization, but substantially degrades benign utility, rendering the resulting attacks impractical. To understand the true upper bound of the threat, we propose AGENTQ, an attack framework that combines layer-banded LoRA injection with partial-PGD repair over a multi-codebook quantization-equivalence class. AGENTQ preserves normal agentic capability while concentrating malicious behavior in the quantized model. Across three trigger-action pairs and three codebooks (NF4, FP4, INT8), AGENTQ reaches up to 100% post-quantization attack success rate with minimal loss of benign utility, underscoring the need to make quantization-aware safety evaluation a standard requirement before open-weight agents are deployed.",
+      "authors": [
+        "Xiaoqun Liu",
+        "Qiben Yan"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-12T17:17:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.14060v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "backdoor attacks on LLM agents triggered after quantization",
+      "llm_evidence_cn": "量化触发针对LLM智能体的后门攻击",
+      "llm_evidence": "量化触发针对LLM智能体的后门攻击",
+      "canonical_evidence": "量化触发针对LLM智能体的后门攻击",
+      "llm_tldr_en": "AGENTQ presents the first study of quantization-conditioned backdoor attacks against LLM agents, where a full-precision checkpoint passes audits but misbehaves once quantized, and proposes an injection method that preserves benign utility.",
+      "llm_tldr_cn": "量化是开放权重LLM智能体的默认部署路径，却不保持行为一致，攻击者可发布通过审计的全精度检查点，使其在量化后执行可被自动调用的结构化恶意载荷。论文首次研究针对智能体的量化条件后门攻击，发现直接套用既有后门注入方法虽能诱发恶意行为，却严重损害正常效用。作者据此提出改进注入方法，在保持良性性能的同时实现有效攻击。",
+      "llm_tldr": "量化是开放权重LLM智能体的默认部署路径，却不保持行为一致，攻击者可发布通过审计的全精度检查点，使其在量化后执行可被自动调用的结构化恶意载荷。论文首次研究针对智能体的量化条件后门攻击，发现直接套用既有后门注入方法虽能诱发恶意行为，却严重损害正常效用。作者据此提出改进注入方法，在保持良性性能的同时实现有效攻击。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

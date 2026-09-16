@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-15</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-16</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-15 22:31:43 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-16 22:11:39 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精选5篇：精读2篇聚焦AI Agent技能提示注入漏洞与自动程序修复智能体的对抗测试，速读3篇覆盖LLM-Agent输入投毒、SLM CTF上下文分割及LLM后门投毒集选择。</p>
-<p>最值得看的是两篇8分精读：SkillSecurer关注AI Agent技能中提示注入漏洞的检测与修补，另一篇关注自动程序修复智能体的安全漏洞对抗测试。</p>
-<p>普通读者可先读这两篇8分精读，建立“Agent与修复工具自身也可能被攻击”的安全意识，再按兴趣浏览3篇6~7分速读。</p>
+<p>今天速读3篇、精读0篇，三篇均6.0分，主线落在AI安全与鲁棒性。</p>
+<p>最值得看的是智能体安全方向：可信Agentic AI综述梳理威胁与防御，AGENTQ则聚焦LLM智能体的量化条件后门攻击。</p>
+<p>普通读者可先从综述建立风险地图，再关注后门攻击与防御的后续进展。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills">SkillSecurer: Detecting and Patching Prompt-Injection Vulnerabilities in AI Agent Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities">Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>2</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -89,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs">Detecting and Localizing Segment-Level Poisoning in Multi-Source LLM-Agent Inputs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks">Evaluating Context Segmentation in Locally Deployable SLMs for Cybersecurity CTF Tasks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks">Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Where to Defend? Layer-Wise Adversarial Training for Robust Transformer-Based Semantic Communications">Where to Defend? Layer-Wise Adversarial Training for Robust Transformer-Based Semantic Communications</span></li><li><span class="dpr-home-dashboard-paper-title" title="Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges">Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges</span></li><li><span class="dpr-home-dashboard-paper-title" title="AGENTQ: Quantization-Conditioned Backdoor Attacks on LLM Agents">AGENTQ: Quantization-Conditioned Backdoor Attacks on LLM Agents</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>3</strong></span></div>
 </section>

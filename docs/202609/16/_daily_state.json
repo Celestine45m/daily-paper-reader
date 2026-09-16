@@ -1,0 +1,57 @@
+{
+  "date": "20260916",
+  "date_label": "",
+  "generated_at": "2026-09-16 22:11:39 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.13128v1",
+      "route": "202609/16/2609.13128v1-where-to-defend-layer-wise-adversarial-training-for-robust-transformer-based-semantic-communications",
+      "title": "Where to Defend? Layer-Wise Adversarial Training for Robust Transformer-Based Semantic Communications",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对Transformer文本数据的对抗攻防",
+      "first_seen_at": "2026-09-16 22:11:39 UTC",
+      "updated_at": "2026-09-16 22:11:39 UTC"
+    },
+    {
+      "paper_id": "2609.13731v1",
+      "route": "202609/16/2609.13731v1-trustworthy-agentic-ai-a-comprehensive-cybersecurity-and-systems-survey-on-threat-landscapes-defense-architectures-and-open-challenges",
+      "title": "Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "智能体AI威胁态势与防御架构综述",
+      "first_seen_at": "2026-09-16 22:11:39 UTC",
+      "updated_at": "2026-09-16 22:11:39 UTC"
+    },
+    {
+      "paper_id": "2609.14060v1",
+      "route": "202609/16/2609.14060v1-agentq-quantization-conditioned-backdoor-attacks-on-llm-agents",
+      "title": "AGENTQ: Quantization-Conditioned Backdoor Attacks on LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "量化触发针对LLM智能体的后门攻击",
+      "first_seen_at": "2026-09-16 22:11:39 UTC",
+      "updated_at": "2026-09-16 22:11:39 UTC"
+    }
+  ]
+}
