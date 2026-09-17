@@ -1,0 +1,153 @@
+{
+  "date": "20260917",
+  "date_label": "",
+  "generated_at": "2026-09-17 21:48:15 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.17221v1",
+      "route": "202609/17/2609.17221v1-grounding-swe-agent-decisions-in-architecture-0-design-navigating-unknown-unknowns-through-physical-mapping",
+      "title": "Grounding SWE-Agent Decisions in Architecture-0 Design: Navigating Unknown Unknowns through Physical Mapping",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "沿纯文本自博弈、工具反馈与物理映射的渐进路径",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.13353v1",
+      "route": "202609/17/2609.13353v1-skillatlas-an-attack-trace-library-for-agent-skills",
+      "title": "SkillAtlas: An Attack Trace Library for Agent Skills",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体技能安全漏洞的攻击轨迹库",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.13731v1",
+      "route": "202609/17/2609.13731v1-trustworthy-agentic-ai-a-comprehensive-cybersecurity-and-systems-survey-on-threat-landscapes-defense-architectures-and-open-challenges",
+      "title": "Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "智能体AI威胁态势与防御架构的网络安全综述",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.16098v1",
+      "route": "202609/17/2609.16098v1-universal-defenses-for-tool-integrated-llm-agents-against-adversarial-attacks",
+      "title": "Universal Defenses for Tool-Integrated LLM Agents Against Adversarial Attacks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向LLM智能体提示注入等文本对抗攻击的通用防御",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.16305v1",
+      "route": "202609/17/2609.16305v1-blindspot-a-benchmark-for-safety-and-refusal-calibration-in-long-horizon-tool-using-agents",
+      "title": "BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长程工具智能体安全的自适应对抗交互基准",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.16541v1",
+      "route": "202609/17/2609.16541v1-a-cyber-range-evaluation-of-autonomous-network-incident-response-agents",
+      "title": "A Cyber Range Evaluation of Autonomous Network Incident Response Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "网络靶场中基于强化学习的防御智能体对抗红队",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.16681v1",
+      "route": "202609/17/2609.16681v1-marksec-capability-aware-evaluation-of-adversarial-attacks-against-llm-watermarks",
+      "title": "MarkSec: Capability-Aware Evaluation of Adversarial Attacks Against LLM Watermarks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "统一评估针对LLM水印文本的窃取、擦除与伪造攻击",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.16694v1",
+      "route": "202609/17/2609.16694v1-toward-secure-ai-powered-penetration-testing-agents-security-threats-guardrails-and-architectural-perspectives",
+      "title": "Toward Secure AI-Powered Penetration Testing Agents: Security Threats, Guardrails, and Architectural Perspectives",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向漏洞识别的自主渗透测试LLM智能体",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    },
+    {
+      "paper_id": "2609.19140v1",
+      "route": "202609/17/2609.19140v1-agentlsd-evaluating-ai-security-agents-under-adversarial-task-contamination",
+      "title": "AgentLSD: Evaluating AI Security Agents Under Adversarial Task Contamination",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对抗污染下的安全智能体与CTF漏洞任务",
+      "first_seen_at": "2026-09-17 21:48:15 UTC",
+      "updated_at": "2026-09-17 21:48:15 UTC"
+    }
+  ]
+}
