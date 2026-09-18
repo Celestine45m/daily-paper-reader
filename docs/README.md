@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-17</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-18</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 9 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>9</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-17 21:48:15 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-18 21:37:47 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>2026-09-17 日报速读 9 篇、精读 0 篇，聚焦智能体安全与架构落地。最值得看的是《Grounding SWE-Agent Decisions in Architecture-0 Design》以 7.0 分领先，另有《SkillAtlas》和《Trustworthy Agentic AI》两篇 6.0 分，分别关注技能攻击痕迹与智能体网络安全全景。建议普通读者优先从高分那篇入手，了解智能体决策如何与物理映射对齐，再按兴趣扫读两篇安全综述。</p>
+<p>今天筛出5篇论文，精读1篇多智能体交易系统中的对抗信号传播（8.0/10），速读覆盖智能体渗透测试、自博弈均衡选择与LLM恶意软件分析规避。</p>
+<p>最值得看的是8.0分精读揭示交易场内对抗信号如何跨智能体扩散，以及速读中“自动化攻击图+神经符号漏洞挖掘”和“ALIBI对LLM恶意软件分析器的合法性注入”两条安全评测线索。</p>
+<p>普通读者可先读精读结论，再按兴趣浏览攻击图构建与ALIBI，重点理解对抗信号和输入如何影响多智能体及LLM的安全决策。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems">Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">9 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Grounding SWE-Agent Decisions in Architecture-0 Design: Navigating Unknown Unknowns through Physical Mapping">Grounding SWE-Agent Decisions in Architecture-0 Design: Navigating Unknown Unknowns through Physical Mapping</span></li><li><span class="dpr-home-dashboard-paper-title" title="SkillAtlas: An Attack Trace Library for Agent Skills">SkillAtlas: An Attack Trace Library for Agent Skills</span></li><li><span class="dpr-home-dashboard-paper-title" title="Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges">Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Automating Attack Graph Construction for Agentic Pentesting. Towards Neuro-Symbolic Vulnerability Hunting">Automating Attack Graph Construction for Agentic Pentesting. Towards Neuro-Symbolic Vulnerability Hunting</span></li><li><span class="dpr-home-dashboard-paper-title" title="Steering Equilibrium Selection in Regularized Self-Play via the Reference Policy">Steering Equilibrium Selection in Regularized Self-Play via the Reference Policy</span></li><li><span class="dpr-home-dashboard-paper-title" title="ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers">ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>9</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
 </section>
 </div>
 

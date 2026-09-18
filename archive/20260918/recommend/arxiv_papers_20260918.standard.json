@@ -1,0 +1,207 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-18T21:34:12.660978+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.19789v1",
+      "source": "arxiv",
+      "title": "Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems",
+      "abstract": "Multi-agent trading systems built on large language models (LLMs) are beginning to appear in quantitative finance, yet their robustness to adversarial inputs is largely unknown. We study the vulnerability of LLM trading stacks to black-box, input-only attacks that enter solely via admissible social-media feeds. We introduce the Generic Multi-Agent Trading System (GMATS), a framework that captures modern multiagent trading architectures and instantiate a class of black-box poisoning attackers that treat an LLM as a post generator and inject budget-constrained, plausibly benign social-media content into the analyst's evidence stream. We define contagion metrics that trace how adversarial content propagates through the stack, including belief-shift scores at analyst and coordinator layers and attack-clean deltas on standard backtest metrics. Experiments on a safe offline benchmark with historical market and social data show that even simple input-only attackers can materially degrade risk-return profiles, sharply reducing Sharpe ratios. At the same time, we find that suitably designed multi-agent topologies and coordinator prompts can dampen adversarial shocks and improve average robustness under identical poisoning budgets.",
+      "authors": [
+        "Qi Rong Sua",
+        "Junhao Dong",
+        "Nguyen Duc Thai",
+        "Yuqing Wen",
+        "Cheston Tan",
+        "Yew-Soon Ong"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-17T06:54:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.19789v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "black-box input-only adversarial attacks via injected social-media text",
+      "llm_evidence_cn": "通过注入社交媒体文本实施黑盒对抗攻击",
+      "llm_evidence": "通过注入社交媒体文本实施黑盒对抗攻击",
+      "canonical_evidence": "通过注入社交媒体文本实施黑盒对抗攻击",
+      "llm_tldr_en": "This work studies how black-box, input-only adversarial text injected through social-media feeds spreads across LLM multi-agent trading systems and defines contagion metrics to trace its propagation.",
+      "llm_tldr_cn": "基于LLM的多智能体交易系统正进入量化金融，但其对对抗输入的鲁棒性尚不明确。本文提出通用多智能体交易系统GMATS，并构造一类黑盒投毒攻击者，仅通过社交媒体信息流注入预算受限、看似无害的对抗文本内容。研究定义传染度量以追踪对抗内容在系统中的传播路径。结果揭示此类系统易受输入级攻击影响，为多智能体金融系统的安全评估提供框架。",
+      "llm_tldr": "基于LLM的多智能体交易系统正进入量化金融，但其对对抗输入的鲁棒性尚不明确。本文提出通用多智能体交易系统GMATS，并构造一类黑盒投毒攻击者，仅通过社交媒体信息流注入预算受限、看似无害的对抗文本内容。研究定义传染度量以追踪对抗内容在系统中的传播路径。结果揭示此类系统易受输入级攻击影响，为多智能体金融系统的安全评估提供框架。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.15523v1",
+      "source": "arxiv",
+      "title": "Automating Attack Graph Construction for Agentic Pentesting. Towards Neuro-Symbolic Vulnerability Hunting",
+      "abstract": "Logic attack graphs grounded in scanner output provide explicit and auditable attack path reasoning LLM-based agents lack. Integrating symbolic frameworks such as MulVAL to contemporary security workflows or agentic pipelines, however, requires translating scanner evidence to initial facts, and creating domain-specific rules. We present a semi-automated pipeline that addresses this interoperability problem and depict its feasibility in a web-security case study. Our pipeline parses findings from Trivy, Semgrep, and Nmap into MulVAL predicates and uses an LLM-assisted process to construct domain-specific Datalog rules linking scanner-detectable evidence to attack techniques. MulVAL/XSB then performs symbolic inference to generate structured attack paths. We evaluate the attack-graph construction infrastructure on 54 web Capture-the-Flag tasks from CyBench within an agentic pipeline (Hybrid Reasoner); we do not evaluate the performance of the downstream agent. Every task produced at least one goal-reaching graph, and we achieve mean ground-truth vulnerability coverage of 53.7%, with 51.9% achieving full coverage; mean noise-path rate was 83.9%. With median end-to-end time of 24.9 s (MulVAL reasoning: 2.7 s) the pipeline is feasible and runtime-practical for agentic workflows, but predicate coverage, rule coverage, and path precision remain limiting factors. Next steps include semantic rule validation and agent-level comparison for graph-guided pentesting.",
+      "authors": [
+        "Oliver Stevanovic",
+        "Jasmin Wachter"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-14T13:13:54+00:00",
+      "link": "https://arxiv.org/pdf/2609.15523v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "agentic pentesting and vulnerability hunting",
+      "llm_evidence_cn": "智能体渗透测试与漏洞挖掘",
+      "llm_evidence": "智能体渗透测试与漏洞挖掘",
+      "canonical_evidence": "智能体渗透测试与漏洞挖掘",
+      "llm_tldr_en": "Logic attack graphs provide auditable reasoning but integrating symbolic tools like MulVAL into agentic pentesting is hard. This paper presents a semi-automated pipeline that parses scanner findings into MulVAL predicates and uses LLM-assisted rules, demonstrated in a web-security case study.",
+      "llm_tldr_cn": "基于扫描器输出的逻辑攻击图能提供可审计的攻击路径推理，但将MulVAL等符号框架集成到现代智能体渗透测试流程中需要翻译扫描证据并构建领域规则。本文提出半自动化流水线，将Trivy、Semgrep和Nmap的发现解析为MulVAL谓词，并利用LLM辅助生成Datalog规则。在Web安全案例中验证了该流程的可行性，为神经符号漏洞挖掘提供了实用路径。",
+      "llm_tldr": "基于扫描器输出的逻辑攻击图能提供可审计的攻击路径推理，但将MulVAL等符号框架集成到现代智能体渗透测试流程中需要翻译扫描证据并构建领域规则。本文提出半自动化流水线，将Trivy、Semgrep和Nmap的发现解析为MulVAL谓词，并利用LLM辅助生成Datalog规则。在Web安全案例中验证了该流程的可行性，为神经符号漏洞挖掘提供了实用路径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.19722v1",
+      "source": "arxiv",
+      "title": "ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers",
+      "abstract": "Large language models are being integrated into malware triage workflows as reasoning components that summarize static evidence and produce analyst-facing verdicts. This paper shows that the same reasoning capability introduces a new attack surface. We present ALIBI, a semantic cover story attack against frontier LLM-based malware analyzers. ALIBI adds a small, non-executed read-only section to a compiled binary, containing a coherent but false security product narrative, without altering imports or executable behavior. Instead of issuing direct instructions to the model, it reframes suspicious evidence as expected behavior of a benign endpoint security tool. On a frozen PE set of 50 malicious samples, the payload flips 30 of the 35 baseline-malicious samples to benign on Gemini 2.5 Pro, while GPT-5.5 Pro and Claude Opus 4.7 produce substantial severity downgrades with significant confidence reductions even when verdict labels are preserved. The attack transfers to ELF binaries, where Gemini flips 16 of 40. A verification-guided defense prompt roughly halves the benign verdicts, but 42.9 percent of malicious samples still reach benign. LLM malware analyzers therefore require provenance checks that separate verified facts from attacker-controlled claims, not narrative trust.",
+      "authors": [
+        "Hyeongjun Choi",
+        "Wonyoung Jung",
+        "Haehoon Seo",
+        "Sungyup Nam"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-09-17T05:27:59+00:00",
+      "link": "https://arxiv.org/pdf/2609.19722v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "semantic text-based adversarial attack on LLM analyzers",
+      "llm_evidence_cn": "面向大模型分析器的语义文本对抗攻击",
+      "llm_evidence": "面向大模型分析器的语义文本对抗攻击",
+      "canonical_evidence": "面向大模型分析器的语义文本对抗攻击",
+      "llm_tldr_en": "ALIBI injects a false but coherent security-narrative text section into malware binaries to manipulate LLM-based malware analyzers without changing behavior.",
+      "llm_tldr_cn": "大模型正被引入恶意软件分析流程，其推理能力也带来了新的攻击面。本文提出ALIBI，一种语义伪装故事攻击：在编译后的二进制中加入一段不执行、只读且内容连贯但虚假的安全产品叙述，不改变导入与执行行为，把可疑证据重新包装为良性终端安全工具的正常表现。在50个恶意样本的固定PE集上，该载荷使35个基础判定中的30个被翻转。该工作揭示了文本语义层面的对抗注入对LLM分析器的威胁。",
+      "llm_tldr": "大模型正被引入恶意软件分析流程，其推理能力也带来了新的攻击面。本文提出ALIBI，一种语义伪装故事攻击：在编译后的二进制中加入一段不执行、只读且内容连贯但虚假的安全产品叙述，不改变导入与执行行为，把可疑证据重新包装为良性终端安全工具的正常表现。在50个恶意样本的固定PE集上，该载荷使35个基础判定中的30个被翻转。该工作揭示了文本语义层面的对抗注入对LLM分析器的威胁。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.19820v1",
+      "source": "arxiv",
+      "title": "Steering Equilibrium Selection in Regularized Self-Play via the Reference Policy",
+      "abstract": "Regularized self-play -- the family behind DeepNash's Stratego play -- drives a two-player zero-sum policy to a Nash equilibrium by best-responding to a slowly moving, entropy-regularized reference policy $ρ$. When the game has a polytope of value-equivalent equilibria, the regularizer silently breaks the tie: with a uniform reference it selects the maximum-entropy member, the I-projection of $ρ$ onto the Nash set. Can the reference be used to choose the equilibrium on purpose? On five exactly solvable games plus a 2-D polytope, with exact best responses and equivalence tests over independent seeds, anchoring the reference at a target member and refining steers self-play to that member with mean coordinate error 0.007 at median exploitability $5\\times10^{-5}$, TOST-equivalent to the request within $\\pm0.05$; the anchoring persists through refinement and follows the reference, not the initialization. Selection follows the reach-weighted I-projection (slope 0.969 [0.950, 0.987]). We report with equal emphasis where the story breaks: fixed off-manifold references cost 0.08-0.25 exploitability; stiff or flat families require a smaller mirror step, set by a pre-registered rule; boundary targets undershoot; curvature predicts where boundary saturation bites (rank correlation 0.90, p=0.037) while interior precision is curvature-independent. Table and MLP steering maps are equivalent within $\\pm0.03$ at every target (30 seeds); matched control arms show attention's robust signature is excess seed variance, any systematic shift bounded at 0.018 and not significant. Against a best response the selection-robustness trade-off is degenerate: steering matters only against fixed, non-equilibrium opponents. The recipe -- anchor the reference at the desired member and refine -- reinterprets the KL anchor of RLHF-style RL as a selection knob, not only a stability leash.",
+      "authors": [
+        "Luis Leal"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.GT",
+        "cs.LG"
+      ],
+      "published": "2026-09-17T07:30:23+00:00",
+      "link": "https://arxiv.org/pdf/2609.19820v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "regularized self-play steering equilibrium selection",
+      "llm_evidence_cn": "正则化自博弈引导均衡选择",
+      "llm_evidence": "正则化自博弈引导均衡选择",
+      "canonical_evidence": "正则化自博弈引导均衡选择",
+      "llm_tldr_en": "This work shows the entropy-regularized reference policy in regularized self-play can be anchored to deliberately steer two-player zero-sum learning to a chosen equilibrium.",
+      "llm_tldr_cn": "正则化自博弈通过对缓慢更新的熵正则参考策略做最优响应来逼近纳什均衡，但当存在多个等价均衡时正则项会隐含地决定选择哪一个。本文研究能否用参考策略有目的地挑选均衡：在五个可精确求解的博弈与一个二维多面体上，以精确最优响应和多种子等价性检验，将参考锚定到目标均衡成员并细化。结果显示自博弈被引导至该成员，平均坐标误差约0.007。该结论为可控自博弈均衡选择提供了理论与实验依据。",
+      "llm_tldr": "正则化自博弈通过对缓慢更新的熵正则参考策略做最优响应来逼近纳什均衡，但当存在多个等价均衡时正则项会隐含地决定选择哪一个。本文研究能否用参考策略有目的地挑选均衡：在五个可精确求解的博弈与一个二维多面体上，以精确最优响应和多种子等价性检验，将参考锚定到目标均衡成员并细化。结果显示自博弈被引导至该成员，平均坐标误差约0.007。该结论为可控自博弈均衡选择提供了理论与实验依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.20089v1",
+      "source": "arxiv",
+      "title": "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
+      "abstract": "Self-evolving methods reduce the need for human-annotated trajectories by allowing tool-using agents to generate their own training data. Yet existing methods typically separate trajectory generation from evaluation, relying on static verifiers that cannot adapt to emerging failure modes or self-consistency signals that may reinforce errors shared across trajectories. Jointly adapting planning, execution, and evaluation offers a promising alternative, but introduces a fundamental coordination challenge: each component continuously changes the data or feedback used to train the others. We address this challenge with \\textbf{UnifiedPlayers}, a cooperative framework comprising a Planning Player that generates tasks, an Execution Player that produces multi-turn trajectories with Python tool calls, and an Evaluation Player that constructs executable verifiers. We design role-specific rewards that coordinate the three players toward a shared learning objective under GRPO. Across two model backbones and twelve reasoning benchmarks, UnifiedPlayers outperforms the strongest prior baseline by at least 3.5\\% on mathematical reasoning and 3.9\\% on general reasoning tasks. Moreover, the learned verifier achieves 84.2\\% adversarial detection accuracy, while its reward signal exhibits 2.03$\\times$ higher per-question variance than a self-consistency baseline, providing more discriminative verifications. These results highlight cooperation among specialized players as a promising path toward self-enhanced tool-integrated agents.",
+      "authors": [
+        "Wenjie Liao",
+        "Liangjie Zhao",
+        "Zehong Cao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-17T11:49:31+00:00",
+      "link": "https://arxiv.org/pdf/2609.20089v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "self-evolving agents generate own training data",
+      "llm_evidence_cn": "自进化智能体自生成训练数据",
+      "llm_evidence": "自进化智能体自生成训练数据",
+      "canonical_evidence": "自进化智能体自生成训练数据",
+      "llm_tldr_en": "UnifiedPlayers is a cooperative framework with planning, execution and evaluation players that jointly adapt to generate and assess their own training data for tool-integrated agentic RL.",
+      "llm_tldr_cn": "自进化方法让工具智能体自行生成训练数据，但常将轨迹生成与评估分离，静态验证器难适应新失效模式且可能强化共性错误。本文提出UnifiedPlayers协作框架，由规划、执行与评估三类智能体共同生成任务、执行并评价，从而联合自适应。该设计缓解各组件相互改变训练数据带来的协调难题。实验表明该框架提升工具集成推理与智能体强化学习效果，为自演化智能体训练提供新范式。",
+      "llm_tldr": "自进化方法让工具智能体自行生成训练数据，但常将轨迹生成与评估分离，静态验证器难适应新失效模式且可能强化共性错误。本文提出UnifiedPlayers协作框架，由规划、执行与评估三类智能体共同生成任务、执行并评价，从而联合自适应。该设计缓解各组件相互改变训练数据带来的协调难题。实验表明该框架提升工具集成推理与智能体强化学习效果，为自演化智能体训练提供新范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
