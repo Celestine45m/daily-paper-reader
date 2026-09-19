@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-18</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-19</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-18 21:37:47 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-19 21:27:18 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今天筛出5篇论文，精读1篇多智能体交易系统中的对抗信号传播（8.0/10），速读覆盖智能体渗透测试、自博弈均衡选择与LLM恶意软件分析规避。</p>
-<p>最值得看的是8.0分精读揭示交易场内对抗信号如何跨智能体扩散，以及速读中“自动化攻击图+神经符号漏洞挖掘”和“ALIBI对LLM恶意软件分析器的合法性注入”两条安全评测线索。</p>
-<p>普通读者可先读精读结论，再按兴趣浏览攻击图构建与ALIBI，重点理解对抗信号和输入如何影响多智能体及LLM的安全决策。</p>
+<p>今日无精读、速读6篇，重点扫描开源依赖漏洞预测与对抗鲁棒强化学习。最值得看的是7.0分《PatchRisk》，它聚焦开源依赖网络未来漏洞暴露预测，另有对抗重要性采样和FDI攻击下多智能体强化学习两篇速读。普通读者可优先了解PatchRisk，并留意项目依赖的漏洞风险与后续精读。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems">Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Automating Attack Graph Construction for Agentic Pentesting. Towards Neuro-Symbolic Vulnerability Hunting">Automating Attack Graph Construction for Agentic Pentesting. Towards Neuro-Symbolic Vulnerability Hunting</span></li><li><span class="dpr-home-dashboard-paper-title" title="Steering Equilibrium Selection in Regularized Self-Play via the Reference Policy">Steering Equilibrium Selection in Regularized Self-Play via the Reference Policy</span></li><li><span class="dpr-home-dashboard-paper-title" title="ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers">ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks">PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Robust Policy Optimization via Adversarial Importance Sampling">Robust Policy Optimization via Adversarial Importance Sampling</span></li><li><span class="dpr-home-dashboard-paper-title" title="Predefined-Time Integral Reinforcement Learning for Saturated Unknown Nonlinear Multi-Agent Systems Under FDI Attacks and Disturbances">Predefined-Time Integral Reinforcement Learning for Saturated Unknown Nonlinear Multi-Agent Systems Under FDI Attacks and Disturbances</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
 </section>
 </div>
 

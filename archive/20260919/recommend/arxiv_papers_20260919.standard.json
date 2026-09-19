@@ -1,0 +1,247 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-19T21:24:35.640240+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.13719v1",
+      "source": "arxiv",
+      "title": "PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks",
+      "abstract": "Open-source software ecosystems are web-scale dependency networks. A downstream package can become exposed to security risk not because its own source code changes, but because one of its transitive dependencies later receives a vulnerability advisory. Existing vulnerability-detection work often focuses on whether code is currently vulnerable or whether a known vulnerable dependency is already present. We study a different problem: future transitive vulnerability exposure. Given a package-version dependency graph observed at release time, the task is to predict whether any non-root dependency will receive a vulnerability advisory within a future horizon. This problem is important for Web intelligence and software supply-chain security because it supports proactive dependency triage before future exposure is visible. It is also easy to evaluate incorrectly: current vulnerable dependencies can leak the label, and different versions of the same root package can create package-level memorization across train and test splits. We therefore construct PatchRisk, a leakage-aware benchmark from Open Source Vulnerability advisories and deps.dev dependency graphs for npm and PyPI. The benchmark uses filtration-aware labels, package-disjoint evaluation, temporal testing, and nested 1K, 3K, 5K, and 10K sampling scales. The largest cleaned setting contains 9,007 root package-version graphs spanning 4,157 root packages. We evaluate three feature families: TimeOnly, GraphStruct, and HistoryGraph. On the 10K temporal-test benchmark, HistoryGraph improves AUPRC over the strongest TimeOnly baseline from 0.351 to 0.640 for 90-day forecasting and from 0.473 to 0.813 for 365-day forecasting. The improvement remains stable across smaller scales and package-group shuffle robustness tests.",
+      "authors": [
+        "Ashfaq Ali Shafin",
+        "Khandaker Mamun Ahmed"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2026-09-12T05:09:17+00:00",
+      "link": "https://arxiv.org/pdf/2609.13719v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "forecasting future transitive vulnerability exposure in open-source dependency networks",
+      "llm_evidence_cn": "预测开源依赖网络中的未来传递性漏洞暴露",
+      "llm_evidence": "预测开源依赖网络中的未来传递性漏洞暴露",
+      "canonical_evidence": "预测开源依赖网络中的未来传递性漏洞暴露",
+      "llm_tldr_en": "PatchRisk predicts future transitive vulnerability exposure in open-source dependency graphs, forecasting whether non-root dependencies will receive advisories.",
+      "llm_tldr_cn": "针对下游软件包可能并非因自身代码变化、而是因某个传递依赖日后获得漏洞通告而暴露风险的问题，本文研究未来传递性漏洞暴露这一新任务。方法上提出PatchRisk，在发布时观测到的包-版本依赖图上预测未来时间窗内是否会有非根依赖收到漏洞通告。该建模把当前漏洞检测扩展为前瞻性风险预测，为软件供应链安全提供早期预警。该工作对Web情报与开源生态安全具有实用价值。",
+      "llm_tldr": "针对下游软件包可能并非因自身代码变化、而是因某个传递依赖日后获得漏洞通告而暴露风险的问题，本文研究未来传递性漏洞暴露这一新任务。方法上提出PatchRisk，在发布时观测到的包-版本依赖图上预测未来时间窗内是否会有非根依赖收到漏洞通告。该建模把当前漏洞检测扩展为前瞻性风险预测，为软件供应链安全提供早期预警。该工作对Web情报与开源生态安全具有实用价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.13044v1",
+      "source": "arxiv",
+      "title": "Robust Policy Optimization via Adversarial Importance Sampling",
+      "abstract": "Significant progress has been made in safeguarding deep reinforcement learning (DRL) policies against input perturbations. Developing robust DRL involves three main stages: algorithm design, implementation, and evaluation. In this work, we identify and address a key limitation at each stage. First, we introduce Adversarial Importance Sampling (Advis), a method that uses importance sampling over trajectories from standard training to estimate and optimize verifiable worst-case returns. Advis satisfies three desirable criteria not jointly achieved by prior work: it requires no additional environment interactions, no auxiliary networks, and captures long-term robustness. Second, we introduce advrl, a modular PyTorch library that provides clean, single-file implementations of existing robustness methods and adversarial attacks, facilitating rapid prototyping and enabling reproducible and traceable evaluations. Third, we revisit evaluation under learned adversaries and show that optimal adversarial hyperparameters do not transfer across agents, which can lead to an overestimation of robustness when using a limited set of attacker configurations. Accordingly, we evaluate policies against a large and diverse set of attackers, using 6-14x more configurations than prior work. Finally, we evaluate our approach on continuous control environments, demonstrating its effectiveness relative to existing baselines. The code is available at: https://github.com/AmineAndam04/advrl",
+      "authors": [
+        "Amine Andam",
+        "Jamal Bentahar",
+        "Mustapha Hedabou"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-11T16:40:45+00:00",
+      "link": "https://arxiv.org/pdf/2609.13044v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial importance sampling for robust RL policy optimization",
+      "llm_evidence_cn": "对抗重要性采样实现鲁棒强化学习策略优化",
+      "llm_evidence": "对抗重要性采样实现鲁棒强化学习策略优化",
+      "canonical_evidence": "对抗重要性采样实现鲁棒强化学习策略优化",
+      "llm_tldr_en": "Robust deep RL suffers from limits in algorithm design and evaluation; the paper proposes Adversarial Importance Sampling to optimize verifiable worst-case returns without extra interactions, plus the advrl library.",
+      "llm_tldr_cn": "深度强化学习策略在输入扰动下往往缺乏鲁棒性，现有方法难以同时兼顾长期鲁棒性与实现简洁性。论文提出对抗重要性采样Advis，通过对标准训练轨迹做重要性采样来估计并优化可验证的最坏情况回报，并配套开源模块化PyTorch库advrl。实验显示该方法无需额外环境交互和辅助网络即可捕捉长期鲁棒性。该工作为鲁棒强化学习提供了算法设计与评估的统一工具。",
+      "llm_tldr": "深度强化学习策略在输入扰动下往往缺乏鲁棒性，现有方法难以同时兼顾长期鲁棒性与实现简洁性。论文提出对抗重要性采样Advis，通过对标准训练轨迹做重要性采样来估计并优化可验证的最坏情况回报，并配套开源模块化PyTorch库advrl。实验显示该方法无需额外环境交互和辅助网络即可捕捉长期鲁棒性。该工作为鲁棒强化学习提供了算法设计与评估的统一工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.14075v1",
+      "source": "arxiv",
+      "title": "Predefined-Time Integral Reinforcement Learning for Saturated Unknown Nonlinear Multi-Agent Systems Under FDI Attacks and Disturbances",
+      "abstract": "This paper addresses secure leader-follower formation of unknown nonlinear multi-agent systems under actuator constraints, external disturbances, and false-data-injection (FDI) attacks. The graph-coupled coordination-error dynamics are formulated as local zero-sum differential games, where a nonquadratic input utility yields saturation-compatible secure policies and actuator-channel FDI and disturbances act as adversarial inputs. To eliminate explicit dependence on the unknown nonlinear drift, an integral Bellman-Isaacs identity enables critic-only learning from finite trajectory data. A two-power state-cost structure and a deadline-parameterized critic update connect optimal learning with predefined-time stabilization. Unlike fixed-time methods whose settling-time bound is determined by preselected gains, the proposed framework assigns the overall deadline first and allocates it among data informativity, critic learning, the reinforcement window, and formation convergence. Practical predefined-time convergence of the critic and formation errors to bounded residual sets is established independently of initial conditions, while secure actuator constraints are satisfied by construction. Simulations validate the framework under FDI attacks, disturbances, input constraints, and different initial conditions.",
+      "authors": [
+        "Tien Dat Vu",
+        "Minh Doan"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-09-12T17:49:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.14075v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "secure formation under FDI attacks solved as local zero-sum differential games via integral RL",
+      "llm_evidence_cn": "将FDI攻击下的安全编队建模为零和微分博弈并用积分强化学习求解",
+      "llm_evidence": "将FDI攻击下的安全编队建模为零和微分博弈并用积分强化学习求解",
+      "canonical_evidence": "将FDI攻击下的安全编队建模为零和微分博弈并用积分强化学习求解",
+      "llm_tldr_en": "This paper formulates secure leader-follower formation under FDI attacks as local zero-sum differential games, using integral Bellman-Isaacs learning to obtain saturation-compatible predefined-time policies.",
+      "llm_tldr_cn": "针对未知非线性多智能体系统在执行器饱和、外部扰动与虚假数据注入（FDI）攻击下难以实现安全编队的问题，本文把图耦合协调误差动力学建模为局部零和微分博弈。方法上采用非二次输入效用得到饱和兼容的安全策略，并借助积分Bellman-Isaacs恒等式实现仅依赖有限轨迹数据的评论家学习。结果通过双幂状态代价与截止时间参数化评论家更新，把最优学习与预设时间收敛联系起来。该工作为受攻击多智能体系统的安全控制提供了无模型强化学习方案。",
+      "llm_tldr": "针对未知非线性多智能体系统在执行器饱和、外部扰动与虚假数据注入（FDI）攻击下难以实现安全编队的问题，本文把图耦合协调误差动力学建模为局部零和微分博弈。方法上采用非二次输入效用得到饱和兼容的安全策略，并借助积分Bellman-Isaacs恒等式实现仅依赖有限轨迹数据的评论家学习。结果通过双幂状态代价与截止时间参数化评论家更新，把最优学习与预设时间收敛联系起来。该工作为受攻击多智能体系统的安全控制提供了无模型强化学习方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.16095v1",
+      "source": "arxiv",
+      "title": "RAG-CT: Mitigating Privacy Risks on Retrieval-Augmented Generation Systems via Scanning Prompt Distribution",
+      "abstract": "Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for improving the quality of generated contents of Large Language Models (LLMs) by grounding responses in external knowledge, thus reducing hallucinations and factual errors. However, recent studies have highlighted a critical vulnerability: adversaries can exploit the retrieval process to extract personally identifiable information (PII) from the underlying corpus. To mitigate this risk, we propose a novel defense, RAG-CT, that identifies malicious queries by analyzing their entropy and margin distributions and using a score-based detection method. Extensive experiments with four state-of-the-art attack strategies and four defense baselines on two datasets show that our approach significantly reduces PII leakage while outperforming existing defenses. This work provides a lightweight yet effective mechanism to protect RAG systems against PII leakage without requiring modifications to the underlying LLM or retriever.",
+      "authors": [
+        "Xingyu Lyu",
+        "Jiayimei Wang",
+        "Jianfeng He",
+        "Ning Wang",
+        "Yidan Hu",
+        "Yimin Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-09-14T14:44:39+00:00",
+      "link": "https://arxiv.org/pdf/2609.16095v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "defense against adversarial queries extracting PII in text/RAG systems",
+      "llm_evidence_cn": "针对文本/RAG系统中提取隐私的对抗查询的防御",
+      "llm_evidence": "针对文本/RAG系统中提取隐私的对抗查询的防御",
+      "canonical_evidence": "针对文本/RAG系统中提取隐私的对抗查询的防御",
+      "llm_tldr_en": "RAG improves LLM grounding but adversaries can exploit retrieval to extract PII, a critical vulnerability. RAG-CT defends by analyzing the entropy and margin distributions of queries and using score-based detection. Experiments against four attack strategies and four defense baselines show effective malicious-query detection.",
+      "llm_tldr_cn": "检索增强生成虽能降低幻觉，但攻击者可利用检索过程从语料中提取个人身份信息，构成严重隐私漏洞。本文提出RAG-CT防御，通过分析恶意查询的熵与边际分布，采用基于评分的检测方法识别攻击。作者在四种先进攻击策略与四种防御基线上进行实验，验证了检测有效性。该工作为RAG文本系统的对抗攻击与防御提供了新的检测式防护思路。",
+      "llm_tldr": "检索增强生成虽能降低幻觉，但攻击者可利用检索过程从语料中提取个人身份信息，构成严重隐私漏洞。本文提出RAG-CT防御，通过分析恶意查询的熵与边际分布，采用基于评分的检测方法识别攻击。作者在四种先进攻击策略与四种防御基线上进行实验，验证了检测有效性。该工作为RAG文本系统的对抗攻击与防御提供了新的检测式防护思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.18829v1",
+      "source": "arxiv",
+      "title": "Epsilon-Nash Equilibria in History-Dependent SA-MDPs",
+      "abstract": "We study state-adversarial Markov decision processes (SA-MDP) as a game of observation-space attacks: at each step, an agent selects an action from a received observation while an adversary$\\unicode{x2014}$who knows the true state the agent is in$\\unicode{x2014}$chooses a perturbed observation within a state-dependent proximity set. While existing work focuses on Markovian policies, we develop a solution concept and computational approach for SA-MDPs under history dependence. This is motivated by results showing that history dependence can materially change equilibrium outcomes and can force both the agent and the adversary to adapt their strategies. First, we prove the non-existence of universal (agnostic of the initial state distribution) history-dependent equilibrium policies. In response to this finding, our main result presents the first algorithmic route to computing $ε$-approximations of initial-state dependent equilibria. We do so by reducing SA-MDPs to a strategically equivalent constrained zero-sum one-sided partially observable stochastic game. We conclude by testing our algorithm on small analytically verifiable games and showing it scales to larger, more realistic benchmarks, including Atari Freeway rollouts with a 12-period ahead horizon.",
+      "authors": [
+        "Brandon Gary Kaplowitz",
+        "Dominik Bohnet Zurcher",
+        "Akash Agrawal",
+        "Tala Jafari",
+        "Christian Schroeder de Witt",
+        "Paul W. Goldberg"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.CR"
+      ],
+      "published": "2026-09-16T15:35:31+00:00",
+      "link": "https://arxiv.org/pdf/2609.18829v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "state-adversarial MDP modeled as agent-adversary observation-space game with equilibrium solutions",
+      "llm_evidence_cn": "将状态对抗MDP建模为智能体与对手的观测空间博弈并求解均衡",
+      "llm_evidence": "将状态对抗MDP建模为智能体与对手的观测空间博弈并求解均衡",
+      "canonical_evidence": "将状态对抗MDP建模为智能体与对手的观测空间博弈并求解均衡",
+      "llm_tldr_en": "This paper studies state-adversarial MDPs as observation-space games, proving non-existence of universal history-dependent equilibria and developing epsilon-Nash solution methods.",
+      "llm_tldr_cn": "针对状态对抗马尔可夫决策过程（SA-MDP）中现有工作多局限于马尔可夫策略、忽视历史依赖影响的问题，本文将其刻画为智能体与对手在观测空间上的攻防博弈。作者提出历史依赖策略下的解概念与计算方法，并证明不存在与初始状态分布无关的通用历史依赖均衡。结果给出ε-纳什均衡的存在性与求解途径，表明历史依赖会实质改变攻防双方的策略与均衡结果。该工作为对抗扰动下的强化学习攻防提供了新的博弈论理论工具。",
+      "llm_tldr": "针对状态对抗马尔可夫决策过程（SA-MDP）中现有工作多局限于马尔可夫策略、忽视历史依赖影响的问题，本文将其刻画为智能体与对手在观测空间上的攻防博弈。作者提出历史依赖策略下的解概念与计算方法，并证明不存在与初始状态分布无关的通用历史依赖均衡。结果给出ε-纳什均衡的存在性与求解途径，表明历史依赖会实质改变攻防双方的策略与均衡结果。该工作为对抗扰动下的强化学习攻防提供了新的博弈论理论工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.19873v1",
+      "source": "arxiv",
+      "title": "AURA: Adaptive Uncertainty-Routed Analysis for Email Threat Detection",
+      "abstract": "Email spam and phishing attacks remain a critical security threat. Adversaries increasingly exploit large language models to craft contextually convincing malicious messages, and existing spam detection systems often struggle to keep pace. Generalization across diverse and evolving attack scenarios is limited, which reduces effectiveness once these systems are deployed in practice. This paper introduces Adaptive Uncertainty-Routed Analysis (AURA), a multimodal email threat detection system that analyzes both the content of an email and its embedded URLs. AURA is built around two layers: the first quantifies prediction uncertainty from a URL classifier, and only ambiguous messages are escalated to a fine-tuned transformer encoder for semantic analysis. The system is evaluated on eight heterogeneous training corpora together with two held-out real-world corpora spanning a decade of adversarial campaigns. AURA reaches a macro F1-score of 0.9858 in-distribution, and on NazPhish-Eval and GuenterTrap-Eval it maintains 0.9502 and 0.9436, respectively, which is evidence of robust generalization under genuine distribution shift.",
+      "authors": [
+        "Omran Berjawi",
+        "Walid fahs",
+        "Rida Khatoun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-17T08:26:04+00:00",
+      "link": "https://arxiv.org/pdf/2609.19873v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "detecting adversarial LLM-crafted malicious messages",
+      "llm_evidence_cn": "检测对抗性LLM构造的恶意邮件",
+      "llm_evidence": "检测对抗性LLM构造的恶意邮件",
+      "canonical_evidence": "检测对抗性LLM构造的恶意邮件",
+      "llm_tldr_en": "This paper addresses email spam and phishing where adversaries use LLMs to craft convincing malicious messages that evade detection. It proposes AURA, a multimodal system routing uncertain URL predictions to a fine-tuned transformer for semantic analysis. The uncertainty-routed design improves generalization against evolving attacks.",
+      "llm_tldr_cn": "针对攻击者利用大模型生成逼真钓鱼邮件、现有垃圾邮件检测难以泛化到演变攻击的问题，本文提出AURA多模态邮件威胁检测系统。该系统先由URL分类器量化不确定性，仅将歧义邮件升级到微调Transformer进行语义分析。研究通过内容与URL联合分析提升了检测泛化能力，表明不确定性驱动的分层路由可增强邮件威胁检测的鲁棒性。",
+      "llm_tldr": "针对攻击者利用大模型生成逼真钓鱼邮件、现有垃圾邮件检测难以泛化到演变攻击的问题，本文提出AURA多模态邮件威胁检测系统。该系统先由URL分类器量化不确定性，仅将歧义邮件升级到微调Transformer进行语义分析。研究通过内容与URL联合分析提升了检测泛化能力，表明不确定性驱动的分层路由可增强邮件威胁检测的鲁棒性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
