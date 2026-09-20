@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-19</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-20</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-19 21:27:18 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-20 21:35:47 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日无精读、速读6篇，重点扫描开源依赖漏洞预测与对抗鲁棒强化学习。最值得看的是7.0分《PatchRisk》，它聚焦开源依赖网络未来漏洞暴露预测，另有对抗重要性采样和FDI攻击下多智能体强化学习两篇速读。普通读者可优先了解PatchRisk，并留意项目依赖的漏洞风险与后续精读。</p>
+<p>今日速读5篇AI安全与对抗研究，聚焦红队测试、思维链监控规避及网络攻防模拟。最值得关注的是《Red-Teaming Auto Mode》提出用红队改进恶意编程Agent拦截分类器（7.0分），以及《Corrupt Plans, Clean Traces》揭示通过计划注入绕过思维链监控的风险（6.0分）。建议普通读者重点了解Agent安全护栏的实际攻防思路，并留意监控机制的潜在盲区。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">6 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks">PatchRisk: Forecasting Future Vulnerability Exposure in Open-Source Dependency Networks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Robust Policy Optimization via Adversarial Importance Sampling">Robust Policy Optimization via Adversarial Importance Sampling</span></li><li><span class="dpr-home-dashboard-paper-title" title="Predefined-Time Integral Reinforcement Learning for Saturated Unknown Nonlinear Multi-Agent Systems Under FDI Attacks and Disturbances">Predefined-Time Integral Reinforcement Learning for Saturated Unknown Nonlinear Multi-Agent Systems Under FDI Attacks and Disturbances</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents">Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection">Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection</span></li><li><span class="dpr-home-dashboard-paper-title" title="The MAL Simulator: Cyber Operations Simulation based on Attack &amp; Defense Graphs">The MAL Simulator: Cyber Operations Simulation based on Attack &amp; Defense Graphs</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>6</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>5</strong></span></div>
 </section>
 </div>
 

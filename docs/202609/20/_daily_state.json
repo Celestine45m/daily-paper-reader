@@ -1,0 +1,89 @@
+{
+  "date": "20260920",
+  "date_label": "",
+  "generated_at": "2026-09-20 21:35:47 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.19587v1",
+      "route": "202609/20/2609.19587v1-red-teaming-auto-mode-improving-blocking-classifiers-against-malign-coding-agents",
+      "title": "Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "对抗智能体规避阻断监控器",
+      "first_seen_at": "2026-09-20 21:35:47 UTC",
+      "updated_at": "2026-09-20 21:35:47 UTC"
+    },
+    {
+      "paper_id": "2609.15989v1",
+      "route": "202609/20/2609.15989v1-corrupt-plans-clean-traces-evading-chain-of-thought-monitoring-with-plan-injection",
+      "title": "Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "计划注入攻击规避思维链监控",
+      "first_seen_at": "2026-09-20 21:35:47 UTC",
+      "updated_at": "2026-09-20 21:35:47 UTC"
+    },
+    {
+      "paper_id": "2609.16563v1",
+      "route": "202609/20/2609.16563v1-the-mal-simulator-cyber-operations-simulation-based-on-attack--defense-graphs",
+      "title": "The MAL Simulator: Cyber Operations Simulation based on Attack & Defense Graphs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "攻防网络仿真中训练进攻与防御智能体",
+      "first_seen_at": "2026-09-20 21:35:47 UTC",
+      "updated_at": "2026-09-20 21:35:47 UTC"
+    },
+    {
+      "paper_id": "2609.16984v1",
+      "route": "202609/20/2609.16984v1-nameless-tokenization-a-lossless-tokenizer-level-defense-against-control-token-forgery-in-open-weight-llms",
+      "title": "Nameless Tokenization: A Lossless Tokenizer-Level Defense Against Control-Token Forgery in Open-Weight LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对控制令牌伪造（可致提示注入）的分词器级防御",
+      "first_seen_at": "2026-09-20 21:35:47 UTC",
+      "updated_at": "2026-09-20 21:35:47 UTC"
+    },
+    {
+      "paper_id": "2609.18357v1",
+      "route": "202609/20/2609.18357v1-market-signal-injection-adversarial-context-manipulation-of-llm-pricing-agents",
+      "title": "Market Signal Injection: Adversarial Context Manipulation of LLM Pricing Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对LLM定价智能体的对抗性文本上下文操纵",
+      "first_seen_at": "2026-09-20 21:35:47 UTC",
+      "updated_at": "2026-09-20 21:35:47 UTC"
+    }
+  ]
+}

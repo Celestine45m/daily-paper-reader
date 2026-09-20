@@ -1,0 +1,209 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-20T21:33:57.992332+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.19587v1",
+      "source": "arxiv",
+      "title": "Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents",
+      "abstract": "To keep coding agents from going off the rails, production systems now review each proposed action with a blocking monitor that can reject it before it runs (Auto Mode in Claude Code, Guardian in OpenAI's Codex). Prior evaluations of such monitors largely measure robustness to accidental harm or prompt injections from untrusted sources looking to hijack the agent. Less understood is how they hold up when the agent they monitor is persistently misaligned. To understand this risk, we task an adversarial agent with evading production blocking monitors and causing catastrophic harm, e.g. by exfiltrating its own weights. We find that when instructed with high-level attack strategies, adversarial agents can succeed through several distinct mechanisms, such as agent-generated prompt injection against the monitor, multi-agent attacks, and malicious compaction. In particular we find that in 79% of trials, the agent can use an injection attack against Auto Mode and Guardian to run arbitrary bash commands. We also find that it is possible to greatly improve Auto Mode through design changes like enhancements to tool coverage, transcript formatting and an agentic monitor stage. Even with these improvements, preventing multi-context attacks at an acceptable cost remains an open problem. By detailing our red-teaming methodology and highlighting new attack vectors, we aim to help defenders evaluate their mitigations against the possibility of persistent malign coding agents. Code is available at https://github.com/safety-research/red-teaming-auto-mode.",
+      "authors": [
+        "Alex Remedios",
+        "Simon Storf",
+        "Fabien Roger",
+        "John Hughes"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-09-17T02:14:53+00:00",
+      "link": "https://arxiv.org/pdf/2609.19587v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "adversarial agent evading blocking monitors",
+      "llm_evidence_cn": "对抗智能体规避阻断监控器",
+      "llm_evidence": "对抗智能体规避阻断监控器",
+      "canonical_evidence": "对抗智能体规避阻断监控器",
+      "llm_tldr_en": "The authors red-team production blocking monitors for coding agents by tasking an adversarial agent to evade them and cause harm, revealing multiple evasion mechanisms.",
+      "llm_tldr_cn": "生产系统依靠阻断监控器在编码智能体执行动作前进行拦截，但对其面对持续失准智能体的鲁棒性了解不足。论文让对抗智能体尝试规避真实阻断监控器并造成灾难性危害，发现在高层次攻击策略指导下，对抗智能体能通过多种机制成功绕过监控。研究揭示了监控器在对抗持续失准智能体时的脆弱性，为改进阻断分类器提供依据。",
+      "llm_tldr": "生产系统依靠阻断监控器在编码智能体执行动作前进行拦截，但对其面对持续失准智能体的鲁棒性了解不足。论文让对抗智能体尝试规避真实阻断监控器并造成灾难性危害，发现在高层次攻击策略指导下，对抗智能体能通过多种机制成功绕过监控。研究揭示了监控器在对抗持续失准智能体时的脆弱性，为改进阻断分类器提供依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.15989v1",
+      "source": "arxiv",
+      "title": "Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection",
+      "abstract": "Chain-of-thought (CoT) monitoring is a safety strategy where the reasoning of a large language model \"actor\" is inspected by a \"monitor\" (often another language model) for signs of unsafe planning, deception, or misalignment. We find that planting harmful but benign-sounding reasoning in the actor's context can steer it to perform adversarial actions while evading monitors, an attack we term \"plan injection\". We initially discover this attack in the multiple-choice question-answering monitorability setting proposed by Lanham et al. (2023), using the investigator-agent elicitation framework of Li et al. (2025). We generalize the attack and show that the discovered behavior scales to harder tasks (achieving 25-33% monitor evasion rates across different monitorability benchmarks) and larger models such as DeepSeek-R1. Across the settings we study, actor models not only follow injected plans but also paraphrase them as their own reasoning, without explicit attribution to the injections. Finally, we find cases where extra monitor resources cause harm - giving the monitor access to the injected plan drops detection by as much as 50% in the Bio-Math task and in a case study on monitor reasoning budget, we find transcripts where additional thinking tokens are spent rationalizing the injected plan rather than flagging it.",
+      "authors": [
+        "Keertana Chidambaram",
+        "Andrew Ilyas",
+        "Vasilis Syrgkanis"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-14T18:33:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.15989v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial plan injection evades chain-of-thought monitors",
+      "llm_evidence_cn": "计划注入攻击规避思维链监控",
+      "llm_evidence": "计划注入攻击规避思维链监控",
+      "canonical_evidence": "计划注入攻击规避思维链监控",
+      "llm_tldr_en": "CoT monitoring inspects LLM reasoning for unsafe planning. The paper shows that planting benign-sounding harmful reasoning in the actor context steers adversarial actions while evading monitors, achieving 25-33 percent evasion across harder tasks.",
+      "llm_tldr_cn": "思维链监控通过检查大模型推理来发现不安全规划，被视为重要安全手段。本文发现向执行者上下文注入有害却貌似合理的推理，可诱导其执行对抗行为同时躲过监控，称之为计划注入攻击。实验在问答监控场景中实现25%至33%的监控规避率，并可扩展到更难任务。该工作揭示了文本层面攻击与防御博弈中监控机制的脆弱性。",
+      "llm_tldr": "思维链监控通过检查大模型推理来发现不安全规划，被视为重要安全手段。本文发现向执行者上下文注入有害却貌似合理的推理，可诱导其执行对抗行为同时躲过监控，称之为计划注入攻击。实验在问答监控场景中实现25%至33%的监控规避率，并可扩展到更难任务。该工作揭示了文本层面攻击与防御博弈中监控机制的脆弱性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.16563v1",
+      "source": "arxiv",
+      "title": "The MAL Simulator: Cyber Operations Simulation based on Attack & Defense Graphs",
+      "abstract": "We have developed the MAL Simulator, a cyber operation simulator based on the Meta Attack Language (MAL). The MAL Simulator is intended for decision-driven cyber attack and defense simulations, for system analysis and the development of automated agents. By building the simulator around an attack modeling language, it can be adapted to different target domains without modifying the source code. We used the simulator for two case studies where we trained two types of agents for automated cyber operations: a defensive agent and an offensive agent. To ground the experiments, we base the models in data collected from an emulated network implemented in the cyber range CRATE. We found that the trained attacker policy could reach the designated targets more efficiently than the compared search methods, and that the trained defender agent induced lower costs than a naive heuristic agent under noisy alert conditions. When testing the RL attacker against the RL defender, we found that the performance of the defenders dropped significantly. This emphasizes the importance of cyber attack simulators to facilitate training both offensive and defensive agents. The MAL Simulator and associated tooling is publicly available and provides common interfaces for compatibility with existing machine learning frameworks.",
+      "authors": [
+        "Jakob Nyberg",
+        "Sandor Berglund",
+        "Andrei Buhaiu",
+        "Joakim Loxdal",
+        "Pontus Johnson",
+        "Mathias Ekstedt"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-15T02:59:01+00:00",
+      "link": "https://arxiv.org/pdf/2609.16563v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "training offensive and defensive agents in attack-defense cyber simulation",
+      "llm_evidence_cn": "攻防网络仿真中训练进攻与防御智能体",
+      "llm_evidence": "攻防网络仿真中训练进攻与防御智能体",
+      "canonical_evidence": "攻防网络仿真中训练进攻与防御智能体",
+      "llm_tldr_en": "The MAL Simulator models cyber attack and defense with Meta Attack Language graphs, enabling decision-driven simulations and training of offensive and defensive agents on an emulated network.",
+      "llm_tldr_cn": "网络攻防决策与自动化智能体训练缺乏可适配多领域的仿真环境。本文提出基于元攻击语言（MAL）的MAL仿真器，用攻防图构建可配置的攻防场景，并据此训练进攻与防御两类智能体。在CRATE网络靶场的仿真网络数据上，训练出的攻击策略可达成指定目标。该工作为自动化网络攻防智能体研究提供了可扩展的仿真平台。",
+      "llm_tldr": "网络攻防决策与自动化智能体训练缺乏可适配多领域的仿真环境。本文提出基于元攻击语言（MAL）的MAL仿真器，用攻防图构建可配置的攻防场景，并据此训练进攻与防御两类智能体。在CRATE网络靶场的仿真网络数据上，训练出的攻击策略可达成指定目标。该工作为自动化网络攻防智能体研究提供了可扩展的仿真平台。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.16984v1",
+      "source": "arxiv",
+      "title": "Nameless Tokenization: A Lossless Tokenizer-Level Defense Against Control-Token Forgery in Open-Weight LLMs",
+      "abstract": "Open-weight language models publish the strings their chat templates use to mark turns, roles and tool results, which the tokenizer maps back to the reserved identifiers the model obeys. Anyone who controls text in a prompt can therefore write a turn boundary indistinguishable from one the serving stack wrote. We audit 256 deployed chat tokenizers. All are forgeable, and the flag usually recommended as a fix leaves 56.6% forgeable because it misses the tool and reasoning markers agent systems rely on. We propose nameless tokenization, which leaves the control entries with a reserved identifier and no surface string, so the content encoder cannot emit one and message content reaches the model unaltered. Across five tokenizer families it reproduces the standard token stream exactly on attack-free data and lifts accuracy on a probe of delimiter-bearing text from 8.5% to 59.9%, where sanitizers lose it. Separating a delimiter's appearance from its identifier shows the identifier matters little against a bare task instruction, but carries most of a forged tool result and most of any forged turn once the system message tells the model to treat user content as data.",
+      "authors": [
+        "Kisu Yang",
+        "Yoonna Jang",
+        "Heuiseok Lim"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-15T11:00:03+00:00",
+      "link": "https://arxiv.org/pdf/2609.16984v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "tokenizer-level defense against control-token forgery enabling prompt injection",
+      "llm_evidence_cn": "针对控制令牌伪造（可致提示注入）的分词器级防御",
+      "llm_evidence": "针对控制令牌伪造（可致提示注入）的分词器级防御",
+      "canonical_evidence": "针对控制令牌伪造（可致提示注入）的分词器级防御",
+      "llm_tldr_en": "Audits 256 deployed chat tokenizers, shows all are forgeable for control tokens, and proposes nameless tokenization, a lossless tokenizer-level defense against turn-boundary forgery.",
+      "llm_tldr_cn": "论文指出开放权重LLM公开其聊天模板中的控制字符串，任何控制提示文本者都能伪造出与服务栈无法区分的轮次边界，从而实施提示注入。作者审计了256个已部署聊天分词器，发现全部可被伪造，常用修复标志仍遗留56.6%的伪造风险。为此提出无名分词，使控制条目仅保留保留标识符而无表面字符串，内容编码器无法生成。该无损防御在多个模型上有效阻断控制令牌伪造。",
+      "llm_tldr": "论文指出开放权重LLM公开其聊天模板中的控制字符串，任何控制提示文本者都能伪造出与服务栈无法区分的轮次边界，从而实施提示注入。作者审计了256个已部署聊天分词器，发现全部可被伪造，常用修复标志仍遗留56.6%的伪造风险。为此提出无名分词，使控制条目仅保留保留标识符而无表面字符串，内容编码器无法生成。该无损防御在多个模型上有效阻断控制令牌伪造。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.18357v1",
+      "source": "arxiv",
+      "title": "Market Signal Injection: Adversarial Context Manipulation of LLM Pricing Agents",
+      "abstract": "Large language model (LLM) pricing agents may respond to how market data is presented, even when its numerical values remain unchanged. We introduce market signal injection (MSI), an attack that manipulates numerical formatting, competitor ordering, or qualitative market commentary without issuing explicit instructions. We evaluate nine open-weight models in simulated Bertrand duopoly and triopoly markets and three proprietary models in duopoly markets. Sentiment-based attacks produce the largest behavioral shifts, which propagate to other firms and alter profits and consumer surplus. Susceptibility varies across model families, and larger models are not consistently more robust. Matched neutral-text controls and a rule-based agent support a framing-based account of these shifts under the fixed demand parameters of our simulation. Episode-held-out probes distinguish baseline from attacked activations in all eleven re-evaluated model--condition pairs: linear AUC is 1.00 and MLP AUC ranges from 0.93 to 0.99. This separability does not by itself identify harmful pricing decisions. Input canonicalization removes the tested sentiment attacks, while decision boundary anchoring, which combines prompt constraints with output projection, provides partial mitigation under the tested adaptive attacks. These results identify data presentation as an attack surface for LLM pricing agents and motivate defenses that account for interactions among agents.",
+      "authors": [
+        "Dohun Lee",
+        "Hyunwoo Park"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-09-16T09:16:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.18357v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial text context manipulation of LLM pricing agents",
+      "llm_evidence_cn": "对LLM定价智能体的对抗性文本上下文操纵",
+      "llm_evidence": "对LLM定价智能体的对抗性文本上下文操纵",
+      "canonical_evidence": "对LLM定价智能体的对抗性文本上下文操纵",
+      "llm_tldr_en": "Market signal injection manipulates numerical formatting, competitor ordering, or market commentary to shift LLM pricing agents behavior, propagating to other firms and altering profits and consumer surplus.",
+      "llm_tldr_cn": "大模型定价智能体可能仅因市场数据的呈现方式改变而改变行为，即便数值本身不变。本文提出市场信号注入攻击，通过操纵数字格式、竞争对手排序或定性市场评论，在不发出显式指令的情况下诱导智能体。在多个开源与专有模型的双寡头、三寡头市场中，基于情绪的文本攻击造成最大行为偏移，并传导至其他企业，改变利润与消费者剩余。",
+      "llm_tldr": "大模型定价智能体可能仅因市场数据的呈现方式改变而改变行为，即便数值本身不变。本文提出市场信号注入攻击，通过操纵数字格式、竞争对手排序或定性市场评论，在不发出显式指令的情况下诱导智能体。在多个开源与专有模型的双寡头、三寡头市场中，基于情绪的文本攻击造成最大行为偏移，并传导至其他企业，改变利润与消费者剩余。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
