@@ -1,0 +1,407 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-21T22:15:59.178973+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2609.21617v1",
+      "source": "arxiv",
+      "title": "CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies",
+      "abstract": "Self-play in high-throughput simulators yields driving policies with robust closed-loop performance, but improvement per unit of simulation diminishes as training scales. Policies learn to handle common situations early, while further rollouts repeatedly encounter unresolved failures. Post-training offers an opportunity to target these failures, but existing methods primarily evaluate alternative actions or continuations at visited states, although successful recovery may require changing driving style earlier. We propose CounterPlay, a counterfactual self-play post-training approach that backtracks from failed tasks and retries them under alternate driving styles. CounterPlay rests on three key components. First, failure-driven backtracking uses the policy's value estimates to select an earlier stored state from which to retry the task. Second, reward conditioning enables a single policy to retry the task from this state using candidate styles ranging from cautious to aggressive. Third, CounterPlay retains task-completing retries only if no other vehicle incurs a new or earlier collision or off-road event relative to the factual branch. Retries that pass verification with fresh randomness are then distilled into the policy under its deployment condition. On BehaviorBench, CounterPlay achieves state-of-the-art scores on both the Interactive and Random splits across all eight traffic regimes using 1B post-training transitions, which is just 1% of the anchor's 100B self-play training budget. Improvements over the anchor hold across all three evaluated driving styles. CounterPlay resolves a substantial fraction of the anchor's timeout cases on BehaviorBench and achieves a balance between task completion and safety that neither continued self-play nor adopting a more aggressive driving style attains.",
+      "authors": [
+        "Jiarong Wei",
+        "Yin Wu",
+        "Runkai He",
+        "Abhinav Valada"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-18T11:00:14+00:00",
+      "link": "https://arxiv.org/pdf/2609.21617v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "self-play reinforcement learning post-training for driving policies",
+      "llm_evidence_cn": "面向驾驶策略的自博弈强化学习后训练",
+      "llm_evidence": "面向驾驶策略的自博弈强化学习后训练",
+      "canonical_evidence": "面向驾驶策略的自博弈强化学习后训练",
+      "llm_tldr_en": "CounterPlay addresses diminishing returns in self-play driving policy training by backtracking from failed tasks and retrying them under alternate driving styles, a counterfactual self-play post-training approach.",
+      "llm_tldr_cn": "自博弈在仿真中能训练出闭环性能鲁棒的驾驶策略，但随着训练规模扩大，单位仿真带来的提升递减，策略反复遇到未解决的失败场景。本文提出CounterPlay，一种反事实自博弈后训练方法，从失败任务回溯并在不同驾驶风格下重试，包含失败驱动回溯等三个组件。实验表明该方法能有效针对失败场景继续提升策略。该工作为自博弈智能体的持续训练提供了新思路。",
+      "llm_tldr": "自博弈在仿真中能训练出闭环性能鲁棒的驾驶策略，但随着训练规模扩大，单位仿真带来的提升递减，策略反复遇到未解决的失败场景。本文提出CounterPlay，一种反事实自博弈后训练方法，从失败任务回溯并在不同驾驶风格下重试，包含失败驱动回溯等三个组件。实验表明该方法能有效针对失败场景继续提升策略。该工作为自博弈智能体的持续训练提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.15939v1",
+      "source": "arxiv",
+      "title": "Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale",
+      "abstract": "Language-model agents increasingly operate over complete software repositories, yet cybersecurity evaluations primarily measure whether they can detect, reproduce, or repair vulnerabilities rather than whether they can locate the relevant code. We study vulnerability localization: given a weakness class and an unfamiliar repository, identify the implementation files associated with that weakness. We introduce the Vulnerability Localization Benchmark (VLoc Bench), comprising 500 real world vulnerabilities from 290 repositories across six package ecosystems and 147 CWE categories. Each task pairs repository snapshots immediately before and after a security fix. On the vulnerable snapshot, an agent receives only the CWE description and read-only terminal access and must return the affected files; on the patched snapshot, it must determine that the recorded vulnerability is no longer present. We evaluate 27 language models and four static-analysis tools under a common agent interface. Repository-scale vulnerability localization remains difficult: the strongest system achieves 0.229 File F1, and 38.4% of tasks receive no correct localization from any evaluated model.   We further find that stronger localization does not imply reliable behavior after remediation: systems that identify vulnerable files effectively can still report unsupported locations on patched repositories. These results establish vulnerability localization as a distinct repository-scale capability and provide a setting for studying both how security agents search for vulnerable code and when they should refrain from reporting it.",
+      "authors": [
+        "Aman Priyanshu",
+        "Supriti Vijay",
+        "Kimia Majd",
+        "Xuhong He",
+        "Fraser Burch",
+        "Takahiro Matsumoto",
+        "Jianliang He",
+        "Baturay Saglam",
+        "Arthur Goldblatt",
+        "Zhuoran Yang",
+        "Amin Karbasi"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-14T17:44:51+00:00",
+      "link": "https://arxiv.org/pdf/2609.15939v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "vulnerability localization benchmark for agentic security analysis at repository scale",
+      "llm_evidence_cn": "仓库规模智能体化安全分析的漏洞定位基准",
+      "llm_evidence": "仓库规模智能体化安全分析的漏洞定位基准",
+      "canonical_evidence": "仓库规模智能体化安全分析的漏洞定位基准",
+      "llm_tldr_en": "VLoc Bench evaluates whether LLM agents can localize vulnerable files in unfamiliar repositories given only a CWE description, spanning 500 real vulnerabilities across 290 repos and 147 CWEs.",
+      "llm_tldr_cn": "现有网络安全评测多关注智能体能否检测、复现或修复漏洞，却很少衡量其能否在陌生仓库中定位相关代码。为此作者提出漏洞定位基准 VLoc Bench，涵盖 290 个仓库、147 类 CWE 的 500 个真实漏洞，每项任务提供修复前后的仓库快照，智能体仅凭 CWE 描述需找出对应实现文件。该基准把安全分析评测从检测推进到定位，为仓库级智能体安全能力提供可复现的度量标准。",
+      "llm_tldr": "现有网络安全评测多关注智能体能否检测、复现或修复漏洞，却很少衡量其能否在陌生仓库中定位相关代码。为此作者提出漏洞定位基准 VLoc Bench，涵盖 290 个仓库、147 类 CWE 的 500 个真实漏洞，每项任务提供修复前后的仓库快照，智能体仅凭 CWE 描述需找出对应实现文件。该基准把安全分析评测从检测推进到定位，为仓库级智能体安全能力提供可复现的度量标准。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.15297v1",
+      "source": "arxiv",
+      "title": "Admissable: Training Reinforcement Learning Agents against Adversarial Missingness",
+      "abstract": "In order to make Reinforcement Learning algorithms applicable in real world scenarios, safety must be ensured even under adverse operating conditions. In this work, we consider the challenge of adversarial feature missingness: a scenario in which an adversary occludes features from the agent's observation in order to reduce performance as much as possible. We formally define adversarial missingness for Reinforcement Learning and compare it to the related concepts of $\\ell_\\infty$-norm bounded adversarial perturbations and learning with missing data. We develop an adversarial training algorithm and show its effectiveness in increasing robustness against adversarial missingness on three MuJoCo benchmark environments. Compared to a baseline trained with random uniform missingness, our method achieves better robustness on all three tasks.",
+      "authors": [
+        "Paul Stahlhofen",
+        "Luca Hermes",
+        "Tim Kochs",
+        "Markus Vieth",
+        "Barbara Hammer"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-14T09:48:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.15297v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial training of RL agents against occlusion attacks",
+      "llm_evidence_cn": "针对特征遮挡攻击的强化学习对抗训练",
+      "llm_evidence": "针对特征遮挡攻击的强化学习对抗训练",
+      "canonical_evidence": "针对特征遮挡攻击的强化学习对抗训练",
+      "llm_tldr_en": "The paper formalizes adversarial feature missingness for RL and proposes an adversarial training algorithm that improves agent robustness on three MuJoCo benchmarks.",
+      "llm_tldr_cn": "为使强化学习适用于现实场景，需在对抗条件下保证安全性。本文考虑对抗性特征缺失，即对手遮挡智能体观测特征以最大程度降低其性能，并形式化定义该问题、与L无穷扰动和缺失数据学习进行比较。作者提出对抗训练算法，在三个MuJoCo基准上有效提升了对对抗性缺失的鲁棒性。",
+      "llm_tldr": "为使强化学习适用于现实场景，需在对抗条件下保证安全性。本文考虑对抗性特征缺失，即对手遮挡智能体观测特征以最大程度降低其性能，并形式化定义该问题、与L无穷扰动和缺失数据学习进行比较。作者提出对抗训练算法，在三个MuJoCo基准上有效提升了对对抗性缺失的鲁棒性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.17254v1",
+      "source": "arxiv",
+      "title": "SEMA-GUARD: Semantic and Graph-Based Vulnerability Detection in Assembly Code",
+      "abstract": "In cases where source code is not available, such as malware analysis, firmware analysis, and embedded systems analysis, vulnerability detection in compiled programs has gained importance. Current methods are heavily reliant on syntactical regularities or higher level representations that are vulnerable to changes in the compiler and may not be readily applicable to assembly code.In this article, we present SEMA-GUARD, a framework that uses semantic analysis and graph neural networks to identify flaws in assembly code. The approach improves the representation of control flow graphs by adding information about the program's execution at a lower level of abstraction, including stack manipulations, memory accesses, and data flow. A set based on the Juliet Test Suite was used to evaluate the effectiveness of SEMA-GUARD. In this set, each piece of source code is initially translated into assembly language and then broken down into function-level chunks. The suggested method, which relies only on statistical or structural data, achieves an accuracy of 85.1\\% and an F1 score of 0.801, according to the results. Such results imply that including semantic information in graph-based models may be a successful method for identifying vulnerabilities in compiled code.",
+      "authors": [
+        "Halil Dursunoglu",
+        "Kaan Sulkalar"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-15T14:35:18+00:00",
+      "link": "https://arxiv.org/pdf/2609.17254v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "vulnerability detection in compiled programs using semantic analysis and GNN",
+      "llm_evidence_cn": "用语义分析与图神经网络检测汇编代码漏洞",
+      "llm_evidence": "用语义分析与图神经网络检测汇编代码漏洞",
+      "canonical_evidence": "用语义分析与图神经网络检测汇编代码漏洞",
+      "llm_tldr_en": "In source-unavailable settings such as malware, firmware and embedded analysis, detecting vulnerabilities in compiled programs matters, yet current methods rely on syntax that breaks under compiler changes. SEMA-GUARD uses semantic analysis and graph neural networks, enriching control flow graphs with stack, memory and data-flow execution details to find assembly-code flaws.",
+      "llm_tldr_cn": "在缺乏源码的场景（如恶意软件、固件与嵌入式分析）中，编译程序漏洞检测日益重要，但现有方法依赖易受编译器变化影响的语法或高层表示，难以用于汇编代码。本文提出SEMA-GUARD框架，利用语义分析与图神经网络识别汇编代码缺陷，通过为控制流图补充栈操作、内存访问与数据流等底层执行信息增强表示。实验表明该方法在汇编级漏洞检测上取得良好效果，为无源码场景的安全分析提供了新途径。",
+      "llm_tldr": "在缺乏源码的场景（如恶意软件、固件与嵌入式分析）中，编译程序漏洞检测日益重要，但现有方法依赖易受编译器变化影响的语法或高层表示，难以用于汇编代码。本文提出SEMA-GUARD框架，利用语义分析与图神经网络识别汇编代码缺陷，通过为控制流图补充栈操作、内存访问与数据流等底层执行信息增强表示。实验表明该方法在汇编级漏洞检测上取得良好效果，为无源码场景的安全分析提供了新途径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.17648v1",
+      "source": "arxiv",
+      "title": "Trust propagation and structural containment in Multi-agent LLM pipelines",
+      "abstract": "Multi-agent LLM systems increasingly automate tasks involving agents with different levels of privilege, creating a security risk in which a compromised low-privilege agent can influence a higher-privilege agent and trigger an unauthorized action. We study attack propagation in a four-agent LangGraph pipeline comprising a Supervisor, Researcher, Validator, and Executor. We evaluate shared-memory poisoning and indirect prompt injection through a forged approval embedded in a retrieved document. We compare the Validator's judgment with an independent authorization layer using task-bound signed tokens and a separately verified policy oracle. Our contribution is an empirical study of attack propagation, a component-level ablation of the authorization boundary, and the Judgment Bypass Rate (JBR), which measures compromise at the attacked agent rather than at the final action. Across three seeds and 60 labeled tasks, memory poisoning reaches execution in every undefended trial. With authorization enabled, it achieves 100% JBR but 0% Unsafe Action Rate, showing that the Validator can remain compromised while execution is contained. Against an attacker possessing the signing secret, the policy oracle provides the observed containment, while an independently authored least privilege policy preserves this result. An Observer layer reduces the false-positive rate for agent hijacking from 49% to 7% without weakening execution-level security. These results show that structural authorization can contain compromised agent behavior even when upstream LLM judgment fails.",
+      "authors": [
+        "Tanzim Hossain Safin",
+        "Sharif Noor Zisad",
+        "Swakkhar Shatabda",
+        "Ragib Hasan"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CY"
+      ],
+      "published": "2026-09-15T15:46:01+00:00",
+      "link": "https://arxiv.org/pdf/2609.17648v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "attack propagation via memory poisoning and indirect prompt injection in multi-agent pipelines",
+      "llm_evidence_cn": "多智能体管线中经记忆投毒与间接提示注入的攻击传播",
+      "llm_evidence": "多智能体管线中经记忆投毒与间接提示注入的攻击传播",
+      "canonical_evidence": "多智能体管线中经记忆投毒与间接提示注入的攻击传播",
+      "llm_tldr_en": "Multi-agent LLM pipelines with mixed privilege allow a compromised agent to influence higher-privilege agents; this study analyzes attack propagation and containment via signed tokens and a policy oracle.",
+      "llm_tldr_cn": "多智能体大模型系统在混合权限下存在低权限被控智能体影响高权限智能体并触发未授权操作的安全风险。本文在包含监督者、研究者、验证者与执行者的四智能体管线中，研究经共享记忆投毒与检索文档伪造审批的间接提示注入攻击传播。研究比较验证者判断与基于签名令牌和策略预言机的独立授权层，为多智能体管线的攻击遏制提供实证依据。",
+      "llm_tldr": "多智能体大模型系统在混合权限下存在低权限被控智能体影响高权限智能体并触发未授权操作的安全风险。本文在包含监督者、研究者、验证者与执行者的四智能体管线中，研究经共享记忆投毒与检索文档伪造审批的间接提示注入攻击传播。研究比较验证者判断与基于签名令牌和策略预言机的独立授权层，为多智能体管线的攻击遏制提供实证依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21793v1",
+      "source": "arxiv",
+      "title": "CASCADE Against Jailbreaks: Combination Across Stages with Controlled Attack-Defense Evaluation",
+      "abstract": "Defenses against jailbreak attacks on Large Language Models (LLMs) operate at different pipeline stages, such as input modification or output guard, but it remains unclear which defenses to deploy at each stage and how to combine them. Prior empirical studies, fragmented by inconsistent attack-success-rate definitions and experimental settings, have evaluated defenses largely in isolation. Here we present the first systematic study, to our knowledge, of defense combinations both within and across pipeline stages, under a consistent threat model of direct, black-box, single-turn attacks. Our decision framework standardizes evaluation through a principled attack-success-rate formulation with controlled query budgets, together with explicit fairness rules. Across 19 attacks and 15 defenses, we find that no single defense is universally best, but well-chosen combinations achieve substantial safety with minimal utility degradation, yielding practical recommendations for layered defense pipelines.",
+      "authors": [
+        "Jiale Luo",
+        "Eric Han"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "published": "2026-09-18T14:06:00+00:00",
+      "link": "https://arxiv.org/pdf/2609.21793v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "controlled attack-defense evaluation of LLM jailbreak defenses across pipeline stages",
+      "llm_evidence_cn": "跨流水线阶段的 LLM 越狱攻防受控评估",
+      "llm_evidence": "跨流水线阶段的 LLM 越狱攻防受控评估",
+      "canonical_evidence": "跨流水线阶段的 LLM 越狱攻防受控评估",
+      "llm_tldr_en": "CASCADE systematically studies jailbreak defense combinations within and across pipeline stages under a consistent black-box threat model, standardizing attack-success-rate evaluation with controlled query budgets.",
+      "llm_tldr_cn": "针对大语言模型的越狱攻击防御分布在不同流水线阶段，如输入修改或输出把关，但应如何组合部署尚不明确，已有研究因攻击成功率定义与实验设置不一致而彼此割裂。作者提出 CASCADE 决策框架，在一致威胁模型下首次系统研究阶段内与跨阶段的防御组合。该工作用统一的攻击成功率定义与受控查询预算标准化了直接、黑盒、单轮攻击下的攻防评测。它为 LLM 越狱防御的部署与组合提供系统化、可比较的评估依据。",
+      "llm_tldr": "针对大语言模型的越狱攻击防御分布在不同流水线阶段，如输入修改或输出把关，但应如何组合部署尚不明确，已有研究因攻击成功率定义与实验设置不一致而彼此割裂。作者提出 CASCADE 决策框架，在一致威胁模型下首次系统研究阶段内与跨阶段的防御组合。该工作用统一的攻击成功率定义与受控查询预算标准化了直接、黑盒、单轮攻击下的攻防评测。它为 LLM 越狱防御的部署与组合提供系统化、可比较的评估依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.21100v1",
+      "source": "arxiv",
+      "title": "Dynamics-Induced Commitment in Learning-Based Robotic Penalty Kicks",
+      "abstract": "Learning in robotic games is constrained not only by strategic information but also by what the body can still execute. We study this coupling in a hierarchical humanoid-quadruped penalty system in which game-level self-play policies command fixed soccer whole-body controllers (S-WBCs). The humanoid shooting skill is initialized from self-collected motion-capture data, whereas the quadruped saving skill is learned by reinforcement learning. We introduce dynamics-induced commitment mapping (DIC-Map), a body-grounded analysis that estimates continuation capability, identifies the first persistent loss of a terminal alternative, and tests whether the remaining interaction admits a reduced zero-sum game. For symmetric terminal alternatives, the reduced game yields a closed-form bound on optimal strategy concentration determined by the responder's value of deferring. We further show that, when the responder acts through an estimator, equal response values eliminate the direct terminal-allocation gradient and leave an estimator-mediated first-order learning channel. Experiments locate commitment about 0.29 s before contact, and changing only ball speed shifts deferral coverage. Across four responder policies, replacing the estimator raises save rate from 0.240 to 0.472, whereas a comparable gain in read accuracy obtained by waiting raises it only to 0.246. Posterior analysis is used for the equilibrium comparison because the available coverage terms are observational proxies. Project website: https://chris-ruizegeng.github.io/penaltykick/",
+      "authors": [
+        "Ruize Geng",
+        "Hao E. Zhang",
+        "Yisen Li",
+        "Yikai Wang",
+        "H. Eric Tseng",
+        "Ding Zhao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-17T21:21:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.21100v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Game-level self-play policies with reinforcement learning in a hierarchical robot penalty game",
+      "llm_evidence_cn": "分层机器人点球博弈中使用游戏层自博弈策略与强化学习",
+      "llm_evidence": "分层机器人点球博弈中使用游戏层自博弈策略与强化学习",
+      "canonical_evidence": "分层机器人点球博弈中使用游戏层自博弈策略与强化学习",
+      "llm_tldr_en": "A hierarchical humanoid-quadruped penalty system uses game-level self-play policies and RL, analyzed via dynamics-induced commitment mapping of the reduced game.",
+      "llm_tldr_cn": "针对机器人博弈学习不仅受策略信息限制、还受身体可执行能力约束的问题，本文研究分层人形-四足点球系统。游戏层自博弈策略驱动固定的全身控制器，人形射门由动捕数据初始化，四足扑救则通过强化学习习得。作者提出动力学诱导承诺映射DIC-Map，估计续行能力并检验剩余交互是否可约简为零和博弈。研究揭示了身体约束下自博弈策略的承诺结构，为具身博弈学习提供分析工具。",
+      "llm_tldr": "针对机器人博弈学习不仅受策略信息限制、还受身体可执行能力约束的问题，本文研究分层人形-四足点球系统。游戏层自博弈策略驱动固定的全身控制器，人形射门由动捕数据初始化，四足扑救则通过强化学习习得。作者提出动力学诱导承诺映射DIC-Map，估计续行能力并检验剩余交互是否可约简为零和博弈。研究揭示了身体约束下自博弈策略的承诺结构，为具身博弈学习提供分析工具。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21976v1",
+      "source": "arxiv",
+      "title": "Multiplicative Optimism for Constant Regret in Games",
+      "abstract": "We introduce Multiplicatively Optimistic Regret Matching (MORM), an uncoupled learning rule for finite general-sum games. Under simultaneous full-information self-play, every player achieves external regret $O(\\sqrt n\\log d)$ uniformly over all horizons, using only one-step optimism. The analysis combines a potential-based regret-matching argument with multiplicative stability and Hellinger control of strategy movement. A learning-rate safeguard additionally gives $O(\\sqrt{T\\log d})$ regret in the face of adversarial utilities.",
+      "authors": [
+        "Ashkan Soleymani",
+        "Georgios Piliouras"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-09-18T16:38:29+00:00",
+      "link": "https://arxiv.org/pdf/2609.21976v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uncoupled learning under simultaneous full-information self-play",
+      "llm_evidence_cn": "同时全信息自博弈下的无耦合学习",
+      "llm_evidence": "同时全信息自博弈下的无耦合学习",
+      "canonical_evidence": "同时全信息自博弈下的无耦合学习",
+      "llm_tldr_en": "MORM is an uncoupled learning rule for finite general-sum games that, under simultaneous full-information self-play, achieves external regret O(sqrt n log d) uniformly with one-step optimism.",
+      "llm_tldr_cn": "针对有限一般和博弈中的学习问题，本文提出乘法乐观遗憾匹配MORM这一无耦合学习规则。在同时全信息自博弈下，每位参与者仅用一步乐观即可在所有时间尺度上获得O(sqrt n log d)的外部遗憾。分析结合了基于势函数的遗憾匹配论证、乘法稳定性与策略移动的Hellinger控制。面对对抗性收益时，学习率保护机制仍给出O(sqrt T log d)遗憾。该结果为自博弈场景下的高效博弈学习提供了理论保证。",
+      "llm_tldr": "针对有限一般和博弈中的学习问题，本文提出乘法乐观遗憾匹配MORM这一无耦合学习规则。在同时全信息自博弈下，每位参与者仅用一步乐观即可在所有时间尺度上获得O(sqrt n log d)的外部遗憾。分析结合了基于势函数的遗憾匹配论证、乘法稳定性与策略移动的Hellinger控制。面对对抗性收益时，学习率保护机制仍给出O(sqrt T log d)遗憾。该结果为自博弈场景下的高效博弈学习提供了理论保证。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.21334v1",
+      "source": "arxiv",
+      "title": "Co-Evolving Zero-Day Jamming: Adaptive Attack Synthesis and Graph Attention-Based Online Detection",
+      "abstract": "Effective evaluation of zero-day jamming detectors requires robust adversarial models. However, existing attack models often assume prior knowledge of the target receiver, limiting their utility as evaluation benchmarks. On the detection side, existing detectors fail to capture the global temporal-spectral structure of jamming behavior and cannot differentiate zero-day strategies as they emerge. This paper addresses these limitations through a two-pronged framework. First, an online detection framework is introduced that combines a graph attention network (GAT) for temporal-spectral representation learning with Dirichlet process (DP)-means clustering. This framework jointly classifies known and discovers zero-day strategies within a unified learning objective. Second, an inference-driven reinforcement learning (RL) jammer is proposed as an adversarial benchmark. The jammer treats the target receiver as a black-box, infers the detector state via hypothesis testing, and optimizes the trade-off between attack impact and stealth. Simulation results show that the proposed RL jammer outperforms benchmarks, achieving 33% higher attack efficacy and 67% higher stealth. The proposed detection framework against the proposed RL jammer is shown to achieve 20% higher detection accuracy than the benchmarks.",
+      "authors": [
+        "Ghilas Aissou",
+        "Rémi A. Chou",
+        "Taejoon Kim"
+      ],
+      "primary_category": "cs.IT",
+      "categories": [
+        "cs.IT",
+        "cs.AI",
+        "eess.SP"
+      ],
+      "published": "2026-09-18T05:34:30+00:00",
+      "link": "https://arxiv.org/pdf/2609.21334v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Co-evolving adaptive attack synthesis and online detection, an attack-defense adversarial loop for zero-day jamming",
+      "llm_evidence_cn": "协同演化的自适应攻击合成与在线检测，面向零日干扰的攻防对抗循环",
+      "llm_evidence": "协同演化的自适应攻击合成与在线检测，面向零日干扰的攻防对抗循环",
+      "canonical_evidence": "协同演化的自适应攻击合成与在线检测，面向零日干扰的攻防对抗循环",
+      "llm_tldr_en": "A co-evolving framework synthesizes adaptive zero-day jamming attacks and detects them with a graph attention network plus Dirichlet-process clustering.",
+      "llm_tldr_cn": "针对零日干扰检测评估缺乏鲁棒对抗模型、且现有检测器难以刻画全局时频谱结构并区分新策略的问题，本文提出双管齐下的攻防协同演化框架。检测侧用图注意力网络学习时频谱表示并结合狄利克雷过程均值聚类，在线分类已知并发现零日干扰策略；攻击侧则合成无需目标先验的自适应攻击以评估检测器。研究形成攻击合成与在线检测相互对抗演化的闭环。工作通过攻防协同演化提升了零日干扰检测的鲁棒性评估能力。",
+      "llm_tldr": "针对零日干扰检测评估缺乏鲁棒对抗模型、且现有检测器难以刻画全局时频谱结构并区分新策略的问题，本文提出双管齐下的攻防协同演化框架。检测侧用图注意力网络学习时频谱表示并结合狄利克雷过程均值聚类，在线分类已知并发现零日干扰策略；攻击侧则合成无需目标先验的自适应攻击以评估检测器。研究形成攻击合成与在线检测相互对抗演化的闭环。工作通过攻防协同演化提升了零日干扰检测的鲁棒性评估能力。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.21484v1",
+      "source": "arxiv",
+      "title": "HE-Guardrail: A Homomorphic Guardrail Against Jailbreak Attacks for Encrypted Large Language Model Inference",
+      "abstract": "Homomorphic encryption (HE) has emerged as a promising approach to privacy-preserving machine learning (PPML), enabling computation directly over encrypted data. In HE-based PPML, a client submits an encrypted input to the server, which evaluates models such as large language models (LLMs) without access to the underlying plaintext. However, we identify a critical security vulnerability in this setting: HE-LLM inference is vulnerable to malicious clients that submit adversarial prompts, such as jailbreak attacks. The same confidentiality that protects benign clients also prevents the server from inspecting incoming prompts or generated responses, making adversarial attempts difficult to detect or block and potentially allowing successful attacks to remain entirely invisible to the server. To address this vulnerability, we propose HE-Guardrail, a framework that evaluates guardrail mechanisms entirely over encrypted data and homomorphically controls whether the target-model response is returned to the client. We instantiate HE-Guardrail with three representative guardrails - Llama Guard, JBShield, and GradSafe. Our results show that HE-Guardrail closely reproduces the decisions of the corresponding plaintext guardrails in the encrypted domain, with distinct security-efficiency-utility trade-offs.",
+      "authors": [
+        "Byeongseo Min",
+        "Yongwoo Lee",
+        "Young-Sik Kim",
+        "Yongjune Kim"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-18T08:36:37+00:00",
+      "link": "https://arxiv.org/pdf/2609.21484v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Adversarial prompts such as jailbreak attacks against encrypted LLM inference and a guardrail defense",
+      "llm_evidence_cn": "针对加密LLM推理的越狱等对抗提示攻击与防护栏防御",
+      "llm_evidence": "针对加密LLM推理的越狱等对抗提示攻击与防护栏防御",
+      "canonical_evidence": "针对加密LLM推理的越狱等对抗提示攻击与防护栏防御",
+      "llm_tldr_en": "HE-Guardrail detects and blocks malicious adversarial prompts such as jailbreaks in encrypted LLM inference where the server cannot inspect ciphertext inputs.",
+      "llm_tldr_cn": "针对同态加密LLM推理中服务器无法查看密文提示、因而易受越狱等对抗提示攻击的问题，本文识别出这一关键安全漏洞。作者提出HE-Guardrail同态防护栏，在不解密的前提下检测并阻断恶意对抗提示。研究面向隐私保护推理场景给出防御方案，兼顾客户端机密性与服务端安全。工作为加密大模型推理提供了可抵御对抗文本攻击的防护机制。",
+      "llm_tldr": "针对同态加密LLM推理中服务器无法查看密文提示、因而易受越狱等对抗提示攻击的问题，本文识别出这一关键安全漏洞。作者提出HE-Guardrail同态防护栏，在不解密的前提下检测并阻断恶意对抗提示。研究面向隐私保护推理场景给出防御方案，兼顾客户端机密性与服务端安全。工作为加密大模型推理提供了可抵御对抗文本攻击的防护机制。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

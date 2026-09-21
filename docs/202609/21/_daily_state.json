@@ -1,0 +1,169 @@
+{
+  "date": "20260921",
+  "date_label": "",
+  "generated_at": "2026-09-21 22:20:47 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.21617v1",
+      "route": "202609/21/2609.21617v1-counterplay-counterfactual-post-training-for-self-play-driving-policies",
+      "title": "CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向驾驶策略的自博弈强化学习后训练",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.15939v1",
+      "route": "202609/21/2609.15939v1-vulnerability-localization-benchmark-measuring-agentic-security-analysis-at-repository-scale",
+      "title": "Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "仓库规模智能体化安全分析的漏洞定位基准",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.17254v1",
+      "route": "202609/21/2609.17254v1-sema-guard-semantic-and-graph-based-vulnerability-detection-in-assembly-code",
+      "title": "SEMA-GUARD: Semantic and Graph-Based Vulnerability Detection in Assembly Code",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用语义分析与图神经网络检测汇编代码漏洞",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.21793v1",
+      "route": "202609/21/2609.21793v1-cascade-against-jailbreaks-combination-across-stages-with-controlled-attack-defense-evaluation",
+      "title": "CASCADE Against Jailbreaks: Combination Across Stages with Controlled Attack-Defense Evaluation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "跨流水线阶段的 LLM 越狱攻防受控评估",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.21976v1",
+      "route": "202609/21/2609.21976v1-multiplicative-optimism-for-constant-regret-in-games",
+      "title": "Multiplicative Optimism for Constant Regret in Games",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "同时全信息自博弈下的无耦合学习",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.15297v1",
+      "route": "202609/21/2609.15297v1-admissable-training-reinforcement-learning-agents-against-adversarial-missingness",
+      "title": "Admissable: Training Reinforcement Learning Agents against Adversarial Missingness",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对特征遮挡攻击的强化学习对抗训练",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.17648v1",
+      "route": "202609/21/2609.17648v1-trust-propagation-and-structural-containment-in-multi-agent-llm-pipelines",
+      "title": "Trust propagation and structural containment in Multi-agent LLM pipelines",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "多智能体管线中经记忆投毒与间接提示注入的攻击传播",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.21100v1",
+      "route": "202609/21/2609.21100v1-dynamics-induced-commitment-in-learning-based-robotic-penalty-kicks",
+      "title": "Dynamics-Induced Commitment in Learning-Based Robotic Penalty Kicks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "分层机器人点球博弈中使用游戏层自博弈策略与强化学习",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.21334v1",
+      "route": "202609/21/2609.21334v1-co-evolving-zero-day-jamming-adaptive-attack-synthesis-and-graph-attention-based-online-detection",
+      "title": "Co-Evolving Zero-Day Jamming: Adaptive Attack Synthesis and Graph Attention-Based Online Detection",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "协同演化的自适应攻击合成与在线检测，面向零日干扰的攻防对抗循环",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    },
+    {
+      "paper_id": "2609.21484v1",
+      "route": "202609/21/2609.21484v1-he-guardrail-a-homomorphic-guardrail-against-jailbreak-attacks-for-encrypted-large-language-model-inference",
+      "title": "HE-Guardrail: A Homomorphic Guardrail Against Jailbreak Attacks for Encrypted Large Language Model Inference",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对加密LLM推理的越狱等对抗提示攻击与防护栏防御",
+      "first_seen_at": "2026-09-21 22:20:47 UTC",
+      "updated_at": "2026-09-21 22:20:47 UTC"
+    }
+  ]
+}

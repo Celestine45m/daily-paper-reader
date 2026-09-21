@@ -1,0 +1,619 @@
+Title: Co-Evolving Zero-Day Jamming: Adaptive Attack Synthesis and Graph Attention-Based Online Detection
+
+URL Source: https://arxiv.org/pdf/2609.21334v1
+
+Published Time: Mon, 21 Sep 2026 00:36:24 GMT
+
+Number of Pages: 6
+
+Markdown Content:
+# Co-Evolving Zero-Day Jamming: Adaptive Attack Synthesis and Graph Attention-Based Online Detection 
+
+Ghilas Aissou ∗, R´ emi A. Chou †, and Taejoon Kim ∗
+
+Abstract —Effective evaluation of zero-day jamming detectors requires robust adversarial models. However, existing attack models often assume prior knowledge of the target receiver, limiting their utility as evaluation benchmarks. On the detection side, existing detectors fail to capture the global temporal-spectral structure of jamming behavior and cannot differentiate zero-day strategies as they emerge. This paper addresses these limitations through a two-pronged framework. First, an online detection framework is introduced that combines a graph attention net-work (GAT) for temporal-spectral representation learning with Dirichlet process (DP)-means clustering. This framework jointly classifies known and discovers zero-day strategies within a unified learning objective. Second, an inference-driven reinforcement learning (RL) jammer is proposed as an adversarial benchmark. The jammer treats the target receiver as a black-box, infers the detector state via hypothesis testing, and optimizes the trade-off between attack impact and stealth. Simulation results show that the proposed RL jammer outperforms benchmarks, achieving 
+
+33% higher attack efficacy and 67% higher stealth. The proposed detection framework against the proposed RL jammer is shown to achieve 20% higher detection accuracy than the benchmarks. 
+
+Index Terms —Graph attention network, novel class discovery, online clustering, reinforcement learning, Zero-day jamming. 
+
+I. I NTRODUCTION 
+
+While learning-based jamming detectors have demonstrated robust detection performance against known jammers [1], [2], they remain susceptible to zero-day attacks characterized by previously unseen signatures [3]. To rigorously evaluate detector resilience against such threats, reinforcement learning (RL)-based jammers [4]–[6] can be used to autonomously de-velop zero-day attack behaviors via online learning. However, their utility as evaluation benchmarks is often hindered by two limitations. First, they largely rely on a priori knowledge of the target receiver [4]. Second, they often overlook stealth requirements, even though maintaining a low probability of detection (LPD) is necessary to prevent countermeasures from neutralizing their attacks. On the detection side, anomaly-based methods [1], [7] can be used to detect zero-day attacks, but they are limited to bi-nary benign-or-attack outputs. Similarly, existing frameworks such as open-set recognition method [8] can label zero-day attacks as an unknown class, but they lack the granularity required to distinguish between diverse zero-day attacks. This 
+
+> ∗Arizona State University, School of Electrical, Computer and Energy Engineering, Tempe, AZ 85287, USA. Email: {gaissou, taejoonkim }@asu.edu
+> †The University of Texas at Arlington, Department of Computer Science and Engineering, Arlington, TX 76010, USA. Email: remi.chou@uta.edu This work was supported in part by NSF under grants CNS2451268, CNS2514415, ONR under grant N000142112472, and the NSF and OUSD – Research and Engineering, Grant ITE2515378, as part of the NSF Conver-gence Accelerator Track G.
+
+observation readily suggests that the challenge must be formu-lated as an online discovery problem , where unlabeled sam-ples arrive sequentially as new zero-day jamming behaviors emerge and evolve over time. Although online k-means [9] supports sequential online updates, it does not jointly classify known and zero-day strategies. Existing novel class discovery methods [3], [10] address joint classification and clustering but operate in offline batch settings and require a priori knowledge of the the novel class cardinality. In this work, we consider a wireless communication link in which a transmitter (Alice) must secure robust communi-cations with a receiver (Bob) in the presence of a jammer. Bob is equipped with a jamming detector designed to trigger frequency-hopping countermeasure upon identifying an attack. Within this framework, our primary contributions addressing the latter limitations are as follows:  
+
+> •
+
+We propose an online detection framework that jointly classifies known jamming strategies and discovers zero-day strategies as they emerge. The main challenge is to expand the label space upon zero-day discovery while maintaining classification stability, without the need for offline retraining or a priori knowledge of the zero-day class cardinality, which is in contrast to the methods in [3], [10]. This is addressed by a unified online framework that combines a graph attention network (GAT) encoder for temporal-spectral representation learning with Dirichlet process (DP)-means clustering mod-ule, enabling incremental class expansion without degrading classification of known jamming strategies.  
+
+> •
+
+To effectively evaluate the proposed detector, we introduce an inference-driven RL jammer that treats the receiver (Bob) as a black-box . This overcomes the reliance on receiver-side knowledge common in prior RL-based models [4], [5]. The jammer infers the hidden detector state at the receiver via cyclostationary feature extraction and generalized likelihood ratio test (GLRT)-based hypothesis testing [11]. Using the inferred state the jammer trains an RL policy to maximize interference efficiency while maintaining LPD (stealth). Simulation results show that the proposed RL jammer outperforms the benchmark method in [5], increasing attack efficiency by 33% and stealth by 67% while maintaining a block-box perspective. When evaluated against the proposed jammer the proposed detector achieves 20 % higher detection probability compared to the scheme in [3]. 
+
+Notation: Bold lowercase letters denote column vectors 
+
+x = [ x1, . . . , x N ]⊤ ∈ CN ×1, and bold uppercase letters denote matrices X ∈ CM ×N , where C denote the sets of complex 
+
+> Accepted for publication in the 2026 IEEE Global Communications Conference (GLOBECOM). arXiv:2609.21334v1 [cs.IT] 18 Sep 2026
+
+numbers. Calligraphic letters X denote sets, with |X | their cardinality. E[·] denotes expectation operator. II. S YSTEM MODEL AND PROBLEM FORMULATION 
+
+We consider a wireless communication framework, illus-trated in Fig. 1, where Alice communicates with Bob over L
+
+orthogonal frequency channels in the presence of a jamming adversary. We adopt a discrete-time complex baseband repre-sentation. At time slot t, Alice selects channel m ∈ { 1, . . . , L }
+
+and transmits st[n, m ] ∈ C, n = 0 , . . . , N − 1, where N is the number of time samples per slot. The jammer transmits 
+
+ut[n, m (J)] ∈ C on channel m(J) ∈ { 1, . . . , L } according to a strategy that determines the waveform, channel selection, and power. The signal received at Bob is 
+
+rt[n, m ] = hAB st[n, m ]+ I[m = m(J)] hJB ut[n, m (J)]+ wt[n, m ],
+
+(1) where hAB , h JB ∈ C are the channel gains for the Alice-to-Bob and jammer-to-Bob links on channel m, respectively, 
+
+I[·] is the indicator function that equals 1 if the jammer is active on channel m and 0 when the jammer is not active on channel m, and wt[n, m ] ∼ CN (0 , σ 2
+
+> w
+
+) is the additive zero-mean circularly symmetric complex Gaussian noise with variance σ2
+
+> w
+
+, independent across channels. Bob demodulates and decodes rt[n, m ] to retrieve the transmitted frame, evalu-ating a cyclic redundancy check (CRC) to generate a feedback bit At ∈ { 0, 1}, where At = 1 denotes an acknowledgment (ACK) (CRC passed) and At = 0 a negative-acknowledgment (NACK) (CRC failed). The jammer operates in full-duplex mode with ideal self-interference cancellation, sensing channel m(J) while trans-mitting. The jammer observation is 
+
+r(J) 
+
+> t
+
+[n, m (J)] = hAJ st[n, m ] I[m = m(J)] + wt[n, m (J)], (2) where hAJ ∈ C is the Alice-to-jammer channel gain and 
+
+wt[n, m (J)] ∼ CN (0 , σ 2 
+
+> J
+
+). The jammer is assumed to overhear the binary feedback signal At transmitted over a dedicated control channel, as shown in Fig. 1. 
+
+Figure 1: Wireless communication system under jamming attack. 
+
+Jamming Detector and Problem Statement 
+
+Bob constructs a time-frequency frame Xk ∈ RL×T over T
+
+consecutive time slots, indexed by τ ∈ { 1, . . . , T } correspond-ing to the slot index t = ( k − 1) T + τ . The entry [Xk]m,τ 
+
+denotes the average received energy on channel m during local slot τ , defined as [Xk]m,τ = 1
+
+> N
+
+PN −1 
+
+> n=0
+
+|rt[n, m ]|2 . The detec-tor at Bob is trained on a labeled dataset D = {(Xi, y i)}Ns
+
+> i=1
+
+,where Ns is the number of training frames, yi = 1 denotes benign transmission, and yi ∈ { 2, . . . , K } denotes one of 
+
+K − 1 known jamming strategies. The detector output is a binary decision dk ∈ { 0, 1}, where dk = 1 indicates jamming detection and dk = 0 indicates no jamming detection. Upon detection ( dk = 1), Alice and Bob activate a frequency-hopping countermeasure in frame k + 1 . While we adopt this concrete setting for our analysis, the specific architecture of the detector and countermeasure remains modular and secondary to the proposed zero-day framework. The detector is trained on K known classes and is not designed to handle zero-day jamming. During deployment, Bob receives an unlabeled stream {Xk}∞
+
+> k=1
+
+, where each frame may belong to a known or a zero-day strategy. The task is formulated as an online discovery problem. We want to produce a decision ck ∈ { 1, . . . , K +Mk} for each incoming 
+
+Xk, where indices 1, . . . , K correspond to known classes and indices K + 1 , . . . , K + Mk correspond to discovered zero-day strategies, with Mk the number of zero-day strategies discovered up to frame k. The challenge is that the detector must expand its label space upon zero-day discovery, with no prior knowledge of how many strategies Mk will emerge. At the same time, the detector must remain stable on known classes to prevent error propagation during subsequent online updates. We next present the online detection framework addressing these challenges. III. O NLINE ZERO -D AY JAMMING CLUSTERING 
+
+Fig. 2 illustrates the proposed detection framework, whose components are detailed in the following subsections. A GAT encoder maps the frame Xk to a latent embedding, which a dynamic classifier scores against the current label space to produce ck. A DP-means module determines whether the embedding belongs to an existing class or creates a new zero-day class, while a multi-view consistency loss keeps the en-coder discriminative on the unlabeled deployment stream. We describe the offline pre-training first, then the online detection. 
+
+A. GAT Encoder and Offline Pre-Training 
+
+We describe the GAT encoder architecture and the pre-training procedure that initializes the encoder, classifier, and DP-means radius before deployment. 
+
+1) Graph Construction and Attention: Jamming strategies induce structured global dependencies across frequency chan-nels and time. Classical encoders, such as convolutional en-coders, are not suited to modeling such global structure due to their limited receptive fields [12]. To model these non-local dependencies, we represent each frame Xk ∈ RL×T as a fully connected graph over LT nodes, where node (m, τ )
+
+corresponds to entry [Xk]m,τ . Each node (m, τ ) carries the feature vector xk,m,τ = ϕθϕ ([ Xk]m,τ ) ∈ Rd0×1, with ϕθϕ (·) alearnable node-wise map, with parameter θϕ. For notational convenience, nodes are indexed by i = ( m − 1) T + τ ∈{1, . . . , LT }, so xk,i ≜ xk,m,τ .The feature xk,i is projected into query, key, and value vectors qk,i = W ⊤
+
+> Q
+
+xk,i , kk,i = W ⊤ 
+
+> K
+
+xk,i , vk,i = W ⊤ 
+
+> V
+
+xk,i ,respectively, where W Q, W K , W V ∈ Rd0×d are projection Figure 2: Proposed online zero-day jamming detection and inference-driven RL-based jamming synthesis framework. matrices and d is the embedding dimension [13]. The attention weight from node j to node i is ek,ij = exp( q⊤   
+
+> k,i kk,j /√d)
+> PLT ℓ=1 exp( q⊤
+> k,i kk,ℓ /√d)
+
+.
+
+Each node aggregates value vectors weighted by attention, 
+
+hk,i = PLT j=1 ek,ij vk,j ∈ Rd×1, and mean pooling yields the frame embedding zk = 1
+
+> LT
+
+PLT i=1 hk,i ∈ Rd×1 [13]. The GAT encoder parameters θG ≜ (θϕ,W Q,W K ,W V ) define the mapping zk = fθG (Xk).
+
+2) Offline Pre-Training: As shown in Fig. 2 (in blue), the encoder fθG and initial classifier W cls ,0 = [ w1, . . . , wK ] ∈
+
+Rd×K , where wc ∈ Rd×1 is the weight vector for class c ∈{1, · · · , K }, are trained on the dataset D by minimizing the supervised loss Lℓ = − 1
+
+> Ns
+
+P 
+
+> (Xi,y i)∈D
+
+log p(yi | Xi). Here, 
+
+p(c | Xi) = exp( w⊤ 
+
+> c
+
+fθG (Xi)) /PKc′=1 exp( w⊤ 
+
+> c′
+
+fθG (Xi)) is the softmax posterior. At the end of training, the centroid of each known class c ∈ { 1, . . . , K } is 
+
+μc = 1
+
+|I c|
+
+X
+
+> i∈I c
+
+fθG (Xi) ∈ Rd×1, (3) where Ic = {i : yi = c}. These centroids {μc}Kc=1 
+
+play a dual role: they initialize the DP-means representa-tive set at deployment and provide the reference geome-try for calibrating the DP-means radius λdp ,c . Specifically, 
+
+λdp ,c is set on a held-out validation set Dval as λdp ,c =max (Xi,y i)∈D val ,y i=c ∥fθG (Xi) − μc∥2, c ∈ {1, . . . , K }.
+
+During deployment, a frame is assigned to its nearest class only if the distance falls within that class’s own radius; otherwise it is flagged as a zero-day candidate. 
+
+B. Online Classification and Zero-Day Discovery 
+
+At deployment, the framework draws an unlabeled mini-batch Buk from the deployment stream, and processes Xk ∈Buk in three sequential steps: (i) two augmented views are gen-erated and embedded to produce reliable latent representations; (ii) the DP-means module assigns each frame to an existing class or instantiates a new one; and (iii) the dynamic classifier produces a posterior over the current label space. 
+
+1) Multi-View Augmentations and Unlabeled Consistency: 
+
+Each frame Xk ∈ B uk is transformed into two stochastic views 
+
+X(1)  
+
+> k
+
+= Ψ 1(Xk) ∈ RL×T and X(2)  
+
+> k
+
+= Ψ 2(Xk) ∈ RL×T ,where Ψ1 applies a random time shift and Ψ2 applies a Gaussian noise perturbation. The perturbation magnitudes are calibrated on D to preserve the class label, in the sense that arg max c p(c | Ψv (Xk)) = arg max c p(c | Xk) holds for v ∈ {1, 2}. The shared encoder produces embeddings 
+
+z(v) 
+
+> k
+
+= fθG (X(v) 
+
+> k
+
+) and classifier outputs posterior vectors 
+
+p(v) 
+
+> k
+
+= [pk(1 | X(v) 
+
+> k
+
+), . . . , p k(K + Mk−1 | X(v) 
+
+> k
+
+)] ⊤ ∈
+
+[0 , 1] (K+Mk−1)×1. Similar to [10], each posterior is converted by the Sinkhorn–Knopp algorithm into a soft pseudo-label 
+
+b(v) 
+
+> k
+
+∈ [0 , 1] (K+Mk−1)×1 enforcing a uniform class marginal. The pseudo-label of one view serves as the target for the other, yielding a consistency loss 
+
+Luk = −1
+
+|B uk |
+
+X
+
+> Xu∈B uk
+> K+Mk−1
+
+X
+
+> c=1
+
+h
+
+b(2)  
+
+> u,c
+
+log pu(c | X(1)  
+
+> u
+
+)+ b(1)  
+
+> u,c
+
+log pu(c | X(2)  
+
+> u
+
+)
+
+i
+
+.
+
+(4) This loss prevents the encoder from drifting on the unlabeled stream. The view embeddings (z(1)  
+
+> k
+
+, z(2)  
+
+> k
+
+) are then passed to the DP-means module. 
+
+2) DP-Means Assignment and Class Expansion: The DP-means module maintains representatives {μc}K+Mk−1 
+
+> c=1
+
+, initial-ized from (3) and extended as new classes are discovered. Each view embedding is independently assigned by comparing its distance to the nearest representative against that class’s calibrated radius, 
+
+c(v) 
+
+> k
+
+=
+
+(
+
+c⋆, ∥z(v) 
+
+> k
+
+− μc⋆ ∥2 ≤ λdp ,c ⋆ ,
+
+NEW , otherwise , (5) where c⋆ = arg min c ∥z(v) 
+
+> k
+
+− μc∥2. Consensus between both views is required before any classification is made, guarding against spurious decisions on ambiguous frames. Three out-comes follow as shown in Fig. 2: Case 1: Agreement on an existing class (c(1)  
+
+> k
+
+= c(2)  
+
+> k
+
+=
+
+c⋆̸ = NEW ): the representative is updated with the averaged embedding ¯zk = 12 (z(1)  
+
+> k
+
++ z(2)  
+
+> k
+
+) via 
+
+μc⋆ ← μc⋆ + η(¯ zu − μc⋆ ), (6) where η ∈ (0 , 1] is the step size, and its cluster radius is updated online as λdp ,c ⋆ ← max ( λdp ,c ⋆ , ∥¯zk − μc⋆ ∥2).
+
+Case 2 – Agreement on a new class (c(1)  
+
+> k
+
+= c(2)  
+
+> k
+
+= NEW ): a new class cnew = K +Mk−1 +1 is created with μcnew ← ¯zk
+
+and λdp ,c new ← ∥ z(1)  
+
+> k
+
+−z(2)  
+
+> k
+
+∥2/2. The classifier is expanded as 
+
+W cls ,k ← [W cls ,k −1 μcnew ], (7) and Mk is incremented to Mk = Mk−1 + 1 .
+
+Case 3 — Disagreement (c(1) 
+
+> k
+
+̸ = c(2)  
+
+> k
+
+): the frame is discarded from the representative update and pseudo-label generation, but still contributes to Luk .The DP-means objective penalizes large distances between samples and their assigned cluster centers, while discouraging the creation of unnecessary new clusters: 
+
+Jcluster ,k = X
+
+> Xi∈B uk
+
+X
+
+> c
+
+ri,c ∥¯zi − μc∥22 + λ2dp Mk−1, (8) where ri,c = 1 iff both views agree on class c, and λdp is the penalty for creating a new class, set to λdp = min c λdp ,c so that any sample flagged as NEW in (5) incurs this penalty. At step k, the classifier W cls ,k ∈ Rd×(K+Mk−1) scores zk
+
+via p(yk = c | Xk) = exp( w⊤      
+
+> czk)
+> PK+Mk−1
+> c′=1 exp( w⊤
+> c′zk)
+
+, and produces ck =arg max c p(c | Xk). Known and zero-day classes are handled uniformly within the same softmax. When Case 2 occurs, the classifier is expanded via (7) with the new column initialized from the discovered centroid. 
+
+3) Unified Online Objective: The supervised loss Lℓk,consistency loss Luk , and clustering objective Jcluster ,k all operate on the same encoder and classifier, so they are not independently optimized but jointly solved through 
+
+Ltotal ,k = Lℓk + 12e2su Luk + 12e2sc Jcluster ,k + su + sc, (9) where Lℓk = −|B ℓk|−1P
+
+> (Xi,y i)∈B ℓk
+
+log p(yi | Xi) is evaluated on a labeled replay minibatch Bℓk ⊂ D, and su, s c ∈
+
+R are trainable log-uncertainty weights [14] that balance the three terms without manual tuning. At each step, 
+
+{θG, W cls ,k , s u, s c} are updated by gradient descent on (9) and {μc} by (6), coupled within a single online objective. To evaluate the proposed zero-day detector, we next intro-duce the inference-driven RL jammer. IV. I NFERENCE -D RIVEN RL J AMMER 
+
+We model the jammer as an inference-driven adversary that learns its strategy through RL, with the objective of maximiz-ing the outage probability at Bob while remaining undetected. 
+
+A. Jammer Observations and Detector State Estimation 
+
+As illustrated in Fig. 1 (shown in red), the jammer observes the ACK/NACK feedback At [15] but does not directly observe the detector decision dk or the countermeasure activa-tion. To bridge this information gap and inform its RL-based policy, the jammer must probabilistically infer the detector’s state. We formulate this state estimation as a binary hypothesis test on the previous frame’s detection outcome: 
+
+H0 : dk−1 = 0 , H1 : dk−1 = 1 , (10) where H0 denotes stealth maintained and H1 denotes detection followed by countermeasure activation. The key challenge is that ACK/NACK feedback reflects both channel impairments and jamming effects and therefore does not reveal whether countermeasure activation has occurred. The jammer must infer dk−1 from its sensing observation r(J)[n, m (J)] in (2). To sense Alice’s transmission, the jammer exploits the cyclostationary structure of Alice’s signal via the spectral correlation function (SCF) [11], [16]. The SCF maps the signal into a two-dimensional cyclic-spectral domain param-eterized by spectral frequency ω and cyclic frequency α,providing robustness to noise uncertainty and channel fading, unlike energy-based detection. Using the smoothed cyclic periodogram bSαr(J),t (ω) [11], the jammer identifies a discrimi-native coordinate (α⋆, ω ⋆) during an initial observation phase and computes the frame-level SCF feature 
+
+bqk ≜ 1
+
+T
+
+> kT
+
+X 
+
+> t=( k−1) T+1
+
+bSα⋆
+
+> r(J),t
+
+(ω⋆) . (11) By the frequency-shift property of the SCF [16], when the countermeasure forces Alice to hop from the monitored chan-nel (center frequency νm) to another channel ( νm′ , m ′̸ = m), the theoretical SCF satisfies Sαr(J),t (ω) = |hAJ |2Sαs (ω − νm′ ),shifting its peak away from (α⋆, ω ⋆) and causing bqk to drop. We define the unshifted SCF magnitude Ψm ≜ |Sα⋆ 
+
+> s
+
+(ω⋆ −
+
+νm)|, the occupancy ratio ρk ≜ T −1PkT t=( k−1) T+1 1{νm′ = νm},the SCF leakage residual ϵ ≜ max νm′̸ =νm |Sα⋆ 
+
+> s
+
+(ω⋆ − νm′ )|,and assume channel-gain bounds 0 < h 2min ≤ | hAJ |2 ≤ h2max .Using the asymptotic normality of the SCF estimator es-tablished in [11], we derive the separation guarantee for our hypothesis test. For a target error probability β ∈ (0 , 1) , define the confidence parameter δN,T (β) ≜ σS
+
+p2 log(2 /β )/(N T ),where σ2 
+
+> S
+
+is the asymptotic variance of bSα⋆
+
+> r(J),t
+
+(ω⋆) [11]. 
+
+Proposition 1. For any β ∈ (0 , 1) , with probability at least 
+
+1 − β, under H0
+
+bqk ≥ h2min Ψm − δN,T (β), (12) 
+
+and under H1,
+
+bqk ≤ ρkh2max Ψm + (1 − ρk)h2max ϵ + δN,T (β). (13) 
+
+Consequently, bqk is discriminative with probability at least 
+
+1 − β whenever 
+
+∆q ≜ (h2min −ρkh2max )Ψ m −(1 −ρk)h2max ϵ > 2δN,T (β). (14) Proof. Since w(J)[n, m (J)] is second-order stationary, its SCF satisfies Sα⋆
+
+> w(J),t
+
+(ω) = 0 for α⋆̸ = 0 [11]. By independence of s[n, m ] and w(J)[n, m (J)], the nonzero-cyclic-frequency SCF of the jammer’s sensed signal is governed by the Alice component, yielding Sα⋆
+
+> r(J),t
+
+(ω) = |hAJ |2Sα⋆ 
+
+> s
+
+(ω −νm′ ). Under 
+
+H0, all slots satisfy νm′ = νm, so |Sα⋆
+
+> r(J),t
+
+(ω⋆)| ≥ h2min Ψm.Under H1, slots with νm′̸ = νm contribute at most h2max ϵ.Averaging over T slots yields 
+
+ρkh2max Ψm + (1 − ρk)h2max ϵ ≥ qk ≥ h2min Ψm, (15) where qk ≜ T −1PkT t=( k−1) T +1 |Sα⋆
+
+> r(J),t
+
+(ω⋆)| is the theo-retical counterpart of bqk. From [11], √N ( bSα⋆
+
+> r(J),t
+
+(ω⋆) −
+
+Sα⋆
+
+> r(J),t
+
+(ω⋆)) d
+
+−→ CN (0 , σ 2 
+
+> S
+
+). Applying a Gaussian tail bound to the frame-level SCF feature bqk yields P (|bqk − qk| >δN,T (β)) ≤ β. Combining with (15) yields (12)–(13), and (14) follows by requiring the H0 lower bound to exceed the H1
+
+upper bound. 
+
+Remark 1. Rearranging (14) , the minimum observation length required to guarantee discrimination at confidence 1−β
+
+is N T > 2σ2 
+
+> S
+
+log(2 /β )/∆2 
+
+> q
+
+, providing a design rule for selecting the frame parameters N and T as a function of the channel conditions and target reliability. 
+
+From the asymptotic normality established in [11], bqk ∼N (qk, σ 2 
+
+> S
+
+/(N T )) , where qk depends on the unknown channel gains through (15). Since these gains are unknown, the jammer applies the GLRT 
+
+log max ϑ1 p(bqk | H 1; ϑ1)max ϑ0 p(bqk | H 0; ϑ0)
+
+> H1
+
+≷
+
+> H0
+
+η, (16) where ϑi collects the unknown channel parameters under Hi.The threshold η is calibrated during the observation phase to satisfy the Neyman–Pearson constraint PFA ≜ Pr( gk = 1 |H0) ≤ αFA for a prescribed false-alarm level αFA . The GLRT outcome is mapped to 
+
+gk =
+
+(
+
+1, if the GLRT selects H1,
+
+0, otherwise, (17) so that gk serves as a one-frame-delayed noisy proxy for Bob’s hidden detector response dk−1, with gk = 1 indicating inferred detection ( dk−1=1 ) and gk= 0 indicating no detection ( dk−1=0 ). 
+
+B. Jamming Decision-Making and Learning Framework 
+
+At decision frame k, the jammer selects an action ak ∈ A 
+
+following a policy π(ak | ok), where ok is its observable state. The action space A consists of all combinations of a type of jamming waveform (e.g., barrage noise, pulsed, etc.), a target frequency channel m(J) ∈ { 1, . . . , L }, and a transmit power level subject to 1
+
+> T N
+
+PkT t=( k−1) T +1 
+
+PN −1 
+
+> n=0
+
+E|ut[n, m (J)]|2 ≤
+
+Pmax . Each action ak ∈ A specifies the jamming signal 
+
+u[n, m (J)] in (1) during frame k.The observable state is ok ≜ (˜ qk, g k, ˜Ak−1), where ˜qk
+
+and ˜Ak−1 are uniform quantizations of bqk and ¯Ak−1 ≜
+
+T −1 P(k−1) Tt=( k−2) T +1 At into qlev and Alev levels, respectively. The resulting state space is of size |O| = qlev ×2×Alev , which is controllable by the quantization level for tractable Q-learning. The reward function must be designed to capture the trade-off between communication disruption (impact) and stealth. A more aggressive jammer disrupts communication but also increases the risk of detection. Once detected, the countermea-sure forces Alice to hop to a new channel, and the jammer must spend additional frames re-sensing to locate the new channel before resuming jamming. The per-frame reward is 
+
+Rk = (1 − ¯Ak)
+
+| {z }
+
+> impact
+
+−ζ gk+1 
+
+|{z} 
+
+> stealth penalty
+
+, (18) where gk+1 is the GLRT-based inference of Bob’s detector decision dk, available with one-frame delay, and ζ ≥ 0 governs the trade-off. The first term rewards communication disruption; the second penalizes inferred detection. Since gk+1 becomes available at frame k + 1 , the Q-learning update is performed once gk+1 becomes available. Under the adopted quantized state representation, the learning problem is treated as a finite-state MDP approximation. The jammer maximizes the expected discounted return 
+
+max π Eπ [P∞ 
+
+> k=1
+
+γk−1Rk] with discount factor γ ∈ (0 , 1) via the Q-learning update with learning rate ξ ∈ (0 , 1) .
+
+Q(ok, a k)← (1 −ξ)Q(ok, a k)+ ξ
+
+
+
+Rk +γ max 
+
+> a′∈A
+
+Q(ok+1 ,a ′)
+
+
+
+. (19) 
+
+Remark 2. A fixed stationary policy corresponds to a single jamming strategy, regardless of the frame-to-frame variability in the actions drawn from that policy. This follows from the equivalence between behavior strategies and mixed strategies in games with perfect recall [17]. 
+
+V. S IMULATION AND RESULTS 
+
+Alice communicates with Bob over L = 64 orthogonal frequency channels. Each frame contains T = 100 slots, and each slot contains N = 80 complex baseband samples. The Alice-to-Bob and jammer-to-Bob links are modeled as independent Rayleigh fading channels. Alice transmits with fixed normalized power, PA = E[|st[n, m ]|2], while the noise variance σ2 
+
+> w
+
+is set such that 10 log 10 (PA/σ 2
+
+> w
+
+) = 20 dB during training. During evaluation, σ2 
+
+> w
+
+is adjusted such that 
+
+10 log 10 (PA/σ 2
+
+> w
+
+) varies from 5 dB to 30 dB to evaluate the jammer under different channel conditions. Bob is equipped with a convolutional neural network based jamming detector trained on K = 4 known classes as discussed in Section II: benign transmission, sequential jammer, random jammer, and a reactive jammer [1]. In this simulation, the proposed jammer action space is instantiated by eight waveform-power com-binations, formed by four jamming power levels and two jamming waveforms: wideband noise and narrowband tone interference. To generate zero-day jamming strategies, three independently initialized policies of the proposed RL jammer are trained. In view of Remark 2, each learned stationary policy is interpreted as one jamming strategy. Three baseline jammers are considered: a LinUCB contextual bandit [5], a super-reactive jammer (SRJ) [2], and a random jammer [1]. Figure 3: Performance comparison across transmit SNR values: (a) jamming effectiveness, (b) adversary stealth, (c) detector detection probability, and (d) average jammer reward for the proposed and benchmark detectors. 
+
+RL Jammer Performance: Fig. 3(a) shows that the pro-posed jammer consistently attains the highest outage proba-bility, exceeding 0.8 for SNR values of 15 dB and above, as the learned reward explicitly balances disruption and stealth after accounting for Bob’s defensive response. Fig. 3(b) reports the average stealth penalty, i.e., the average value of gk
+
+in (18). The proposed jammer achieves the lowest penalty over the entire SNR range, indicating that the inference-driven feedback enables the jammer to avoid actions likely to trigger Bob’s detector, whereas the baselines either react myopically or ignore the detector altogether. On the defense side, the proposed detector is first trained offline on the K = 4 known jamming classes and then adapted during deployment through (9). As a benchmark, we consider the open-set recognition method in [3], combining OpenMax, Weibull-based score calibration, and a Siamese similarity module on the same encoder backbone. 
+
+Online Detection Performance: Fig. 3(c) compares the detection probability of the proposed detector with that of the benchmark in [3]. The proposed detector maintains a detection probability between 0.86 and 0.92 , versus 0.68 –0.76 
+
+for the benchmark, attributed to GAT-based temporal–spectral representation learning and online clustering, which captures long-range structure and adapts to previously unseen jamming strategies. Fig. 3(d) shows the jammer reward remains negative against the proposed detector for all SNR values but positive against the benchmark, consistent with the reward definition in Section IV-B: under the proposed detector, the penalty associated with the inferred detector response dominates the jammer’s disruption gain, while the benchmark fails to impose the same cost on the adaptive adversary. VI. C ONCLUSION 
+
+We proposed a unified framework for zero-day jamming detection and adversarial benchmarking. A GAT-based online detector jointly classifies known and discovers emerging zero-day strategies without retraining, while an inference-driven RL jammer treats the receiver as a black-box and balances attack impact against stealth. Simulations show the proposed jammer synthesizes more effective and stealthier attacks than bench-marks, and the detector reliably identifies zero-day strategies that evade existing detectors. REFERENCES [1] H. Pirayesh and H. Zeng, “Jamming attacks and anti-jamming strategies in wireless networks: A comprehensive survey,” IEEE Commun. Surveys Tuts. , 2021. [2] N. Van Huynh, D. N. Nguyen, D. T. Hoang, T. X. Vu, E. Dutkiewicz, and S. Chatzinotas, “Defeating super-reactive jammers with deception strategy: Modeling, signal detection, and performance analysis,” IEEE Trans. on Wireless Commun. , vol. 21, no. 9, pp. 7374–7390, 2022. [3] H. Zhou, X. Cai, P. Peng, and Z. Guo, “A sustainable learning method for radar jamming recognition based on open set,” IEEE Trans. on Aerospace and Electronic sys. , vol. 61, no. 5, pp. 12 525–12 537, 2025. [4] S. Amuru, C. Tekin, M. v. der Schaar, and R. M. Buehrer, “Jamming bandits—a novel learning method for optimal jamming,” IEEE Trans. on Wireless Commun. , vol. 15, no. 4, pp. 2792–2808, 2016. [5] Z. Schutz, D. J. Jakubisin, C. E. Thornton, and R. M. Buehrer, “Linear jamming bandits: Learning to jam OFDM-modulated signals,” in ICC 2024-IEEE Intl. Conf. on Commun. IEEE, 2024, pp. 2567–2572. [6] W. Liu, Y. Xu, J. Gu, H. Wang, Y. Yang, and G. Ding, “Jamming effectiveness evaluation based on automatic modulation recognition in cognitive jamming systems,” IEEE Trans. on Cognitive Commun. and Networking , vol. 12, pp. 2471–2485, 2026. [7] S. Rajendran, W. Meert, V. Lenders, and S. Pollin, “SAIFE: Unsuper-vised wireless spectrum anomaly detection with interpretable features,” in 2018 IEEE Intl. Symposium on Dynamic Spectrum Access Networks (DySPAN) , 2018, pp. 1–9. [8] J. Zhang et al. , “Toward open-set intrusion detection in VANETs: An efficient meta-recognition approach,” IEEE Trans. Netw. Sci. Eng. , 2024. [9] V. Cohen-Addad, B. Guedj, V. Kanade, and G. Rom, “Online k-means clustering,” in Intl. Conf. on Artificial Intelligence and Statistics . PMLR, 2021, pp. 1126–1134. [10] E. Fini, E. Sangineto, S. Lathuili` ere, Z. Zhong, M. Nabi, and E. Ricci, “A unified objective for novel class discovery,” in 2021 IEEE/CVF Intl. Conf. on Computer Vision (ICCV) , 2021, pp. 9264–9272. [11] A. Dandawate and G. Giannakis, “Statistical tests for presence of cyclostationarity,” IEEE Trans. on Signal Processing , vol. 42, no. 9, pp. 2355–2369, 1994. [12] S. Lin, Y. Zeng, and Y. Gong, “Learning of time-frequency attention mechanism for automatic modulation recognition,” IEEE Wireless Com-munications Letters , vol. 11, no. 4, pp. 707–711, 2022. [13] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, “Attention is all you need,” Advances in neural information processing sys. , vol. 30, 2017. [14] A. Kendall, Y. Gal, and R. Cipolla, “Multi-task learning using uncer-tainty to weigh losses for scene geometry and semantics,” in Proceedings of the IEEE conf. on computer vision and pattern recognition , 2018, pp. 7482–7491. [15] T. Kim, D. J. Love, M. Skoglund, and Z.-Y. Jin, “An approach to sensor network throughput enhancement by PHY-aided MAC,” IEEE Trans. on Wireless Commun. , vol. 14, no. 2, pp. 670–684, 2015. [16] J. Lunden, V. Koivunen, A. Huttunen, and H. V. Poor, “Collaborative cyclostationary spectrum sensing for cognitive radio systems,” IEEE Trans. on Signal Processing , vol. 57, no. 11, pp. 4182–4195, 2009. [17] H. W. Kuhn, “Extensive games and the problem of information,” 
+
+Contributions to the Theory of Games , vol. 2, no. 28, pp. 193–216, 1953.

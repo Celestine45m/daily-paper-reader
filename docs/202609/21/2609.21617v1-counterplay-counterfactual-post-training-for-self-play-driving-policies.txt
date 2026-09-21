@@ -1,0 +1,304 @@
+Title: CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies
+
+URL Source: https://arxiv.org/pdf/2609.21617v1
+
+Published Time: Mon, 21 Sep 2026 00:49:57 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies 
+
+Jiarong Wei 1,3, Yin Wu 2,3, Runkai He 3, and Abhinav Valada 1
+
+Abstract — Self-play in high-throughput simulators yields driving policies with robust closed-loop performance, but improvement per unit of simulation diminishes as training scales. Policies learn to handle common situations early, while further rollouts repeatedly encounter unresolved failures. Post-training offers an opportunity to target these failures, but existing methods primarily evaluate alternative actions or continuations at visited states, although successful recovery may require changing driving style earlier. We propose CounterPlay, a counterfactual self-play post-training approach that backtracks from failed tasks and retries them under alternate driving styles. CounterPlay rests on three key components. First, failure-driven backtracking uses the policy’s value estimates to select an earlier stored state from which to retry the task. Second, reward conditioning enables a single policy to retry the task from this state using candidate styles ranging from cautious to aggressive. Third, CounterPlay retains task-completing retries only if no other vehicle incurs a new or earlier collision or off-road event relative to the factual branch. Retries that pass verification with fresh randomness are then distilled into the policy under its deployment condition. On BehaviorBench, CounterPlay achieves state-of-the-art scores on both the Interactive and Random splits across all eight traffic regimes using 1B post-training transitions, which is just 1% of the anchor’s 100B self-play training budget. Improvements over the anchor hold across all three evaluated driving styles. CounterPlay resolves a substantial fraction of the anchor’s timeout cases on BehaviorBench and achieves a balance between task completion and safety that neither continued self-play nor adopting a more aggressive driving style attains. 
+
+I. I NTRODUCTION 
+
+Self-play has emerged as an effective approach to learning driving policies, with a single policy controlling simulated vehicles and learning from billions of interactions with copies of itself [1], [2]. However, increasing the simulation budget yields diminishing returns. Frequently encountered situations are mastered early, while difficult cases persist despite repeated exposure. In these cases, additional rollouts can reproduce the same unsuccessful behavior, motivating a targeted approach to learn from the remaining failures. Post-training provides a dedicated stage for addressing these residual failures and is increasingly used to improve driving policies [3], [4]. Existing methods primarily seek corrections at states visited by the policy. Group-relative and critic-based objectives score alternative actions or continuations from these states [5]–[7], while counterfactual fine-tuning explores branches against replayed or modeled traffic [8], [9]. In self-play, however, any recorded state can be re-driven, so a lost task can be replayed from a point before the failure in a different driving style. This raises the central question of our work: can an earlier change of driving style resolve persistent self-play failures and provide useful post-training supervision?      
+
+> 1Department of Computer Science, University of Freiburg, Germany. 2
+> Karlsruhe Institute of Technology, Germany. 3CARIAD SE, Germany. This work was partially funded by CARIAD SE.
+> Fig. 1. The self-play policy repeatedly waits for a gap and times out. Re-sampling the same driving style from a late state fails to recover the task. CounterPlay backtracks to an earlier root and explores alternative driving styles. An aggressive retry completes the task, passes verification with fresh randomness, and is distilled under the deployment condition.
+
+Learning from these counterfactual retries presents three challenges. The first is the intervention point. An intervention placed after the decisive moment can no longer change the outcome, whereas one placed long before it no longer isolates the decision under study. The second is how to drive from that point. Most failures of a well-trained self-play policy are timeouts in which it keeps yielding or stays deadlocked without a timely decision, so a retry has to resolve them without giving up the safety the policy has learned. The third is counterfactual rollouts. A retry may score well under its own objective without completing the task, succeed by chance or at a neighbor’s expense, and drive in a style the policy does not deploy and should not simply copy. In this work, we propose CounterPlay, a counterfactual self-play post-training approach that backtracks from failed tasks, explores alternative driving styles, and distills verified recoveries into the deployment policy, as illustrated in Fig. 1. Failure-driven backtracking uses the policy’s recorded value estimates to choose an earlier state from which to retry the failed task. From this state, reward conditioning enables the same policy to execute candidate driving styles ranging from cautious to aggressive, providing temporally extended behavioral alternatives. We retain task-completing retries only if no other vehicle incurs a new or earlier collision or off-arXiv:2609.21617v1 [cs.RO] 18 Sep 2026 road event relative to the factual branch. We then verify their success with fresh randomness. These verified retries then supervise distillation under the policy’s deployment condition. We evaluate CounterPlay on BehaviorBench [10] against post-training baselines with the same interaction budget and show that CounterPlay achieves state-of-the-art scores on both splits, and the gains hold across all evaluated driving styles. The approach resolves a substantial fraction of the anchor’s timeout cases on BehaviorBench and achieves a balance between task completion and safety that neither continued self-play nor adopting a more aggressive driving style attains. To summarize, our main contributions are as follows: 1) We propose CounterPlay, a counterfactual self-play post-training approach that repairs failures self-play repeats by backtracking failed tasks and retrying them with alternate driving styles, turning verified recoveries into supervision for the deployment policy. 2) We introduce failure-driven backtracking, which uses the policy’s recorded value estimates to choose an earlier intervention point along a failed trajectory. 3) We develop a reward-conditioned retry and distillation procedure that verifies task completion, checks for adverse effects on other vehicles, and tests success under fresh randomness before transferring corrective behavior to the deployment condition. 4) We evaluate CounterPlay on BehaviorBench against post-training baselines with the same budget, achieving state-of-the-art scores on both splits across all the traffic regimes, while balancing task completion and safety. II. R ELATED WORK 
+
+Self-Play for Autonomous Driving: In self-play, one policy typically controls every agent in the scene, so the training distribution evolves together with the learned behavior. Noc-turne [11] and GPUDrive [12] provide multi-agent driving simulation based on recorded scenarios for self-play training. Gigaflow [1] shows that robust and naturalistic driving emerges from self-play alone over 1.6 billion kilometers of simulated experience. Cornelisse et al. [2] scale self-play across thousands of recorded scenarios [13] and achieve near-perfect goal completion on held-out scenes. They also show that the pretrained policy can be fine-tuned within minutes on a few hand-designed rare scenarios. CoPark [14] applies self-play to reactive parking. Recent studies identify limitations of self-play, including traffic-rule violations [15] and driving conventions incompatible with human behavior [16]. Behav-iorBench [10] evaluates driving policies against eight frozen traffic-agent regimes, ranging from rule-based followers [17] to log replay. To our knowledge, no prior work studies how a competent self-play policy can use a fixed additional budget to address recurring failures in its training scenarios. 
+
+Policy Post-Training: Post-training refines a pretrained policy in a separate stage with its own objective. For language models, GRPO [18] and DAPO [6] compute advantages from groups of responses to the same prompt without a learned critic. VinePPO [5] instead estimates intermediate state values through Monte Carlo continuations from partial contexts. For driving, Peng et al. [3] fine-tune pretrained behavior models in a closed loop, and ADV-0 [19] and AWM [20] adapt a planner against traffic trained to expose its failures. SPICED [16] anchors self-play to a small human dataset through a KL term toward a behavior-cloning policy, and CL4AD [21] uses a curriculum to select self-play scenarios. We focus on repairing a pretrained policy’s failures by returning to earlier states and searching over its driving styles. 
+
+Counterfactual Learning for Driving Policies: Counterfactual methods differ in how they evaluate alternative decisions and where they intervene. ParkDiffusion++ [22] predicts the joint response of surrounding agents to alternative ego intentions with a learned model. Another route executes the alternative. The vine estimator of TRPO [23] restores the simulator to visited states and rolls out several actions from each, and VinePPO [5] revives this idea for credit assignment. Go-Explore [24] and Backplay [25] restore recorded states for exploration and curriculum learning, respectively. For driving fine-tuning, PlannerRFT [8] trains against log-replayed surrounding traffic. CRAFT [9] scores candidate trajectories with a hold-then-decay traffic proxy and supplements this signal with corrective advantages from executed closed-loop events. Li and Kang [26] restore states near the end of failed trajectories, replace one action with an action from an expert or reference controller, and retain substitutions that reduce subsequent failure cost as supervision. STaR [27] uses verified model-generated outputs as supervision. Expert iteration [28] and policy distillation [29] similarly train a network to imitate behavior produced by search or another policy. However, these methods do not backtrack from a self-play policy’s own failures to retry tasks under alternative ego reward conditions. 
+
+Reward-Conditioned Policies and Behavior Control: Condi-tioning a policy on a reward specification turns one network into a family of behaviors. Reward-conditioned policies [30] learn actions as a function of a target return or advantage, Decision Transformer [31] conditions a sequence model on the return-to-go, and Gigaflow [1] samples per-agent reward coefficients during self-play so that one policy drives cautiously or assertively on demand. CtRL-Sim [32] controls the aggressiveness of simulated agents by tilting the distribu-tion over per-component returns-to-go, BehaviorBench [10] evaluates planners against aggressive, normal, and cautious traffic produced by one conditioned policy, and AWM [20] switches the role condition of traffic agents to attribute credit among adversaries. To our knowledge, no prior work has varied the ego policy’s own reward condition as a counterfactual intervention on tasks it previously failed. III. M ETHOD 
+
+In this section, we present the key components of CounterPlay, as illustrated in Fig. 2. Sec. III-A formalizes the self-play post-training problem. Sec. III-B to Sec. III-D introduce failure-driven backtracking, re-driving the task in other styles of the same policy, and verification and distillation of the retries. Sec. III-E explains how all stages share one post-training budget and enter the training loop. Fig. 2. Overview of CounterPlay. Based on a pretrained self-play anchor policy, Stage 1 uses critic estimates recorded along the failed trajectory to select an earlier root. Stage 2 then restores this state and simulates a factual branch under the original reward condition and retries under the candidate profiles. Stage 3 filters and ranks retries using task completion and other-vehicle outcomes relative to the factual branch. It then reruns the factual and selected branches with fresh shared random draws to verify the recovery. Stage 4 distills the verified retry into the policy under the deployment condition. 
+
+A. Problem Formulation 
+
+We model driving as a partially observable Markov game 
+
+G = ( N , S, {A i}, {O i}, P, {ri}, γ ) among agents i ∈ N .At time t, each policy-controlled agent i receives a local observation oit ∈ O i of the state st ∈ S and selects an action 
+
+ait ∈ A i. The state evolves as st+1 ∼ P (· | st, at) under the joint action at, and agent i receives the reward ri(st, at). An agent’s task is to reach a goal g within the episode length T .It fails on a collision, an off-road event, or a timeout. The base policy πθbase that we post-train is trained by self-play with reward conditioning [1]. All policy-controlled agents share one policy πθ acting from the observation history. At the start of each episode, agent i samples a condition wi ∼
+
+ptrain (w) that specifies its preferences for safety, comfort, lane position, and target speed, together with the goal radius. This condition determines the reward ri(st, at; wi) and is supplied to both the policy and critic, with actions sampled as ait ∼ πθ (· | oi
+
+> ≤t
+
+, w i). We use PPO [33] to maximize each agent’s expected discounted return 
+
+J(θ) = Eπθ
+
+X
+
+> t≥0
+
+γt ri(st, at; wi)
+
+ , (1) where the expectation runs over self-play episodes. At deployment, the policy receives a single fixed condition wdep 
+
+that selects its driving style. Starting from θbase , we seek to improve the policy under a fixed budget of additional simulator transitions. Ordinary self-play continues to optimize Eq. (1) under the original condition distribution ptrain . Our primary target is performance under the fixed deployment condition wdep , and we also evaluate the other conditions in the policy family. 
+
+B. Failure-Driven Backtracking 
+
+Most self-play episodes already succeed, but further rollouts often reproduce the remaining failures. A failure may originate in an earlier decision, so we use the critic’s recorded value estimates to choose where to restart the failed task. 
+
+1) Failure Detection: Within the branch budget, we search once per failed task. Each search tests several styles from one earlier state for the agent that failed, called the focal agent. 
+
+2) Root State Recording: During each training generation, we collect self-play experience using frozen copies ¯π and ¯V
+
+of the current policy and critic. We record roots at a fixed stride along the self-play rollouts. Each root zt stores the simulator state and every agent’s recurrent memory and reward condition so retries can resume the recorded interaction. 
+
+3) Value-Guided Root Selection: We first identify stored states whose critic estimates meet or exceed a threshold, then choose the one closest in time to the failure. The value ¯V (zt)
+
+is the focal agent’s critic estimate at a stored root zt. Within a window of stored roots before the failure, let Vmax be the highest estimate and Vf the estimate at failure. The threshold 
+
+Vthr = Vmax − ρ (Vmax − Vf ), ρ ∈ [0 , 1] , (2) interpolates between these values, with ρ controlling the interpolation. The selected root time tr is therefore 
+
+tr = max t : ¯V (zt) ≥ Vthr . (3) If no stored root in the window meets the threshold, we take its earliest root instead. Critic values guide the starting point. The simulated outcome determines whether the retry succeeds. 
+
+C. Reward-Conditioned Counterfactual Re-Driving 
+
+Reward conditioning lets the same policy drive in different styles, so we search for a recovery by changing the focal agent’s condition and retrying from the selected root while keeping the policy frozen. 
+
+1) Counterfactual Branch Generation: For every branch, we restore the same simulator state and every agent’s recorded recurrent memory from ztr . Using the frozen policy ¯π, we simulate a factual branch τ0 under the focal agent’s original condition w0 and J candidate retries τj under conditions 
+
+wj ∈ W . The other agents keep their own conditions and react to the evolving interaction in each branch. Our fixed set W = {w1, . . . , w J } contains the benchmark’s cautious, normal and aggressive profiles and the two midpoint profiles between adjacent styles. We change only the style-related reward coefficients. The original goal, goal radius, arrival-speed threshold and deadline remain fixed. Task-defining parameters are unchanged in both the policy input and the simulator’s completion and termination checks. 
+
+2) Shared Randomness Across Branches: When retries use independent action samples, differences in their outcomes can reflect sampling randomness as well as driving style. To control this source of randomness, we share random draws across branches from the same root. At each time step t, we draw unt ∼ U (0 , 1) for each agent n and use it to sample from that agent’s action distribution in every branch: 
+
+ant,j = F −1 unt ; ¯ π(· | ont,j , m nt,j , w nj ), (4) where F −1(· ; p) is the inverse cumulative distribution func-tion of the categorical action distribution p. Here mnt,j is agent n’s recurrent memory in branch j. The condition wnj
+
+equals wj for the focal agent. The other agents retain their own conditions. Shared draws can still yield different actions because each branch has its own action distribution. 
+
+3) Branch Termination and Co-Player Checking: To compare effects on other vehicles over the same time horizon, we simulate each branch until the original deadline, even after the focal task ends. We record the focal agent’s outcome when its task ends and evaluate the other vehicles over the full branch. 
+
+D. Teacher Verification and Distillation 
+
+We transfer recoveries found under alternative reward profiles into the deployment condition by selecting, verifying and distilling successful retries. 
+
+1) Condition-Independent Branch Ranking: To compare retries generated under different reward profiles, we rank them by the same task-outcome criteria rather than their profile-specific returns. For a branch τ , let c(τ ) ∈ { 0, 1} indicate that the focal agent completes the task in time without a collision or off-road event, nharm (τ ) the number of other vehicles that collide or go off-road along the branch, and 
+
+tarr (τ ) the arrival time ( +∞ when c(τ ) = 0 ). The resulting ranking is 
+
+U (τ ) =  c(τ ), −nharm (τ ), −tarr (τ ). (5) Completion takes priority. Among branches with the same completion outcome, we prefer fewer affected vehicles and then earlier arrival. 
+
+2) Teacher Admission and Verification: A retry is eligible to become a teacher only if it completes the original task without a collision or off-road event, c(τj ) = 1 , and outranks the factual branch, U (τj ) > U (τ0). It must also satisfy a constraint for every other vehicle: relative to the factual branch 
+
+τ0, no collision or off-road event may be new or occur earlier. We select the eligible retry trajectory τ ∗ ranked highest by the outcome ordering U . For verification, we restore the root and rerun both factual and selected-condition branches once with fresh action-sampling draws shared between them. The selected-condition rollout must again complete the original task without a collision or off-road event and meet the per-vehicle safety constraint relative to the new factual rollout. If verification fails, we discard all retries from that search. 
+
+3) Retry Distillation: We distill each verified retry τ ∗
+
+from the root until the focal task ends, training the policy under wdep to imitate behavior generated under the selected retry’s condition w∗. At each recorded step, the frozen teacher uses the observation ot and recurrent memory mt under condition w∗ to produce ¯pt = ¯ π(· | ot, m t, w ∗). The student’s recurrent memory is initialized from the memory stored at the root, without replaying observations from before that point. It then processes the same observation sequence under 
+
+wdep , updating its own recurrent memory mθt to produce 
+
+pθ,t = πθ (· | ot, m θt , w dep ). We average the KL divergence over each retry’s steps and then over verified retries: 
+
+LCF (θ) = Eτ ∗
+
+"
+
+1
+
+|τ ∗|
+
+X
+
+> t
+
+DKL 
+
+ ¯pt pθ,t 
+
+#
+
+. (6) The policy update minimizes the combined objective 
+
+L(θ) = LPPO (θ) + λCF LCF (θ), (7) where LPPO is the negated clipped PPO surrogate for Eq. (1), computed from the ordinary self-play rollout. Branch trajectories contribute only through LCF . They are not used for PPO or value-function updates. If no verified teacher is available, the generation uses LPPO alone. 
+
+E. Self-Play Training Integration 
+
+The post-training budget includes agent transitions from ordinary self-play and all branch simulations: 
+
+Bpost = Bmain + Bfactual + Bcandidate . (8) Here Bmain counts ordinary self-play, Bfactual counts factual branches from search and verification, and Bcandidate counts candidate retries and verification of the selected condition. All agent transitions count equally, including those from rejected retries. Within each generation, branch transitions are capped at ρCF Bmain . We run search branches in batches under the current generation’s frozen policy alongside the next generation’s self-play rollouts. We then train on those rollouts with PPO and distill the verified recoveries in the same update. IV. E XPERIMENT 
+
+A. Experimental Setup 1) Benchmark and Data: We evaluate on Behavior-Bench [10], a closed-loop planning benchmark on the Waymo TABLE I BENCHMARK SCORES PER TRAFFIC REGIME ON BEHAVIOR BENCH .
+
+Interactive1k Random1k Planner IDM PPO SMART Exp. Aggr. Norm. Caut. Mix Mean IDM PPO SMART Exp. Aggr. Norm. Caut. Mix Mean 
+
+Anchor 48.95 66.84 59.00 55.68 68.48 60.64 49.39 59.29 58.53 62.64 69.11 63.97 62.78 71.79 70.02 66.05 68.03 66.80 PPO-Continue 50.92 65.27 56.82 53.53 69.47 61.93 51.00 60.58 58.69 ±0.06 65.29 70.92 64.50 66.09 71.64 70.92 66.55 69.67 68.20 ±0.13 
+
+PPO-Rewind 50.53 64.98 57.17 54.08 68.99 62.16 50.76 58.97 58.46 ±0.21 65.63 71.12 65.03 65.54 71.77 70.86 66.83 69.35 68.27 ±0.29 
+
+PPO-Opponent 49.90 66.33 57.33 53.91 69.37 63.04 50.42 59.11 58.68 ±0.38 64.95 70.81 64.52 66.34 71.82 70.91 67.72 69.67 68.34 ±0.13 
+
+SPICED † [16] 44.91 62.96 59.83 55.69 68.02 65.35 51.72 61.02 58.69 ±0.94 69.29 73.78 67.59 62.74 75.17 72.48 67.65 70.40 69.89 ±0.44 
+
+CL4AD † [21] 50.30 64.96 57.82 53.93 70.25 61.84 50.94 60.26 58.79 ±0.91 65.93 71.40 64.94 65.51 71.66 70.93 66.86 69.66 68.36 ±0.16 
+
+DAPO † [6] 49.00 64.53 58.93 53.44 68.64 61.35 50.62 60.09 58.33 ±0.35 66.20 69.33 64.42 63.92 72.74 70.86 67.14 68.47 67.88 ±0.10 
+
+VinePPO † [5] 50.18 64.16 57.19 53.04 69.46 61.57 50.49 60.41 58.31 ±0.16 66.60 70.61 64.70 66.10 71.58 70.87 66.83 69.32 68.33 ±0.13 
+
+PlannerRFT † [8] 48.86 64.68 59.34 53.24 68.91 62.46 50.13 60.91 58.57 ±0.37 66.22 69.49 64.72 63.85 72.70 70.88 67.37 67.95 67.90 ±0.12 
+
+CRAFT † [9] 48.43 66.55 59.58 52.25 69.67 61.27 49.53 61.90 58.65 ±0.84 64.10 70.08 63.69 63.76 72.70 70.87 67.09 67.94 67.53 ±0.21 
+
+CounterPlay (Ours) 59.73 73.53 65.53 63.51 76.44 70.22 56.65 67.30 66.61 ±0.14 75.04 78.82 71.83 70.21 81.01 79.55 75.44 75.59 75.94 ±0.70 
+
+Table I: We show the main results here. The Mean columns average eight regimes and also report standard deviations across three seeds. Best in bold, second best underlined among post-trained methods. The regimes comprise IDM, released PPO, SMART [34], expert log replay, three reward-conditioned PPO styles, and their per-agent mixture. Scores use the released BehaviorBench evaluator and are scaled by 100. On both 1,000-task splits, the ego selects argmax actions under the normal condition. (a) Anchor · collision (b) CounterPlay · completed (c) Anchor · timeout (d) CounterPlay · completed (e) Anchor · timeout (f) CounterPlay · completed (g) Anchor · offroad 
+
+> Event 7.0 s
+> offroad
+
+(h) CounterPlay · completed 
+
+> Pass 6.1 s
+> 0369Time (s)
+
+IDM traffic PPO traffic IDM traffic aggressive traffic 
+
+Fig. 3. Qualitative results. Each pair compares the anchor (left) and CounterPlay (right) in the same scene and traffic regime. Ego trajectories are colored by elapsed time in seconds. Grey arrows show other road users’ motion. Open boxes mark ego starts and stars mark goals. Red crosses mark collisions. Circles and triangles mark timeouts and off-road events, respectively. 
+
+Open Motion Dataset [13]. The evaluated policy controls one designated ego vehicle. Other agents follow one of eight frozen traffic regimes, from rule-based IDM [17] to log replay (Tab. I). Interactive1k contains the 1,000 validation tasks with the highest interaction scores. Random1k contains 1,000 uniformly sampled validation tasks. Both splits are reserved for evaluation. Post-training uses PufferDrive [35], [36] on the 80,000 WOMD training scenarios. Episodes last 91 decisions with a decision interval of 0.1 s . Each agent receives one logged goal. Agents that collide or go off-road are removed for the rest of the episode. 
+
+2) Training Protocol: Every method starts from an anchor, which is a reward-conditioned self-play PPO policy trained for 100B transitions following BehaviorBench’s [10] reward conditioning training recipe. This network also generates the three conditioned traffic regimes and their per-agent mixture. Each method receives the same post-training budget of 1B agent transitions, counted as Bpost defined in Eq. (8). We post-train each method with three training seeds under the anchor’s condition distribution ptrain . Evaluation uses a fixed deployment condition wdep . The main comparison uses normal deployment. Tab. IV compares the other styles. 
+
+3) Baselines: PPO variants. PPO-Continue spends the budget on factual self-play. PPO-Rewind uses the same failure criteria as CounterPlay and restores the state eight decisions before the focal agent’s failure. Ordinary PPO continues from that state under the original condition. PPO-Opponent drives a fraction of the agents with earlier policy checkpoints. 
+
+Recent post-training methods. We adapt these methods to the same recurrent policy and simulator. A dagger marks each adaptation. SPICED † [16] adds a human-anchoring KL penalty to PPO. Its reference is a frozen behavior-cloning policy trained on log-tracking actions from the training scenar-ios. CL4AD † [21] replaces uniform scenario sampling with a learnability curriculum. It emphasizes scenarios that the policy sometimes completes and sometimes fails. DAPO † [6] and 
+
+VinePPO † [5] restore states where the ego approaches another vehicle. Both execute groups of closed-loop continuations. DAPO computes group-relative advantages and retains its decoupled clipping and dynamic sampling. VinePPO replaces the critic’s root-value estimate with a Monte Carlo estimate from these continuations. 
+
+Counterfactual post-training. PlannerRFT † [8] uses a clipped group-relative trajectory objective and evaluates continuations against log-replayed vehicles. Its original PPO-trained exploration policy controls a diffusion denoiser’s guidance scale. Our categorical policy has no denoiser, so a learned exploration head instead controls the sampling temperature of continuations. PPO trains this head on the group return. The planner retains the clipped group-relative GRPO loss. CRAFT † [9] uses a score-function objective with group-normalized counterfactual advantages. We adapt its candidate-based formulation to continuations from the recurrent categorical policy. Its traffic proxy holds other vehicles’ last actions and then decays them. We retain its residual correction from closed-loop rollouts under frozen co-players. We also retain its asymmetric KL regularization toward an exponential moving average of the policy. Both adaptations preserve the original methods’ traffic assumptions. All four continuation-based baselines match group sizes and branch horizons. Their transitions count toward Bpost at the same rate as branches of CounterPlay. 
+
+4) Evaluation Metrics: A task receives zero score if the ego misses the goal or incurs an at-fault collision or off-road event. Otherwise, its score is 
+
+S = 0 .2 Scmf + 0 .5 Salign + 0 .3 Sctr , (9) where Scmf , Salign and Sctr measure comfort, lane alignment and lane centering, respectively. Each lies in [0 , 1] . Metric definitions and parameter values follow BehaviorBench [10]. 
+
+5) Implementation Details: All methods use the anchor’s policy network and a learning rate of 3 × 10 −5 with a cosine schedule. CounterPlay stores a root every five decisions. Value-guided selection uses ρ = 0 .5 within a window of 5–60 decisions before failure. Each root runs one factual branch and J = 5 candidate branches. Branch transitions are capped at ρCF = 50% of main-line transitions. Their observed share of the total budget Bpost is 27% . We average the distillation KL over each teacher’s steps and then over teachers in the generation. The loss has weight λCF = 0 .5 and contributes to four minibatch updates per generation. Across training, 41% of searched roots yield an admissible retry. Of these selected retries, 88% pass verification, producing about 70 teachers per generation. 
+
+B. Main Results 1) Quantitative Results: Tab. I compares methods after 1B post-training transitions using BehaviorBench’s normal ego reward profile [10]. Its moderate reward settings provide a common reference for comparing post-training gains. CounterPlay leads on both splits in all eight traffic regimes, with mean gains over PPO-Continue of 7.9 points on Inter-active1k and 7.7 on Random1k. On Interactive1k, the gains are largest against log replay ( 10 .0 points), IDM ( 8.8) and SMART ( 8.7). They are smaller against the conditioned policy family, reaching a minimum of 5.7 points against cautious traffic. The larger gains against traffic outside this family show that CounterPlay responds more robustly to unfamiliar agents. Even with reward conditioning, self-play exposes the anchor only to copies of its own policy. CounterPlay, however, achieves broader robustness by learning from backtracked failures and distilling alternative driving styles. The baselines remain within half a point of the anchor on Interactive1k despite the additional training budget. These updates lack an explicit search for a different driving style at an earlier state. Their limited gains suggest that continued training or changes to experience collection and the learning objective alone are insufficient to resolve persistent yielding and timeout failures after 100B self-play transitions. 
+
+2) Qualitative Results: Fig. 3 shows how CounterPlay resolves collision, timeout, and off-road failures encountered by the anchor. At the intersection in (a,b), CounterPlay completes the crossing under IDM traffic while the anchor collides. Both timeout cases involve prolonged hesitation: the anchor nearly stops under PPO traffic (c,d) and barely moves before a right turn under IDM traffic (e,f). CounterPlay overcomes this stalled behavior to reach the goal in both scenes. In the final pair (g,h), CounterPlay stays on-road and reaches the goal under aggressive traffic while the anchor goes off-road. 
+
+C. Ablation Study 1) Component Ablations: We examine the contributions of backtracking, reward conditioning, teacher selection, veri-fication and distillation through the variants in Tab. II. For backtracking, we restore states 10, 30 or 50 decisions before failure instead of letting the critic choose the intervention point. For search without a style change, retries retain the failed attempt’s reward profile. The focal-agent action draws are independent across factual and candidate branches, while draws for the other agents remain shared. In a separate test of teacher selection, we score each retry under the profile that generated it and select the highest-scoring retry instead of ranking candidates by task completion and safety. We test verification by omitting the second execution used to check whether a selected retry succeeds again with fresh randomness. We compare distillation with PPO on the same accepted recovery trajectories, using rewards for PPO updates instead of matching the teacher’s action probabilities. All fixed depths reduce performance. Shallow roots may leave little room to change an interaction, while deeper roots may include more steps unrelated to its failure. Under the evaluated sampling protocols, retries without a style change barely improve over PPO-Continue and remain 6.8
+
+points below CounterPlay. Selection by reward also performs worse than selection using common task criteria. Omitting verification changes the score little but raises the observed at-fault collision rate from 2.57% to 3.1% on Interactive1k. TABLE II COMPONENT ABLATIONS ON INTERACTIVE 1K.
+
+Variant B C S D Score ↑
+
+Anchor (no post-training) – – – – 58.53 PPO-Continue ✗ ✗ ✗ ✗ 58.69 ±0.06 
+
+Backtracking 
+
+10 decisions before failure 10 ✓ ✓ ✓ 62.83 ±0.41 
+
+30 decisions before failure 30 ✓ ✓ ✓ 65.21 ±0.33 
+
+50 decisions before failure 50 ✓ ✓ ✓ 64.58 ±0.39 
+
+Reward conditioning 
+
+No change in driving style ✓ ✗ ✓ ✓ 59.84 ±0.27 
+
+Selection 
+
+Selection by reward ✓ ✓ ✗ ✓ 63.42 ±0.46 
+
+Without verification ✓ ✓ ✓− ✓ 66.20 ±0.31 
+
+Distillation 
+
+PPO on recovery trajectories ✓ ✓ ✓ ✗ 61.40 ±0.31 
+
+CounterPlay (full) ✓ ✓ ✓ ✓ 66.61 ±0.14 
+
+Table II: For post-trained policies, we report the mean and standard deviation across three training seeds. Best in bold, second best underlined. B: backtracking ( ✓:value-guided, numbers: decisions before failure). C: search across reward profiles. S: task-based selection and verification ( ✓−: no re-execution). D: teacher distillation. Without a style change, retries use wj = w0.
+
+TABLE III TASK RETENTION AND FAILURE REPAIR AFTER POST -TRAINING (%). 
+
+Policy Completed Timeout AF coll. Non-AF coll. Offroad 
+
+Interactive1k 
+
+Anchor 68.4 23.1 3.8 4.5 0.2 PPO-Continue 96.3 ±0.11 4.9 ±0.5 30.0 ±3.3 9.3 ±1.6 33.3 ±11.1 
+
+CounterPlay 95.1 ±0.59 45.9 ±1.4 38.9 ±5.1 38.0 ±2.6 40.7 ±12.8 
+
+Random1k 
+
+Anchor 75.6 18.5 1.9 1.8 2.2 PPO-Continue 99.2 ±0.17 6.8 ±0.7 37.8 ±3.9 12.9 ±2.9 13.5 ±2.6 
+
+CounterPlay 97.2 ±0.91 67.3 ±1.2 46.7 ±6.7 67.9 ±4.0 23.8 ±3.2 
+
+Table III: Anchor rows report the outcome distribution over 8,000 task–regime evaluations per split. Post-trained rows report the percentage of each anchor class reaching the goal without a collision or off-road event. We report the mean and standard deviation across three training seeds. Bold marks the higher post-trained rate. Anchor classes prioritize at-fault (AF) collision, off-road, goal completion, non-AF collision, then timeout. Class shares are rounded independently. 
+
+This supports verifying recoveries before using them to train the policy. PPO on the same recoveries also performs worse than learning directly from the teacher. 
+
+2) Failure Repair Analysis: We examine which failures account for CounterPlay’s gains over continued self-play (Tab. III). For each of Interactive1k and Random1k, we evaluate 1,000 tasks under all eight traffic regimes and group the results by the anchor’s outcome. We then compare PPO-Continue and CounterPlay within each group to identify which failures they repair and whether they retain success on previously completed tasks. A repair requires the ego to reach its goal without a collision or off-road event. Repairing timeouts, the anchor’s main failure mode, explains most of the gain in collision- and off-road-free completion. On Interactive1k, CounterPlay repairs 45 .9% of these cases compared with 4.9% for PPO-Continue. Random1k shows the same pattern. Compared with PPO-Continue, CounterPlay completes slightly fewer tasks that the anchor had already solved. It completes more tasks overall by repairing far more of the anchor’s timeouts. It also repairs more at-fault and non-at-fault collision cases. 
+
+TABLE IV EFFECT OF EGO DEPLOYMENT CONDITION ON INTERACTIVE 1K.
+
+Normal Halfway Aggressive Method Score ↑ AF-C. ↓ Score ↑ AF-C. ↓ Score ↑ AF-C. ↓
+
+Anchor 58.53 3.75 64.21 4.03 69.85 4.38 PPO-Continue 58.69 ±0.06 2.17 ±0.14 64.73 ±0.72 2.75 ±0.50 69.49 ±0.89 3.12 ±0.62 
+
+Aggressive distillation 65.44 ±0.42 4.46 ±0.35 70.07 ±0.39 4.62 ±0.33 66.22 ±0.47 5.08 ±0.41 
+
+Cautious distillation 61.18 ±0.48 1.86 ±0.22 65.83 ±0.45 1.90 ±0.24 68.94 ±0.52 2.20 ±0.27 
+
+CounterPlay 66.61 ±0.14 2.57 ±0.29 73.55 ±0.18 1.79 ±0.07 73.60 ±0.75 1.92 ±0.51 
+
+Table IV: For post-trained policies, we report the mean and standard deviation across three training seeds. AF-C.: at-fault collision rate (%). Best post-trained values in bold, second best underlined. Halfway averages the normal and aggressive reward settings. All conditions use the same goal criterion. Both distillation controls match CounterPlay’s PPO update and budget. 
+
+TABLE V SEARCH WITH ONE OR FIVE DRIVING STYLES ON INTERACTIVE 1K.
+
+Search styles Score ↑ AF-C. ↓ Off. ↓ Goal ↑
+
+All five styles (CounterPlay) 66.61 ±0.14 2.57 ±0.29 0.67 ±0.07 79.0 ±0.14 
+
+Cautious 57.02 ±0.55 2.88 ±0.31 0.50 ±0.12 66.5 ±0.62 
+
+Cautious–normal midpoint 54.27 ±0.47 2.75 ±0.26 1.62 ±0.21 63.5 ±0.53 
+
+Normal 54.18 ±0.52 3.58 ±0.33 1.25 ±0.18 63.5 ±0.58 
+
+Normal–aggressive midpoint 64.56 ±0.37 3.84 ±0.33 1.12 ±0.15 75.3 ±0.44 
+
+Aggressive 65.75 ±0.28 3.06 ±0.27 0.88 ±0.11 77.9 ±0.35 
+
+Table V: We report the mean and standard deviation across three training seeds. Each search uses five candidate retries. Best in bold, second best underlined. Evaluation uses the normal ego condition. The normal-profile variant uses same-condition self-distillation and does not directly reinforce the sampled actions. AF-C., Off. and Goal are at-fault collision, off-road and completion rates (%) over all eight regimes. 
+
+3) Deployment Condition Analysis: The timeout results raise a natural question: could a more aggressive anchor achieve the same gains? We compare the anchor, PPO-Continue and CounterPlay under the same ego deployment condition to separate post-training gains from changes in driving style (Tab. IV). We also train two distillation controls under the normal reward input to imitate a frozen teacher’s aggressive or cautious behavior, without failure backtracking, search or verification. We evaluate all five policies under normal and aggressive reward settings and the halfway point between them without further updating their weights. CounterPlay achieves the highest score under all three deployment conditions and the lowest at-fault collision rate under halfway and aggressive deployment. Under normal deployment, direct aggressive distillation achieves much of CounterPlay’s score improvement over PPO-Continue. How-ever, CounterPlay achieves a higher score and a lower at-fault collision rate than direct aggressive distillation under each of the three deployment conditions. Under normal deployment, cautious distillation has a lower at-fault collision rate than CounterPlay but a substantially lower score. Increasing the anchor’s deployment aggression improves its score but also increases at-fault collisions. For CounterPlay itself, halfway deployment nearly matches the aggressive score with a lower observed at-fault collision rate ( 1.79% versus 1.92% ), offering a favorable balance between performance and risk. 
+
+4) Driving Style Diversity: The fixed-style controls above omit failure recovery search, so they do not establish whether searching with a single driving style would suffice. We test this by keeping backtracking, teacher selection, verification and distillation unchanged while restricting every retry to one fixed reward profile (Tab. V). During these searches, focal-agent action draws are independent across factual and candidate branches, while co-player draws remain shared. Using only the cautious profile yields fewer at-fault collisions and off-road events than using only the aggressive profile, but also fewer completions. Their complementary strengths motivate a search that provides both cautious responses to reduce risk and aggressive responses to make progress. The full panel achieves higher completion and fewer at-fault collisions than every single-profile variant tested. V. C ONCLUSION 
+
+We presented CounterPlay, a counterfactual post-training method that backtracks the failed tasks of a self-play policy and re-drives them in other styles of the same reward-conditioned policy. On BehaviorBench, it turns a large share of the anchor’s timeouts into completions with a small post-training budget, while maintaining a balance between completion and safety that a fixed shift of the same policy to a more aggressive driving style does not achieve. The main limitation lies in the source of the counterfactuals. The retries are drawn from a fixed panel of five hand-chosen reward profiles, so the search can only find repair styles already in the panel, and the method does not learn to propose conditions tailored to each failure. A natural next step is to learn the condition space, or a style generator, so the search proposes more human-like, safer, and more comfortable driving than any preset profile. Measuring the outcomes of the other vehicles around the post-trained policy would test whether the teacher filter’s safety benefit carries over to deployment, and a second anchor would test whether the post-training generalizes to policies from other self-play recipes and simulators. REFERENCES [1] M. Cusumano-Towner, D. Hafner, A. Hertzberg, B. Huval, et al. ,“Robust autonomy emerges from self-play,” in Int. Conf. on Machine Learning , 2025, pp. 11 710–11 737. [2] D. Cornelisse, A. Pandya, K. Joseph, J. Su´ arez, and E. Vinitsky, “Building reliable sim driving agents by scaling self-play,” arXiv preprint arXiv:2502.14706 , 2025. [3] Z. Peng, W. Luo, Y. Lu, T. Shen, C. Gulino, A. Seff, and J. Fu, “Improving agent behaviors with RL fine-tuning for autonomous driving,” in Eur. Conf. on Computer Vision , 2024, pp. 165–181. [4] R. Yang, M. Wang, Y. Chen, T. Guo, Y. Xu, C. Cui, Z. Yang, Y. Zhang, Z. Wang, Y. Fu, and L. Su, “Post-training in end-to-end autonomous driving,” arXiv preprint arXiv:2607.08072 , 2026. [5] A. Kazemnejad, M. Aghajohari, E. Portelance, A. Sordoni, S. Reddy, A. Courville, and N. Le Roux, “VinePPO: Refining credit assignment in RL training of LLMs,” in Int. Conf. on Machine Learning , 2025, pp. 29 557–29 590. [6] Q. Yu, Z. Zhang, R. Zhu, et al. , “DAPO: An open-source LLM reinforcement learning system at scale,” in Conf. on Neural Information Processing Systems , 2025, pp. 113 222–113 244. [7] J. N. Foerster, G. Farquhar, T. Afouras, N. Nardelli, and S. Whiteson, “Counterfactual multi-agent policy gradients,” in AAAI Conf. on Artificial Intelligence , vol. 32, 2018, pp. 2974–2982. [8] H. Li, T. Li, J. Yang, M. Shang, G. Wu, C. Wang, H. Tian, Z. Lin, Z. Hao, X. Lang, J. Hu, and H. Li, “PlannerRFT: Reinforcing diffusion planners through closed-loop and sample-efficient fine-tuning,” in 
+
+IEEE/CVF Conf. on Computer Vision and Pattern Recognition , 2026, pp. 24 929–24 938. [9] K. Chen, N. Ye, Y. Wang, W. Sun, D. Zhao, H. Cheng, and S. Zheng, “CRAFT: Counterfactual-to-interactive reinforcement fine-tuning for driving policies,” arXiv preprint arXiv:2605.04470 , 2026. [10] A. Distelzweig, F. Janjoˇ s, A. Look, A. Rothenh¨ ausler, et al. , “Beyond self-play and scale: A behavior benchmark for generalization in autonomous driving,” arXiv preprint arXiv:2605.10034 , 2026. [11] E. Vinitsky, N. Lichtl´ e, X. Yang, B. Amos, and J. Foerster, “Nocturne: A scalable driving benchmark for bringing multi-agent learning one step closer to the real world,” in Conf. on Neural Information Processing Systems Datasets and Benchmarks Track , 2022. [12] S. Kazemkhani, A. Pandya, D. Cornelisse, B. Shacklett, and E. Vinitsky, “GPUDrive: Data-driven, multi-agent driving simulation at 1 million FPS,” in Int. Conf. on Learning Representations , 2025. [13] S. Ettinger, S. Cheng, B. Caine, C. Liu, H. Zhao, S. Pradhan, Y. Chai, B. Sapp, C. R. Qi, Y. Zhou, et al. , “Large scale interactive motion forecasting for autonomous driving: The Waymo Open Motion Dataset,” in IEEE/CVF Int. Conf. on Computer Vision , 2021, pp. 9710–9719. [14] J. Wei, Y. Chen, S. Song, Y. Wu, A. Rehr, and A. Valada, “CoPark: Learning reactive parking via self-play,” arXiv preprint arXiv:2606.04149 , 2026. [15] L. Sisask, A. Tampuu, and T. Matiisen, “What emerges and what breaks in self-play driving,” arXiv preprint arXiv:2608.30819 , 2026. [16] D. Cornelisse, J. Hunt, Z. Zhang, W. Doulazmi, K. Joseph, J. Fern´ andez Fisac, and E. Vinitsky, “Human-like autonomy emerges from self-play and a pinch of human data,” arXiv preprint arXiv:2606.19370 , 2026. [17] M. Treiber, A. Hennecke, and D. Helbing, “Congested traffic states in empirical observations and microscopic simulations,” Physical Review E, vol. 62, no. 2, pp. 1805–1824, 2000. [18] Z. Shao, P. Wang, Q. Zhu, R. Xu, J. Song, X. Bi, H. Zhang, M. Zhang, Y. K. Li, Y. Wu, and D. Guo, “DeepSeekMath: Pushing the limits of mathematical reasoning in open language models,” arXiv preprint arXiv:2402.03300 , 2024. [19] T. Nie, Y. Tang, J. He, Y. Mei, J. Sun, L. Sun, W. Ma, and J. Sun, “ADV-0: Closed-loop min-max adversarial training for long-tail robustness in autonomous driving,” arXiv preprint arXiv:2603.15221 , 2026. [20] T. Nie, Y. Mei, J. He, Y. Tang, J. Sun, and W. Ma, “World models as adversaries: Multi-agent self-play fine-tuning for robust motion planning,” arXiv preprint arXiv:2607.10630 , 2026. [21] C. Koprulu, D. Paz, F. Tao, Y. Guo, X. Huang, U. Topcu, and L. Ren, “Scaling curriculum learning for autonomous driving,” arXiv preprint arXiv:2608.22549 , 2026. [22] J. Wei, A. Rehr, C. Feist, and A. Valada, “ParkDiffusion++: Ego inten-tion conditioned joint multi-agent trajectory prediction for automated parking using diffusion models,” in IEEE Int. Conf. on Robotics and Automation , 2026. [23] J. Schulman, S. Levine, P. Abbeel, M. Jordan, and P. Moritz, “Trust region policy optimization,” in Int. Conf. on Machine Learning , 2015, pp. 1889–1897. [24] A. Ecoffet, J. Huizinga, J. Lehman, K. O. Stanley, and J. Clune, “First return, then explore,” Nature , vol. 590, no. 7847, pp. 580–586, 2021. [25] C. Resnick, R. Raileanu, S. Kapoor, A. Peysakhovich, K. Cho, and J. Bruna, “Backplay: “man muss immer umkehren”,” arXiv preprint arXiv:1807.06919 , 2018. [26] Y. Li and W. Kang, “Data-centric autonomous driving: A data-utilization framework for learning from large-scale driving logs,” Electronics ,vol. 15, no. 16, p. 3517, 2026. [27] E. Zelikman, Y. Wu, J. Mu, and N. D. Goodman, “STaR: Bootstrapping reasoning with reasoning,” in Conf. on Neural Information Processing Systems , vol. 35, 2022, pp. 15 476–15 488. [28] T. Anthony, Z. Tian, and D. Barber, “Thinking fast and slow with deep learning and tree search,” in Conf. on Neural Information Processing Systems , vol. 30, 2017, pp. 5360–5370. [29] A. A. Rusu, S. G. Colmenarejo, C ¸ . G¨ ulc ¸ehre, G. Desjardins, J. Kirk-patrick, R. Pascanu, V. Mnih, K. Kavukcuoglu, and R. Hadsell, “Policy distillation,” in Int. Conf. on Learning Representations , 2016. [30] A. Kumar, X. B. Peng, and S. Levine, “Reward-conditioned policies,” 
+
+arXiv preprint arXiv:1912.13465 , 2019. [31] L. Chen, K. Lu, A. Rajeswaran, K. Lee, A. Grover, M. Laskin, P. Abbeel, A. Srinivas, and I. Mordatch, “Decision transformer: Reinforcement learning via sequence modeling,” in Conf. on Neural Information Processing Systems , vol. 34, 2021, pp. 15 084–15 097. [32] L. Rowe, R. Girgis, A. Gosselin, B. Carrez, F. Golemo, F. Heide, L. Paull, and C. Pal, “CtRL-Sim: Reactive and controllable driving agents with offline reinforcement learning,” in Conf. on Robot Learning ,2024, pp. 3600–3621. [33] J. Schulman, F. Wolski, P. Dhariwal, A. Radford, and O. Klimov, “Prox-imal policy optimization algorithms,” arXiv preprint arXiv:1707.06347 ,2017. [34] W. Wu, X. Feng, Z. Gao, and Y. Kan, “SMART: Scalable multi-agent real-time motion generation via next-token prediction,” in Conf. on Neural Information Processing Systems , vol. 37, 2024. [35] D. Cornelisse, S. Cheng, P. Mandavilli, J. Hunt, K. Joseph, W. Doulazmi, A. Gupta, and E. Vinitsky, “PufferDrive: A fast and friendly driving simulator for training and evaluating RL agents,” https://github.com/Emerge-Lab/PufferDrive, 2025, version 2.0.0. [36] J. Suarez, “PufferLib 2.0: Reinforcement learning at 1M steps/s,” 
+
+Reinforcement Learning Journal , vol. 6, pp. 1378–1388, 2025.
