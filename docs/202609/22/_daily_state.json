@@ -1,0 +1,137 @@
+{
+  "date": "20260922",
+  "date_label": "",
+  "generated_at": "2026-09-22 22:27:00 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22792v1",
+      "route": "202609/22/2609.22792v1-selfop-an-optimization-algorithm-for-self-improving-security-agents",
+      "title": "SelfOp: An Optimization Algorithm for Self-Improving Security Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向漏洞发现的自改进安全智能体",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.16751v2",
+      "route": "202609/22/2609.16751v2-constant-swap-regret-in-general-sum-games-via-two-scale-higher-order-optimism",
+      "title": "Constant Swap Regret in General-Sum Games via Two-Scale Higher-Order Optimism",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "自博弈中实现常数互换遗憾的学习动力学",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.22949v1",
+      "route": "202609/22/2609.22949v1-beyond-single-model-injection-a-threat-model-and-defense-architecture-for-prompt-injection-in-multi-agent-systems",
+      "title": "Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "多智能体系统中提示注入的威胁模型与防御",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.23062v1",
+      "route": "202609/22/2609.23062v1-adversary-as-agents-a-co-evolutionary-agent-based-threat-modelling-framework-for-wireless-and-mobile-networks",
+      "title": "Adversary-as-Agents: A Co-Evolutionary Agent-Based Threat-Modelling Framework for Wireless and Mobile Networks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "协同演化的攻击智能体分配攻击预算",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.22592v1",
+      "route": "202609/22/2609.22592v1-autogym-blueprint-first-generation-of-verifiable-agent-gyms",
+      "title": "AutoGym: Blueprint-First Generation of Verifiable Agent Gyms",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "自动生成强化学习智能体训练环境（gym）",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.24115v1",
+      "route": "202609/22/2609.24115v1-edgegen-improving-tool-calling-agents-beyond-happy-paths-with-synthetic-edge-case-generation",
+      "title": "EDGEGEN: Improving Tool-Calling Agents Beyond Happy Paths with Synthetic Edge Case Generation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体的合成边缘案例任务生成",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.24662v1",
+      "route": "202609/22/2609.24662v1-duma-bench-a-dual-control-multi-agent-benchmark-for-evaluating-llm-agent-security",
+      "title": "DUMA-Bench: A Dual-Control Multi-Agent Benchmark for Evaluating LLM Agent Security",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "覆盖八类漏洞的对抗环境基准",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    },
+    {
+      "paper_id": "2609.24801v1",
+      "route": "202609/22/2609.24801v1-decoding-guardrails-xai-guided-perturbation-analysis-of-prompt-injection-detection",
+      "title": "Decoding Guardrails: XAI-Guided Perturbation Analysis of Prompt Injection Detection",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对提示注入与越狱检测的可解释分析",
+      "first_seen_at": "2026-09-22 22:27:00 UTC",
+      "updated_at": "2026-09-22 22:27:00 UTC"
+    }
+  ]
+}

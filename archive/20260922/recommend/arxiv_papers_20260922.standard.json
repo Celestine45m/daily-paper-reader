@@ -1,0 +1,330 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-22T22:19:58.796078+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2609.22792v1",
+      "source": "arxiv",
+      "title": "SelfOp: An Optimization Algorithm for Self-Improving Security Agents",
+      "abstract": "LLM agents are increasingly used for security tasks: vulnerability discovery, exploit reproduction, and patch generation. Improving them at the model level demands expert demonstrations or computable rewards, which security tasks rarely offer: traces are costly, failures hard to diagnose, rewards sparse, and non-computable. Efforts thus shift to the harness and context, but manual tuning needs task-specific expertise and scales poorly, while automated methods rely on scarce ground truth, stronger optimizer models, or unguided propose-and-evaluate loops that reduce to costly trial and error.   We introduce SelfOp, an algorithm that automatically improves a frozen security agent's task context (instructions, skills, and reference documents), without modifying its execution harness and model weights. SelfOp casts context optimization as chain-rule-inspired textual gradient descent: from a single instance's outcome, it propagates error signals backward through the evaluator, the agent's trajectory, and the context artifacts that shaped its behavior, yielding per-instance textual gradients. Gradients are accumulated across instances by clustering, ranking, and filtering, and committed only under cross-instance consensus. A convergence detector monitors the gradient signal itself and stops once the context has absorbed the generalizable information in the training data, without held-out validation data.   We evaluate SelfOp on CyberGym, a benchmark of real-world vulnerability reproduction tasks. With fewer than 200 training examples, SelfOp yields a 17-point self-improvement for GPT-5.4-mini (with Codex), enough to surpass the frontier GPT-5.4 baseline by 6 points, and an 18.5-point self-improvement for GPT-5.4 itself. The optimized skills also transfer across models, highlighting that SelfOp-optimized skills learn generalizable task knowledge not model-specific patterns.",
+      "authors": [
+        "Saad Ullah",
+        "Yigitcan Kaya",
+        "Christopher Kruegel",
+        "Giovanni Vigna",
+        "Gianluca Stringhini"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-19T05:51:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.22792v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "self-improving security agents for vulnerability discovery",
+      "llm_evidence_cn": "面向漏洞发现的自改进安全智能体",
+      "llm_evidence": "面向漏洞发现的自改进安全智能体",
+      "canonical_evidence": "面向漏洞发现的自改进安全智能体",
+      "llm_tldr_en": "SelfOp automatically improves a frozen security agent's task context for vulnerability discovery and patch generation, avoiding scarce rewards and costly manual tuning.",
+      "llm_tldr_cn": "LLM智能体已被用于漏洞发现、漏洞复现与补丁生成等安全任务，但在模型层面改进它们需要专家演示或可计算奖励，而安全任务往往奖励稀疏且难以诊断。论文提出SelfOp，在不修改模型参数的前提下自动优化冻结安全智能体的任务上下文，包括指令、技能与参考文档，避免人工调参和昂贵的试错循环。该方法为漏洞挖掘等安全智能体的自动改进提供了新途径。",
+      "llm_tldr": "LLM智能体已被用于漏洞发现、漏洞复现与补丁生成等安全任务，但在模型层面改进它们需要专家演示或可计算奖励，而安全任务往往奖励稀疏且难以诊断。论文提出SelfOp，在不修改模型参数的前提下自动优化冻结安全智能体的任务上下文，包括指令、技能与参考文档，避免人工调参和昂贵的试错循环。该方法为漏洞挖掘等安全智能体的自动改进提供了新途径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.16751v2",
+      "source": "arxiv",
+      "title": "Constant Swap Regret in General-Sum Games via Two-Scale Higher-Order Optimism",
+      "abstract": "We give deterministic and uncoupled learning dynamics for finite multiplayer general-sum games under full-information feedback that achieve constant individual swap regret in self-play, independent of the horizon $T$. With $n$ players and at most $m$ actions each, every player's individual swap regret is $O(\\sqrt n\\,m\\log m\\log^{5/2}(nm))$ at every finite horizon. The dynamics use the classical Blum-Mansour framework with optimism. Each player predicts the deviation gains, uses these predictions to update a row-stochastic transition matrix, and plays its stationary distribution. Our new ingredients include a tailored row normalization map and a two-scale higher-order predictor. An adversarially robust variant, obtained through a generic common-prefix switching wrapper, preserves the self-play bound up to a universal constant and guarantees individual swap regret at most $7\\sqrt{mT\\log m}$ in the adversarial setting.",
+      "authors": [
+        "Tung Mai"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.LG"
+      ],
+      "published": "2026-09-15T07:27:34+00:00",
+      "link": "https://arxiv.org/pdf/2609.16751v2",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "constant swap regret in self-play for general-sum games",
+      "llm_evidence_cn": "自博弈中实现常数互换遗憾的学习动力学",
+      "llm_evidence": "自博弈中实现常数互换遗憾的学习动力学",
+      "canonical_evidence": "自博弈中实现常数互换遗憾的学习动力学",
+      "llm_tldr_en": "This paper gives uncoupled learning dynamics achieving constant individual swap regret in self-play for finite general-sum games, via a two-scale higher-order optimistic predictor.",
+      "llm_tldr_cn": "多玩家通用和博弈中实现常数互换遗憾的自博弈学习动力学此前难以达成。本文提出确定性、非耦合的学习动力学，基于Blum-Mansour框架与乐观机制，通过行归一化映射与双尺度高阶预测器，使每个玩家在任意有限时域内的个体互换遗憾为常数。该结果为自博弈多智能体学习提供了理论保证。",
+      "llm_tldr": "多玩家通用和博弈中实现常数互换遗憾的自博弈学习动力学此前难以达成。本文提出确定性、非耦合的学习动力学，基于Blum-Mansour框架与乐观机制，通过行归一化映射与双尺度高阶预测器，使每个玩家在任意有限时域内的个体互换遗憾为常数。该结果为自博弈多智能体学习提供了理论保证。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.22592v1",
+      "source": "arxiv",
+      "title": "AutoGym: Blueprint-First Generation of Verifiable Agent Gyms",
+      "abstract": "Training agents with reinforcement learning requires a gym, comprising a task, an executable environment in which the task can be attempted, and a verifier that reliably distinguishes success from failure. Constructing such gyms remains manual, expensive, and static. Task sets saturate as models improve and are increasingly exposed to contamination. Synthetic generation offers scale, but single-pass synthesis produces tasks whose difficulty is largely cosmetic. Models comparable in capability solve them despite convoluted phrasing, and correctness must be adjudicated post-hoc by unreliable LLM judges. We present AutoGym, a framework that generates complete gyms (tasks, executable environments, and verifiers) from a minimal domain seed or prior model trajectories. AutoGym introduces three mechanisms. (1) Blueprint-first generation specifies the valid solution space, environment requirements, and verification criteria before the environment is materialized, making solvability a construction prerequisite rather than a property verified after the fact. (2) Explicit generation parameters control task topology, interaction depth, capability axes, question obfuscation, and distractor composition, enabling fine-grained difficulty steering. (3) Active curriculum synthesis uses performance-informed calibration to adjust the distribution over these parameters as model capabilities evolve. Across productivity and temporal-reasoning settings, AutoGym generates gyms spanning the capability spectrum, including instances that challenge frontier models.",
+      "authors": [
+        "Aarati Andrea Noronha",
+        "Kavya Ravikumar",
+        "Carly Xiaoyu Lin"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-09-18T21:18:49+00:00",
+      "link": "https://arxiv.org/pdf/2609.22592v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "framework generating RL agent training gyms with tasks and verifiers",
+      "llm_evidence_cn": "自动生成强化学习智能体训练环境（gym）",
+      "llm_evidence": "自动生成强化学习智能体训练环境（gym）",
+      "canonical_evidence": "自动生成强化学习智能体训练环境（gym）",
+      "llm_tldr_en": "AutoGym generates complete RL agent gyms (tasks, executable environments, verifiers) from a minimal domain seed, avoiding cosmetic difficulty and unreliable LLM judges.",
+      "llm_tldr_cn": "强化学习训练智能体需要包含任务、可执行环境与验证器的gym，但其构建依赖人工、昂贵且静态，任务集易饱和与污染。本文提出AutoGym框架，从最小领域种子或模型轨迹出发自动生成完整gym，避免单次合成的表面难度与不可靠评判。该工作为规模化、可验证的智能体训练提供可复用的基础设施。",
+      "llm_tldr": "强化学习训练智能体需要包含任务、可执行环境与验证器的gym，但其构建依赖人工、昂贵且静态，任务集易饱和与污染。本文提出AutoGym框架，从最小领域种子或模型轨迹出发自动生成完整gym，避免单次合成的表面难度与不可靠评判。该工作为规模化、可验证的智能体训练提供可复用的基础设施。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.22949v1",
+      "source": "arxiv",
+      "title": "Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems",
+      "abstract": "Existing prompt injection research focuses on single-model chatbot scenarios, where an attacker manipulates one LLM through crafted input. Multi-agent systems amplify this threat through three mechanisms absent from single-model settings: inter-agent message passing creates injection channels invisible to perimeter defenses, shared tool access enables privilege escalation across agent boundaries, and trust propagation allows a compromised agent to influence upstream orchestrators. We construct a threat model enumerating 14 attack vectors across four categories: direct injection via user input (3 vectors), indirect injection via tool outputs (4 vectors), inter-agent injection via message passing (4 vectors), and cascading injection through orchestrator manipulation (3 vectors). Testing all 14 vectors against a 6-agent production-representative system, we find that 67% of agents are vulnerable to at least one scope violation even with system-prompt-level guardrails, and indirect injection via tool outputs succeeds in 43% of attempts. Four architectural defenses reduce overall injection success from 31.2% to 4.2%: message signing with provenance tracking (inter-agent injection down 91%), input/output sanitization at agent boundaries (indirect injection down 78%), privilege-scoped tool access per agent role (privilege escalation eliminated entirely), and anomaly detection on inter-agent communication patterns (84% of cascading attempts caught).",
+      "authors": [
+        "Rudrendu Kumar Paul",
+        "Sourav Nandy"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "published": "2026-09-19T11:06:14+00:00",
+      "link": "https://arxiv.org/pdf/2609.22949v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "threat model of prompt injection in multi-agent systems",
+      "llm_evidence_cn": "多智能体系统中提示注入的威胁模型与防御",
+      "llm_evidence": "多智能体系统中提示注入的威胁模型与防御",
+      "canonical_evidence": "多智能体系统中提示注入的威胁模型与防御",
+      "llm_tldr_en": "This work builds a threat model of 14 prompt injection attack vectors across four categories in multi-agent systems and proposes a defense architecture addressing inter-agent and indirect injection channels.",
+      "llm_tldr_cn": "已有提示注入研究多聚焦单模型聊天场景，而多智能体系统通过智能体间消息传递、共享工具访问与信任传播放大该威胁。本文构建了涵盖四类共14种攻击向量的威胁模型，包括用户输入直接注入、工具输出间接注入与智能体间消息注入等。研究进一步提出相应的防御架构以缓解跨智能体的注入风险。该工作揭示了多智能体场景下提示注入的新攻击面并给出防护思路。",
+      "llm_tldr": "已有提示注入研究多聚焦单模型聊天场景，而多智能体系统通过智能体间消息传递、共享工具访问与信任传播放大该威胁。本文构建了涵盖四类共14种攻击向量的威胁模型，包括用户输入直接注入、工具输出间接注入与智能体间消息注入等。研究进一步提出相应的防御架构以缓解跨智能体的注入风险。该工作揭示了多智能体场景下提示注入的新攻击面并给出防护思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.24115v1",
+      "source": "arxiv",
+      "title": "EDGEGEN: Improving Tool-Calling Agents Beyond Happy Paths with Synthetic Edge Case Generation",
+      "abstract": "Tool-calling LLM agents are increasingly deployed in enterprise applications. However, effective evaluation and optimization require high-quality, diverse task datasets that are often difficult to obtain due to privacy and other constraints. Existing synthetic task generation methods often produce generic tasks that ignore an agent's underlying state or database and fail to reflect real-world usage diversity. We propose EdgeGen, a synthetic task generation framework that extracts compliance rules from an agent's specification and uses them to generate database-grounded edge-case tasks designed to violate these rules. When combined with existing synthetic data generation techniques, EdgeGen enables agent improvement through finetuning and harness optimization. The resulting pipeline forms a fully automated closed-loop system that requires no human annotation. Finetuning on data generated by EdgeGen yields a consistent mean progress improvement of 2 percent to 42 percent on tau2bench airline domain, while other baseline methods show degradation for some models. On the other hand, for harness optimization, our method shows a mean progress improvement of 10 percent and 30 percent over the human-curated and base harnesses, respectively, for the Gemma-4-e4b model.",
+      "authors": [
+        "Harshavardhan Abichandani",
+        "Penny Chong",
+        "Jiyuan Shen",
+        "Gunraj Singh",
+        "Ashutosh Hathidara",
+        "Marcus Duigan Xing Yu",
+        "Jane Lo",
+        "Atin Ghosh",
+        "Yipeng Li",
+        "Daniel Dahlmeier"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-21T05:07:45+00:00",
+      "link": "https://arxiv.org/pdf/2609.24115v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "synthetic edge-case task generation for agent data augmentation",
+      "llm_evidence_cn": "面向智能体的合成边缘案例任务生成",
+      "llm_evidence": "面向智能体的合成边缘案例任务生成",
+      "canonical_evidence": "面向智能体的合成边缘案例任务生成",
+      "llm_tldr_en": "EdgeGen extracts compliance rules from agent specs to synthesize database-grounded edge-case tasks that violate them, improving tool-calling agents beyond happy paths when combined with existing synthetic data methods.",
+      "llm_tldr_cn": "工具调用型LLM智能体在企业部署中常因缺乏高质量多样化任务数据而难以评估与优化，现有合成方法生成的通用任务脱离真实状态与失败场景。本文提出EdgeGen框架，从智能体规范中提取合规规则，据此生成违反规则的、基于数据库的边缘案例任务。与现有合成数据生成技术结合后，可通过微调持续提升智能体在边缘场景下的表现。该工作为智能体的合成数据增强提供了面向真实失败模式的生成思路。",
+      "llm_tldr": "工具调用型LLM智能体在企业部署中常因缺乏高质量多样化任务数据而难以评估与优化，现有合成方法生成的通用任务脱离真实状态与失败场景。本文提出EdgeGen框架，从智能体规范中提取合规规则，据此生成违反规则的、基于数据库的边缘案例任务。与现有合成数据生成技术结合后，可通过微调持续提升智能体在边缘场景下的表现。该工作为智能体的合成数据增强提供了面向真实失败模式的生成思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "data augmentation agent text generation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.23062v1",
+      "source": "arxiv",
+      "title": "Adversary-as-Agents: A Co-Evolutionary Agent-Based Threat-Modelling Framework for Wireless and Mobile Networks",
+      "abstract": "Threat modelling for wireless and mobile networks is dominated by static, catalogue-driven methods that fix the adversary in advance and never ask whether an attack is feasible against the defence actually deployed; agent-based resilience studies share this limitation, optimising a defender against an exogenous threat profile. We instead endogenise the adversary. Network entities run a decentralised consensus agent-based model (DC-ABM) defence, while an adaptive adversary population co-evolves by allocating a bounded attack budget across vulnerability-mode partitions. The equilibrium is a rankable, feasibility-grounded threat model expressed through three structural metrics: degeneracy-weighted path robustness, trust-weighted functional substitutability, and robust degeneracy. We prove that the DC-ABM defence contracts below its Byzantine breakdown threshold and that the induced adversary payoff is convex against that threshold, so the emergent attack drives a subset of partitions to breakdown in priority order. We further prove that this attack concentrates on the least substitutable partitions, that severity diverges as the induced corrupted-mass fraction approaches breakdown, and that operators can shrink the attack surface at deployment time along a closed-form connectivity-substitutability exchange rate.",
+      "authors": [
+        "I. Dey",
+        "M. K. Hassan",
+        "S. Ghosh",
+        "N. Marchetti"
+      ],
+      "primary_category": "eess.SP",
+      "categories": [
+        "eess.SP"
+      ],
+      "published": "2026-09-19T14:48:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.23062v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "co-evolutionary adversary agents allocate attack budget",
+      "llm_evidence_cn": "协同演化的攻击智能体分配攻击预算",
+      "llm_evidence": "协同演化的攻击智能体分配攻击预算",
+      "canonical_evidence": "协同演化的攻击智能体分配攻击预算",
+      "llm_tldr_en": "Adversary-as-Agents endogenises the adversary: a defender ABM co-evolves with an adaptive attacker population allocating a bounded budget across vulnerability modes.",
+      "llm_tldr_cn": "无线与移动网络的威胁建模长期依赖静态目录式方法，事先固定攻击者，无法判断攻击对实际部署防御的可行性，智能体韧性研究也仅针对外生威胁优化防御方。本文提出Adversary-as-Agents，将攻击者内生化：网络实体运行去中心化共识智能体防御模型，自适应攻击者种群在漏洞模式分区上分配有限攻击预算并协同演化。均衡结果给出可排序、基于可行性的威胁模型，通过退化加权路径鲁棒性等三项结构指标表达，为动态攻防建模提供新思路。",
+      "llm_tldr": "无线与移动网络的威胁建模长期依赖静态目录式方法，事先固定攻击者，无法判断攻击对实际部署防御的可行性，智能体韧性研究也仅针对外生威胁优化防御方。本文提出Adversary-as-Agents，将攻击者内生化：网络实体运行去中心化共识智能体防御模型，自适应攻击者种群在漏洞模式分区上分配有限攻击预算并协同演化。均衡结果给出可排序、基于可行性的威胁模型，通过退化加权路径鲁棒性等三项结构指标表达，为动态攻防建模提供新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.24662v1",
+      "source": "arxiv",
+      "title": "DUMA-Bench: A Dual-Control Multi-Agent Benchmark for Evaluating LLM Agent Security",
+      "abstract": "LLM-based agents increasingly operate in environments where they interact with users, tools, and external systems. Yet most security evaluations assume passive users and static control, ignoring the interactive dynamics that shape real agent behavior. We introduce \\textbf{DUMA-Bench}, a benchmark and evaluation protocol for measuring agent security under \\emph{dual-control} interaction, where both the agent and the user can influence the shared environment state. DUMA-Bench extends $τ^2$-bench ~\\cite{barres2025tau} with adversarial environments covering eight vulnerability classes, including RAG poisoning, cross-agent manipulation, and unsafe output handling. We evaluate \\textbf{14 models from five model families} (OpenAI, Anthropic, DeepSeek, Qwen, and Z.ai) across eight domains and multiple user-behavior regimes. Across our experiments, introducing dual-control interaction increases the attack success rate from \\textbf{26.9\\%} to \\textbf{41.1\\%}. These results show that agent security is not solely a property of the model but emerges from the interaction between the model, the user, and the environment. DUMA-Bench provides a missing evaluation layer for studying security in realistic agent deployments.",
+      "authors": [
+        "Ivan Aleksandrov",
+        "German Kochnev",
+        "Sabrina Sadiekh",
+        "Yaroslav Rogoza"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-21T14:28:05+00:00",
+      "link": "https://arxiv.org/pdf/2609.24662v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "adversarial environments covering eight vulnerability classes",
+      "llm_evidence_cn": "覆盖八类漏洞的对抗环境基准",
+      "llm_evidence": "覆盖八类漏洞的对抗环境基准",
+      "canonical_evidence": "覆盖八类漏洞的对抗环境基准",
+      "llm_tldr_en": "DUMA-Bench is a benchmark and evaluation protocol measuring LLM agent security under dual-control interaction, extending prior work with adversarial environments covering eight vulnerability classes across 14 models.",
+      "llm_tldr_cn": "现有智能体安全评估多假设用户被动、控制静态，忽视了塑造真实行为的交互动态。本文提出DUMA-Bench基准与评估协议，在智能体与用户共同影响环境状态的双控制交互下测量安全性，并扩展出涵盖RAG投毒、跨智能体操纵等八类漏洞的对抗环境。研究评测了来自五个模型族的14个模型。该工作为智能体安全与漏洞评测提供了更贴近真实的基准。",
+      "llm_tldr": "现有智能体安全评估多假设用户被动、控制静态，忽视了塑造真实行为的交互动态。本文提出DUMA-Bench基准与评估协议，在智能体与用户共同影响环境状态的双控制交互下测量安全性，并扩展出涵盖RAG投毒、跨智能体操纵等八类漏洞的对抗环境。研究评测了来自五个模型族的14个模型。该工作为智能体安全与漏洞评测提供了更贴近真实的基准。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.24801v1",
+      "source": "arxiv",
+      "title": "Decoding Guardrails: XAI-Guided Perturbation Analysis of Prompt Injection Detection",
+      "abstract": "Large language models (LLMs) are increasingly deployed in production systems, raising concerns about their exposure to adversarial manipulation through prompt injection and jailbreak attacks. Classifier-based guardrails, such as Prompt Guard 2, are widely used as a first line of defense against such attacks, but their internal decision logic is largely opaque to both defenders and attackers. This paper presents an exploratory case study that applies explainable artificial intelligence (XAI) techniques to analyze how Prompt Guard 2 distinguishes malicious from benign prompts.   We conduct four experiments to probe this question empirically. Guided by Vanilla Gradient and SHAP attributions, we find that Prompt Guard 2's decisions rely on the cumulative contribution of many tokens rather than a few dominant ones, yet saliency-guided synonym substitution and sentence-level paraphrasing can flip its predictions while altering only a moderate fraction of the text, in some cases yielding a successful jailbreak against the underlying LLM. A dataset-scale saliency analysis further shows that undetected injection prompts systematically lack the lexical markers the classifier relies on. We discuss the implications of these findings for the design and evaluation of classifier-based guardrails, and argue that explanation methods intended to support transparency can simultaneously lower the cost of constructing successful adversarial bypasses.",
+      "authors": [
+        "Fernando Outeda",
+        "Gustavo Betarte",
+        "Juan Diego Campo",
+        "Fiorella Cravero"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-21T16:01:09+00:00",
+      "link": "https://arxiv.org/pdf/2609.24801v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "XAI analysis of prompt injection and jailbreak detection",
+      "llm_evidence_cn": "对提示注入与越狱检测的可解释分析",
+      "llm_evidence": "对提示注入与越狱检测的可解释分析",
+      "canonical_evidence": "对提示注入与越狱检测的可解释分析",
+      "llm_tldr_en": "This case study applies XAI (Vanilla Gradient, SHAP) to analyze how the Prompt Guard 2 classifier distinguishes malicious from benign prompts, probing the internal decision logic of prompt-injection guardrails.",
+      "llm_tldr_cn": "针对提示注入与越狱攻击日益增多、而分类器防护栏（如Prompt Guard 2）内部决策逻辑不透明的问题，本文开展探索性案例研究。作者运用可解释AI技术，通过四项实验分析防护栏如何区分恶意与良性提示，发现其决策主要依赖特定特征。该分析同时为防御者和攻击者理解防护栏行为提供依据。工作凸显了对抗文本检测中可解释性的重要价值。",
+      "llm_tldr": "针对提示注入与越狱攻击日益增多、而分类器防护栏（如Prompt Guard 2）内部决策逻辑不透明的问题，本文开展探索性案例研究。作者运用可解释AI技术，通过四项实验分析防护栏如何区分恶意与良性提示，发现其决策主要依赖特定特征。该分析同时为防御者和攻击者理解防护栏行为提供依据。工作凸显了对抗文本检测中可解释性的重要价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

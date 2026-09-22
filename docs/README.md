@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-21</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-22</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 8 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>9</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>7</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-21 22:20:47 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-22 22:27:00 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读1篇、速读9篇，共处理10篇，聚焦驾驶策略与安全分析。最值得看的是《CounterPlay》提出的反事实后训练自博弈驾驶策略（8.0分），以及仓库级智能体安全分析与汇编代码漏洞检测两个速读方向（均7.0分）。普通读者可优先了解反事实训练如何提升自动驾驶决策，再按兴趣浏览安全评测类工作。</p>
+<p>今日精读1篇、速读7篇，重点聚焦自我改进安全智能体与多智能体提示注入防御。最值得看的是《SelfOp》提出的自我改进安全智能体优化算法（8.0分），以及多智能体系统提示注入的威胁模型与防御架构（7.0分）。普通读者可优先了解多智能体协作中的提示注入风险，再关注安全智能体如何通过优化实现自我迭代。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -74,7 +74,7 @@
     <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies">CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SelfOp: An Optimization Algorithm for Self-Improving Security Agents">SelfOp: An Optimization Algorithm for Self-Improving Security Agents</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
 </section>
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">9 篇</strong>
+    <strong class="dpr-home-dashboard-count">7 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale">Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale</span></li><li><span class="dpr-home-dashboard-paper-title" title="SEMA-GUARD: Semantic and Graph-Based Vulnerability Detection in Assembly Code">SEMA-GUARD: Semantic and Graph-Based Vulnerability Detection in Assembly Code</span></li><li><span class="dpr-home-dashboard-paper-title" title="CASCADE Against Jailbreaks: Combination Across Stages with Controlled Attack-Defense Evaluation">CASCADE Against Jailbreaks: Combination Across Stages with Controlled Attack-Defense Evaluation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Constant Swap Regret in General-Sum Games via Two-Scale Higher-Order Optimism">Constant Swap Regret in General-Sum Games via Two-Scale Higher-Order Optimism</span></li><li><span class="dpr-home-dashboard-paper-title" title="Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems">Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems</span></li><li><span class="dpr-home-dashboard-paper-title" title="Adversary-as-Agents: A Co-Evolutionary Agent-Based Threat-Modelling Framework for Wireless and Mobile Networks">Adversary-as-Agents: A Co-Evolutionary Agent-Based Threat-Modelling Framework for Wireless and Mobile Networks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>9</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>7</strong></span></div>
 </section>
 </div>
 
