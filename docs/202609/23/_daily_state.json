@@ -1,0 +1,57 @@
+{
+  "date": "20260923",
+  "date_label": "",
+  "generated_at": "2026-09-23 21:56:34 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22510v1",
+      "route": "202609/23/2609.22510v1-defusing-explosive-prompts-understanding-and-preventing-trigger-based-prompt-injections-in-llm-agents",
+      "title": "Defusing Explosive Prompts: Understanding and Preventing Trigger-Based Prompt Injections in LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "以条件式提示注入对LLM智能体实施对抗攻击",
+      "first_seen_at": "2026-09-23 21:56:34 UTC",
+      "updated_at": "2026-09-23 21:56:34 UTC"
+    },
+    {
+      "paper_id": "2609.25194v1",
+      "route": "202609/23/2609.25194v1-indirect-tipping-a-social-attack-surface-in-ai-agent-populations",
+      "title": "Indirect tipping: a social attack surface in AI agent populations",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "AI智能体群体的社会攻击面",
+      "first_seen_at": "2026-09-23 21:56:34 UTC",
+      "updated_at": "2026-09-23 21:56:34 UTC"
+    },
+    {
+      "paper_id": "2609.26555v1",
+      "route": "202609/23/2609.26555v1-rouxii-exploiting-honeypots-with-deception-aware-ai-pentesters",
+      "title": "Rouxii: Exploiting Honeypots with Deception-Aware AI Pentesters",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "AI渗透测试框架从蜜罐检测转向漏洞利用",
+      "first_seen_at": "2026-09-23 21:56:34 UTC",
+      "updated_at": "2026-09-23 21:56:34 UTC"
+    }
+  ]
+}

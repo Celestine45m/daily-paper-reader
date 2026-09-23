@@ -1,0 +1,54 @@
+{
+  "label": "2026-09-23",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T21:56:38",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202609/23/2609.22510v1-defusing-explosive-prompts-understanding-and-preventing-trigger-based-prompt-injections-in-llm-agents",
+      "section": "quick",
+      "title_en": "Defusing Explosive Prompts: Understanding and Preventing Trigger-Based Prompt Injections in LLM Agents",
+      "authors": "Justin Szczepaniak, Elad Feldman, Naum Viner, Ben Nassi",
+      "date": "2026-09-18",
+      "pdf": "https://arxiv.org/pdf/2609.22510v1",
+      "score": "6.0",
+      "evidence": "以条件式提示注入对LLM智能体实施对抗攻击",
+      "tldr": "LLM智能体接入外部工具后，间接提示注入（IPI）常在内容被读取时立即触发。本文提出“爆炸性提示”：一种条件式载荷，在攻击者指定触发条件满足前保持休眠，相当于免训练、推理时植入检索内容的后门。它在9个生产智能体上成功率达43-83%，远超命令式基线的≤3%，并可绕过现有防御。作者据此训练检测器DeFuse，将实时工具执行攻击成功率从34.3%降至3.0%（5%误报预算），揭示摄入时条件结构检测是关键防御杠杆。",
+      "tags": "query:as",
+      "abstract_en": "As LLM applications integrate with external tools, they are increasingly exposed to indirect prompt injection (IPI), where adversarial instructions are embedded in retrieved content. Conventional IPIs fire on contact: the moment an agent ingests the content, it carries out the instruction. We introduce the explosive prompt, a conditional payload that stays dormant until an attacker-chosen trigger is met, in effect a training-free, inference-time backdoor planted in a single piece of retrieved content.   This temporal separation reaches where ordinary IPI cannot. On frontier models that refuse the bare imperative almost entirely, rephrasing the same goal as a dormant conditional drives real, state-changing tool execution against a live agent backend (a paired mean of 16.5% vs. 2.4% for the imperative, reaching 34.2% on a proprietary model). In trials on nine production agents (OpenAI Codex, Google Gemini CLI, Anthropic Claude Code CLI, Cursor CLI, GitHub Copilot, Devin AI CLI, Amazon Kiro CLI, Qwen Code, Google Assistant; n=30 each), explosive prompts succeed in 43-83% of cases versus at most 3% for an imperative baseline, and they slip past deployed defenses: off-the-shelf injection classifiers are miscalibrated on them, and a preference-optimized model that closes imperative injection entirely still executes 11.8% of explosive prompts, every one at the trigger turn.   The durable defensive lever is ingestion-time detection of the conditional structure, once detectors are trained on explosive-prompt data, which no prior benchmark supplied and our generator does. Retraining cuts live tool-execution attack success from an undefended 34.3% to 7.5-8.1% for the encoder baselines. Our detector, DeFuse, reaches 3.0% at a calibrated 5% false-positive budget with the best detection quality of any method tested (AUC 0.9994) and 25x lower latency, though it needs length-aware thresholds.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/23/2609.25194v1-indirect-tipping-a-social-attack-surface-in-ai-agent-populations",
+      "section": "quick",
+      "title_en": "Indirect tipping: a social attack surface in AI agent populations",
+      "authors": "Ariel Flint, Luca Maria Aiello, Sara M. Constantino, Romualdo Pastor-Satorras, Andrea Baronchelli",
+      "date": "2026-09-21",
+      "pdf": "https://arxiv.org/pdf/2609.25194v1",
+      "score": "6.0",
+      "evidence": "AI智能体群体的社会攻击面",
+      "tldr": "生成式AI智能体大规模部署后，其集体均衡既是协调基础，也构成社会攻击面。现有临界规模视角只关注直接竞争所需的最小对抗比例，可能低估脆弱性。本文用LLM智能体实验与解析框架，将均衡间临界阈值建模为有向加权拓扑和可导航景观。结果显示，经中间踏脚石均衡的间接撬动可降低所需少数派比例、绕开多数要求，并揭示均衡抗性取决于结构关系。",
+      "tags": "query:as",
+      "abstract_en": "As generative AI agents are deployed at scale, safety will depend not only on technical safeguards and individual model design, but also on collective equilibria that determine how agent populations process information, prioritize actions, and respond to uncertainty. Yet the same equilibria that enable agents to coordinate also create a social attack surface. The standard framework to assess this vulnerability is critical mass dynamics: the minimum fraction of adversarial agents required to overturn an equilibrium through direct competition. Here, we show that this approach risks underestimating system vulnerability by reducing the problem to the identification of singular tipping points, and ignoring indirect but potentially more efficient routes through which collective behavior can be redirected. Through experiments with populations of LLM agents and an analytic framework that captures their collective dynamics at scale, we map critical-mass thresholds that define a directed, weighted topology over the space of coordination equilibria, and treat this topology as a navigable landscape. We show that indirect tipping through intermediate stepping-stone equilibria can reduce the committed minority required to reach an alternative state, bypass majority requirements, and make possible transitions inaccessible through direct challenges. The diversity of available alternatives and timing of the attack further reshape this landscape, creating opportunities for control as well as risks of unintended destabilization. These results show that an equilibrium's resistance to committed intervention is not an intrinsic property but a structural feature of its competitive relations with alternative states. Securing populations of interacting AI agents therefore requires mapping this social landscape alongside individual agent capabilities and the technical channels through which they interact.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202609/23/2609.26555v1-rouxii-exploiting-honeypots-with-deception-aware-ai-pentesters",
+      "section": "quick",
+      "title_en": "Rouxii: Exploiting Honeypots with Deception-Aware AI Pentesters",
+      "authors": "Arthur Cordeiro, Alberto Maria Mongardini, Emmanouil Vasilomanolakis",
+      "date": "2026-09-22",
+      "pdf": "https://arxiv.org/pdf/2609.26555v1",
+      "score": "6.0",
+      "evidence": "AI渗透测试框架从蜜罐检测转向漏洞利用",
+      "tldr": "蜜罐可欺骗攻击者，但已有评估多假设LLM渗透测试者不知情。本文提出Rouxii，将反欺骗融入侦察，使AI攻击者识别蜜罐指纹并转向利用。在3个推理模型、11种网络设置、12轮共1544份报告中，反欺骗配置把蜜罐识别率从19%提至97%，OT服务从11%到97%，真实服务误报0.7%；白盒分析还禁用Conpot而不触发存活监控、污染GasPot情报。结果表明蜜罐有效性高度依赖攻击者知识，AI攻击者评估须考虑其主动推理并利用欺骗层。",
+      "tags": "query:as",
+      "abstract_en": "Honeypots are designed to deceive attackers, and recent work shows they can also derail autonomous LLM-based pentesters. These evaluations, however, largely consider attackers unaware of the deception they face. We study the opposite setting: an autonomous attacker explicitly equipped to recognize and act on honeypot fingerprints. We introduce Rouxii, an AI-driven penetration-testing framework that integrates counter-deception into reconnaissance and pivots from honeypot detection to exploitation. We evaluate matched vanilla and anti-deception Rouxii configurations across three reasoning models and eleven network setups over twelve cycles (1,544 attack reports). Between the matched cohorts, which differ only in the prompt, counter-deception raises correct honeypot identification from 19% to 97%, an effect strongest on OT services (11% to 97%), while false alarms on the real service stay at 0.7%. Deception-unaware baselines (PentestGPT, HackingBuddy) fail similarly, indicating the effect is not specific to our framework. Detection, moreover, is not the endpoint: through a white-box analysis of the honeypots themselves we show that a detected trap can be turned against its operator, demonstrating a denial-of-service that disables Conpot without tripping its liveness monitoring, and a corruption of the intelligence a GasPot instance reports. These findings show that deception effectiveness depends strongly on attacker knowledge, and that evaluations of honeypot resilience against AI attackers must account for adversaries that actively reason about and exploit the deception layer.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
