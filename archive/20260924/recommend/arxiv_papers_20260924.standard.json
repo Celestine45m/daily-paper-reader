@@ -1,0 +1,165 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-24T21:48:48.885871+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.23980v1",
+      "source": "arxiv",
+      "title": "MobileCybench: Evaluating Agent Vulnerability Discovery via Executable Probes",
+      "abstract": "AI agents now report vulnerabilities faster than maintainers can review them. Reports often depend on security properties specific to the application, and require considerable human labor to process. To mitigate this, we introduce a framework for evaluating vulnerability reports via probes, executable checks of security properties. A reported exploit is evaluated by replaying it against the application and running the probes: a triggered probe indicates both that the exploit succeeded and which security property it violated. As a probe encodes a security property rather than a known vulnerability, it can detect vulnerabilities that were not known when the probe was written. We instantiate the framework as MobileCybench, a benchmark for vulnerability discovery by AI agents in 13 Android applications, with 495 probes written and reviewed by the authors. We evaluate 5 coding agents (OpenCode with GPT-5.5, GPT-5.6-Sol, and GLM-5.2; Claude Code with Opus 4.8 and Opus 5) under 4 settings: as a malicious app on the victim's device or as a remote attacker with a low-privilege account, each with either only an obfuscated APK or access to the application's source code. Given only the obfuscated APK, the top agent, OpenCode with GPT-5.6-Sol, triggers probes in 53.8% of applications in the malicious-app setting and 16.7% in the remote-attacker setting. With source code, the trigger rate across all agents and both attack settings increases from 28.8% to 32.8%. Building and running the benchmark surfaced 23 previously unreported vulnerabilities, the majority of which have been confirmed by maintainers.",
+      "authors": [
+        "Andy K. Zhang",
+        "Ava Huang",
+        "Joey Ji",
+        "Wai Han",
+        "Thomas Qin",
+        "Nardos Demilew",
+        "Michael Tian-Yue Liu",
+        "Brian Song",
+        "Riya Dulepet",
+        "Brian Wang",
+        "Kyleen Liao",
+        "Cuiyuanxiu Chen",
+        "Nishka Kacheria",
+        "Andrew Wu",
+        "Pratham Rangwala",
+        "Xinjie Wang",
+        "Laura Gomezjurado Gonzalez",
+        "Anita Ding",
+        "Benjamin Yi",
+        "Daniel E. Ho",
+        "Dan Boneh",
+        "Dawn Song",
+        "Ion Stoica",
+        "Percy Liang"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-21T01:21:06+00:00",
+      "link": "https://arxiv.org/pdf/2609.23980v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "framework for evaluating agent vulnerability discovery via executable probes",
+      "llm_evidence_cn": "通过可执行探针评估智能体漏洞发现的框架",
+      "llm_evidence": "通过可执行探针评估智能体漏洞发现的框架",
+      "canonical_evidence": "通过可执行探针评估智能体漏洞发现的框架",
+      "llm_tldr_en": "MobileCybench evaluates AI agent vulnerability discovery using executable probes that encode security properties, letting reported exploits be replayed to confirm success and violations.",
+      "llm_tldr_cn": "AI智能体报告的漏洞数量已超出维护者可审核的速度，且报告常依赖特定应用的安全属性、处理成本高。本文提出基于探针的漏洞报告评估框架，探针是可执行的安全属性检查，通过重放漏洞利用并运行探针来判断攻击是否成功及违反哪一属性。作者以MobileCybench实例化该框架，用于评估移动端智能体的漏洞发现能力，因探针编码的是安全属性而非已知漏洞，故能发现未知漏洞。",
+      "llm_tldr": "AI智能体报告的漏洞数量已超出维护者可审核的速度，且报告常依赖特定应用的安全属性、处理成本高。本文提出基于探针的漏洞报告评估框架，探针是可执行的安全属性检查，通过重放漏洞利用并运行探针来判断攻击是否成功及违反哪一属性。作者以MobileCybench实例化该框架，用于评估移动端智能体的漏洞发现能力，因探针编码的是安全属性而非已知漏洞，故能发现未知漏洞。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.21378v1",
+      "source": "arxiv",
+      "title": "ArenaFlow: From Trajectory Ranking to Hierarchical Credit Propagation for Open-Ended Agent RL",
+      "abstract": "Reinforcement learning has substantially improved large language model (LLM) agents in verifiable domains, but remains difficult to apply to open-ended agent tasks, where solutions are diverse and reliable scalar rewards are hard to obtain. Recent pairwise evaluation methods alleviate reward discrimination collapse by replacing pointwise scoring with relative preferences. However, they still compress rich comparative feedback into a single trajectory-level reward, obscuring decisive intermediate steps and preventing successful behaviors from being consolidated into reusable skills. We propose ArenaFlow, a hierarchical credit propagation framework for open-ended agent reinforcement learning. ArenaFlow leverages tournament-based relative ranking to derive trajectory-level reward signals. Each comparison is further equipped with structured reflective evaluation, which reveals three types of supervision: pivotal success steps, reusable strategy skills, and usage attribution of retrieved skills. At the step level, ArenaFlow propagates trajectory-level advantages to high-confidence pivotal steps according to tournament survival depth, enabling more targeted optimization of local reasoning behaviors. At the skill level, ArenaFlow estimates skill utility from group-level usage attribution and maintains a global skill memory through utility-aware updating, pruning, and retrieval. The resulting high-utility skills further serve as policy priors for future exploration. Extensive experiments validate ArenaFlow's effectiveness on open-ended agent tasks.",
+      "authors": [
+        "Qiang Zhang",
+        "Ruixue Ding",
+        "Fanrui Zhang",
+        "Xi Chen",
+        "Boli Chen",
+        "Shihang Wang",
+        "Yinfeng Huang",
+        "Yi Zheng",
+        "Pengjun Xie",
+        "Kaipeng Zhang",
+        "Jiawei Liu",
+        "Zheng-Jun Zha"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-09-18T06:44:44+00:00",
+      "link": "https://arxiv.org/pdf/2609.21378v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "agent RL training with tournament-based pairwise evaluation",
+      "llm_evidence_cn": "基于锦标赛成对评估的智能体强化学习训练",
+      "llm_evidence": "基于锦标赛成对评估的智能体强化学习训练",
+      "canonical_evidence": "基于锦标赛成对评估的智能体强化学习训练",
+      "llm_tldr_en": "Open-ended agent RL lacks reliable scalar rewards, and pairwise evaluation compresses feedback into one trajectory reward. ArenaFlow uses tournament-based hierarchical credit propagation to assign credit to intermediate steps and consolidate reusable skills.",
+      "llm_tldr_cn": "开放式智能体强化学习任务解多样、缺乏可靠标量奖励，现有成对评估将丰富比较反馈压缩为单一轨迹奖励，掩盖关键中间步骤。作者提出ArenaFlow，一种基于锦标赛的分层信用传播框架，把比较信号分配到中间步骤并沉淀可复用技能。该方法缓解奖励坍塌，使成功行为能被巩固。其贡献在于为开放式智能体强化学习提供更细粒度的信用分配机制。",
+      "llm_tldr": "开放式智能体强化学习任务解多样、缺乏可靠标量奖励，现有成对评估将丰富比较反馈压缩为单一轨迹奖励，掩盖关键中间步骤。作者提出ArenaFlow，一种基于锦标赛的分层信用传播框架，把比较信号分配到中间步骤并沉淀可复用技能。该方法缓解奖励坍塌，使成功行为能被巩固。其贡献在于为开放式智能体强化学习提供更细粒度的信用分配机制。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.26761v1",
+      "source": "arxiv",
+      "title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
+      "abstract": "Agents using the Model Context Protocol (MCP) rely on semantic matching to select tools from third-party servers, exposing a semantic supply-chain risk through attacker-controlled metadata and outputs. We introduce A2M (Attraction-to-Manipulation), a two-stage black-box framework for hijacking MCP agents. The Attraction phase optimizes tool metadata to increase invocation probability; the Manipulation phase uses execution traces to refine adversarial tool returns that steer agents toward attacker-desired outcomes. On LiveMCPBench, direct attacks optimized and evaluated on GLM-4.6 achieve a macro-average malicious tool invocation rate of 93.6% across four scenarios, increase weighted token costs to 32.4$\\times$ the benign baseline under Cognitive Denial of Service, and attain a mean attack success rate of 74.4% across Information Exfiltration, Environment Integrity Compromise, and Reasoning Derailment. Transfer to four other models without re-optimization yields corresponding macro-averages of 63.6%, 2.7$\\times$, and 24.5%. These findings motivate stronger tool vetting and runtime isolation in MCP ecosystems. Code is publicly available at https://github.com/Lilaizhen/A2M.",
+      "authors": [
+        "Laizhen Li",
+        "Xuan Wang",
+        "Peicheng Zhao",
+        "Juanjuan Zhao",
+        "Kejiang Ye",
+        "Cheng-zhong Xu",
+        "Xitong Gao"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-22T17:41:34+00:00",
+      "link": "https://arxiv.org/pdf/2609.26761v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "black-box adversarial hijacking of tool-calling agents exploiting supply-chain metadata",
+      "llm_evidence_cn": "利用供应链元数据对工具调用智能体的黑盒对抗劫持",
+      "llm_evidence": "利用供应链元数据对工具调用智能体的黑盒对抗劫持",
+      "canonical_evidence": "利用供应链元数据对工具调用智能体的黑盒对抗劫持",
+      "llm_tldr_en": "MCP agents select tools via semantic matching, exposing a supply-chain risk. A2M optimizes tool metadata and refines adversarial returns, hijacking agents with 93.6% malicious invocation rate.",
+      "llm_tldr_cn": "使用模型上下文协议（MCP）的智能体依赖语义匹配从第三方服务器选择工具，攻击者可通过控制元数据与输出形成语义供应链风险。作者提出两阶段黑盒框架A2M，先在Attraction阶段优化工具元数据以提高被调用概率，再在Manipulation阶段利用执行轨迹优化对抗性工具返回，将智能体导向攻击者期望的结果。在LiveMCPBench上，恶意工具调用率达93.6%，认知拒绝服务下令牌成本升至基线的32.4倍。该工作揭示了智能体生态的对抗攻击面。",
+      "llm_tldr": "使用模型上下文协议（MCP）的智能体依赖语义匹配从第三方服务器选择工具，攻击者可通过控制元数据与输出形成语义供应链风险。作者提出两阶段黑盒框架A2M，先在Attraction阶段优化工具元数据以提高被调用概率，再在Manipulation阶段利用执行轨迹优化对抗性工具返回，将智能体导向攻击者期望的结果。在LiveMCPBench上，恶意工具调用率达93.6%，认知拒绝服务下令牌成本升至基线的32.4倍。该工作揭示了智能体生态的对抗攻击面。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack and defense in text using self play",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
