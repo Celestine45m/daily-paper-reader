@@ -1,0 +1,212 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-25T21:53:04.760601+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.30063v1",
+      "source": "arxiv",
+      "title": "Self-Play Pretraining with Zero Data",
+      "abstract": "Advances in language modeling have been driven by scaling pretraining on ever more data. Yet, the training data is still largely curated on the model's behalf. A more general approach to pretraining would let the model learn to generate the data most useful for its own improvement. This would provide an effectively unbounded source of training data, limited by compute rather than human knowledge. We introduce Self-Play Pretraining with Zero Data, an initial proof-of-concept towards realizing this vision. Our procedure casts synthetic data generation as a search over the space of all computable structure, taking inspiration from Solomonoff induction. Starting from random initialization, two models learn in tandem: a generator proposes programs interpreted by a universal Turing machine, generating byte sequences, while a learner autoregressively predicts these byte sequences. The learner is trained with standard cross-entropy, while the generator is trained with reinforcement learning to produce sequences at the frontier of the learner's capabilities, yielding an adaptive curriculum. A universal Turing machine gives us a search space over all computable data-generating processes, imposing little domain-specific structure, and self-play searches over this space for useful training data. We test whether zero-shot performance on natural data improves predictably with self-play compute; this is a clean test of transfer since neither generator nor learner is trained on natural data. Across several natural datasets, zero-shot loss exhibits predictable scaling in compute. The models also exhibit in-context learning, and discover recognizable mathematical sequences during training.",
+      "authors": [
+        "Aditya Cowsik",
+        "Kfir Dolev",
+        "Michael Y. Li",
+        "G. Bruno De Luca",
+        "Nourya Cohen",
+        "Noah D. Goodman",
+        "Yoav Levine"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-09-24T16:23:01+00:00",
+      "link": "https://arxiv.org/pdf/2609.30063v1",
+      "tags": [
+        "keyword:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "self-play training with a generator model and synthetic data generation",
+      "llm_evidence_cn": "含生成器模型与合成数据生成的自博弈训练",
+      "llm_evidence": "含生成器模型与合成数据生成的自博弈训练",
+      "canonical_evidence": "含生成器模型与合成数据生成的自博弈训练",
+      "llm_tldr_en": "Language model pretraining depends on human-curated data. This proof-of-concept casts synthetic data generation as a search over computable structure inspired by Solomonoff induction: two models learn in tandem from random initialization, a generator proposing programs interpreted by a universal Turing machine. It offers an effectively unbounded, compute-limited training data source, advancing self-play agent training and synthetic text generation.",
+      "llm_tldr_cn": "该文指出语言模型预训练仍依赖人类策划的数据，模型无法自主学习最有用的训练样本。作者提出零数据自博弈预训练，将合成数据生成建模为对可计算结构空间的搜索，借鉴Solomonoff归纳：两个模型从随机初始化起协同学习，生成器提出由通用图灵机解释的程序。该概念验证表明自博弈可提供由算力而非人类知识限制的近乎无限训练数据来源。其贡献在于为无需人工数据的自博弈式智能体训练与合成文本生成提供可行路径。",
+      "llm_tldr": "该文指出语言模型预训练仍依赖人类策划的数据，模型无法自主学习最有用的训练样本。作者提出零数据自博弈预训练，将合成数据生成建模为对可计算结构空间的搜索，借鉴Solomonoff归纳：两个模型从随机初始化起协同学习，生成器提出由通用图灵机解释的程序。该概念验证表明自博弈可提供由算力而非人类知识限制的近乎无限训练数据来源。其贡献在于为无需人工数据的自博弈式智能体训练与合成文本生成提供可行路径。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.27667v1",
+      "source": "arxiv",
+      "title": "Robust Adversarial Reinforcement Learning with Risk Sensitivity and Critic Consistency Regularization",
+      "abstract": "Reinforcement learning (RL) achieves strong performance in sequential decision-making but remains brittle under dynamic uncertainty and distributional shifts. Robust Adversarial Reinforcement Learning (RARL) improves robustness via worst-case perturbations, but existing approaches frequently suffer from unstable optimization and degraded value estimation. In particular, overly aggressive adversaries can drive the agent toward uninformative failure states, while adversarial perturbations amplify disagreement between double critics and introduce biased value targets. We propose a unified framework, RACER (Risk-sensitive robust Adversarial critic ConsistEncy-regularized Reinforcement learning), that revisits adversarial RL from a risk-sensitive perspective. First, we introduce a state-dependent adversarial objective that adaptively regulates perturbation strength, suppressing harmful disturbances while preserving informative exploration. Second, we propose critic consistency regularization to reduce disagreement between Q-value estimators and stabilize learning. Comprehensive experiments on challenging continuous control benchmarks demonstrate that RACER consistently improves performance, robustness, and training stability over strong robust RL baselines.",
+      "authors": [
+        "Jiaxi Wu",
+        "Tiantian Zhang",
+        "Yuxing Wang",
+        "Yongzhe Chang",
+        "Xueqian Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-23T10:37:27+00:00",
+      "link": "https://arxiv.org/pdf/2609.27667v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "adversarial reinforcement learning for robust attack-defense training",
+      "llm_evidence_cn": "面向鲁棒攻防训练的对抗强化学习",
+      "llm_evidence": "面向鲁棒攻防训练的对抗强化学习",
+      "canonical_evidence": "面向鲁棒攻防训练的对抗强化学习",
+      "llm_tldr_en": "Robust adversarial RL suffers unstable optimization and biased value estimation. This paper proposes RACER, combining risk sensitivity with critic consistency regularization for stable adversarial training.",
+      "llm_tldr_cn": "强化学习在动态不确定与分布偏移下仍显脆弱，鲁棒对抗强化学习通过最坏情况扰动提升鲁棒性，但常面临优化不稳定与价值估计退化问题。本文提出RACER框架，融合风险敏感目标与双评论家一致性正则，缓解过度激进对手带来的无信息失败状态与价值偏差。实验表明该方法在保持鲁棒性的同时提升了优化稳定性与价值估计质量。",
+      "llm_tldr": "强化学习在动态不确定与分布偏移下仍显脆弱，鲁棒对抗强化学习通过最坏情况扰动提升鲁棒性，但常面临优化不稳定与价值估计退化问题。本文提出RACER框架，融合风险敏感目标与双评论家一致性正则，缓解过度激进对手带来的无信息失败状态与价值偏差。实验表明该方法在保持鲁棒性的同时提升了优化稳定性与价值估计质量。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.25469v1",
+      "source": "arxiv",
+      "title": "RAG-NAROK: Retrieval-Aware Knowledge Corpus Poisoning in RAG with Source-specific Refutation",
+      "abstract": "Retrieval augmented generation (RAG) systems have emerged as the dominant architecture for grounding large language model (LLM) outputs in verifiable external knowledge, yet their structural reliance on a dynamic retrieval pipeline introduces a largely unexplored class of adversarial vulnerability. Existing knowledge-base poisoning attacks are fundamentally static. Adversarial documents are pre-computed and injected without any awareness of what the victim system will actually retrieve for a given query, leaving the attack blind to the competitive documentary landscape that surrounds its payload in the generator's context window. Unlike traditional static poisoning attacks that are blind to the retrieved context, we introduce RAG-NAROK (Retrieval-Anchored Generation Negation And Response Quality Collapse), a RAG attack framework that adapts to the query text. RAG-NAROK exploits the transparency inherent in RAG pipeline to first extract the legitimate source identities, then generate Anchor-Specific Refutation documents that explicitly name and devalue retrieved sources while leveraging recency and authority biases to steer the text generation toward a target answer. Our results demonstrate that RAG-NAROK significantly outperforms static baselines across diverse domains, revealing a fundamental tension between RAG transparency and AI security.",
+      "authors": [
+        "Abdullahil Kafi",
+        "Alvi Ataur Khalil"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-21T22:53:04+00:00",
+      "link": "https://arxiv.org/pdf/2609.25469v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "poisoning attack on text generation",
+      "llm_evidence_cn": "针对文本生成的投毒攻击",
+      "llm_evidence": "针对文本生成的投毒攻击",
+      "canonical_evidence": "针对文本生成的投毒攻击",
+      "llm_tldr_en": "RAG-NAROK introduces retrieval-aware knowledge corpus poisoning for RAG systems, using source-specific refutation to exploit the dynamic retrieval pipeline, outperforming static poisoning attacks.",
+      "llm_tldr_cn": "检索增强生成系统依赖动态检索管线，引入了一类此前未被充分探索的对抗性漏洞，而现有知识库投毒攻击是静态的、对检索结果无感知。论文提出RAG-NAROK，一种检索感知的知识库投毒方法，结合来源特定反驳来增强攻击效果。该方法相较静态攻击更能有效操纵生成结果，揭示了RAG管线的对抗风险。",
+      "llm_tldr": "检索增强生成系统依赖动态检索管线，引入了一类此前未被充分探索的对抗性漏洞，而现有知识库投毒攻击是静态的、对检索结果无感知。论文提出RAG-NAROK，一种检索感知的知识库投毒方法，结合来源特定反驳来增强攻击效果。该方法相较静态攻击更能有效操纵生成结果，揭示了RAG管线的对抗风险。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.28609v1",
+      "source": "arxiv",
+      "title": "Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents",
+      "abstract": "Role-playing agents based on large language models have been widely applied in areas such as personalized assistance and social simulation. Recent RL methods typically train on a fixed scenario pool collected before learning begins. This creates a distributional bottleneck: as the agent improves, the scenarios where it performs poorly also change, while the training distribution remains static. Therefore, we propose AdvRole, an adversarial context rewriting framework that turns role-playing RL into a closed-loop curriculum. AdvRole alternates between an Actor that learns to role-play and a Rewriter that edits character profiles and dialogue contexts into actor-specific hard scenarios. The Rewriter is trained with a performance-gap reward, which favors rewrites that reduce the current Actor's score relative to the original scenario. As a result, the scenario pool evolves with the Actor and continuously targets under-mastered regions of the character-context space. Experiments on three role-playing benchmarks covering English and Chinese, as well as a new multilingual benchmark we release, show that AdvRole consistently outperforms baselines.",
+      "authors": [
+        "Zheng Zhang",
+        "Liu Liu",
+        "Qi Chai",
+        "Deheng Ye",
+        "Peilin Zhao",
+        "Mao Zheng",
+        "Hao Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-23T16:58:08+00:00",
+      "link": "https://arxiv.org/pdf/2609.28609v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "adversarial closed-loop curriculum with actor-rewriter self-play",
+      "llm_evidence_cn": "Actor与Rewriter对抗闭环课程自博弈",
+      "llm_evidence": "Actor与Rewriter对抗闭环课程自博弈",
+      "canonical_evidence": "Actor与Rewriter对抗闭环课程自博弈",
+      "llm_tldr_en": "Role-playing RL agents suffer from static scenario pools; AdvRole alternates an Actor and a Rewriter that edits profiles and dialogue into harder contexts, forming an adversarial closed-loop curriculum.",
+      "llm_tldr_cn": "基于大语言模型的角色扮演智能体常用于个性化助手与社会模拟，但现有强化学习多在固定场景池上训练，随智能体提升训练分布不再匹配，形成分布瓶颈。本文提出AdvRole对抗式上下文改写框架，让Actor学习角色扮演，Rewriter依据性能差奖励将角色档案与对话改写为更难场景，构成闭环课程。该方法实现智能体与场景的对抗共进化。",
+      "llm_tldr": "基于大语言模型的角色扮演智能体常用于个性化助手与社会模拟，但现有强化学习多在固定场景池上训练，随智能体提升训练分布不再匹配，形成分布瓶颈。本文提出AdvRole对抗式上下文改写框架，让Actor学习角色扮演，Rewriter依据性能差奖励将角色档案与对话改写为更难场景，构成闭环课程。该方法实现智能体与场景的对抗共进化。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.29775v1",
+      "source": "arxiv",
+      "title": "Prefilling the Reasoning Channel: Output-Prefix Attacks on Reasoning LLMs",
+      "abstract": "Large Language Models (LLMs) consume and produce a single sequence of text; hence, if text can be added to the beginning of the LLM's response, i.e., an output prefix, then all subsequent tokens will be conditioned on it. This output-prefix attack technique is a cheap black-box prompt injection. Prior work has shown this type of attack can reliably jailbreak non-reasoning models. Most reasoning models add an intermediate scratchpad reasoning step before the assistant's final response. The ability to edit this reasoning channel is exposed by some APIs and attack vectors can be leveraged for reasoning injection attacks. We present the first systematic, controlled study that isolates the scratchpad reasoning channel as an output-prefix attack vector, and the first to compare reasoning-only, output-prefix-only and reasoning-plus-output-prefix attacks across both exposed- and hidden-reasoning models. Using a factorial design of 3 prefix types $\\times$ 2 reasoning injections over $1{,}800$ test cases drawn from AdvBench, we attack three 2026-era frontier models Gemini 3 Flash Preview, DeepSeek V4 Flash, and Claude Haiku 4.5. We find that injecting malicious reasoning alone is essentially inert ($\\approx0\\%$ attack success), but injecting the same reasoning together with a trivial output prefix raises the attack success rate to as high as $99\\%$ for some models. For this type of attack we find that contextual prefixes work better than static prefixes; and that susceptibility is dependent on the model.",
+      "authors": [
+        "Lukáš Brůna",
+        "Robert Bridges",
+        "Adam Ek"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-24T13:18:21+00:00",
+      "link": "https://arxiv.org/pdf/2609.29775v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "output-prefix prompt injection attack on reasoning LLMs",
+      "llm_evidence_cn": "针对推理大模型的输出前缀提示注入攻击",
+      "llm_evidence": "针对推理大模型的输出前缀提示注入攻击",
+      "canonical_evidence": "针对推理大模型的输出前缀提示注入攻击",
+      "llm_tldr_en": "This paper isolates the scratchpad reasoning channel of reasoning LLMs as an output-prefix attack vector, presenting a systematic controlled study of a cheap black-box prompt injection that edits the reasoning channel.",
+      "llm_tldr_cn": "大模型逐词生成文本，若能在回复开头插入输出前缀，后续所有词元都会被其条件化，从而形成廉价的黑盒提示注入。此前工作已证明该手法可稳定越狱非推理模型，但推理模型新增的思维链通道尚未被系统研究。本文首次将推理草稿通道隔离为输出前缀攻击面，开展受控实验分析其注入效果与影响。结果揭示了推理通道带来的新攻击风险，为推理大模型的安全防护提供依据。",
+      "llm_tldr": "大模型逐词生成文本，若能在回复开头插入输出前缀，后续所有词元都会被其条件化，从而形成廉价的黑盒提示注入。此前工作已证明该手法可稳定越狱非推理模型，但推理模型新增的思维链通道尚未被系统研究。本文首次将推理草稿通道隔离为输出前缀攻击面，开展受控实验分析其注入效果与影响。结果揭示了推理通道带来的新攻击风险，为推理大模型的安全防护提供依据。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

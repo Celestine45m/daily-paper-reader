@@ -1,0 +1,89 @@
+{
+  "date": "20260925",
+  "date_label": "",
+  "generated_at": "2026-09-25 21:56:16 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.30063v1",
+      "route": "202609/25/2609.30063v1-self-play-pretraining-with-zero-data",
+      "title": "Self-Play Pretraining with Zero Data",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "含生成器模型与合成数据生成的自博弈训练",
+      "first_seen_at": "2026-09-25 21:56:16 UTC",
+      "updated_at": "2026-09-25 21:56:16 UTC"
+    },
+    {
+      "paper_id": "2609.27667v1",
+      "route": "202609/25/2609.27667v1-robust-adversarial-reinforcement-learning-with-risk-sensitivity-and-critic-consistency-regularization",
+      "title": "Robust Adversarial Reinforcement Learning with Risk Sensitivity and Critic Consistency Regularization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向鲁棒攻防训练的对抗强化学习",
+      "first_seen_at": "2026-09-25 21:56:16 UTC",
+      "updated_at": "2026-09-25 21:56:16 UTC"
+    },
+    {
+      "paper_id": "2609.28609v1",
+      "route": "202609/25/2609.28609v1-adversarial-closed-loop-curriculum-for-evolving-role-playing-agents",
+      "title": "Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "Actor与Rewriter对抗闭环课程自博弈",
+      "first_seen_at": "2026-09-25 21:56:16 UTC",
+      "updated_at": "2026-09-25 21:56:16 UTC"
+    },
+    {
+      "paper_id": "2609.29775v1",
+      "route": "202609/25/2609.29775v1-prefilling-the-reasoning-channel-output-prefix-attacks-on-reasoning-llms",
+      "title": "Prefilling the Reasoning Channel: Output-Prefix Attacks on Reasoning LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对推理大模型的输出前缀提示注入攻击",
+      "first_seen_at": "2026-09-25 21:56:16 UTC",
+      "updated_at": "2026-09-25 21:56:16 UTC"
+    },
+    {
+      "paper_id": "2609.25469v1",
+      "route": "202609/25/2609.25469v1-rag-narok-retrieval-aware-knowledge-corpus-poisoning-in-rag-with-source-specific-refutation",
+      "title": "RAG-NAROK: Retrieval-Aware Knowledge Corpus Poisoning in RAG with Source-specific Refutation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对文本生成的投毒攻击",
+      "first_seen_at": "2026-09-25 21:56:16 UTC",
+      "updated_at": "2026-09-25 21:56:16 UTC"
+    }
+  ]
+}
