@@ -1,0 +1,221 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-26T21:52:50.345517+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2609.29948v1",
+      "source": "arxiv",
+      "title": "ENDOPROMPT: Victim-Side Pseudo-References for Utility Degradation",
+      "abstract": "Prompt injection can degrade benign task performance without eliciting harmful content. Yet many attack objectives depend on task labels or predefined target responses. We present ENDOPROMPT, a white-box method that learns utility-degrading prefixes from unlabeled instructions. Its generator takes the request text as input. Clean victim continuations serve as pseudo-references: local search identifies prefixes that reduce continuation likelihood, and preference fitting on comparisons within the same instruction, followed by reward refinement, distills this signal into a generator. At deployment, the generator produces one prefix per request without further victim-side search. Across four instruction-tuned models and the complete splits of seven benign benchmarks, ENDOPROMPT yields a mean utility change of -26.8 percentage points; 27 of 28 cells are negative. Failure analysis reveals output expansion and prefix reuse; the controls do not establish a degradation advantage from request matching. Victim-derived supervision can reveal utility weaknesses without benchmark feedback or prescribed failure responses. The code will be released upon acceptance.",
+      "authors": [
+        "Qingyu Wu",
+        "Zeyu Feng",
+        "Yongda Yu",
+        "Yuzhe Luo",
+        "Hua Cheng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-09-24T15:08:13+00:00",
+      "link": "https://arxiv.org/pdf/2609.29948v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "learns utility-degrading prompt-injection prefixes from unlabeled instructions",
+      "llm_evidence_cn": "从无标注指令中学习降低效用的提示注入前缀",
+      "llm_evidence": "从无标注指令中学习降低效用的提示注入前缀",
+      "canonical_evidence": "从无标注指令中学习降低效用的提示注入前缀",
+      "llm_tldr_en": "ENDOPROMPT learns utility-degrading prefixes from unlabeled instructions using clean victim continuations as pseudo-references, distilling local-search and preference signals into a generator that attacks four instruction-tuned models.",
+      "llm_tldr_cn": "现有提示注入攻击多依赖任务标签或预设目标回复，难以在无标注场景下泛化。论文提出ENDOPROMPT，将受害模型的干净续写作为伪参考，通过局部搜索找到降低续写似然的攻击前缀，并用偏好拟合与奖励精炼把信号蒸馏进生成器。部署时仅需为每个请求生成一个前缀，无需额外的受害端搜索。在四个指令微调模型和七个良性基准上验证了效用退化攻击的有效性。",
+      "llm_tldr": "现有提示注入攻击多依赖任务标签或预设目标回复，难以在无标注场景下泛化。论文提出ENDOPROMPT，将受害模型的干净续写作为伪参考，通过局部搜索找到降低续写似然的攻击前缀，并用偏好拟合与奖励精炼把信号蒸馏进生成器。部署时仅需为每个请求生成一个前缀，无需额外的受害端搜索。在四个指令微调模型和七个良性基准上验证了效用退化攻击的有效性。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2609.26711v1",
+      "source": "arxiv",
+      "title": "TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits",
+      "abstract": "Software vulnerabilities are often discovered long after they are introduced, making it difficult to identify the vulnerability-inducing commit (VIC) responsible for introducing the underlying vulnerable condition. Existing VIC identification techniques largely rely on git blame to trace vulnerable code through revision history and use positional heuristics, such as selecting its earliest or most recent modification. However, the true VIC may occur anywhere within this history, and vulnerable behavior may depend on code that evolves across multiple revisions. We therefore argue that VIC identification requires reasoning about how vulnerability-relevant code evolves, rather than simply where a candidate commit appears in the revision history.   We present TraceVIC, a temporal graph-based approach for identifying and ranking VICs by reasoning over code evolution. TraceVIC first localizes likely root-cause lines and traces their histories across revisions, constructing graph representations that capture program structure within each revision and the evolution of vulnerability-relevant code across the history. It reasons over the resulting revision history, using temporal edges to preserve correspondences between program elements across consecutive revisions, and directly ranks candidate commits according to their contribution to the vulnerable condition.   Ablation results show that modeling the full revision history improves F2 from 0.637 to 0.814. TraceVIC improves F2 by up to 28.7% over state-of-the-art methods and identifies a valid VIC for 78 of 79 vulnerabilities across four unseen C/C++ projects.",
+      "authors": [
+        "Fnu Tanish",
+        "Samiha Shimmi",
+        "Samikshya Chapagain",
+        "Hamed Okhravi",
+        "Mona Rahimi",
+        "Lei Zhang"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-09-22T17:02:42+00:00",
+      "link": "https://arxiv.org/pdf/2609.26711v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "vulnerability-inducing commit identification",
+      "llm_evidence_cn": "漏洞引入提交识别",
+      "llm_evidence": "漏洞引入提交识别",
+      "canonical_evidence": "漏洞引入提交识别",
+      "llm_tldr_en": "TraceVIC identifies vulnerability-inducing commits by causally reasoning over how vulnerability-relevant code evolves across revisions, instead of relying on git blame positional heuristics.",
+      "llm_tldr_cn": "针对软件漏洞常在引入很久后才被发现、而现有基于git blame与位置启发式的技术难以定位真正漏洞引入提交的问题，本文提出TraceVIC，主张对漏洞相关代码的演化进行因果推理而非仅依据候选提交在历史中的位置。该方法能处理脆弱行为依赖跨多个修订演化代码的情形，更准确地识别漏洞引入提交，为软件安全漏洞溯源提供了新思路。",
+      "llm_tldr": "针对软件漏洞常在引入很久后才被发现、而现有基于git blame与位置启发式的技术难以定位真正漏洞引入提交的问题，本文提出TraceVIC，主张对漏洞相关代码的演化进行因果推理而非仅依据候选提交在历史中的位置。该方法能处理脆弱行为依赖跨多个修订演化代码的情形，更准确地识别漏洞引入提交，为软件安全漏洞溯源提供了新思路。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2609.22711v1",
+      "source": "arxiv",
+      "title": "UBA-ORL: Unlearning-Activated Backdoor Attacks on Offline Reinforcement Learning",
+      "abstract": "Offline reinforcement learning (offline RL) enables policy learning from pre-collected static datasets without online exploration, and is increasingly deployed not only in safety-critical domains such as autonomous driving and robotic control but also in data-mining applications such as recommendation and behavior analysis. While compliance-driven data removal enhances privacy, it also opens a previously unrecognized attack surface. We introduce UBA-ORL (Unlearning-activated Backdoor Attack on Offline Reinforcement Learning), the first unlearning-activated backdoor attack for offline RL: in the evaluated settings, the attack is substantially suppressed after normal training and becomes pronounced after a compliance-driven deletion (unlearning) request. UBA-ORL employs a dual-sample mechanism: alongside backdoor trajectories (BD) that link a trigger to malicious actions under inflated rewards, the attacker injects camouflage trajectories (CM) sharing the same trigger pattern but preserving benign actions with equally high rewards. During training, BD and CM provide competing supervisory signals; upon a legitimate deletion request on the CM subset, the residual BD signal can re-dominate, reactivating the backdoor on demand. Empirical results show that UBA-ORL achieves controllable activation under the evaluated offline-RL configurations, while no-trigger return changes vary by configuration, exposing a previously overlooked security risk in compliance-driven offline RL platforms. We urge the community to develop joint pre-/post-unlearning auditing mechanisms for compliant unlearning services.",
+      "authors": [
+        "Fengyi Wang",
+        "Cong Li",
+        "Lulu Xue",
+        "Qiyu Leng",
+        "Ziqi Zhou",
+        "Peijin Guo"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-09-19T02:46:35+00:00",
+      "link": "https://arxiv.org/pdf/2609.22711v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "backdoor adversarial attack against offline RL agents",
+      "llm_evidence_cn": "面向离线强化学习智能体的后门对抗攻击",
+      "llm_evidence": "面向离线强化学习智能体的后门对抗攻击",
+      "canonical_evidence": "面向离线强化学习智能体的后门对抗攻击",
+      "llm_tldr_en": "UBA-ORL introduces the first unlearning-activated backdoor attack on offline RL, where the attack stays dormant after normal training but becomes pronounced after compliance-driven data deletion.",
+      "llm_tldr_cn": "离线强化学习依赖预收集静态数据且常部署于安全关键场景，合规驱动的数据删除带来了新的攻击面。论文提出UBA-ORL，首个面向离线RL的遗忘激活后门攻击：正常训练阶段攻击被显著抑制，而在执行合规性数据遗忘后攻击行为被激活。实验在评估设定下验证了该攻击的隐蔽性与触发效果。该工作揭示了强化学习智能体在数据删除流程中的安全脆弱性，与自博弈攻防主题存在方法层面的关联。",
+      "llm_tldr": "离线强化学习依赖预收集静态数据且常部署于安全关键场景，合规驱动的数据删除带来了新的攻击面。论文提出UBA-ORL，首个面向离线RL的遗忘激活后门攻击：正常训练阶段攻击被显著抑制，而在执行合规性数据遗忘后攻击行为被激活。实验在评估设定下验证了该攻击的隐蔽性与触发效果。该工作揭示了强化学习智能体在数据删除流程中的安全脆弱性，与自博弈攻防主题存在方法层面的关联。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self play based reinforcement learning for adversarial attack and defense",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.22724v1",
+      "source": "arxiv",
+      "title": "MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning",
+      "abstract": "Mobile agents powered by foundation models now automate complex, multi-step workflows on real devices, but their trajectories can violate app-specific security policies. Existing trajectory-level defenses rely on LLM prompting or rigid rules, and thus fail to support fine-grained, natural-language policies that generalize across apps and tasks. In this work, we introduce MATE, a lightweight, policy-conditioned auditor that encodes both agent trajectories and natural-language security policies to determine whether a trajectory violates a given policy and to explain why. Treating policies as editable text rather than fixed model parameters allows MATE to handle user-defined and evolving requirements without retraining. To construct MATE, we build a knowledge base by extracting app descriptions, workflows, and policies from hundreds of popular mobile apps worldwide, and synthesizing over 140K semantically realistic, policy-conditioned trajectories with a multi-stage pipeline. We further release MATEBench, a trajectory-level auditing benchmark with two synthetic subsets and one real-world subset of manually collected trajectories. Models trained with our synthesis-driven trajectory learning achieve over 95% accuracy on MATEBench, retain strong performance on external safety benchmarks, and audit trajectories from Zhipu's AutoGLM and Alibaba's Mobile-Agent on real devices with over 95% accuracy, outperforming prior methods by over 20%. MATE shows that practical, fine-grained security auditing for heterogeneous mobile agents is both feasible and effective.",
+      "authors": [
+        "Changyue Jiang",
+        "Jiayi Wang",
+        "Xin Wen",
+        "Jiarun Dai",
+        "Geng Hong",
+        "Xudong Pan"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-19T03:18:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.22724v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "security auditing of agent trajectories for policy violations",
+      "llm_evidence_cn": "对智能体轨迹进行安全策略违规审计",
+      "llm_evidence": "对智能体轨迹进行安全策略违规审计",
+      "canonical_evidence": "对智能体轨迹进行安全策略违规审计",
+      "llm_tldr_en": "MATE is a lightweight, policy-conditioned auditor that encodes agent trajectories together with editable natural-language security policies to detect and explain violations, generalizing across apps without retraining.",
+      "llm_tldr_cn": "移动智能体可自动完成多步任务，但其轨迹可能违反应用特定的安全策略，而现有防御依赖提示或固定规则，难以泛化到自然语言策略。本文提出MATE，一个轻量级策略条件审计器，将智能体轨迹与可编辑的自然语言安全策略共同编码，判定轨迹是否违规并解释原因。该方法无需重训练即可支持用户自定义且不断演化的策略，实现跨应用与任务的细粒度安全审计，为智能体安全防护提供通用方案。",
+      "llm_tldr": "移动智能体可自动完成多步任务，但其轨迹可能违反应用特定的安全策略，而现有防御依赖提示或固定规则，难以泛化到自然语言策略。本文提出MATE，一个轻量级策略条件审计器，将智能体轨迹与可编辑的自然语言安全策略共同编码，判定轨迹是否违规并解释原因。该方法无需重训练即可支持用户自定义且不断演化的策略，实现跨应用与任务的细粒度安全审计，为智能体安全防护提供通用方案。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining software security",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.29051v1",
+      "source": "arxiv",
+      "title": "From Self-Distillation to Self-Practice: Privileged Information for Multi-Turn Agents",
+      "abstract": "On-policy self-distillation (OPSD) has become a popular recipe for post-training LLM agents. It supervises the agent model at the token level with a stronger teacher view of the same model, obtained by conditioning on privileged information (PI). In this work, we show that in multi-turn agents, this paradigm teaches the student to act with confidence but without the information behind it. The trained agent behaves as if it had privileged information it never observed, and its performance falls well short of plain RL, in the worst case below the untrained base model. Therefore, we propose Privileged Self-Practice (PSP), which keeps the PI and moves it from the loss to the sampler. When the student's rollouts on a task mostly fail, we inject a short per-task instruction written by an analyzer model, sample the task again with the instruction in context, and train on the result with an unchanged GRPO objective. The privileged information stays in the prompt and never enters the loss. Across AppWorld and SWE-bench Verified, with three different student models, PSP obtains the best average score in every setting and is the only method that consistently outperforms plain GRPO, improving task-goal completion by up to 65% on AppWorld and the resolved rate by up to 61% on SWE-bench Verified.",
+      "authors": [
+        "Xingyu Su",
+        "Abhishek Kumar",
+        "Qing Ping",
+        "Youzhi Luo",
+        "Jonathan Buck",
+        "Zach Zhang",
+        "Subramanian Chidambaram",
+        "Vinayak Arannil"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-24T05:32:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.29051v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "self-practice RL post-training for multi-turn LLM agents",
+      "llm_evidence_cn": "面向多轮智能体的自练习式强化学习训练",
+      "llm_evidence": "面向多轮智能体的自练习式强化学习训练",
+      "canonical_evidence": "面向多轮智能体的自练习式强化学习训练",
+      "llm_tldr_en": "The paper shows on-policy self-distillation makes multi-turn agents act confidently without privileged information, and proposes Privileged Self-Practice, which moves privileged information into the sampler and outperforms plain RL.",
+      "llm_tldr_cn": "多轮LLM智能体的在线自蒸馏训练会让学生模型在缺乏特权信息的情况下盲目自信，性能甚至低于普通强化学习。论文提出特权自练习PSP，把特权信息从损失函数转移到采样器，在rollout失败时注入信息以改进探索。实验显示PSP在多种多轮任务上优于在线自蒸馏与朴素RL。该工作为智能体自练习式训练提供了新的信息利用范式。",
+      "llm_tldr": "多轮LLM智能体的在线自蒸馏训练会让学生模型在缺乏特权信息的情况下盲目自信，性能甚至低于普通强化学习。论文提出特权自练习PSP，把特权信息从损失函数转移到采样器，在rollout失败时注入信息以改进探索。实验显示PSP在多种多轮任务上优于在线自蒸馏与朴素RL。该工作为智能体自练习式训练提供了新的信息利用范式。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play agent training",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

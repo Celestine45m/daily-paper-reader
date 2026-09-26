@@ -1,0 +1,89 @@
+{
+  "date": "20260926",
+  "date_label": "",
+  "generated_at": "2026-09-26 21:57:10 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.29948v1",
+      "route": "202609/26/2609.29948v1-endoprompt-victim-side-pseudo-references-for-utility-degradation",
+      "title": "ENDOPROMPT: Victim-Side Pseudo-References for Utility Degradation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "从无标注指令中学习降低效用的提示注入前缀",
+      "first_seen_at": "2026-09-26 21:57:10 UTC",
+      "updated_at": "2026-09-26 21:57:10 UTC"
+    },
+    {
+      "paper_id": "2609.26711v1",
+      "route": "202609/26/2609.26711v1-tracevic-causal-reasoning-over-code-evolution-for-identifying-vulnerability-inducing-commits",
+      "title": "TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "漏洞引入提交识别",
+      "first_seen_at": "2026-09-26 21:57:10 UTC",
+      "updated_at": "2026-09-26 21:57:10 UTC"
+    },
+    {
+      "paper_id": "2609.22711v1",
+      "route": "202609/26/2609.22711v1-uba-orl-unlearning-activated-backdoor-attacks-on-offline-reinforcement-learning",
+      "title": "UBA-ORL: Unlearning-Activated Backdoor Attacks on Offline Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向离线强化学习智能体的后门对抗攻击",
+      "first_seen_at": "2026-09-26 21:57:10 UTC",
+      "updated_at": "2026-09-26 21:57:10 UTC"
+    },
+    {
+      "paper_id": "2609.22724v1",
+      "route": "202609/26/2609.22724v1-mate-policy-aware-security-auditing-for-mobile-agents-via-synthesis-driven-trajectory-learning",
+      "title": "MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对智能体轨迹进行安全策略违规审计",
+      "first_seen_at": "2026-09-26 21:57:10 UTC",
+      "updated_at": "2026-09-26 21:57:10 UTC"
+    },
+    {
+      "paper_id": "2609.29051v1",
+      "route": "202609/26/2609.29051v1-from-self-distillation-to-self-practice-privileged-information-for-multi-turn-agents",
+      "title": "From Self-Distillation to Self-Practice: Privileged Information for Multi-Turn Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向多轮智能体的自练习式强化学习训练",
+      "first_seen_at": "2026-09-26 21:57:10 UTC",
+      "updated_at": "2026-09-26 21:57:10 UTC"
+    }
+  ]
+}
