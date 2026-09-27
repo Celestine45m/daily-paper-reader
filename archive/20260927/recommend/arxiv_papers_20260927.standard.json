@@ -1,0 +1,131 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-09-27T22:07:28.658323+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2609.22839v1",
+      "source": "arxiv",
+      "title": "A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games",
+      "abstract": "Can simple learning rules keep their regret bounded in self-play? Recent work achieves constant regret bounds through modified regularization and higher-order prediction. Yet for Optimistic Hedge, arguably the most canonical method in games, the best known individual regret bound remains logarithmic. In this work, we prove that plain Optimistic Hedge with a constant step size can attain $O_{n,d}(1)$ individual regret in general-sum games with $n$ players and $d=(d_1,\\ldots,d_n)$ actions, under expected loss-vector feedback. As a corollary, its time-averaged play enjoys an $O_{n,d}(1/T)$ coarse correlated equilibrium (CCE) gap. Our analysis represents Optimistic Hedge as a real-analytic recurrence on a compact space, which yields an exact finite-order difference relation that eliminates horizon dependence. Our proof hinges on nonconstructive Noetherianity argument of Frisch (1967), so the $(n,d)$-dependence remains implicit.",
+      "authors": [
+        "Junsoo Ha"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.LG"
+      ],
+      "published": "2026-09-19T07:15:57+00:00",
+      "link": "https://arxiv.org/pdf/2609.22839v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "regret bounds for self-play learning rules in general-sum games",
+      "llm_evidence_cn": "一般和博弈中自博弈学习规则的遗憾界",
+      "llm_evidence": "一般和博弈中自博弈学习规则的遗憾界",
+      "canonical_evidence": "一般和博弈中自博弈学习规则的遗憾界",
+      "llm_tldr_en": "Whether simple learning rules keep regret bounded in self-play is a core question. The paper proves constant-step Optimistic Hedge attains O(1) individual regret in general-sum games, implying O(1/T) coarse correlated equilibrium gap, via a real-analytic recurrence analysis.",
+      "llm_tldr_cn": "在自博弈中，简单学习规则能否保持遗憾有界是关键问题，而乐观对冲这一经典方法此前仅知对数级个体遗憾界。本文证明常数步长的朴素乐观对冲在一般和博弈中可达到与时间跨度无关的O(1)个体遗憾，并推出时间平均策略的粗相关均衡间隙为O(1/T)。该分析将乐观对冲表示为紧空间上的实解析递推，为自博弈学习提供了更强的理论保证。",
+      "llm_tldr": "在自博弈中，简单学习规则能否保持遗憾有界是关键问题，而乐观对冲这一经典方法此前仅知对数级个体遗憾界。本文证明常数步长的朴素乐观对冲在一般和博弈中可达到与时间跨度无关的O(1)个体遗憾，并推出时间平均策略的粗相关均衡间隙为O(1/T)。该分析将乐观对冲表示为紧空间上的实解析递推，为自博弈学习提供了更强的理论保证。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "self-play reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.28572v1",
+      "source": "arxiv",
+      "title": "Where Cyber Agents Struggle: Bottleneck Analysis of Multi-Stage LLM Agents",
+      "abstract": "Multi-stage LLM-based cyber agents may complete attack workflows while remaining brittle, costly, or reliant on incorrect interpretations of execution evidence. Success rates alone obscure inefficiency, adaptation through retries, and recognition of success or failure. We present an end-to-end diagnostic study of an Autonomous Adversary system with orchestrator, executor, and validator LLMs in enterprise-like lateral-movement scenarios. Six frontier models are evaluated across two scenarios and three modes: expert-defined, self-scaffolded, and fully autonomous. We assess validator consistency and evidence grounding; introduce a subtask-conditioned, cost-aware score for abnormal token use, retries, and runtime; and use comparative LLM-as-a-Judge analysis to identify planning deficiencies, including tool misalignment, plan similarity, over-specification, inadequate probing, and weak recovery. Validators are generally relevant and evidence-grounded but often nonspecific and overly optimistic. Bottlenecks cluster in credential and lateral-movement tasks, spread with scenario complexity, and vary more under full autonomy. Reliable evaluation must assess outcomes, evidence interpretation, resource use, and adaptation after failure.",
+      "authors": [
+        "Saeedeh Lohrasbi",
+        "Mohammad Mamun",
+        "Ahmed Yehia",
+        "Scott Buffett",
+        "Sherif Saad"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-09-23T11:58:25+00:00",
+      "link": "https://arxiv.org/pdf/2609.28572v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM cyber agents for attack workflows and vulnerability-related tasks",
+      "llm_evidence_cn": "用于攻击流程与漏洞相关任务的 LLM 网络智能体",
+      "llm_evidence": "用于攻击流程与漏洞相关任务的 LLM 网络智能体",
+      "canonical_evidence": "用于攻击流程与漏洞相关任务的 LLM 网络智能体",
+      "llm_tldr_en": "An end-to-end diagnostic study of multi-stage LLM cyber agents with orchestrator, executor and validator roles evaluates six frontier models across three modes, revealing brittleness, cost and evidence-grounding bottlenecks.",
+      "llm_tldr_cn": "多阶段 LLM 网络智能体虽能完成攻击流程，却往往脆弱、昂贵或依赖对执行证据的错误解读，而仅看成功率会掩盖这些问题。本文对由编排器、执行器与验证器组成自主对手系统进行端到端诊断，在类企业横向移动场景中评估六种前沿模型与三种模式。研究引入考虑子任务与成本感知的评分，分析验证器一致性与证据落地情况，表明需要更细粒度的指标衡量网络智能体能力，对漏洞挖掘智能体研究具有参考价值。",
+      "llm_tldr": "多阶段 LLM 网络智能体虽能完成攻击流程，却往往脆弱、昂贵或依赖对执行证据的错误解读，而仅看成功率会掩盖这些问题。本文对由编排器、执行器与验证器组成自主对手系统进行端到端诊断，在类企业横向移动场景中评估六种前沿模型与三种模式。研究引入考虑子任务与成本感知的评分，分析验证器一致性与证据落地情况，表明需要更细粒度的指标衡量网络智能体能力，对漏洞挖掘智能体研究具有参考价值。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "vulnerability mining using intelligent agents and reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2609.28613v1",
+      "source": "arxiv",
+      "title": "Decision Hijacking: Prompt Injection Attacks on Jev's Typed Probabilistic Decisions",
+      "abstract": "Most studies of prompt injection focus on generative agents, leaving their effects on models with schema-defined outputs unclear. We examine these effects in Jev, a non-generative decision model, using 510 reconstructed InjecAgent cases. Malicious content shifts action probabilities but rarely causes Jev to select the attacker's target. Override markers reduce this influence, while claims of contextual relatedness have small effects. Adaptive attacks using score feedback double the mean highest attacker-target probability found during optimization, while success on fresh validation calls rises from 1.8% to 3.5%. Exploratory analysis links these successes to small initial decision margins or greater attacker control over the observation. Together, these findings show that schema-defined outputs change but do not eliminate prompt-injection risk, highlighting the need to evaluate how untrusted content influences choices within the allowed action set.",
+      "authors": [
+        "Tiantong Wu",
+        "Wei Yang Bryan Lim"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2026-09-23T17:47:53+00:00",
+      "link": "https://arxiv.org/pdf/2609.28613v1",
+      "tags": [
+        "keyword:as",
+        "query:as"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "prompt injection adversarial attack on an LLM decision model",
+      "llm_evidence_cn": "针对 LLM 决策模型的提示注入对抗攻击",
+      "llm_evidence": "针对 LLM 决策模型的提示注入对抗攻击",
+      "canonical_evidence": "针对 LLM 决策模型的提示注入对抗攻击",
+      "llm_tldr_en": "Studying prompt injection on Jev, a non-generative decision model, over 510 InjecAgent cases, malicious content shifts action probabilities but rarely hijacks decisions; score-feedback adaptive attacks raise validation success from 1.8% to 3.5%.",
+      "llm_tldr_cn": "多数提示注入研究聚焦生成式智能体，对具有模式化输出的决策模型影响尚不清楚。本文以非生成决策模型 Jev 为对象，基于 510 个 InjecAgent 案例研究恶意内容对动作概率与决策的影响，并评估自适应攻击。结果显示恶意内容会改变动作概率但很少让模型选择攻击者目标，而使用分数反馈的自适应攻击可将验证集成功率从 1.8% 提升到 3.5%，揭示了提示注入对结构化决策模型的实际威胁边界。",
+      "llm_tldr": "多数提示注入研究聚焦生成式智能体，对具有模式化输出的决策模型影响尚不清楚。本文以非生成决策模型 Jev 为对象，基于 510 个 InjecAgent 案例研究恶意内容对动作概率与决策的影响，并评估自适应攻击。结果显示恶意内容会改变动作概率但很少让模型选择攻击者目标，而使用分数反馈的自适应攻击可将验证集成功率从 1.8% 提升到 3.5%，揭示了提示注入对结构化决策模型的实际威胁边界。",
+      "llm_tags": [
+        "query:as"
+      ],
+      "matched_query_tag": "query:as",
+      "matched_query_text": "adversarial attack text",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

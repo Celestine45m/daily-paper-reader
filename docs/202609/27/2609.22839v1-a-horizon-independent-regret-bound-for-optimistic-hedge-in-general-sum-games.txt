@@ -1,0 +1,1941 @@
+Title: A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games
+
+URL Source: https://arxiv.org/pdf/2609.22839v1
+
+Published Time: Tue, 22 Sep 2026 00:41:15 GMT
+
+Number of Pages: 23
+
+Markdown Content:
+# A H ORIZON -I NDEPENDENT REGRET BOUND FOR 
+
+# OPTIMISTIC HEDGE IN GENERAL -S UM GAMES 
+
+Junsoo Ha 
+
+junsoo.ha.contact@gmail.com 
+
+## ABSTRACT 
+
+Can simple learning rules keep their regret bounded in self-play? Recent work achieves constant regret bounds through modified regularization and higher-order prediction (Liu et al., 2026; Abbadi et al., 2026). Yet for Optimistic Hedge, ar-guably the most canonical method in games, the best known individual regret bound remains logarithmic (Ha, 2026). In this work, we prove that plain Optimistic Hedge with a constant step size can attain On,d (1) individual regret in general-sum games with n players and d = ( d1, . . . , d n) actions, under expected loss-vector feedback. As a corollary, its time-averaged play enjoys an On,d (1 /T ) coarse correlated equi-librium (CCE) gap. Our analysis represents Optimistic Hedge as a real-analytic recurrence on a compact space, which yields an exact finite-order difference relation that eliminates horizon dependence. Our proof hinges on nonconstructive Noethe-rianity argument of Frisch (1967), so the (n, d )-dependence remains implicit. 
+
+## 1 INTRODUCTION 
+
+A central question in game theory (von Neumann & Morgenstern, 1944; Nash, 1950) is whether independent learning can lead to an equilibrium when opponents are adapting. Such interdependent learning dynamics underpin modern applications such as poker self-play (Brown & Sandholm, 2019), adversarial training (Goodfellow et al., 2014), and game-theoretic approaches to language-model alignment (Munos et al., 2024; Rosset et al., 2024; Wu et al., 2024; Gölz et al., 2025; Wu et al., 2026). No-regret learning (Cesa-Bianchi & Lugosi, 2006) offers a decentralized approach: players seek low regret against the best fixed action in hindsight (Hannan, 1957). Indeed, sublinear external regret drives time-averaged play toward an equilibrium (Moulin & Vial, 1978; Hart & Mas-Colell, 2001). While classical online learning guarantees O(√T ) regret against arbitrary losses (Freund & Schapire, 1997), self-play adds an additional structure: a common update rule shared by all players. Optimistic methods exploit this structure and use recent losses to predict the next one and improve regret bounds (Rakhlin & Sridharan, 2013a; Syrgkanis et al., 2015). Optimistic Hedge, the most canonical optimistic method for games, has recently been shown to enjoy polylogarithmic (Daskalakis et al., 2021) and logarithmic (Ha, 2026) regret bounds. On the other hand, recent alternatives have shown that modified regularization and higher-order prediction methods can produce horizon-independent regret bounds (Liu et al., 2026; Abbadi et al., 2026). In this paper, we ask the following natural question: 
+
+Can Optimistic Hedge attain horizon-independent individual regret in general-sum games? 
+
+Contributions. Our main result gives an affirmative answer. Our contributions are two-fold. (i) An analytic finite-order difference relation. Based on the high-order smoothness framework (Daskalakis et al., 2021) and the weighted-gap reduction (Ha, 2026), we represent Optimistic Hedge as an analytic recurrence on a compact domain. A Noetherianity argument then yields an exact finite-order difference relation controlling the first-order weighted-gap differences. (ii) A horizon-independent regret bound. Based on the finite-order difference relation and a simple finite-difference interpolation argument, we obtain On,d (1) individual regret and an On,d (1 /T )
+
+CCE gap. The dimension dependence remains nonconstructive. Section 2 reviews prior work; Sections 3–4 introduce the setting and main result. Section 5 explains the proof strategy, with detailed proofs in the appendices. 1arXiv:2609.22839v1 [cs.GT] 19 Sep 2026 2 RELATED WORK 
+
+No-regret learning and equilibrium. The link between no-regret learning and equilibrium computa-tion dates back to Blackwell (1956) and Hannan (1957). External regret compares cumulative loss with the best fixed action in hindsight. When all players achieve sublinear regret, averaging yields approximate Nash equilibria in two-player zero-sum games (Freund & Schapire, 1999) and CCE in general-sum games (Moulin & Vial, 1978; Hart & Mas-Colell, 2001). Controlling recommendation-dependent deviations via internal or swap regret yields correlated equilibrium (Hart & Mas-Colell, 2000; Blum & Mansour, 2007). 
+
+Individual regret in self-play. Improving upon standard no-regret learning algorithms, such as follow-the-regularized-leader (FTRL), optimistic algorithms exploit predictable loss sequences (Chiang et al., 2012; Rakhlin & Sridharan, 2013a). Notably, the seminal work of Syrgkanis et al. (2015) showed that optimistic follow-the-regularized-leader (OFTRL) and optimistic mirror descent (OMD) can exploit the self-play-induced predictability in games to achieve O(√n log dmax T 1/4) individual regret, where dmax := max i di is the maximum number of actions across players. For Optimistic Hedge, Chen & Peng (2020) obtained O(log 5/6 dmax T 1/6) in two-player games, and Daskalakis et al. (2021) established O(n log di log 4 T ) in n-player games based on a high-order smoothness analysis. A recent line of work improves regret bounds by modifying regularization, step sizes, or prediction methods. Log-regularized lifted OFTRL (LRL-OFTRL) (Farina et al., 2022) enlarges the regu-larized strategy space and achieves O(nd max log T ) in finite general-sum games, and extends to general convex strategy sets. Cautious Optimistic MWU (COMWU) (Soleymani et al., 2025a;b) achieves O(n log 2 dmax log T ) through adaptive step sizes. ECHO-OFTRL (Liu et al., 2026) and HOOD (Abbadi et al., 2026) combine higher-order prediction with lifted regularization to obtain 
+
+O(n21 log 4 dmax ) and O(n3 log 2 dmax ) regret bounds, respectively. Table 1 compares these individ-ual regret bounds. 
+
+Other regret notions and update rules. A parallel line studies swap regret to obtain guarantees for correlated equilibrium (CE) (Aumann, 1974). Anagnostides et al. (2022a) extend the high-order smoothness framework of Daskalakis et al. (2021) to obtain polylogarithmic internal and swap regret. Log-barrier regularization (Anagnostides et al., 2022b) and hybrid regularization (Tsuchiya, 2026) yield logarithmic and sublogarithmic swap regret, respectively. Clairvoyant Multiplicative Weights Update (CMWU) (Piliouras et al., 2022) obtains horizon-independent regret via implicit updates; however, its uncoupled implementation guarantees this bound only on a selected subsequence. For two-player general-sum games, Tao & Zheng (2026) achieve O(log dmax ) alternating regret and 
+
+O(log dmax /T ) CCE error using sequential updates, unlike our simultaneous external-regret setting. 
+
+Closest prior work. The closest works are Daskalakis et al. (2021) and Ha (2026). We build on the high-order smoothness framework of Daskalakis et al. (2021) and the recurrence-based weighted-gap analysis of Ha (2026). In particular, Ha (2026) represents Optimistic Hedge as a recurrent map acting on a state space equipped with a fixed Euclidean norm. Crucially, the high-order estimates of Ha (2026) leave a remainder that grows with the horizon at a fixed step size. In this work, we instead obtain an exact relation among difference orders and eliminate the horizon dependence in our final regret bound. 
+
+## 3 PRELIMINARIES 
+
+We study full-information repeated play in finite general-sum games within the classical no-regret learning framework (Hannan, 1957; Cesa-Bianchi & Lugosi, 2006). 
+
+Notation. For an integer q ≥ 1, write [q] := {1, . . . , q } and define a probability simplex ∆q := 
+
+{x ∈ Rq 
+
+> +
+
+: P 
+
+> a
+
+xa = 1 }. Fix n ≥ 1 players with action counts di ≥ 1, action sets Ai = [ di], and mixed strategies xi ∈ ∆di . Set action dimensions d := ( d1, . . . , d n) and dmax := max i di. The notation On,d (·) hides dependence on n, d , but not on the horizon; all logarithms are natural. 
+
+Loss functions. We denote a loss table by ℓ : Qnj=1 Aj → [0 , 1] n and define player i’s expected loss ℓi : Qnj=1 ∆dj → [0 , 1] as ℓi(x) := Ea∼N  
+
+> jxj
+
+[ℓ(a)] i. For a strategy profile x = ( x1, . . . , x n),2Table 1: Individual external regret in full-information general-sum normal-form games; dmax := max i di. The Chen–Peng bound assumes two players; LRL-OFTRL also applies to convex games. “Single loop” means closed-form updates without inner optimization or root finding, excluding feed-back cost. The OFTRL/OMD check refers to its entropy-regularized Optimistic Hedge instantiation. The notation On,d (1) hides dependence on the numbers of players and actions, but not on T .
+
+Reference Algorithm Single loop Regret bound Syrgkanis et al. (2015) OFTRL/OMD ✓ O(√n log dmax T 1/4)
+
+Chen & Peng (2020) Optimistic Hedge ✓ O(log 5/6 dmax T 1/6)
+
+Daskalakis et al. (2021) Optimistic Hedge ✓ O(n log di log 4 T )
+
+Farina et al. (2022) LRL-OFTRL ✗ O(nd max log T )
+
+Soleymani et al. (2025a;b) COMWU ✗ O(n log 2 dmax log T )
+
+Liu et al. (2026) ECHO-OFTRL ✗ O(n21 log 4 dmax )
+
+Abbadi et al. (2026) HOOD ✗ O(n3 log 2 dmax )
+
+Ha (2026) Optimistic Hedge ✓ O(√n log di log T )
+
+This work Optimistic Hedge ✓ On,d (1) 
+
+write x−i := ( xj )j̸ =i. We define the expected loss vector ℓi(x−i) ∈ [0 , 1] di by 
+
+[ℓi(x−i)] ai := X  
+
+> a−i∈Q
+> j̸=iAj
+
+[ℓ(ai, a −i)] i
+
+Y  
+
+> j̸=i
+
+xj,a j . (1) Hence, the identity ℓi(x) = ⟨xi, ℓ i(x−i)⟩ holds. We also write ℓ(x) := ( ℓi(x−i)) ni=1 for the stacked expected-loss profile; the argument distinguishes it from the loss table. At round t, write ℓt := ℓ(xt);player i incurs ⟨xti, ℓ ti⟩ and observes the full vector ℓti = ℓi(xt
+
+> −i
+
+).Computing a Nash equilibrium is PPAD-complete even for two-player general-sum games (Daskalakis et al., 2009; Chen et al., 2009). Coarse correlated equilibrium (CCE) (Moulin & Vial, 1978) is a tractable relaxation: every Nash equilibrium induces a CCE, but a CCE allows correlated actions and tests only unconditional deviations. A CCE can be computed by linear programming with a time complexity polynomial in n Q 
+
+> i
+
+di and the payoff bit length (Papadimitriou & Roughgarden, 2008). 
+
+Definition 3.1 (ε-approximate coarse correlated equilibrium) . For a joint distribution μ on Q 
+
+> j
+
+Aj ,define its CCE gap by 
+
+Gap CCE (μ) := max  
+
+> i∈[n]
+
+max 
+
+> a′
+> i∈Ai
+
+Ea∼μ[[ ℓ(a)] i − [ℓ(a′
+
+> i
+
+, a −i)] i] . (2) For ε ≥ 0, μ is an ε-approximate CCE if Gap CCE (μ) ≤ ε.No-regret learning approaches CCE by controlling each player’s external regret (Hart & Mas-Colell, 2001; Cesa-Bianchi & Lugosi, 2006), which is defined as the difference between its cumulative loss and that of its best fixed action in hindsight. 
+
+Definition 3.2 (External regret) . At horizon T ≥ 1, player i’s individual external regret is 
+
+Reg i(T ) := 
+
+> T
+
+X
+
+> t=1
+
+xti, ℓ ti − min 
+
+> a′
+> i∈Ai
+> T
+
+X
+
+> t=1
+
+ℓti,a ′ 
+
+> i
+
+. (3) Let bμT := T −1 PTt=1 
+
+Nnj=1 xtj be the time-averaged joint distribution, the uniform mixture of the product distributions played at each round. Under bμT , each fixed-action deviation gain is its average gain over the played rounds. As a result, the following standard result holds: 
+
+Gap CCE (bμT ) = 1
+
+T max  
+
+> i∈[n]
+
+Reg i(T ). (4) Therefore, individual-regret bounds directly control the CCE approximation error. 
+
+Optimistic Hedge. Hedge is an entropy-regularized follow-the-regularized-leader (FTRL) algo-rithm (Freund & Schapire, 1997). Optimistic Hedge uses ℓti to predict ℓt+1  
+
+> i
+
+(Rakhlin & Sridharan, 32013a). All players use a constant step size η > 0, with ℓ0 
+
+> i
+
+= 0 and x1 
+
+> i
+
+= 1di /d i, where 1di is the all-ones vector. Eliminating cumulative losses from its closed-form update gives 
+
+xt+1  
+
+> i,a
+
+= xti,a exp {− η(2 ℓti,a − ℓt−1 
+
+> i,a
+
+)}
+
+P 
+
+> b∈Ai
+
+xti,b exp {− η(2 ℓti,b − ℓt−1 
+
+> i,b
+
+)} , t ≥ 1, a ∈ Ai. (5) For the update in Equation (5), Chen & Peng (2020) obtain O(log 5/6 dmax T 1/6) individual regret in two-player games. For n players, Daskalakis et al. (2021) establish O(n log di log 4 T ), and Ha (2026) sharpens this to O(√n log di log T ). We show that plain Optimistic Hedge can attain horizon-independent On,d (1) regret for a sufficiently small constant step size. 
+
+## 4 MAIN RESULT 
+
+The following theorem shows that Optimistic Hedge admits a horizon-independent individual-regret bound at sufficiently small constant step sizes. 
+
+Theorem 4.1 (Horizon-independent individual regret) . Fix n players with action counts d1, . . . , d n.There exist η⋆ > 0 and C⋆ < ∞, depending only on (n, d 1, . . . , d n), such that, for every game in the setup of Section 3 and every common constant step size 0 < η ≤ η⋆, the Optimistic Hedge iterates satisfy, for every i ∈ [n] and T ≥ 1,
+
+Reg i(T ) ≤ log di
+
+η + C⋆η. (6) The logarithmic guarantee for Optimistic Hedge uses a horizon-tuned constant step size (Ha, 2026). Specifically, the parameterized bound of Ha (2026) leaves a remainder proportional to 
+
+ηT exp {− c/ (√n η )} (for a universal c > 0), which is exponentially small in the inverse step size but still grows with the horizon. In contrast, Theorem 4.1 yields a horizon-independent On,d (1) 
+
+individual-regret bound. The following corollary translates this regret bound into a convergence guarantee for time-averaged play, using Equation (4). 
+
+Corollary 4.2 (Coarse-correlated-equilibrium convergence) . Under the conditions of Theorem 4.1, the time-averaged joint distribution bμT satisfies, for every T ≥ 1,
+
+Gap CCE (bμT ) ≤ 1
+
+T max 
+
+> i∈[n]
+
+ log di
+
+η + C⋆η
+
+
+
+. (7) Corollary 4.2 improves the horizon dependence of the O(√n log dmax log T /T ) CCE bound of Ha (2026) from log T /T to 1/T . The improvement is in T , not in game dimensions: our On,d (1 /T )
+
+guarantee leaves n, d unquantified. We leave explicit bounds on η⋆, C ⋆ and a dimension-explicit horizon-independent individual regret bound to future work. 
+
+Remark 4.1 (Comparison with modified dynamics) . ECHO-OFTRL achieves O(n21 log 4 dmax ) indi-vidual external regret (Liu et al., 2026), and HOOD achieves O(n3 log 2 dmax ) (Abbadi et al., 2026). Hybrid-regularized OFTRL with the Blum–Mansour reduction gives O(nd 2max 
+
+√log dmax log T )
+
+swap regret and a correlated-equilibrium guarantee (Tsuchiya, 2026). However, these modified dynamics involve inner optimization or root-finding subroutines. Our result instead establishes a horizon-independent regret bound for plain Optimistic Hedge, which admits a closed-form update. 
+
+## 5 PROOF OVERVIEW 
+
+We follow the high-order smoothness framework of Daskalakis et al. (2021) and the weighted-gap reduction of Ha (2026). Our real-analytic state representation of Optimistic Hedge yields an exact finite-order relation through the Noetherianity theorem of Frisch (1967). Finite-difference interpolation then converts this relation into a horizon-independent regret bound. 45.1 REDUCTION TO A FIRST -O RDER DIFFERENCE ESTIMATE 
+
+For x ∈ ∆q and v ∈ Rq , write the variance of a vector as Var x(v) := P 
+
+> a
+
+xa(va − ⟨ x, v ⟩)2. Ha (2026) gives the following small-step-size specialization of Lemma 4.1 in Daskalakis et al. (2021). 
+
+Lemma 5.1 (Optimistic regret bound (Ha, 2026, Lemma 5.1)) . There is a universal ηrvu > 0 such that, for every player, horizon, and 0 < η ≤ ηrvu ,
+
+Reg i(T ) ≤ log di
+
+η + 2η
+
+3
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) − η
+
+3
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+). (8) The first sum charges prediction error; the second supplies the negative variance term. Bounding the first by half the second, up to a horizon-independent remainder, controls regret. The time-varying quadratic form Var xti (·) prevents a direct comparison in a fixed sequence norm; hence, we incorporate its probability weights into the vectors themselves. The pairwise identity 
+
+Var x(v) = X
+
+> a<b
+
+xaxb(va − vb)2 (9) motivates the weighted pairwise loss-gap vector hti ∈ R(di 
+
+> 2
+
+) of Ha (2026), defined for a < b by 
+
+[hti]ab := 
+
+q
+
+xti,a xti,b 
+
+ ℓt−1 
+
+> i,a
+
+− ℓt−1
+
+> i,b
+
+. (10) The following lemma from Ha (2026) controls the sum of prediction-error variances Var xti (ℓti − ℓt−1 
+
+> i
+
+)
+
+in terms of the weighted-gap differences ∆hti := ht+1  
+
+> i
+
+− hti, accounting for time-varying weights. 
+
+Lemma 5.2 (Weighted-gap reduction (Ha, 2026, Lemma 5.2)) . There are universal constants C > 0
+
+and ηgap > 0 such that, whenever 0 < η ≤ ηgap ,
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+) = 
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
+,
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) ≤ 32
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
++ Cη 2
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ Cη 2.
+
+(11) Lemmas 5.1 and 5.2 reduce the remaining challenge to bounding the sum of first-order differences of weighted gaps PTt=1 ∥∆hti∥22 by the sum of weighted gaps themselves PT +1  
+
+> t=1
+
+∥hti∥22, up to a horizon-independent remainder. The following key lemma supplies this bound. 
+
+Lemma 5.3 (First-order difference estimate) . Fix n and the action counts d. There are constants 
+
+C, C ′ < ∞ and ηtemp > 0, depending only on n, d , such that, for every game of these dimensions, every player i ∈ [n], every horizon T ≥ 1, and every common constant step size 0 < η ≤ ηtemp ,
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
+≤ Cη 2 
+
+> T+1
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ C′. (12) Unlike the first-order difference estimate of Ha (2026), this bound is horizon-independent: C′ depends only on the game dimensions (n, d ), but not on the horizon T . Lemmas 5.1 to 5.3 yield Theorem 4.1, so our goal now reduces to proving Lemma 5.3. 5.2 REDUCTION TO A HIGH -O RDER DIFFERENCE 
+
+For a sequence y = ( yt)t∈Z, define finite differences by ∆0yt := yt, ∆yt := yt+1 − yt, and 
+
+∆k+1 yt := ∆(∆ kyt). For a sequence with a finite support, write ∥y∥2 
+
+> ℓ2
+
+:= P 
+
+> t
+
+∥yt∥2.To prove Lemma 5.3, we use the following lemma to control the first-order difference ∥∆y∥ℓ2 in terms of the sequence norm ∥y∥ℓ2 and the order-m difference ∥∆my∥ℓ2 .
+
+Lemma 5.4 (Finite-difference interpolation) . For every finitely supported sequence y = ( yt)t∈Z in a finite-dimensional Hilbert space, the following holds for all integers m ≥ 1 and 0 ≤ j ≤ m:
+
+∆j y ℓ2 ≤ ∥ y∥1−j/m ℓ2 ∥∆my∥j/m ℓ2 . (13) 5Intuitively, Parseval’s identity expresses the difference norms in a frequency domain, and Hölder’s inequality interpolates between orders 0 and m. We defer the proof to Appendix B. Lemma 5.4 suggests the following route. Suppose the weighted gaps satisfy the finite-order relation 
+
+∆mht+mi =
+
+> m−1
+
+X
+
+> k=0
+
+ck,t ηm−k∆kht+ki , |ck,t | ≤ A, t ≥ 1, (14) where m, A depend only on (n, d ). At each horizon, we can construct a finitely supported cutoff y of 
+
+(hti) whose error in (14) is bounded by On,d (ηm−1/2) in ℓ2 norm (Lemma 5.9). Taking norms gives 
+
+∥∆my∥ℓ2 ≤ 12 ∥∆my∥ℓ2 + On,d (ηm) ∥y∥ℓ2 + On,d (ηm−1/2).
+
+Here we use Lemma 5.4 and Young’s inequality. Absorbing the first term on the right and applying Lemma 5.4 with j = 1 and Young’s inequality once more yields 
+
+∥∆y∥2 
+
+> ℓ2
+
+≤ ∥ y∥2−2/m ℓ2 ∥∆my∥2/m ℓ2 ≤ On,d (η2) ∥y∥2 
+
+> ℓ2
+
++ On,d (η).
+
+The cutoff construction y in Lemma 5.9 transfers this estimate back to hti, yielding Lemma 5.3, and hence, Theorem 4.1. Notice that the above derivation crucially hinges on the exact finite-order relation (14); we prove that precise finite-order relation in the following subsections. 5.3 STATE RECURRENCE AND FINITE -O RDER DIFFERENCE RELATION 
+
+To obtain the finite-order relation (14), we write Optimistic Hedge as a recurrence on a compact state space. Specifically, we encode the scaled differences η−k∆kht+ki by analytic maps. Then, Frisch’s Noetherianity theorem (Frisch, 1967), which guarantees finite generation of analytic spans near compact semianalytic sets, gives the finite relation we need. 
+
+Square-root state. The factor √xi,a xi,b in Equation (10) is not analytic in the probabilities at the boundary. Hence, we set ri(a) = pxi(a), which turns the pair weights into the polynomial products 
+
+ri(a)ri(b) and places each ri on a compact nonnegative unit sphere. We store the loss profile as 
+
+ℓ = ( ℓi)ni=1 and use the state space 
+
+S := 
+
+n
+
+(r, ℓ ) : ri ∈ Rdi 
+
+> +
+
+, ∥ri∥2 = 1 , ℓ i ∈ [0 , 1] di for every i
+
+o
+
+.
+
+State recurrence. For a nonzero ri, define the mixed strategy xi(ri) ∈ ∆di by [xi(ri)] a := 
+
+ri(a)2/ ∥ri∥22. Recall that ℓ denotes the stacked expected-loss map from Section 3, and write ℓ(r) := 
+
+ℓ(( xi(ri)) ni=1 ). For s = ( r, ℓ ) ∈ S , define the strategy update Fi : S × R → Rdi and the full state update G : S × R → S by 
+
+[Fi(r, ℓ ; η)] a := ∥ri∥2 ri(a) exp {− η(2[ ℓ(r)] i(a) − [ℓi]a)/2}
+
+(P 
+
+> b
+
+ri(b)2 exp {− η(2[ ℓ(r)] i(b) − [ℓi]b)})1/2 , (15) 
+
+G(r, ℓ ; η) :=    Fi(r, ℓ ; η)ni=1 , ℓ (r) . (16) The factor ∥ri∥2 leaves the update unchanged on S and extends it to a neighborhood of the unit spheres. We keep η fixed under composition: G0(s; η) = s and Gj+1 (s; η) = G(Gj (s; η); η). For Optimistic Hedge, setting rti (a) = pxti(a) and st = ( rt, ℓ t−1) gives st+1 = G(st; η).
+
+Weighted gaps. We map the square-root state back to the weighted gaps with Hi, 0 : S × R → R(di 
+
+> 2
+
+):
+
+[Hi, 0(r, ℓ ; η)] ab := ri(a)ri(b) [ℓi]a − [ℓi]b
+
+, a < b. (17) For η̸ = 0 and k ≥ 0, define the scaled-difference maps recursively by 
+
+Hi,k +1 (s; η) := Hi,k (G2(s; η); η) − Hi,k (G(s; η); η)
+
+η . (18) Induction along st+1 = G(st; η) gives ∆kht+ki = ηkHi,k (st; η) for k ≥ 0 and t ≥ 1.6Notice that a relation Hi,m = P 
+
+> k<m
+
+ckHi,k immediately yields the finite-order relation (14) after multiplication by ηm. A natural question is therefore when such a relation would exist among the maps Hi,k . The following consequence of the Noetherianity theorem of Frisch (1967) shows that real analyticity of these maps near a compact semianalytic set suffices; see also Lønsted (1973). Recall that a semianalytic set is locally specified by finitely many real-analytic equalities and inequalities. 
+
+Theorem 5.5 (Finite relation among analytic maps) . Let K ⊂ Rq be compact and semianalytic, and let V be a finite-dimensional real vector space. For every sequence Φ0, Φ1, . . . of V -valued maps, each real analytic on a neighborhood of K, there exist an integer m ≥ 1, an open neighborhood U
+
+of K, and scalar real-analytic functions c0, . . . , c m−1 on U such that the following holds on U :
+
+Φm =
+
+> m−1
+
+X
+
+> k=0
+
+ckΦk. (19) Locally, analytic maps behave like polynomials: after finitely many Φk, new maps can be expressed using earlier ones with analytic coefficients. The number of earlier maps needed locally may vary across K. Compactness and semianalyticity rule out unbounded growth of this number; we defer the proof to Appendix C.4. We verify these hypotheses for Hi,k and transfer the relation to hti.5.4 PROOF OF THE FINITE -O RDER DIFFERENCE RELATION 
+
+Recall that our goal is to derive the finite-order relation (14) for the weighted gaps hti in arbitrary games with dimensions (n, d ). To make the finite relation produced by Theorem 5.5 hold uniformly over such games, we include the entire loss table in the arguments of our maps. Let 
+
+G := [0 , 1] n Qnj=1 dj , K⋆ := S × G × { 0},
+
+where G is the set of loss tables. We choose the singleton step size space {0} because we only need the relation for sufficiently small step sizes. With g ∈ G fixed, we suppress it throughout this subsection: 
+
+Fi(r, ℓ ; η) ≡ Fi(r, ℓ ; g, η ), G(s; η) ≡ G(s; g, η ), Hi,k (s; η) ≡ Hi,k (s; g, η ).
+
+We now verify the hypotheses of Theorem 5.5 for Φk = Hi,k and prove the finite-order relation (14). 
+
+Step 1: analyticity of G and Hi,k . We first study the analyticity of G and its behavior at η = 0 .
+
+Lemma 5.6 (Analyticity of the state update) . The state update G(s; η) is jointly real analytic in the state, the loss-table entries, and η on one common neighborhood of K⋆. The state space S is invariant. Moreover, G(r, ℓ ; 0) = ( r, ℓ (r)) and G2(s; 0) = G(s; 0) throughout this neighborhood. 
+
+At η = 0 , G only replaces the stored losses by ℓ(r), so applying it twice changes nothing further. Thus the zero-step identity makes the numerator in Equation (18) vanish at η = 0 . By Lemma 5.6, the numerator is analytic whenever Hi,k is, so the quotient extends analytically through η = 0 . Thus the recursion preserves analyticity from the polynomial base Hi, 0, giving Lemma 5.7. 
+
+Lemma 5.7 (Analyticity of scaled finite differences) . For every fixed k ≥ 0, the function Hi,k in Equation (18) extends real analytically through η = 0 , jointly in the state and loss-table entries, on a neighborhood of K⋆. The neighborhood may depend on k, but not on the state or game. 
+
+Step 2: finite generation and uniform coefficient bounds. Now that we have established the analyticity of Hi,k , we can apply Theorem 5.5 to Hi, 0, H i, 1, . . . . For some finite m, Theorem 5.5 gives analytic coefficient functions c0, . . . , c m−1 on a common neighborhood of K⋆ such that 
+
+Hi,m =
+
+> m−1
+
+X
+
+> k=0
+
+ckHi,k . (20) Evaluating (20) along the Optimistic Hedge trajectory gives the finite-order relation we have sought: 
+
+∆mht+mi = ηmHi,m (st; η) = 
+
+> m−1
+
+X
+
+> k=0
+
+ck(st; η)ηm−k∆kht+ki .
+
+Compactness of K⋆ puts S × G × [0 , η i] inside the common neighborhood for some ηi > 0 depending on (n, d ). Continuity bounds ck and Hi,k on this compact set; invariance of S makes these bounds valid at every round and produces the following lemma. 7Lemma 5.8 (Exact finite-order relation) . Fix the number of players n, number of actions d =(d1, . . . , d n), and a player i. There are an integer m ≥ 1, constants A, M < ∞, and ηi > 0, uniform over all games of these dimensions, such that, for every such game, 0 < η ≤ ηi, and t ≥ 1, there exist scalars c0,t , . . . , c m−1,t , possibly depending on the game, η, and t, satisfying 
+
+∆mht+mi =
+
+> m−1
+
+X
+
+> k=0
+
+ck,t ηm−k∆kht+ki , |ck,t | ≤ A, (21) 
+
+∆kht+ki 2 ≤ M η k, 0 ≤ k ≤ m. (22) Lemma 5.8 gives the precise finite-order relation (14) that we needed in Section 5.2. In particular, it provides a uniform bound on the coefficients ck,t and does not include any error term that accumulates over the horizon T . The exact order m and constants A, M remain implicit due to the nonconstructive nature of Theorem 5.5. We defer the full proof to Appendix C.4. 5.5 FROM THE FINITE -O RDER RELATION TO THE REGRET BOUND 
+
+With the exact finite-order relation from Lemma 5.8 in hand, one final step unlocks Lemma 5.4: a finitely supported cutoff of hti with boundary error independent of T . The next lemma supplies this cutoff construction to complete the argument in Section 5.2; we defer the proof to Appendix D. 
+
+Lemma 5.9 (Finite-support cutoff) . Fix an integer m ≥ 1 and A, M < ∞. For 0 < η < 1/m ,suppose a sequence (ut)t≥1 in a finite-dimensional Euclidean space satisfies, for every t ≥ 1,
+
+∆mut+m =
+
+> m−1
+
+X
+
+> k=0
+
+ck,t ηm−k∆kut+k, |ck,t | ≤ A (0 ≤ k < m ), (23) 
+
+∆kut+k ≤ M η k (0 ≤ k ≤ m). (24) 
+
+There is a constant C < ∞, depending only on m, A, M , such that every horizon T ≥ 1 admits a finitely supported sequence y = ( yt)t∈Z with 
+
+∥∆y∥2 
+
+> ℓ2
+
+≥ XTt=1 ∆ut 2 − C, (25) 
+
+∥y∥2 
+
+> ℓ2
+
+≤ XT +1  
+
+> t=1
+
+ut 2 , (26) 
+
+∥∆my∥ℓ2 ≤ A Xm−1 
+
+> k=0
+
+ηm−k ∆ky ℓ2 + Cη m−1/2. (27) This finite-support construction is similar to that of Ha (2026), but is tailored to preserve the finite-order relation up to a horizon-independent error. The inequalities (25)–(26) let us transfer a first-order difference bound for y back to hti only at a constant cost. 
+
+Proof of Lemma 5.3. We combine the finite-order relation in Lemma 5.8, the cutoff bound (27) from Lemma 5.9, and the finite-difference interpolation in Lemma 5.4 to bound ∥∆y∥ℓ2 . We then use (25) and (26) from Lemma 5.9 to transfer the bound to hti with error independent of T .Fix i, T and take m, A, M, η i from Lemma 5.8. For 0 < η ≤ ¯ηi := 12 min {ηi, 1/m, 1}, apply Lemma 5.9 to (hti)t≥1 to obtain the cutoff y, and write C1 ≥ 0 for its constant C.The cutoff bound (27) in Lemma 5.9 and the finite-difference interpolation (13) in Lemma 5.4 give: 
+
+∥∆my∥ℓ2
+
+> (27)
+
+≤ A
+
+> m−1
+
+X
+
+> k=0
+
+ηm−k ∆ky ℓ2 + C1ηm−1/2
+
+> (13)
+
+≤ Aη m ∥y∥ℓ2 + A
+
+> m−1
+
+X
+
+> k=1
+
+ ηm ∥y∥ℓ2
+
+1−k/m ∥∆my∥k/m ℓ2 + C1ηm−1/2. (28) For each term in the sum, Young’s inequality gives 
+
+A ηm ∥y∥ℓ2
+
+1−k/m ∥∆my∥k/m ℓ2 ≤ 12m ∥∆my∥ℓ2 + m − km (2 k) km−k A mm−k ηm ∥y∥ℓ2 . (29) 8Substituting (29) into (28) gives a coefficient (m − 1) /(2 m) ≤ 1/2 on ∥∆my∥ℓ2 . Moving this term to the left yields the following for some constant C2 ≥ 0 depending only on m, A, M :
+
+∥∆my∥ℓ2 ≤ C2ηm ∥y∥ℓ2 + C2ηm−1/2. (30) 
+
+Case m = 1 . Equation (30) already bounds ∥∆y∥ℓ2 . Squaring and using (a + b)2 ≤ 2a2 + 2 b2 gives 
+
+∥∆y∥2 
+
+> ℓ2
+
+≤ 2C22 η2 ∥y∥2 
+
+> ℓ2
+
++ 2 C22 η. 
+
+Case m ≥ 2. Invoking Lemma 5.4 with j = 1 and combining it with (30) gives: 
+
+∥∆y∥2
+
+> ℓ2
+> (13)
+
+≤ ∥ y∥2−2/m ℓ2 ∥∆my∥2/m ℓ2
+
+> (30)
+
+≤ C2/m  
+
+> 2
+
+∥y∥2−2/m ℓ2
+
+ ηm ∥y∥ℓ2 + ηm−1/22/m 
+
+≤ C2/m  
+
+> 2
+
+η2 ∥y∥2 
+
+> ℓ2
+
++ C2/m 
+
+> 2
+
+ η2 ∥y∥2
+
+> ℓ2
+
+1−1/m η1/m 
+
+≤ C2/m 
+
+> 2
+
+ (2 − 1/m )η2 ∥y∥2 
+
+> ℓ2
+
++ η/m 
+
+≤ 2C2/m 
+
+> 2
+
+ η2 ∥y∥2 
+
+> ℓ2
+
++ η. (31) The third inequality uses (a + b)2/m ≤ a2/m + b2/m , ∀m ≥ 2. The fourth applies Young’s inequality 
+
+(η2 ∥y∥2 
+
+> ℓ2
+
+)1−1/m η1/m ≤ (1 − 1/m )η2 ∥y∥2 
+
+> ℓ2
+
++ η/m .We now return to hti using (25) and (26). Either case and η ≤ 1 give 
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
+≤ ∥ ∆y∥2 
+
+> ℓ2
+
++ C1 ≤ 2C2/m  
+
+> 2
+
+η2 
+
+> T+1
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ C1 + 2 C2/m  
+
+> 2
+
+.
+
+The coefficients depend only on (n, d ) and i, through m, A, M . Taking common upper bounds over i
+
+and ηtemp := min i ¯ηi proves Lemma 5.3. 
+
+Completing the regret bound. Combining Lemma 5.1, Lemma 5.2, and Lemma 5.3 directly proves Theorem 4.1. We give a detailed calculation in Appendix A. 
+
+## 6 DISCUSSION 
+
+Implications. Notably, a recent line of work has obtained horizon-independent regret bounds in finite general-sum games by combining modified regularization with higher-order prediction (Liu et al., 2026; Abbadi et al., 2026). However, Theorem 4.1 shows that plain Optimistic Hedge can already attain this horizon independence with a dimension-dependent constant step size. Our result suggests that adaptive learning rates (Soleymani et al., 2025a;b), hybrid regularization (Tsuchiya, 2026), and higher-order predictions (Liu et al., 2026; Abbadi et al., 2026) are unnecessary for this guarantee. 
+
+Comparison with Ha (2026). Both our analysis and the analysis of Ha (2026) build on the high-order smoothness framework of Daskalakis et al. (2021). Ha’s centered-logit derivative bounds control each difference order separately. Choosing m ≍ (√nη )−1 leaves a regret contribution proportional to 
+
+ηT exp {− c/ (√nη )}, leading to a logarithmic regret bound when the step size is tuned to the horizon. In our analysis, Frisch’s theorem on the compact state space yields an exact relation among difference orders (Lemma 5.8). Its order is fixed by (n, d ), and it has no additive error that accumulates over 
+
+T . Finite-difference interpolation (Lemma 5.4) then yields a first-order difference bound that lets us absorb prediction error into stability, up to a horizon-independent error. Intuitively, our approach thus trades Ha’s explicit dimension dependence for horizon independence. 
+
+## 7 CONCLUSION 
+
+In this work, we proved that plain Optimistic Hedge with a constant step size can achieve horizon-independent individual regret in finite general-sum games. An exact finite-order relation for weighted gaps removes the horizon-accumulating remainder in the logarithmic analysis of Ha (2026), and yields an On,d (1 /T ) CCE guarantee. Quantifying the explicit dimension dependence of η⋆ and C⋆ in our regret bound remains open, and we leave it as an intriguing future work. 9AI USE STATEMENT 
+
+The author formulated the initial horizon-independent regret hypothesis and conducted a numerical experiment to test the hypothesis empirically. The hypothesis was motivated by the close connection between optimistic and implicit update rules (Mokhtari et al., 2020). Specifically, the authors hypoth-esized that a similar connection might exist between Optimistic Hedge and Clairvoyant Multiplicative Weights Update (CMWU) (Piliouras et al., 2022), and therefore, Optimistic Hedge might also enjoy horizon-independent regret bounds. Under the authors’ direction, generative AI tools were used to develop and write proof arguments based on the high-order smoothness framework of Daskalakis et al. (2021) and the weighted-gap reduction of Ha (2026). AI tools also assisted with literature search, exposition, and LaTeX editing. The author takes responsibility for the final content, including all mathematical claims, proofs, and references. REPRODUCIBILITY STATEMENT 
+
+The assumptions and algorithm are specified in Sections 3 and 4. Complete proofs appear in Section 5 and Appendices A–D. 
+
+## REFERENCES 
+
+Omar Abbadi, Rida Laraki, and Panayotis Mertikopoulos. Constant regret in general games via higher-order optimism. arXiv preprint arXiv:2609.04113 , 2026. URL https://arxiv.org/ abs/2609.04113 .Ioannis Anagnostides, Constantinos Daskalakis, Gabriele Farina, Maxwell Fishelson, Noah Golowich, and Tuomas Sandholm. Near-optimal no-regret learning for correlated equilibria in multi-player general-sum games. In Proceedings of the ACM Symposium on Theory of Computing , 2022a. Ioannis Anagnostides, Gabriele Farina, Christian Kroer, Chung-Wei Lee, Haipeng Luo, and Tuomas Sandholm. Uncoupled learning dynamics with O(log T ) swap regret in multiplayer games. In 
+
+Advances in Neural Information Processing Systems , 2022b. Robert J. Aumann. Subjectivity and correlation in randomized strategies. Journal of Mathematical Economics , 1(1):67–96, 1974. doi: 10.1016/0304-4068(74)90037-8. Constantin B˘ anic˘ a and Octavian St˘ an˘ a¸ sil˘ a. Algebraic Methods in the Global Theory of Complex Spaces . John Wiley & Sons, 1976. ISBN 0-471-01809-0. David Blackwell. An analog of the minimax theorem for vector payoffs. Pacific Journal of Mathe-matics , 6(1):1–8, 1956. doi: 10.2140/pjm.1956.6.1. Avrim Blum and Yishay Mansour. From external to internal regret. Journal of Machine Learning Research , 8:1307–1324, 2007. Noam Brown and Tuomas Sandholm. Superhuman AI for multiplayer poker. Science , 365(6456): 885–890, 2019. doi: 10.1126/science.aay2400. Nicolò Cesa-Bianchi and Gábor Lugosi. Prediction, Learning, and Games . Cambridge University Press, 2006. Xi Chen and Binghui Peng. Hedging in games: Faster convergence of external and swap regrets. In 
+
+Advances in Neural Information Processing Systems , 2020. Xi Chen, Xiaotie Deng, and Shang-Hua Teng. Settling the complexity of computing two-player Nash equilibria. Journal of the ACM , 56(3):14:1–14:57, 2009. doi: 10.1145/1516512.1516516. URL 
+
+https://arxiv.org/abs/0704.1678 .Chao-Kai Chiang, Tianbao Yang, Chia-Jung Lee, Mehrdad Mahdavi, Chi-Jen Lu, Rong Jin, and Shenghuo Zhu. Online optimization with gradual variations. In Proceedings of the 25th Annual Conference on Learning Theory , volume 23 of Proceedings of Machine Learning Research , pp. 6.1–6.20, 2012. URL https://proceedings.mlr.press/v23/chiang12.html .10 Constantinos Daskalakis, Paul W. Goldberg, and Christos H. Papadimitriou. The complexity of computing a Nash equilibrium. SIAM Journal on Computing , 39(1):195–259, 2009. doi: 10.1137/ 070699652. Constantinos Daskalakis, Maxwell Fishelson, and Noah Golowich. Near-optimal no-regret learning in general games. In Advances in Neural Information Processing Systems , 2021. Gabriele Farina, Ioannis Anagnostides, Haipeng Luo, Chung-Wei Lee, Christian Kroer, and Tuomas Sandholm. Near-optimal no-regret learning dynamics for general convex games. In Advances in Neural Information Processing Systems , 2022. Yoav Freund and Robert E. Schapire. A decision-theoretic generalization of on-line learning and an application to boosting. Journal of Computer and System Sciences , 55(1):119–139, 1997. doi: 10.1006/jcss.1997.1504. Yoav Freund and Robert E. Schapire. Adaptive game playing using multiplicative weights. Games and Economic Behavior , 29(1–2):79–103, 1999. doi: 10.1006/game.1999.0738. Jacques Frisch. Points de platitude d’un morphisme d’espaces analytiques complexes. Inventiones Mathematicae , 4:118–138, 1967. doi: 10.1007/BF01425245. Paul Gölz, Nika Haghtalab, and Kunhe Yang. Distortion of AI alignment: Does preference optimiza-tion optimize for preferences? In Advances in Neural Information Processing Systems , volume 38, 2025. doi: 10.52202/085713-0876. URL https://arxiv.org/abs/2505.23749 .Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. Generative adversarial nets. In Advances in Neural Information Processing Systems , volume 27, pp. 2672–2680, 2014. Gert-Martin Greuel, Christoph Lossen, and Eugenii Shustin. Introduction to Singularities and Deformations . Springer Monographs in Mathematics. Springer, Berlin, Heidelberg, first edition, 2007. doi: 10.1007/3-540-28419-2. Junsoo Ha. A Logarithmic Regret Bound for Optimistic Hedge in General-Sum Games. arXiv preprint arXiv:2609.19677, 2026. URL https://arxiv.org/abs/2609.19677 .James Hannan. Approximation to Bayes risk in repeated play. In Melvin Dresher, Albert W. Tucker, and Philip Wolfe (eds.), Contributions to the Theory of Games, Volume III , volume 39 of Annals of Mathematics Studies , pp. 97–139. Princeton University Press, Princeton, NJ, 1957. Sergiu Hart and Andreu Mas-Colell. A simple adaptive procedure leading to correlated equilibrium. 
+
+Econometrica , 68(5):1127–1150, 2000. doi: 10.1111/1468-0262.00153. Sergiu Hart and Andreu Mas-Colell. A general class of adaptive strategies. Journal of Economic Theory , 98(1):26–54, 2001. doi: 10.1006/jeth.2000.2746. Lars Hörmander. An Introduction to Complex Analysis in Several Variables , volume 7 of North-Holland Mathematical Library . North-Holland, third revised edition, 1990. ISBN 0-444-88446-7. Mingyang Liu, Gabriele Farina, and Asuman Ozdaglar. Constant individual regret in general games. 
+
+arXiv preprint arXiv:2608.31166 , 2026. Knud Lønsted. Vector bundles over finite CW-complexes are algebraic. Proceedings of the American Mathematical Society , 38(1):27–31, 1973. Aryan Mokhtari, Asuman Ozdaglar, and Sarath Pattathil. A unified analysis of extra-gradient and optimistic gradient methods for saddle point problems: Proximal point approach. In Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics , volume 108 of Proceedings of Machine Learning Research , pp. 1497–1507. PMLR, 2020. URL https: //proceedings.mlr.press/v108/mokhtari20a.html .Hervé Moulin and Jean-Philippe Vial. Strategically zero-sum games: The class of games whose completely mixed equilibria cannot be improved upon. International Journal of Game Theory , 7 (3–4):201–221, 1978. doi: 10.1007/BF01769190. 11 Remi Munos, Michal Valko, Daniele Calandriello, Mohammad Gheshlaghi Azar, Mark Rowland, Zhaohan Daniel Guo, Yunhao Tang, Matthieu Geist, Thomas Mesnard, Côme Fiegel, Andrea Michi, Marco Selvi, Sertan Girgin, Nikola Momchev, Olivier Bachem, Daniel J. Mankowitz, Doina Precup, and Bilal Piot. Nash learning from human feedback. In Proceedings of the 41st International Conference on Machine Learning , volume 235 of Proceedings of Machine Learning Research , pp. 36743–36768. PMLR, 2024. John F. Nash. Equilibrium points in n-person games. Proceedings of the National Academy of Sciences , 36(1):48–49, 1950. doi: 10.1073/pnas.36.1.48. Christos H. Papadimitriou and Tim Roughgarden. Computing correlated equilibria in multi-player games. Journal of the ACM , 55(3):14:1–14:29, 2008. doi: 10.1145/1379759.1379762. Georgios Piliouras, Ryann Sim, and Stratis Skoulakis. Beyond time-average convergence: Near-optimal uncoupled online learning via clairvoyant multiplicative weights update. In Advances in Neural Information Processing Systems , 2022. Alexander Rakhlin and Karthik Sridharan. Optimization, learning, and games with predictable sequences. In Advances in Neural Information Processing Systems , 2013a. Alexander Rakhlin and Karthik Sridharan. Online learning with predictable sequences. In Proceedings of the 26th Annual Conference on Learning Theory , volume 30 of Proceedings of Machine Learning Research , pp. 993–1019, 2013b. URL https://proceedings.mlr.press/ v30/Rakhlin13.html .Corby Rosset, Ching-An Cheng, Arindam Mitra, Michael Santacroce, Ahmed Awadallah, and Tengyang Xie. Direct Nash optimization: Teaching language models to self-improve with general preferences. arXiv preprint arXiv:2404.03715 , 2024. URL https://arxiv.org/abs/2404. 03715 .Ashkan Soleymani, Georgios Piliouras, and Gabriele Farina. Cautious optimism: A meta-algorithm for near-constant regret in general games. In Proceedings of the 26th ACM Conference on Economics and Computation , pp. 870, 2025a. doi: 10.1145/3736252.3742639. URL https: //arxiv.org/abs/2506.05005 .Ashkan Soleymani, Georgios Piliouras, and Gabriele Farina. Faster rates for no-regret learning in general games via cautious optimism. In Proceedings of the 57th Annual ACM Symposium on Theory of Computing , pp. 518–529, 2025b. doi: 10.1145/3717823.3718242. URL https: //arxiv.org/abs/2503.24340 .Vasilis Syrgkanis, Alekh Agarwal, Haipeng Luo, and Robert E. Schapire. Fast convergence of regularized learning in games. In Advances in Neural Information Processing Systems , 2015. Yixin Tao and Weiqiang Zheng. Optimal alternating regret for online learning and games. arXiv preprint arXiv:2608.24731 , 2026. URL https://arxiv.org/abs/2608.24731 .Taira Tsuchiya. Sublogarithmic swap regret in multiplayer general-sum games via hybrid regulariza-tion. arXiv preprint arXiv:2608.04149 , 2026. John von Neumann and Oskar Morgenstern. Theory of Games and Economic Behavior . Princeton University Press, 1944. Fang Wu, Xu Huang, Weihao Xuan, Zhiwei Zhang, Yijia Xiao, Frank Wan, Xiaomin Li, Bing Hu, Peng Xia, Jure Leskovec, and Yejin Choi. Multiplayer Nash preference optimization. In International Conference on Learning Representations , 2026. URL https://iclr.cc/virtual/2026/ oral/10006670 .Yue Wu, Zhiqing Sun, Huizhuo Yuan, Kaixuan Ji, Yiming Yang, and Quanquan Gu. Self-play preference optimization for language model alignment. arXiv preprint arXiv:2405.00675 , 2024. URL https://arxiv.org/abs/2405.00675 .12 APPENDIX CONTENTS 
+
+A Proof of the main result 13 B Preliminary lemmas 14 
+
+B.1 Optimistic regret bound . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14 B.2 Weighted pairwise loss gaps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 B.3 Interpolation of finite differences . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 
+
+C Exact finite-order difference relation 17 
+
+C.1 Analytic state update . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17 C.2 Analytic scaled finite differences . . . . . . . . . . . . . . . . . . . . . . . . . . . 17 C.3 Frisch’s Noetherianity Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . 18 C.4 Exact finite-order relation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 
+
+D Finite-support cutoff construction 21 
+
+## A PROOF OF THE MAIN RESULT 
+
+We derive the horizon-independent regret guarantee from the three estimates in Section 5.1. 
+
+Theorem 4.1 (Horizon-independent individual regret) . Fix n players with action counts d1, . . . , d n.There exist η⋆ > 0 and C⋆ < ∞, depending only on (n, d 1, . . . , d n), such that, for every game in the setup of Section 3 and every common constant step size 0 < η ≤ η⋆, the Optimistic Hedge iterates satisfy, for every i ∈ [n] and T ≥ 1,
+
+Reg i(T ) ≤ log di
+
+η + C⋆η. (6) 
+
+Proof of Theorem 4.1. Let ηrvu , η gap , η temp be the thresholds in Lemmas 5.1 to 5.3, with ηtemp ≤ 1.Since hT +1  
+
+> i
+> 22
+
+≤ 1/4, the last two lemmas give 
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) ≤ C0η2
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+) + C1, (32) with constants C0, C 1 ≥ 0 depending only on n, d . For 0 < η ≤ min {ηrvu , η gap , η temp }, substitution into Equation (8) yields 
+
+Reg i(T ) ≤ log di
+
+η + 2C1η
+
+3 − η
+
+3 (1 − 2C0η2)
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+).
+
+Set 
+
+η⋆ := min 
+
+(
+
+ηrvu , η gap , η temp , 1
+
+p2 max {C0, 1}
+
+)
+
+, C⋆ := 2C1
+
+3 .
+
+The variance coefficient is nonpositive for every 0 < η ≤ η⋆, proving Equation (6). Both constants depend only on n, d .
+
+Corollary 4.2 (Coarse-correlated-equilibrium convergence) . Under the conditions of Theorem 4.1, the time-averaged joint distribution bμT satisfies, for every T ≥ 1,
+
+Gap CCE (bμT ) ≤ 1
+
+T max 
+
+> i∈[n]
+
+ log di
+
+η + C⋆η
+
+
+
+. (7) 13 Proof. Apply Equation (4) to Theorem 4.1: for every T ≥ 1,
+
+Gap CCE (bμT ) = 1
+
+T max  
+
+> i∈[n]
+
+Reg i(T ) ≤ 1
+
+T max 
+
+> i∈[n]
+
+ log di
+
+η + C⋆η
+
+
+
+.
+
+This proves Equation (7). 
+
+## B PRELIMINARY LEMMAS 
+
+We prove the optimistic regret bound, the weighted-gap reduction, and finite-difference interpolation. For the first two, we only use the update rule of Optimistic Hedge and boundedness of loss vectors; we use the analytic structure of self-play in Appendix C. B.1 OPTIMISTIC REGRET BOUND 
+
+Fix a player i, write d := di, and fix η > 0. Define the soft-min potential Φ : Rd → R by 
+
+Φ( z) := − 1
+
+η log 
+
+> d
+
+X
+
+> a=1
+
+e−ηz a
+
+Its gradient gives exponential weights, while its value approximates the smallest coordinate. Since 
+
+−Φ is convex, we can define its corresponding Bregman divergence for y, z ∈ Rd by 
+
+D−Φ(y, z ) := Φ( z) + ⟨∇ Φ( z), y − z⟩ − Φ( y).
+
+For v ∈ Rd, write osc( v) := max a va − min a va for its coordinate span. The following auxiliary bound from Ha (2026) compares each Bregman divergence with the variance under its reference distribution. 
+
+Lemma B.1 (Bregman divergence and local variance (Ha, 2026, Lemma B.1)) . Let z, v ∈ Rd and 
+
+R ≥ 0, set p := ∇Φ( z), and suppose that osc( v) ≤ R. Then 
+
+η
+
+2 e−ηR Var p(v) ≤ D−Φ(z + v, z ) ≤ η
+
+2 eηR Var p(v). (33) 
+
+Proof. We compare the potential’s curvature along the segment from z to z +v. Set ps := ∇Φ( z +sv )
+
+for s ∈ [0 , 1] ; these are the exponential weights along that segment. Since 
+
+−∇ 2Φ( z + sv ) = η Diag( ps) − psp⊤
+
+> s
+
+,
+
+the integral remainder formula gives 
+
+D−Φ(z + v, z ) = η
+
+Z 10
+
+(1 − s) Var ps (v) d s. (34) Moreover, 
+
+ps(a)
+
+p(a) = e−ηsv a
+
+P 
+
+> b
+
+p(b)e−ηsv b
+
+,
+
+so e−ηsR p(a) ≤ ps(a) ≤ eηsR p(a) coordinatewise. Using 
+
+Var p(v) = min 
+
+> c∈R
+
+X
+
+> a
+
+p(a)( va − c)2,
+
+we obtain 
+
+e−ηR Var p(v) ≤ Var ps (v) ≤ eηR Var p(v).
+
+Substitute into Equation (34) and use R 10 (1 − s)d s = 1 /2.The optimistic regret bound of Ha (2026) specializes Lemma 4.1 of Daskalakis et al. (2021), whose Lemma A.5 refines Lemma 3 of Rakhlin & Sridharan (2013b). We reproduce its proof here for completeness. 14 Lemma 5.1 (Optimistic regret bound (Ha, 2026, Lemma 5.1)) . There is a universal ηrvu > 0 such that, for every player, horizon, and 0 < η ≤ ηrvu ,
+
+Reg i(T ) ≤ log di
+
+η + 2η
+
+3
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) − η
+
+3
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+). (8) 
+
+Proof. Suppress the player index from xti, ℓti, and Reg i. We first express the strategy in terms of past losses. Set L0 := 0 , and for t ≥ 1 let 
+
+Lt := 
+
+> t
+
+X 
+
+> τ=1
+
+ℓτ , qt := Lt−1 + ℓt−1.
+
+Here Lt is the cumulative loss, and qt augments the observed cumulative loss with the latest loss vector as a prediction for round t. Unrolling Optimistic Hedge gives 
+
+xta = e−ηq ta
+
+P 
+
+> b∈[d]
+
+e−ηq tb
+
+, a ∈ [d].
+
+This discrepancy is the curvature correction in a potential increment. Using ∇Φ( qt) = xt and 
+
+Lt − Lt−1 = ℓt, we obtain the one-round identity and its cumulative regret consequence: 
+
+D−Φ(Lt, q t) − D−Φ(Lt−1, q t) = xt, ℓ t − Φ( Lt) + Φ( Lt−1),
+
+Reg( T ) ≤ log dη +
+
+> T
+
+X
+
+> t=1
+
+D−Φ(Lt, q t) − D−Φ(Lt−1, q t) . (35) The potential terms telescope, and Φ( LT ) ≤ min a LTa compares the final potential with the best fixed action. Uniform initialization gives Φ(0) = −(log d)/η , hence the initial cost in the second line. Apply Lemma B.1 to the positive and negative divergences in Equation (35). Since Lt −qt = ℓt −ℓt−1
+
+has coordinate span at most 2, while Lt−1 − qt = −ℓt−1 has span at most 1, Equations (33) and (35) give the exact inequality 
+
+Reg( T ) ≤ log dη + ηe 2η
+
+2
+
+> T
+
+X
+
+> t=1
+
+Var xt (ℓt − ℓt−1) − ηe −η
+
+2
+
+> T
+
+X
+
+> t=1
+
+Var xt (ℓt−1). (36) Choose a universal ηrvu > 0 such that e2η /2 ≤ 2/3 and e−η /2 ≥ 1/3 for 0 < η ≤ ηrvu . This proves Lemma 5.1. B.2 WEIGHTED PAIRWISE LOSS GAPS 
+
+For completeness, we reproduce the weighted-gap reduction from Lemma 5.2 of Ha (2026). The pairwise identity transfers the variances to a fixed Euclidean norm; the correction comes from the first-order differences of the probability weights. 
+
+Lemma 5.2 (Weighted-gap reduction (Ha, 2026, Lemma 5.2)) . There are universal constants C > 0
+
+and ηgap > 0 such that, whenever 0 < η ≤ ηgap ,
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓt−1 
+
+> i
+
+) = 
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
+,
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) ≤ 32
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
++ Cη 2
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ Cη 2.
+
+(11) 
+
+Proof. The pairwise variance identity (9) follows by expanding 12
+
+P 
+
+> a,b
+
+xaxb(va − vb)2 and noting that the diagonal terms vanish. Applying it to Equation (10) gives the identity in Equation (11). For prediction error, the remaining obstacle is that the strategy weights change between rounds. Fix player i and pair a < b , and write 
+
+wtab := 
+
+q
+
+xti,a xti,b .
+
+15 Uniform initialization and the multiplicative update keep wtab > 0 at every finite round, so these ratios are well defined. Their bounds remain uniform as probabilities approach zero. The optimistic loss vector mti := 2 ℓti − ℓt−1 
+
+> i
+
+has osc( mti) ≤ 3, and Equation (5) gives 
+
+e−3η ≤ wt+1 
+
+> ab
+
+wtab 
+
+≤ e3η , wtab 
+
+wt+1 
+
+> ab
+
+− 1 ≤ Cη (37) for a universal C and all sufficiently small η. Thus the relative change of each pair weight is O(η).Since [hti]ab = wtab (ℓt−1 
+
+> i,a
+
+− ℓt−1 
+
+> i,b
+
+),
+
+wtab 
+
+(ℓti,a − ℓti,b ) − (ℓt−1 
+
+> i,a
+
+− ℓt−1 
+
+> i,b
+
+) = [ ht+1  
+
+> i
+
+− hti]ab +
+
+ wtab 
+
+wt+1 
+
+> ab
+
+− 1
+
+
+
+[ht+1  
+
+> i
+
+]ab . (38) The first term is the weighted-gap difference [∆ hti]ab ; the second accounts for the weight ratio 
+
+wtab /w t+1  
+
+> ab
+
+. Its coefficient is O(η), so squaring yields the O(η2) correction in the lemma. Apply 
+
+(a + b)2 ≤ 32 a2 + 3 b2 to Equation (38), then sum over t and a < b . Using Equations (9) and (37), 
+
+> T
+
+X
+
+> t=1
+
+Var xti (ℓti − ℓt−1 
+
+> i
+
+) = 
+
+> T
+
+X
+
+> t=1
+
+X
+
+> a<b
+
+
+
+wtab 
+
+(ℓti,a − ℓti,b ) − (ℓt−1 
+
+> i,a
+
+− ℓt−1 
+
+> i,b
+
+)2
+
+≤ 32
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
++ Cη 2
+
+> T
+
+X
+
+> t=1
+
+ht+1 
+
+> i
+> 22
+
+≤ 32
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+
+− hti 
+
+> 22
+
++ Cη 2
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ Cη 2.
+
+The last inequality uses h1 
+
+> i
+
+= 0 and 
+
+> T
+
+X
+
+> t=1
+
+ht+1  
+
+> i
+> 22
+
+=
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ hT +1  
+
+> i
+> 22
+
+≤
+
+> T
+
+X
+
+> t=1
+
+hti 
+
+> 22
+
++ 14 .
+
+The terminal bound follows from hT +1  
+
+> i
+> 22
+
+= Var xT +1 
+
+> i
+
+(ℓTi ) ≤ 1/4. Thus moving the summation window contributes only the final Cη 2 term, and Lemma 5.2 follows. B.3 INTERPOLATION OF FINITE DIFFERENCES 
+
+This interpolation step is independent of Optimistic Hedge. It applies because the reduction to weighted gaps has put all difference orders in one Hilbert space with a fixed norm. 
+
+Lemma 5.4 (Finite-difference interpolation) . For every finitely supported sequence y = ( yt)t∈Z in a finite-dimensional Hilbert space, the following holds for all integers m ≥ 1 and 0 ≤ j ≤ m:
+
+∆j y ℓ2 ≤ ∥ y∥1−j/m ℓ2 ∥∆my∥j/m ℓ2 . (13) 
+
+Proof. Fourier transformation turns finite differences into multiplication, allowing all orders to be compared in one representation. Let by(ω) := P 
+
+> t∈Z
+
+yte−itω be the Fourier transform and λ(ω) := 
+
+|eiω − 1|2 the squared magnitude of the first-order difference multiplier. Parseval’s identity gives 
+
+∆j y 2
+
+> ℓ2
+
+= 12π
+
+Z π
+
+> −π
+
+λ(ω)j ∥by(ω)∥2 dω. 
+
+Thus each order weights the same Fourier components by a different power of λ. The cases j = 0 , m 
+
+are immediate. For 0 < j < m , apply Hölder’s inequality with exponents m/ (m − j) and m/j to 
+
+λj ∥by∥2 =  ∥by∥21−j/m  λm ∥by∥2j/m .
+
+This proves Equation (13). 16 C EXACT FINITE -ORDER DIFFERENCE RELATION 
+
+We first extend the state update and scaled finite-difference maps analytically through zero step size. Appendix C.3 introduces the analytic prerequisites and proves Frisch’s Noetherianity theorem from them. Appendix C.4 then proves Theorem 5.5 and applies it uniformly over states and games to obtain Lemma 5.8. We defer the finite-support construction to Appendix D. C.1 ANALYTIC STATE UPDATE 
+
+To preserve the quantifiers in Theorem 4.1, we include the loss table in the compact parameter set from the outset. Define 
+
+Ri := {ri ∈ Rdi 
+
+> +
+
+: ∥ri∥2 = 1 }, R := 
+
+> n
+
+Y
+
+> i=1
+
+Ri, V := 
+
+> n
+
+Y
+
+> i=1
+
+[0 , 1] di .
+
+Thus S = R × V , where V contains the stored loss profiles. Let G := [0 , 1] n Q  
+
+> jdj
+
+be the set of loss tables, and write g = ( g1, . . . , g n) ∈ G . For ri̸ = 0 , set [xi(ri)] a := ri(a)2/ ∥ri∥22. For r ∈ R ,define the current expected-loss profile by 
+
+[ℓg (r)] i(ai) := X  
+
+> a−i∈Q
+> j̸=iAj
+
+gi(ai, a −i) Y 
+
+> j̸=i
+
+[xj (rj )] aj .
+
+Set K0 := R × V × G and K⋆ := K0 × { 0}. We restore the loss-table argument in the maps as 
+
+Fi(r, ℓ ; g, η ), G(s; g, η ), and Hi,k (s; g, η ); under Gj (s; g, η ), we keep both g and η fixed. The update is 
+
+[Fi(r, ℓ ; g, η )] a := ∥ri∥2 ri(a)e−η(2[ ℓg (r)] i(a)−[ℓi]a)/2
+
+ P  
+
+> b
+
+ri(b)2e−η(2[ ℓg (r)] i(b)−[ℓi]b)1/2 ,G(r, ℓ ; g, η ) :=    Fi(r, ℓ ; g, η )ni=1 , ℓ g (r) .
+
+Lemma 5.6 (Analyticity of the state update) . The state update G(s; η) is jointly real analytic in the state, the loss-table entries, and η on one common neighborhood of K⋆. The state space S is invariant. Moreover, G(r, ℓ ; 0) = ( r, ℓ (r)) and G2(s; 0) = G(s; 0) throughout this neighborhood. Proof. We verify joint analyticity, invariance, and the zero-step identity in turn. On a sufficiently small neighborhood of R, every ∥ri∥2 stays bounded away from zero. Hence xi(ri) and ℓg (r) are rational, and therefore jointly real analytic, in (r, g ). At η = 0 , the expression under the denominator square root in Equation (15) equals ∥ri∥22, which is uniformly positive on K0. Continuity and compactness give one product neighborhood and some ¯η > 0 on which every denominator remains positive for 
+
+|η| < ¯η. The positive square-root function is analytic on (0 , ∞), so the full state update is jointly real analytic there. For ri ∈ R i, X
+
+> a
+
+[Fi(r, ℓ ; g, η )] 2 
+
+> a
+
+=
+
+P 
+
+> a
+
+ri(a)2e−η(2[ ℓg (r)] i(a)−[ℓi]a)
+
+P 
+
+> b
+
+ri(b)2e−η(2[ ℓg (r)] i(b)−[ℓi]b) = 1 .
+
+The update also preserves nonnegativity, and ℓg (r) ∈ V ; hence G leaves S invariant. At η = 0 , the denominator equals ∥ri∥2, so Fi(r, ℓ ; g, 0) = ri throughout the ambient neighborhood. Therefore 
+
+G(r, ℓ ; g, 0) = ( r, ℓ g (r)) . A second zero-step update leaves both components unchanged, proving the zero-step identity. C.2 ANALYTIC SCALED FINITE DIFFERENCES 
+
+For s = ( r, ℓ ), define the weighted-gap map by 
+
+[Hi, 0(s; g, η )] ab := ri(a)ri(b) [ℓi]a − [ℓi]b
+
+, a < b, 
+
+and, for η̸ = 0 , recursively define 
+
+Hi,k +1 (s; g, η ) := Hi,k (G2(s; g, η ); g, η ) − Hi,k (G(s; g, η ); g, η )
+
+η .
+
+17 The trajectory identity follows directly by induction. The case k = 0 follows from Hi, 0(st; g, η ) = hti.If it holds at order k, then 
+
+Hi,k +1 (st; g, η ) = Hi,k (st+2 ; g, η ) − Hi,k (st+1 ; g, η )
+
+η
+
+= η−(k+1)  ∆kht+k+2  
+
+> i
+
+− ∆kht+k+1 
+
+> i
+
+ = η−(k+1) ∆k+1 ht+k+1  
+
+> i
+
+.
+
+Thus Hi,k (st; g, η ) = η−k∆kht+ki for every k ≥ 0 and t ≥ 1.The zero-step identity makes the numerator vanish at η = 0 . The next proof turns that cancellation into an analytic extension at every fixed order. 
+
+Lemma 5.7 (Analyticity of scaled finite differences) . For every fixed k ≥ 0, the function Hi,k in Equation (18) extends real analytically through η = 0 , jointly in the state and loss-table entries, on a neighborhood of K⋆. The neighborhood may depend on k, but not on the state or game. Proof. We argue by induction and shrink the common neighborhood of K⋆ only when a composition requires it. The base map Hi, 0 is polynomial. Suppose Hi,k is analytic on such a neighborhood, and define 
+
+Ni,k (s; g, η ) := Hi,k (G2(s; g, η ); g, η ) − Hi,k (G(s; g, η ); g, η ).
+
+By Lemma 5.6, Ni,k (s; g, 0) = 0 on a neighborhood in (s, g ). After restricting to a product neighbor-hood on which Ni,k is analytic, the fundamental theorem of calculus gives, coordinatewise, 
+
+Ni,k (s; g, η ) = η
+
+Z 10
+
+∂η Ni,k (s; g, τ η ) d τ. 
+
+The integral is jointly analytic on a possibly smaller neighborhood and equals Ni,k /η = Hi,k +1 for 
+
+η̸ = 0 . It therefore extends Hi,k +1 analytically through η = 0 .C.3 FRISCH ’S NOETHERIANITY THEOREM 
+
+Frisch’s theorem lets us select finitely many analytic generators near a compact semianalytic set. We introduce the definitions and three classical analytic lemmas needed for its proof. We state these lemmas in terms of scalar functions and analytic coefficients; their analytic foundations are supplied by the cited results. We reproduce the proof of Frisch’s theorem using these lemmas. 
+
+Definition C.1 (Real-analytic functions) . Let U ⊂ Rq be open. A function f : U → R is real-analytic if, for every x ∈ U , f (x′) equals a convergent power series in x′ − x for x′ in a neighborhood of x.
+
+Definition C.2 (Analytic germs) . Two real-analytic functions, each defined on an open neighborhood of a compact set K ⊂ Rq , represent the same germ along K if they agree on an open neighborhood of K contained in both domains. A germ along K is an equivalence class under this relation. The set of these germs is denoted by O(K).
+
+Intuitively, O(K) describes real-analytic functions near K, identifying two functions whenever they agree on an open neighborhood of K. In particular, O(K) forms a commutative ring: the sum and product of germs represented by f and g are represented by f + g and f g on the intersection of their domains. When K = {x}, write Ox := O({x}) and denote the germ of f at x by fx. Note that agreement only at the points of K, rather than on a neighborhood of K, does not identify germs. 
+
+Definition C.3 (Ideals) . A subset I of a commutative ring R is an ideal if it contains zero and is closed under addition and multiplication by arbitrary elements of R.
+
+Definition C.4 (Finitely generated ideals) . An ideal I ⊆ R is finitely generated if there exist 
+
+f1, . . . , f r ∈ I such that 
+
+I = ( f1, . . . , f r ) := 
+
+
+
+> r
+
+X
+
+> j=1
+
+aj fj : a1, . . . , a r ∈ R
+
+ .
+
+We write fx ∈ (f1,x , . . . , f r,x ) in Ox to denote that f = P 
+
+> j
+
+aj fj on some neighborhood of x, with analytic coefficients aj there. 18 Definition C.5 (Noetherian rings) . A commutative ring R is Noetherian if every ideal of R is finitely generated. 
+
+Definition C.6 (Semianalytic sets) . A set S ⊂ Rq is semianalytic if, for every x ∈ Rq , there exists an open neighborhood U ⊂ Rq of x such that S ∩ U is a finite union of sets, each of the form 
+
+{x′ ∈ U : f1(x′) = · · · = fr (x′) = 0 , g1(x′) > 0, . . . , g s(x′) > 0},
+
+where r, s ≥ 0 are integers and the functions fi, g j : U → R are real analytic; either list of conditions may be empty. The neighborhood U and the finite families of defining functions may depend on x.
+
+In particular, a set defined by finitely many polynomial equalities and weak inequalities is semianalytic, since a weak inequality is the union of a strict inequality and an equality. The following three lemmas, Lemma C.7, Lemma C.8, and Lemma C.9, establish when f can be written as P 
+
+> j
+
+aj fj with analytic coefficients aj . They give finite generators at a point, a common neighborhood for local representations, and analytic coefficients valid near all of K.We first seek finitely many generators at one point, which would allow us to write every germ in an ideal of Ox as their linear combination. 
+
+Lemma C.7 (Finite generation at a point (Greuel et al., 2007, Theorem 1.15)) . For every x ∈ Rq ,the ring Ox of real-analytic germs at x is Noetherian. 
+
+The lemma implies that every germ in an ideal of Ox can be expressed using the same finite number of generators. Hence, in f = Prj=1 aj fj , the coefficients aj may vary with f , but the generators 
+
+f1, . . . , f r are shared across all real-analytic functions f whose germs belong to that ideal. The following lemma allows us to extend Lemma C.7’s finite generation at a single point to its neighborhood within K.
+
+Lemma C.8 (Finite generation on a neighborhood (B˘ anic˘ a & St˘ an˘ a¸ sil˘ a, 1976, Chapter V, §3, pp. 186–187)) . Let K ⊂ Rq be compact and semianalytic, let x ∈ K, and fix f1, . . . , f r ∈ O (K).There is a relative open neighborhood W of x in K such that, for every f ∈ O (K),
+
+fx ∈ (f1,x , . . . , f r,x ) =⇒ fx′ ∈ (f1,x ′ , . . . , f r,x ′ ) for every x′ ∈ W. 
+
+The neighborhood W may depend on K, x, f 1, . . . , f r , but not on f .
+
+Intuitively, Lemma C.7 selects finitely many generators from an ideal at x, and Lemma C.8 gives a single neighborhood where those generators work locally for every element of the ideal. Compactness then allows us to collect these generators into a single finite family that works at every point of K.The following lemma turns these local representations into a representation with analytic coefficients valid near all of K.
+
+Lemma C.9 (Analytic coefficients near a compact set (Hörmander, 1990, Theorem 7.2.1(ii))) . Let 
+
+K ⊂ Rq be compact and let f, f 1, . . . , f r ∈ O (K). If fx ∈ (f1,x , . . . , f r,x ) for every x ∈ K, then there are a1, . . . , a r ∈ O (K) such that 
+
+f =
+
+> r
+
+X
+
+> j=1
+
+aj fj in O(K).
+
+Together with compactness, these three lemmas yield Frisch’s finite-generation theorem. 
+
+Theorem C.10 (Frisch’s Noetherianity theorem, real-analytic form (Frisch, 1967, Theorem I.9)) . Let 
+
+K ⊂ Rq be compact and semianalytic. Then O(K) is Noetherian: every ideal I ⊆ O (K) has finitely many generators f1, . . . , f r ∈ I, so that 
+
+I =
+
+
+
+> r
+
+X
+
+> j=1
+
+aj fj : a1, . . . , a r ∈ O (K)
+
+ .
+
+Proof. Fix an ideal I ⊆ O (K); the case K = ∅ is immediate. We first choose generators that work locally throughout K, and then obtain analytic coefficients near the whole set. 19 Step 1: finite generators near each point. For x ∈ K, let Ix ⊆ O x be the ideal generated by 
+
+{fx : f ∈ I}. By Lemma C.7, Ix has finitely many generators. Each generator is a finite combination of germs coming from I. Collecting the elements of I in these combinations gives fx, 1, . . . , f x,r x ∈ I
+
+whose germs generate Ix. If Ix = {0}, take the single generator 0.Apply Lemma C.8 to this fixed finite family. It gives a relative open neighborhood Wx of x in K
+
+such that 
+
+fx′ ∈ (fx, 1,x ′ , . . . , f x,r x,x ′ ) for every f ∈ I and every x′ ∈ Wx.
+
+The same Wx works for every f ∈ I. Thus the selected elements generate Ix′ at every x′ ∈ Wx.
+
+Step 2: one finite family for the compact set. The sets Wx cover K. Choose a finite subcover and collect the corresponding generators into f1, . . . , f r ∈ I. For every x ∈ K, Step 1 gives 
+
+Ix = ( f1,x , . . . , f r,x ) ⊆ O x.
+
+The reverse inclusion needed for this equality holds because every selected fj belongs to I.
+
+Step 3: coefficients on a neighborhood of K. Fix any f ∈ I. By Step 2, fx ∈ (f1,x , . . . , f r,x ) for every x ∈ K. Lemma C.9 gives a1, . . . , a r ∈ O (K) with f = P 
+
+> j
+
+aj fj . Hence I ⊆ (f1, . . . , f r ),and the reverse inclusion follows from the ideal property. This proves that I is finitely generated. C.4 EXACT FINITE -ORDER RELATION 
+
+Frisch’s theorem gives finite generation for scalar analytic functions. We first extend Frisch’s theorem to vector-valued maps and prove Theorem 5.5. Then, we apply Theorem 5.5 to the scaled finite differences and obtain Lemma 5.8. 
+
+Theorem 5.5 (Finite relation among analytic maps) . Let K ⊂ Rq be compact and semianalytic, and let V be a finite-dimensional real vector space. For every sequence Φ0, Φ1, . . . of V -valued maps, each real analytic on a neighborhood of K, there exist an integer m ≥ 1, an open neighborhood U
+
+of K, and scalar real-analytic functions c0, . . . , c m−1 on U such that the following holds on U :
+
+Φm =
+
+> m−1
+
+X
+
+> k=0
+
+ckΦk. (19) 
+
+Proof. Put R := O(K) and dV := dim V . By Theorem C.10, every ideal of R is finitely generated. We first verify the corresponding fact for a submodule L ⊆ RdV , a set of vectors containing zero and closed under addition and multiplication by elements of R. Induct on dV . The case dV = 0 is immediate, and the case dV = 1 is the ideal property. For dV ≥ 2, projection onto the last coordinate sends L to an ideal of R. Choose finitely many generators of that ideal and lift them to vectors 
+
+v1, . . . , v r ∈ L. The kernel is a submodule of RdV −1, so it has finitely many generators by induction. For any v ∈ L, subtracting a suitable R-linear combination of v1, . . . , v r makes its last coordinate zero. The remainder is generated by the kernel generators. These two families therefore generate L.Choose a basis of V , and write [Φ k] ∈ RdV for the germ of Φk along K. Consider the submodule 
+
+M := X
+
+> k≥0
+
+R[Φ k] ⊆ RdV ,
+
+where every sum defining an element of M is finite. By the preceding argument, M has finitely many generators. Each is a finite combination of the [Φ k], so there is an N ≥ 0 with M = PNk=0 R[Φ k]. If 
+
+M = {0}, take N = 0 . Setting m := N + 1 gives 
+
+[Φ m] = 
+
+> m−1
+
+X
+
+> k=0
+
+[ck][Φ k] for some [c0], . . . , [cm−1] ∈ R. 
+
+Only finitely many maps and coefficient germs enter this equality. Choose their representatives on the intersection of their open neighborhoods of K. Equality as germs means that, after a further restriction to an open neighborhood U ⊇ K, the equality holds pointwise throughout U . This proves Equation (19). The argument does not require one common neighborhood for the entire infinite sequence. 20 The loss table is part of the compact set K⋆. This lets us choose the finite relation once for the entire dimension class, before fixing a game or trajectory. 
+
+Lemma 5.8 (Exact finite-order relation) . Fix the number of players n, number of actions d =(d1, . . . , d n), and a player i. There are an integer m ≥ 1, constants A, M < ∞, and ηi > 0, uniform over all games of these dimensions, such that, for every such game, 0 < η ≤ ηi, and t ≥ 1, there exist scalars c0,t , . . . , c m−1,t , possibly depending on the game, η, and t, satisfying 
+
+∆mht+mi =
+
+> m−1
+
+X
+
+> k=0
+
+ck,t ηm−k∆kht+ki , |ck,t | ≤ A, (21) 
+
+∆kht+ki 2 ≤ M η k, 0 ≤ k ≤ m. (22) 
+
+Proof. Fix the player i. Finitely many polynomial equalities and weak inequalities define K⋆ =
+
+K0 × { 0}, where K0 = R × V × G . Thus K⋆ is compact and semianalytic. By Lemma 5.7, each 
+
+Hi,k is analytic on a neighborhood of K⋆. Apply Theorem 5.5 to the sequence (Hi,k )k≥0 to obtain an integer m ≥ 1 and analytic scalar coefficients c0, . . . , c m−1 such that 
+
+Hi,m =
+
+> m−1
+
+X
+
+> k=0
+
+ckHi,k 
+
+on a common open neighborhood U of K⋆. Intersect U with the domains of G, H i, 0, . . . , H i,m if needed; there are only finitely many of these domains. Because K0 is compact and U is open, some ηi > 0 satisfies 
+
+K0 × [−ηi, η i] ⊆ U. (39) Continuity on this compact set gives finite constants A, M such that, for every 0 ≤ k < m , |ck| ≤ A,and, for every 0 ≤ k ≤ m, ∥Hi,k ∥2 ≤ M . The compact set and analytic maps were fixed by (n, d )
+
+and i before any particular loss table was chosen. Hence m, η i, A, M are uniform over all games of these dimensions and do not depend on the horizon. Fix any such game, 0 < η ≤ ηi, and t ≥ 1. Invariance of S gives (st, g, η ) ∈ K0 × [−ηi, η i].Evaluating the relation there and using the trajectory identity from Equation (18) yields 
+
+η−m∆mht+mi = Hi,m (st; g, η ) = 
+
+> m−1
+
+X
+
+> k=0
+
+ck(st; g, η )η−k∆kht+ki .
+
+Set ck,t := ck(st; g, η ) and multiply by ηm to obtain Equation (21), with |ck,t | ≤ A. For 0 ≤ k ≤ m,the same trajectory identity and the bound on Hi,k give 
+
+∆kht+ki 2 = ηk Hi,k (st; g, η ) 2 ≤ M η k,
+
+which is Equation (22). 
+
+## D FINITE -SUPPORT CUTOFF CONSTRUCTION 
+
+To localize the trajectory, we use a gradual cutoff rather than zero-padding. This preserves the ηm
+
+scale of the recurrence and controls the cost of returning to the original segment. 
+
+Lemma 5.9 (Finite-support cutoff) . Fix an integer m ≥ 1 and A, M < ∞. For 0 < η < 1/m ,suppose a sequence (ut)t≥1 in a finite-dimensional Euclidean space satisfies, for every t ≥ 1,
+
+∆mut+m =
+
+> m−1
+
+X
+
+> k=0
+
+ck,t ηm−k∆kut+k, |ck,t | ≤ A (0 ≤ k < m ), (23) 
+
+∆kut+k ≤ M η k (0 ≤ k ≤ m). (24) 
+
+There is a constant C < ∞, depending only on m, A, M , such that every horizon T ≥ 1 admits a finitely supported sequence y = ( yt)t∈Z with 
+
+∥∆y∥2 
+
+> ℓ2
+
+≥ XTt=1 ∆ut 2 − C, (25) 21 ∥y∥2 
+
+> ℓ2
+
+≤ XT +1  
+
+> t=1
+
+ut 2 , (26) 
+
+∥∆my∥ℓ2 ≤ A Xm−1 
+
+> k=0
+
+ηm−k ∆ky ℓ2 + Cη m−1/2. (27) 
+
+Proof. For short horizons, we pay for the whole segment directly. Otherwise, we keep a central interval unchanged and taper over O(1 /η ) indices at both ends; a buffer before the first taper avoids the exceptional initial first-order difference. Choose a constant C0 depending only on m, A, M . If 
+
+T ≤ C0/η , take yt = 0 for every t. The k = 0 case of Equation (24) gives ∥ut∥ ≤ M . Hence 
+
+∆u1 ≤ 2M , while the k = 1 case gives ∥∆ut∥ ≤ M η for every t ≥ 2. Therefore 
+
+> T
+
+X
+
+> t=1
+
+∆ut 2 ≤ 4M 2 + C0M 2η ≤ C. 
+
+The two norm comparisons follow, and Equation (27) is immediate because y = 0 .Suppose now that T > C 0/η . Put L := ⌈1/η ⌉. Choose a fixed smooth function ψ : R → [0 , 1] that is zero on (−∞ , 0] , one on [1 , ∞), and has bounded derivatives. Define 
+
+χt := ψ
+
+ t − 1 − 3mL
+
+
+
+ψ
+
+ T + 1 − 3m − tL
+
+
+
+, (40) set yt := χtut for 1 ≤ t ≤ T + 1 , and set yt := 0 otherwise. The construction keeps yt = ut on the central interval 
+
+1 + 3 m + L ≤ t ≤ T + 1 − 3m − L
+
+and is zero before and after the two intervals on which χt changes. Let BT be the set of starting indices t for which {t, . . . , t + 2 m} intersects either of these two intervals. Increasing C0 if necessary makes the central interval nonempty and gives 
+
+|BT | ≤ C(L + m) ≤ C/η. 
+
+Repeated use of 
+
+∆ψ(t/L ) = 
+
+Z (t+1) /L t/L 
+
+ψ′(s) d s
+
+and the finite-difference product rule gives sup t |∆ℓχt| ≤ Cm,ℓ ηℓ for 0 ≤ ℓ ≤ m. Moreover, 
+
+∆j (χu )t =
+
+> j
+
+X
+
+> ℓ=0
+
+jℓ
+
+
+
+(∆ ℓχ)t(∆ j−ℓu)t+ℓ. (41) The buffer of length 3m before the first transition ensures that every finite difference of u of positive order in Equation (41) begins at an index covered by Equation (24). Thus, whenever t ∈ BT ,
+
+∆j yt+r ≤ Cη j , 0 ≤ j ≤ m, 0 ≤ r ≤ 2m − j. (42) We retain the original recurrence wherever the cutoff leaves the trajectory unchanged and collect its failure into a boundary residual. For each t, define 
+
+eck,t := 
+
+ck,t , t ≥ 1 and yt+r = ut+r for every 0 ≤ r ≤ 2m, 
+
+0, otherwise ,
+
+and define e = ( et)t∈Z by 
+
+∆myt+m =
+
+> m−1
+
+X
+
+> k=0
+
+eck,t ηm−k∆kyt+k + et. (43) If t / ∈ BT , the values yt, . . . , y t+2 m either agree with the corresponding values of u or are all zero. In the first case Equation (23) gives et = 0 ; in the second case this is immediate. Hence et = 0 for every t / ∈ BT . For t ∈ BT , Equation (42) bounds every term in Equation (43) by Cη m. Therefore 
+
+∥e∥ℓ2 ≤ Cη mp|BT | ≤ Cη m−1/2. (44) 22 Taking ℓ2 norms in Equation (43), using |eck,t | ≤ A, shift invariance, and Equation (44), yields Equation (27). Finally, 0 ≤ χt ≤ 1 gives Equation (26). For 1 + 3 m + L ≤ t ≤ T − 3m − L, both t and t + 1 lie in the central interval, so ∆yt = ∆ ut. Among 2 ≤ t ≤ T , at most C(L + m) ≤ C/η indices lie outside this range, including the last index of the central interval. For these indices, Equation (24) gives ∥∆ut∥ ≤ M η , so their squared contribution is at most Cη . The initial difference satisfies 
+
+∆u1 ≤ 2M . These bounds prove Equation (25). 23

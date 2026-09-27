@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-09-26</span>
+      <span class="dpr-home-dashboard-kicker">2026-09-27</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-09-26 21:57:10 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-09-27 22:08:53 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>2026-09-26 日报精选5篇AI安全论文，精读1篇、速读4篇，聚焦漏洞识别、后门攻击与智能体审计。最值得看的是8.0分的ENDOPROMPT，从受害端伪引用入手研究效用退化，另有TraceVIC用因果推理追踪代码演化中的致漏洞提交。建议普通读者优先读精读篇，再按兴趣浏览速读中的后门攻击与移动智能体审计方向。</p>
+<p>2026-09-27 日报速读 3 篇：博弈学习理论、LLM 智能体瓶颈与提示注入风险。</p>
+<p>最值得看：Optimistic Hedge 首次给出与策略空间无关的遗憾界，以及 LLM 多阶段任务中的真实瓶颈定位与决策劫持攻击面。</p>
+<p>建议普通读者优先了解提示注入如何影响智能体的概率决策，并在使用多步 LLM 工作流时保留人工复核。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">0 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ENDOPROMPT: Victim-Side Pseudo-References for Utility Degradation">ENDOPROMPT: Victim-Side Pseudo-References for Utility Degradation</span></li></ul>
+<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>1</strong></span></div>
+
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits">TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits</span></li><li><span class="dpr-home-dashboard-paper-title" title="UBA-ORL: Unlearning-Activated Backdoor Attacks on Offline Reinforcement Learning">UBA-ORL: Unlearning-Activated Backdoor Attacks on Offline Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning">MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games">A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games</span></li><li><span class="dpr-home-dashboard-paper-title" title="Where Cyber Agents Struggle: Bottleneck Analysis of Multi-Stage LLM Agents">Where Cyber Agents Struggle: Bottleneck Analysis of Multi-Stage LLM Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Decision Hijacking: Prompt Injection Attacks on Jev&#x27;s Typed Probabilistic Decisions">Decision Hijacking: Prompt Injection Attacks on Jev&#x27;s Typed Probabilistic Decisions</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">as <strong>3</strong></span></div>
 </section>
 </div>
 

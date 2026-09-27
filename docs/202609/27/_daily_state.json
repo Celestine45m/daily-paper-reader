@@ -1,0 +1,57 @@
+{
+  "date": "20260927",
+  "date_label": "",
+  "generated_at": "2026-09-27 22:08:53 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2609.22839v1",
+      "route": "202609/27/2609.22839v1-a-horizon-independent-regret-bound-for-optimistic-hedge-in-general-sum-games",
+      "title": "A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "一般和博弈中自博弈学习规则的遗憾界",
+      "first_seen_at": "2026-09-27 22:08:53 UTC",
+      "updated_at": "2026-09-27 22:08:53 UTC"
+    },
+    {
+      "paper_id": "2609.28572v1",
+      "route": "202609/27/2609.28572v1-where-cyber-agents-struggle-bottleneck-analysis-of-multi-stage-llm-agents",
+      "title": "Where Cyber Agents Struggle: Bottleneck Analysis of Multi-Stage LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用于攻击流程与漏洞相关任务的 LLM 网络智能体",
+      "first_seen_at": "2026-09-27 22:08:53 UTC",
+      "updated_at": "2026-09-27 22:08:53 UTC"
+    },
+    {
+      "paper_id": "2609.28613v1",
+      "route": "202609/27/2609.28613v1-decision-hijacking-prompt-injection-attacks-on-jevs-typed-probabilistic-decisions",
+      "title": "Decision Hijacking: Prompt Injection Attacks on Jev's Typed Probabilistic Decisions",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "as"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对 LLM 决策模型的提示注入对抗攻击",
+      "first_seen_at": "2026-09-27 22:08:53 UTC",
+      "updated_at": "2026-09-27 22:08:53 UTC"
+    }
+  ]
+}
